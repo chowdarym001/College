@@ -1,0 +1,101 @@
+----item----
+version: 1
+id: {7B3637DB-0B8C-48C0-A69E-BB3D42C5CFDF}
+database: master
+path: /sitecore/content/Global/HeaderNav/HeaderNav/AreasOfStudy
+parent: {C9A6C7A0-37F9-45A1-A7E4-E11C0056138E}
+name: AreasOfStudy
+master: {00000000-0000-0000-0000-000000000000}
+template: {A39CD236-782D-42A5-BE01-48763D4CCF17}
+templatekey: List
+created: 20170613T153639Z
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+People/16x16/cubes.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+150
+----version----
+language: en
+version: 1
+revision: 14f204b4-2bb1-475f-ae01-d1cf08355d96
+
+----field----
+field: {3B54CBF7-D6A8-4809-914C-707B7C2F0F31}
+name: Title
+key: title
+content-length: 11
+
+descendants
+----field----
+field: {D9E8FBCD-D4F0-4627-B3BA-11EF52FF7D2E}
+name: Body
+key: body
+content-length: 78
+
+<a class="mega-menu__link mega-menu__link--level1" href="#">Areas Of Study</a>
+----field----
+field: {6969E989-7DD3-4B21-89DC-A5565AB5371C}
+name: ListItems
+key: listitems
+content-length: 272
+
+{95DBEA25-6B18-4E04-BED7-91FE25909528}|{FDC5A5A8-5CB1-4ACE-9326-951455689F08}|{25BD1AF7-21B1-4D1F-9DC0-7A17E4F1FD49}|{BA0D9D87-0DBA-4EB1-8151-EB843E68936D}|{B978EEC2-F540-43E8-8C2F-1734088A5C59}|{FEF1FEED-AD48-46BE-B4F6-648B04DC2B4C}|{B5C193C8-1C2A-4768-92B1-BE6CC40E36E3}
+----field----
+field: {B9885E3A-BBDF-495F-AAEB-6E2A9C340E23}
+name: CTA
+key: cta
+content-length: 159
+
+<link text="Explore all areas of study" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B86616AB-F766-46EE-ADA8-7E1BC4BFB206}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170222T061159Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+14f204b4-2bb1-475f-ae01-d1cf08355d96
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170808T201313Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

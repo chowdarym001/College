@@ -1,0 +1,91 @@
+----item----
+version: 1
+id: {52256838-6773-406A-9BF0-1C645A8EC1B9}
+database: master
+path: /sitecore/content/SiteContent/AdmissionContact
+parent: {F55CF70D-4EF8-417D-B42F-0A3F7FB6172A}
+name: AdmissionContact
+master: {00000000-0000-0000-0000-000000000000}
+template: {9B937BA5-787C-4BDC-B29B-8B2D7282B162}
+templatekey: GenericContentBlock
+created: 20170327T155507Z
+
+----version----
+language: en
+version: 1
+revision: bcb01b6d-cc0f-4a16-9044-8d064d63b707
+
+----field----
+field: {35F54DEB-4693-466A-8BC8-9F5CFC8A778F}
+name: Body
+key: body
+content-length: 922
+
+<div class="container">
+<h1 class="heading heading--title heading--reverse">Three quick ways to make contact:</h1>
+<ul class="make-contact__list">
+    <li class="make-contact__item">
+    <a class="make-contact__link" href="#">
+    <em class="fa fa-phone"></em>
+    <h3 class="cta-inline cta-inline--reverse">Call us</h3>
+    <span class="make-contact__detail">[NUMBER]</span>
+    </a>
+    </li>
+    <li class="make-contact__item">
+    <a class="make-contact__link" href="#">
+    <em class="fa fa-comments-o"></em>
+    <h3 class="cta-inline cta-inline--reverse">Chat with us</h3>
+    <span class="make-contact__detail">[LINK]</span>
+    </a>
+    </li>
+    <li class="make-contact__item">
+    <a class="make-contact__link" href="#">
+    <em class="fa fa-envelope"></em>
+    <h3 class="cta-inline cta-inline--reverse">Email us</h3>
+    <span class="make-contact__detail">[EMAIL ADDRESS]</span>
+    </a>
+    </li>
+</ul>
+</div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170228T194746Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bcb01b6d-cc0f-4a16-9044-8d064d63b707
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170424T183912Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

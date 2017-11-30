@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {6812F82A-6531-47D3-A106-974FD1403D12}
+database: master
+path: /sitecore/content/SiteContent/Forms/AlumniForm
+parent: {43443CE9-93BC-4148-9A08-A3ADA3037FC3}
+name: AlumniForm
+master: {00000000-0000-0000-0000-000000000000}
+template: {C388D975-03E8-4F17-A8CE-7D446DF1B276}
+templatekey: RequestInformation
+created: 20170426T042126Z
+
+----version----
+language: en
+version: 1
+revision: 10a7b404-4266-4d79-a5a4-3c50889d2a22
+
+----field----
+field: {A213FFFA-524D-44A2-872C-74A611392223}
+name: Title
+key: title
+content-length: 45
+
+Questions? Talk with a program manager today.
+----field----
+field: {8BD50673-F011-48A7-B1CC-8A90479B4B3A}
+name: Body
+key: body
+content-length: 424
+
+<h2 class="rmi__subtitle">Request More Information</h2>
+<p>Fill out the form to receive:</p>
+<ul class="form-checklist" id="form-checklist">
+    <li><em class="fa fa-check-square-o color-ras--dark"></em>Personalized Financial Aid</li>
+    <li><em class="fa fa-check-square-o color-ras--dark"></em>Customized Support Services</li>
+    <li><em class="fa fa-check-square-o color-ras--dark"></em>Detailed Program Plan</li>
+</ul>
+----field----
+field: {C1BE9F4C-024B-49E1-802E-88825729546F}
+name: Disclaimer
+key: disclaimer
+content-length: 155
+
+<p style="height: 69px;">By requesting information, I authorize Rasmussen College to contact me by email, phone or text message at the number provided.</p>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170222T200913Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+10a7b404-4266-4d79-a5a4-3c50889d2a22
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170426T170316Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

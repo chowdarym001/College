@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {55EF6B15-094F-40A8-946B-E1622F96B36C}
+database: master
+path: /sitecore/content/SiteContent/Lists/FourColumnBlock
+parent: {9473EA73-A35C-480A-A9FC-AA165D8472A6}
+name: FourColumnBlock
+master: {00000000-0000-0000-0000-000000000000}
+template: {A39CD236-782D-42A5-BE01-48763D4CCF17}
+templatekey: List
+created: 20170222T061159Z
+
+----version----
+language: en
+version: 1
+revision: 89c2b092-f2e0-43c4-8e0e-1e89561fc232
+
+----field----
+field: {3B54CBF7-D6A8-4809-914C-707B7C2F0F31}
+name: Title
+key: title
+content-length: 28
+
+A student-centered approach.
+----field----
+field: {D9E8FBCD-D4F0-4627-B3BA-11EF52FF7D2E}
+name: Body
+key: body
+content-length: 531
+
+<span style="background-color: #ffffff; color: #4a4952;">Our guiding principles have always been set by our students. Affordable tuition. Regional accreditation. Innovative programs. How we accomplish these goals will continue to evolve. But who we serve? That remains unchanged.&nbsp;</span><a href="http://sandbox.collegiseducation.com/ras/ras-styleguide-refactored/styleguide/pages/homepage.html#" class="cta-text" style="color: #779145; background-color: #ffffff; border-bottom: 1px solid #9fb14e;">Learn About Our Programs</a>
+----field----
+field: {6969E989-7DD3-4B21-89DC-A5565AB5371C}
+name: ListItems
+key: listitems
+content-length: 155
+
+{F6206E62-D1F1-4BE2-B164-BFA9143039D4}|{80189421-F272-4DF0-A8F5-FA93886F2751}|{70E8C2FB-D11D-492F-B748-63D13632E38A}|{71AB755A-C198-4269-9AE9-856CB7025289}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170222T061159Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+89c2b092-f2e0-43c4-8e0e-1e89561fc232
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170222T061401Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -1,0 +1,151 @@
+----item----
+version: 1
+id: {3E3C6BC8-A341-4FCC-894C-8E144AA8F04D}
+database: master
+path: /sitecore/content/Global/HeaderNav/MobileHeaderNav/AreasofStudy/Nursing
+parent: {358F10E3-8E0B-44C1-8B99-8614F1866CC9}
+name: Nursing
+master: {00000000-0000-0000-0000-000000000000}
+template: {ED508E72-0415-4727-8E68-C65E9BF72549}
+templatekey: ContentCard
+created: 20170706T160750Z
+
+----version----
+language: en
+version: 1
+revision: fe75094f-f1ce-492c-b41c-b9d8ab51c11a
+
+----field----
+field: {7F7A0AF0-3FE2-4BF8-9604-72884EEF25BA}
+name: Title
+key: title
+content-length: 0
+
+
+----field----
+field: {30E74DEC-1D10-4458-976F-548A027B9CF8}
+name: Body
+key: body
+content-length: 7474
+
+<ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Nursing programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Professional Nursing (ADN)</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Professional Nursing (ADN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Professional Nursing Associates</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">ADN Mobility Entrance Option</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Practical Nursing (LPN)</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Practical Nursing (LPN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Diploma</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Bachelor of Science in Nursing (BSN)</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Bachelor of Science in Nursing (BSN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">BSN Standard Entrance Option</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">BSN Second Degree Option</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">RN to BSN Entrance Option</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">RN to BSN programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Master of Science in Nursing</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Master of Science in Nursing (MSN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Master's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Nursing</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Nursing Blog</a>
+		                            </li>
+		                        </ul>
+----field----
+field: {35865571-0AF3-46A5-9485-119DE98A957C}
+name: Footer
+key: footer
+content-length: 106
+
+ <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Nursing</span>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170706T160750Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fe75094f-f1ce-492c-b41c-b9d8ab51c11a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170811T165106Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -1,0 +1,166 @@
+----item----
+version: 1
+id: {37F31756-61BC-44EB-ACAA-2BDEE145BC74}
+database: master
+path: /sitecore/content/SiteContent/AdmissionAudience
+parent: {F55CF70D-4EF8-417D-B42F-0A3F7FB6172A}
+name: AdmissionAudience
+master: {00000000-0000-0000-0000-000000000000}
+template: {9B937BA5-787C-4BDC-B29B-8B2D7282B162}
+templatekey: GenericContentBlock
+created: 20170324T200735Z
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 251
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{02085333-DF71-4CD6-9642-CADBB32E84FD}"><r id="{C9C700D2-EC9F-4207-93E6-F5F256FD30BC}" ph="body" uid="{E54D2FEB-2995-4C72-8057-32AD081FDE90}" /></d></r>
+----version----
+language: en
+version: 1
+revision: 8616c2e3-0ed7-4075-8d2d-30485bcf0fee
+
+----field----
+field: {35F54DEB-4693-466A-8BC8-9F5CFC8A778F}
+name: Body
+key: body
+content-length: 8239
+
+<div class="container">
+
+        <article class="accortabs accortabs--vertical">
+            <ul class="accortabs__list">
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience01')" rel="admissions-audience01">First-Time College Students</li>
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience02')" rel="admissions-audience02">Transfer Students</li>
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience03')" rel="admissions-audience03">Nursing Students</li>
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience04')" rel="admissions-audience04">Military Students</li>
+            </ul>
+            <div class="accortabs__container">
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience01')" rel="admissions-audience01">First-Time College Students</h1>
+                <div class="accortabs__content" id="admissions-audience01">
+                    <h1 class="accortabs__title">First-Time College Students</h1>
+                    <p>Adding school to an already full schedule can seem daunting. But we’ve worked hard to make it easier, designing flexible, skills-based programs that are schedule-friendly while still delivering the competitive edge necessary to succeed.</p>
+
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+                </div>
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience02')" rel="admissions-audience02">Transfer Students</h1>
+                <div class="accortabs__content" id="admissions-audience02">
+                    <h1 class="accortabs__title">Transfer Students</h1>
+                    <p>We believe you should earn credit for the course work you’ve already completed. In fact, in 2015 we accepted more than XXX,000 transfer credits, saving our students $XX million.* Our seamless transfer policies work to maximize your credits, helping you save money and graduate as fast as possible.</p>
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+
+                    <h2 class="accortabs__subtitle">Transfer credit information</h2>
+                    <p>If you have prior college credit, it may transfer. For an overview of how we handle transfer credits, <a href="#" class="cta-inline">click here</a>. * For the entire Transfer Credit Policy, <a href="#" class="cta-inline">click here</a>. </p>
+                </div>
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience03')" rel="admissions-audience03">Nursing Students</h1>
+                <div class="accortabs__content" id="admissions-audience03">
+                    <h1 class="accortabs__title">Nursing Students</h1>
+                    <p>One of the most in-demand jobs—nursing—is also one of the most sought-after programs. You won’t wait to start or advance your education with us—many programs have no wait list for qualified candidates and four starts a year.</p>
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">TEAS Exam</h2>
+                    <p>Upon receiving a qualifying TEAS score, your program manager will help you submit required immunizations, physical exam and CPR certification.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+                </div>
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience04')" rel="admissions-audience04">Military Students</h1>
+                <div class="accortabs__content" id="admissions-audience04">
+                    <h1 class="accortabs__title">Military Students</h1>
+                    <p>Military service is a major achievement, but today’s competitive job market often requires an education related to your field. To honor military service, our programs teach you the skills to integrate seamlessly into the workforce and start the next chapter of your professional life.</p>
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Transfer credit information</h2>
+                    <p>If you have prior college credit, it may transfer. For an overview of how we handle transfer credits, <a href="#" class="cta-inline">click here</a>. *For the entire Transfer Credit Policy, <a href="#" class="cta-inline">click here</a>. (takes them to catalog copy)</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+                </div>
+            </div>
+
+            <footer class="accortabs__footer">
+                <h2 class="accortabs__subtitle">Want personalized assistance?</h2>
+                <a href="#js-rmi" class="cta-inline js-smooth-scroll">Turn to a Program Manager</a>
+            </footer>
+        </article>
+
+        <hr class="rule-stripe rule-stripe--ras">
+    </div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170228T194746Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+8616c2e3-0ed7-4075-8d2d-30485bcf0fee
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170809T211751Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

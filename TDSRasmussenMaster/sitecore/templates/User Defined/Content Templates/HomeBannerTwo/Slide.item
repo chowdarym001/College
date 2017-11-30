@@ -1,0 +1,52 @@
+----item----
+version: 1
+id: {79440DF9-FC43-471E-BFC4-78A3C5448E06}
+database: master
+path: /sitecore/templates/User Defined/Content Templates/HomeBannerTwo/Slide
+parent: {58D70F00-332B-4A72-AE11-5FFC4CBE4DC7}
+name: Slide
+master: {00000000-0000-0000-0000-000000000000}
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20170220T223507Z
+
+----version----
+language: en
+version: 1
+revision: 98dba723-7ea5-46f2-a193-a64abe00f0b8
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170220T223507Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+98dba723-7ea5-46f2-a193-a64abe00f0b8
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170220T223507Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

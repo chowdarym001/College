@@ -1,0 +1,216 @@
+----item----
+version: 1
+id: {FB1AA747-29DC-4398-8406-E1A29CA8025A}
+database: master
+path: /sitecore/content/SiteContent/HomeSlides
+parent: {F55CF70D-4EF8-417D-B42F-0A3F7FB6172A}
+name: HomeSlides
+master: {00000000-0000-0000-0000-000000000000}
+template: {9B937BA5-787C-4BDC-B29B-8B2D7282B162}
+templatekey: GenericContentBlock
+created: 20170222T200843Z
+
+----version----
+language: en
+version: 1
+revision: db360de0-84f4-442b-953c-c8ed210628d6
+
+----field----
+field: {9638A891-4D46-4EDA-AF52-2CDD03CBF78F}
+name: Title
+key: title
+content-length: 71
+
+From undergraduate to graduate degrees, your next step forward is here.
+----field----
+field: {35F54DEB-4693-466A-8BC8-9F5CFC8A778F}
+name: Body
+key: body
+content-length: 5692
+
+<section class="explore-grid__stories explore-grid__stories--alpha">
+<article class="explore-grid__story bgc-rsn">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/nursing/master-science-nursing/">
+<div class="explore-grid__banner">
+<picture>
+<img alt="exploremsnxlarge" srcset="-/media/6C30D7459B054EF4B3E8BBD4C479BA11.ashx" media="(min-width: 1200px)" />
+<img alt="exploremsnlarge" srcset="-/media/C9BB0006685B440EB4C8DE7893EEB81C.ashx" media="(min-width: 854px)" />
+<img alt="exploremsnmedium" srcset="-/media/72B90679A60044E3A90460DDEAD277F0.ashx" media="(min-width: 640px)" />
+<img alt="exploremsnsmall" srcset="-/media/9B3913E35E0C43ACAFF05A324801C326.ashx" media="(min-width: 0)" />
+<img srcset="" alt="" data-object-fit="none" />
+</picture>
+</div>
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Featured Program</h2>
+<h1 class="explore-grid__content__title">Master of Science in Nursing</h1>
+<p>Prepare to take an active role in shaping the future of healthcare.</p>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</article>
+</section>
+<section class="explore-grid__items explore-grid__items--alpha">
+<div class="explore-grid__item bgc-rsn">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/nursing/?_ga=1.207014099.134832742.1484760628">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Nursing</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+<div class="explore-grid__item bgc-rshs">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/health-sciences/">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Healthcare</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+<div class="explore-grid__item bgc-rsb">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/business/">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Business</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+<div class="explore-grid__item bgc-rse">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/education/">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Education</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+</section>
+<section class="explore-grid__stories explore-grid__stories--beta">
+<article class="explore-grid__story bgc-ras">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/student-life/blogs/college-life/benefits-of-competency-based-education-for-adult-learners/">
+<div class="explore-grid__banner">
+<picture>
+<img alt="exploreblogxlarge" srcset="-/media/4734145679D2420EB80E87E7AF9049CF.ashx;" media="(min-width: 1200px)" />
+<img alt="explorebloglarge" srcset="-/media/285BD9B06AD8418BB0F17B91D16C1142.ashx;" media="(min-width: 854px)" />
+<img alt="exploreblogmedium" srcset="-/media/49D13D3BC88D4DFAB61B2452BA00611C.ashx;" media="(min-width: 640px)" />
+<img alt="exploreblogsmall" srcset="-/media/C332B6E84E4A4BCC82BE0EACDB208AF4.ashx;" media="(min-width: 0)" />
+<img srcset="" alt="" data-object-fit="cover" />
+</picture>
+</div>
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Featured Post</h2>
+<h1 class="explore-grid__content__title">6 Benefits of Competency-Based Education that will Excite Adult Learners</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">Read more</span>
+</p>
+</div>
+</a>
+</article>
+</section>
+<section class="explore-grid__items explore-grid__items--beta">
+<div class="explore-grid__item bgc-rst">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/technology/">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Technology</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+<div class="explore-grid__item bgc-rsd">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/design/">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Design</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+<div class="explore-grid__item bgc-rsjs">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/degrees/justice-studies/">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Explore Programs in</h2>
+<h1 class="explore-grid__content__title">Justice Studies</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+<div class="explore-grid__item bgc-ras--medium">
+<a class="explore-grid__link" href="http://www.rasmussen.edu/ways-to-learn/flex-choice">
+<div class="explore-grid__content">
+<h2 class="explore-grid__content__subtitle">Ways to Learn</h2>
+<h1 class="explore-grid__content__title">Flex Choice</h1>
+<p class="explore-grid__cta">
+<span class="explore-grid__cta__label">More info</span>
+</p>
+</div>
+</a>
+</div>
+</section>
+----field----
+field: {94D387E6-2FB9-4CDD-8260-7243DAA70930}
+name: Footer
+key: footer
+content-length: 94
+
+Need help selecting a program? <a class="js-smooth-scroll" href="#js-rmi">Contact Us Today</a>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170222T200843Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+db360de0-84f4-442b-953c-c8ed210628d6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170705T183240Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

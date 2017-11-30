@@ -1,0 +1,98 @@
+----item----
+version: 1
+id: {E901B318-647E-4BF8-B3B5-3FBD2B09FD75}
+database: master
+path: /sitecore/content/SiteContent/AdmissionIntro
+parent: {F55CF70D-4EF8-417D-B42F-0A3F7FB6172A}
+name: AdmissionIntro
+master: {00000000-0000-0000-0000-000000000000}
+template: {9B937BA5-787C-4BDC-B29B-8B2D7282B162}
+templatekey: GenericContentBlock
+created: 20170324T192649Z
+
+----version----
+language: en
+version: 1
+revision: 55b513b2-90de-4450-a604-a8d4eb7378fa
+
+----field----
+field: {35F54DEB-4693-466A-8BC8-9F5CFC8A778F}
+name: Body
+key: body
+content-length: 2211
+
+<div class="container">
+        <article class="intro__copy intro__copy--left">
+            <h1 class="heading heading--title">Enrolling: Let’s do this together.</h1>
+            <p class="intro__text">Congratulations—you’re ready to become a Rasmussen College student! And your Program Manager is right there to help. While the instructions below take you step-by-step through the enrollment process, just reach out if you have questions.</p>
+        </article>
+        <aside class="intro__menu">
+            <h3 class="intro__menu--title">TAKE ME TO:</h3>
+            <ul class="sidebar-nav sidebar-nav--admissions">
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience01')">First-Time College Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience02')">Transfer Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience03')">Nursing Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience04')">Military Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll" href="#admissions-faq">FAQs</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll" href="#admissions-next-steps">I’ve Enrolled! What Now?</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll" href="#js-rmi">Request More Information ›</a>
+                </li>
+            </ul>
+            <hr class="rule-stripe rule-stripe--vertical">
+        </aside>
+    </div>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170228T194746Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+55b513b2-90de-4450-a604-a8d4eb7378fa
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170424T183955Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

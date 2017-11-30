@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {CDDA9E91-3C6D-41E6-99DC-7F6A18F088F1}
+database: master
+path: /sitecore/content/Global/HeaderNav/MobileHeaderNav
+parent: {EB566CAC-B1F2-4426-85E0-A0524B613326}
+name: MobileHeaderNav
+master: {00000000-0000-0000-0000-000000000000}
+template: {66B2870A-702E-459D-82C5-245739B2ECCA}
+templatekey: MultipeList
+created: 20170706T154121Z
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+people/16x16/cubes.png
+----version----
+language: en
+version: 1
+revision: 5871f5ee-38f4-4fa7-bba6-4b976d56060d
+
+----field----
+field: {AFAE1D06-9BED-4EBD-8D48-71D2448AB0A5}
+name: Body
+key: body
+content-length: 80
+
+ <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Home</a>
+----field----
+field: {BC943608-168E-462D-886A-2363C59F1179}
+name: ListItems
+key: listitems
+content-length: 116
+
+{358F10E3-8E0B-44C1-8B99-8614F1866CC9}|{6637F9B0-3A41-40E5-A9D1-C676FD74976B}|{06B91D9F-C9D9-4655-B59B-30653FDC671F}
+----field----
+field: {6376290F-5113-4F96-9A8C-6764B0D18B04}
+name: Footer
+key: footer
+content-length: 460
+
+<li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">About Us</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Student Login</a>
+		            </li>
+----field----
+field: {F2A27D9C-23FD-4815-A39B-80536F332B48}
+name: SubHeading
+key: subheading
+content-length: 711
+
+<li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Student Experience</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Tuition &amp; Aid</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Admissions</a>
+		            </li>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170706T154122Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+5871f5ee-38f4-4fa7-bba6-4b976d56060d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170811T180723Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

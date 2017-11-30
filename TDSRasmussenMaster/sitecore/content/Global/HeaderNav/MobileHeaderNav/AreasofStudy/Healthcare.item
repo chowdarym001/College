@@ -1,0 +1,233 @@
+----item----
+version: 1
+id: {563640F2-3C54-496C-A2F3-5F1CE8E8D0DD}
+database: master
+path: /sitecore/content/Global/HeaderNav/MobileHeaderNav/AreasofStudy/Healthcare
+parent: {358F10E3-8E0B-44C1-8B99-8614F1866CC9}
+name: Healthcare
+master: {00000000-0000-0000-0000-000000000000}
+template: {ED508E72-0415-4727-8E68-C65E9BF72549}
+templatekey: ContentCard
+created: 20170706T160723Z
+
+----version----
+language: en
+version: 1
+revision: 0022d4e0-37ea-4b37-b7c2-dc8d3dd7ec43
+
+----field----
+field: {7F7A0AF0-3FE2-4BF8-9604-72884EEF25BA}
+name: Title
+key: title
+content-length: 0
+
+
+----field----
+field: {30E74DEC-1D10-4458-976F-548A027B9CF8}
+name: Body
+key: body
+content-length: 15768
+
+<ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Healthcare programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health and Wellness</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health and Wellness programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health Information Management</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health Information Management programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health Information Technician</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health Information Technician programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health Sciences</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health Sciences programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Human Services</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Human Services programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Administrative Assistant</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Administrative Assistant programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Assisting</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Assisting programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Diploma</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Billing and Coding</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Billing and Coding programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Laboratory Technician</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Laboratory Technician programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Pharmacy Technican</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Pharmacy Technician programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Physical Therapist Assistant</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Physical Therapist Assistant programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Radiologic Technology</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Radiologic Technology programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Surgical Technologist</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Surgical Technologist programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Health Sciences</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Healthcare Blog</a>
+		                            </li>
+		                        </ul>
+----field----
+field: {35865571-0AF3-46A5-9485-119DE98A957C}
+name: Footer
+key: footer
+content-length: 108
+
+<span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Healthcare</span>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170706T160723Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0022d4e0-37ea-4b37-b7c2-dc8d3dd7ec43
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170811T165012Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

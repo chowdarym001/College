@@ -1,0 +1,87 @@
+----item----
+version: 1
+id: {C9A6C7A0-37F9-45A1-A7E4-E11C0056138E}
+database: master
+path: /sitecore/content/Global/HeaderNav/HeaderNav
+parent: {EB566CAC-B1F2-4426-85E0-A0524B613326}
+name: HeaderNav
+master: {00000000-0000-0000-0000-000000000000}
+template: {66B2870A-702E-459D-82C5-245739B2ECCA}
+templatekey: MultipeList
+created: 20170629T212338Z
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+people/16x16/cubes.png
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 302
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{02085333-DF71-4CD6-9642-CADBB32E84FD}"><r ds="{C9A6C7A0-37F9-45A1-A7E4-E11C0056138E}" id="{3BF75EB7-26E9-4B37-A14E-17C41B9FF157}" par="" ph="Body" uid="{75E673D8-7C55-48B9-9285-10F1B6583DB9}" /></d></r>
+----version----
+language: en
+version: 1
+revision: b56d7e25-1a51-4494-a731-03c4fa4aeb93
+
+----field----
+field: {2CF2ACF6-8BBE-4D21-9ABD-000210F0B04A}
+name: Title
+key: title
+content-length: 0
+
+
+----field----
+field: {BC943608-168E-462D-886A-2363C59F1179}
+name: ListItems
+key: listitems
+content-length: 233
+
+{7B3637DB-0B8C-48C0-A69E-BB3D42C5CFDF}|{C7C3DFCB-5D35-4FCC-8F65-0EDD454B3E1B}|{51C54683-8F35-4233-9FD1-B578E5FC0403}|{E4A8D96E-9257-496A-B6A3-214CA8CBFE55}|{1B3B6CAC-479C-4468-96C1-6EACF19D3030}|{58495383-5946-4E6C-8794-6FA01257F8E1}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170629T212339Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b56d7e25-1a51-4494-a731-03c4fa4aeb93
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170706T192933Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

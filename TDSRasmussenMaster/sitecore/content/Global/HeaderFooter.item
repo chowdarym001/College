@@ -1,0 +1,342 @@
+----item----
+version: 1
+id: {71B27D42-9CBF-4447-81E6-7842B6E476BD}
+database: master
+path: /sitecore/content/Global/HeaderFooter
+parent: {623C325E-0B67-41E2-BF62-AFBDA1581ED0}
+name: HeaderFooter
+master: {00000000-0000-0000-0000-000000000000}
+template: {F505B3A8-AAE7-403E-A27D-418FD5881B79}
+templatekey: HeaderFooter
+created: 20170228T165339Z
+
+----field----
+field: {A0CB3965-8884-4C7A-8815-B6B2E5CED162}
+name: __Editors
+key: __editors
+content-length: 0
+
+
+----field----
+field: {39C4902E-9960-4469-AEEF-E878E9C8218F}
+name: __Hidden
+key: __hidden
+content-length: 0
+
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+400
+----field----
+field: {D312103C-B36C-4CA5-864A-C85F9ABDA503}
+name: __Is Bucket
+key: __is bucket
+content-length: 0
+
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 145
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{02085333-DF71-4CD6-9642-CADBB32E84FD}" /></r>
+----version----
+language: en
+version: 1
+revision: d803ec0f-6ee7-4bad-b654-a0cf077353c3
+
+----field----
+field: {4199CE38-E161-4835-9A99-2ABD6876A80C}
+name: Header
+key: header
+content-length: 3988
+
+<section class="section-nav section-nav--utility">
+	    <div class="container">
+	        <div class="section-nav__contents">
+	            <section class="nav-secondary">
+	                <ul class="nav-secondary__list">
+	                    <li class="nav-secondary__item">
+	                        <a href="#" class="nav-secondary__link">
+	                            Student Login
+	                        </a>
+	                    </li>
+	                    <span class="nav-secondary__divider">|</span>
+	                    <li class="nav-secondary__item nav-secondary__item--last">
+	                        <a href="#" class="nav-secondary__link">
+	                            About Us
+	                        </a>
+	                    </li>
+	                </ul>
+	            </section>
+	            <section class="nav-utility">
+	                <ul class="nav-utility__list">
+	                    <li class="nav-utility__item nav-utility__item--search">
+	                        <a class="nav-utility__link nav-utility__link--icon js-search-toggle" href="#utility-search">
+	                            <svg class="svg icon-search-glasses--gray">
+	                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search-glasses--gray"></use>
+	                            </svg>
+	                            <span class="nav-utility__label">Search Site</span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-utility__item nav-utility__item--call">
+	                        <a class="nav-utility__link nav-utility__link--icon" href="tel:888-549-6755">
+	                            <svg class="svg icon-phone-ring--gray">
+	                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone-ring--gray"></use>
+	                            </svg>
+	                            <span class="nav-utility__label">Call Us</span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-utility__item nav-utility__item--chat">
+	                        <a class="nav-utility__link nav-utility__link--icon" href="#">
+	                            <svg class="svg icon-chat-bubbles--gray">
+	                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chat-bubbles--gray"></use>
+	                            </svg>
+	                            <span class="nav-utility__label">Live Chat</span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-utility__item nav-utility__item--request">
+	                        <a href="#js-rmi" class="nav-utility__link nav-utility__link--text js-smooth-scroll">
+	                            <span class="nav-utility__label nav-utility__label--show">Request Info</span>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </section>
+	        </div>
+	    </div>
+	
+	    <div class="utility-search" id="utility-search">
+	        <div class="utility-search__container">
+	            <div class="utility-search__contents">
+	                <a class="utility-search__close" href="#">
+	                    <i class="fa fa-close"></i>
+	                </a>
+	                <form action="#" class="form utility-search__form" method="get">
+	                    <div class="field-group field-group--odd">
+	                        <label data-role="label" class="form__label" for="form-input--search" id="form-label--search">Search our site</label>
+	                        <input class="form__input" id="form-input--search" name="form-input--search" type="text" tabindex="1" placeholder="Nursing, business, etc" required="">
+	                        <input class="form__input form__input--submit" id="submit-utility-search" name="form__input--submit" type="submit" value="Search now">
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+----field----
+field: {86F3943B-9105-4C17-B25B-4476114D5503}
+name: Footer
+key: footer
+content-length: 7506
+
+ <section class="footer-content footer-content--links">
+        <div class="container">
+            <section class="footer-column footer-column--about">
+                <h4><a href="#" class="footer-column__title">About Us</a></h4>
+                <ul class="list list--unordered list--about">
+                    <li class="list__item">
+                        <a href="">History</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Leadership</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Letter from the President</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Corporate Social Responsibility</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Careers</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">News Center</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Accreditation</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-column footer-column--schools">
+                <h4><a href="#" class="footer-column__title">Areas of Study</a></h4>
+                <ul class="list list--unordered list--schools">
+                    <li class="list__item">
+                        <a href="">Business</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Design</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Education</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Health Sciences</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Justice Studies</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Nursing</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Technology</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-column footer-column--locations">
+                <h4><a href ="#" class="footer-column__title">Campus Locations</a></h4>
+                <ul class="list list--unordered list--locations">
+                    <li class="list__item">
+                        <a href="">Florida</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Illinois</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Kansas</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Minnesota</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">North Dakota</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Wisconsin</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    <section class="footer-content footer-content--sid">
+        <div class="container">
+            <p>
+                <a class="footer-column__link footer-column__link--caps" href="#">Student Investment Disclosure Information</a>
+            </p>
+        </div>
+    </section>
+    <div class="footer-content footer-content--colored">
+        <div class="container">
+            <section class="footer-column footer-column--metadata">
+                <ul class="list list--unordered list--metadata">
+                    <li class="list__item">
+                        <a class="" id="js-footer-disclaimers__toggle" href="#">Disclaimers (+)</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Sitemap</a>
+                    </li>
+                </ul>
+
+                <ul class="list list--unordered list--copyright">
+                    <li class="list__item">
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Copyright</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-column footer-column--social">
+                <div class="footer-column__container">
+                    <ul class="list list--unordered list--social">
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-facebook--white">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-facebook--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-google-plus--white">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-google-plus--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-instagram--white">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-instagram--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-linkedin--white">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-linkedin--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-youtube--white">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-youtube--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="footer-disclaimers">
+        <div class="footer-disclaimers__container">
+            <ol class="list list--ordered list--disclaimers">
+                <li class="list__item">Completion time is dependent on transfer credits accepted and the number of courses completed each term.</li>
+                <li class="list__item">Bureau of Labor Statistics, U.S. Department of Labor, Occupational Outlook Handbook, [career information accessed February 11, 2016] www.bls.gov/ooh/. Employment conditions in your area may vary.] Reflects a Bachelor's Degree in Business Management, Business Analysis and Business Management Core specializations, Rasmussen College.</li>
+            </ol>
+        </div>
+    </div>
+----field----
+field: {0451A0F8-8713-4BB5-82CC-7EDB3D9087DA}
+name: MobileHeaderNav
+key: mobileheadernav
+content-length: 0
+
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170228T165339Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d803ec0f-6ee7-4bad-b654-a0cf077353c3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170815T161304Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

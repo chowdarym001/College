@@ -1,0 +1,131 @@
+----item----
+version: 1
+id: {FCEFD97D-1282-42F2-97AD-3AA6DAF28BA1}
+database: master
+path: /sitecore/content/SiteContent/HomeBanner
+parent: {F55CF70D-4EF8-417D-B42F-0A3F7FB6172A}
+name: HomeBanner
+master: {00000000-0000-0000-0000-000000000000}
+template: {69358A3B-BE68-4A35-B224-16A2B523BB25}
+templatekey: HomeBanner
+created: 20170223T053826Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+100
+----version----
+language: en
+version: 1
+revision: 53df44c7-7d9d-4608-96c8-40a792216224
+
+----field----
+field: {4F48D419-6641-414B-B15D-EB2C046731EE}
+name: Heading
+key: heading
+content-length: 17
+
+Rasmussen College
+----field----
+field: {6789EC21-A9DB-419B-8C10-58987CCC0CF6}
+name: SubHeading
+key: subheading
+content-length: 358
+
+<h1 class="banner-text__title">Our history can change your future.</h1>
+<p>For 115 years, Rasmussen has created student-first programs that help drive personal and career success. Join our students who strive to let education propel them&mdash;not just to better jobs. But greater careers.</p>
+<a class="button button--secondary" href="#">See all degrees</a>
+----field----
+field: {CE95F930-6969-468E-9A6B-F2D7B8AD2280}
+name: CTALink
+key: ctalink
+content-length: 0
+
+
+----field----
+field: {E11BAA9F-C7D2-4E42-9C22-0A3878B16558}
+name: BackgroundImageurl_480
+key: backgroundimageurl_480
+content-length: 110
+
+<image mediaid="{A0567A14-A50E-445F-A387-4ADB0A99AD1B}" alt="banner" height="" width="" hspace="" vspace="" />
+----field----
+field: {1D54FE02-FB16-4825-9B61-809F5CB9BA00}
+name: BackgroundImageurl_640
+key: backgroundimageurl_640
+content-length: 58
+
+<image mediaid="{0416314A-D763-47A3-97DA-834991DDF6BC}" />
+----field----
+field: {C1837E71-6C1E-40DC-9F18-771988243F48}
+name: BackgroundImageurl_960
+key: backgroundimageurl_960
+content-length: 58
+
+<image mediaid="{BB4577BA-5C26-4679-A5C6-F5C9DB367197}" />
+----field----
+field: {8A35CB16-2907-4E37-B7BF-E4F070728893}
+name: BackgroundImageurl_1200
+key: backgroundimageurl_1200
+content-length: 58
+
+<image mediaid="{7A643764-EF2F-41AC-A500-562F48254FD5}" />
+----field----
+field: {1CED32AC-8FA2-432F-A4E1-AA10CDA7CC68}
+name: BackgroundImageurl_1600
+key: backgroundimageurl_1600
+content-length: 58
+
+<image mediaid="{1D1C5F1F-3308-4C4B-B746-94317768625A}" />
+----field----
+field: {11BC6BBA-BA8A-458B-AB27-B0A3A5D0D7C1}
+name: BackgroundImageurl_2000
+key: backgroundimageurl_2000
+content-length: 58
+
+<image mediaid="{5F143100-5D92-49B2-9409-A4CE4A67AFC9}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170220T223233Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+53df44c7-7d9d-4608-96c8-40a792216224
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170717T192400Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
