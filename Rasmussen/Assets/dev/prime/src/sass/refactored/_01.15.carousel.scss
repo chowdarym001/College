@@ -1,0 +1,138 @@
+.carousel {
+    @extend %clearfix;
+    @at-root #{&}__wrapper {}
+    @at-root #{&}__doc {}
+    @at-root #{&}--basic {
+        .rsArrow {
+            display: block;
+            height: 32px;
+            position: absolute;
+            width: 32px;
+            top: 0;
+            z-index: 10;
+            .rsArrowIcn {
+                cursor: pointer;
+                height: inherit;
+                width: inherit;
+                &::before {
+                    color: darken($color-white, 25%);
+                    display: block;
+                    font-family: $font-fontawesome;
+                    font-size: 32px;
+                    position: absolute;
+                }
+            }
+        }
+        .rsArrowLeft {
+            left: 0;
+            .rsArrowIcn {
+                &::before {
+                    content: "\f053";
+                }
+            }
+        }
+        .rsArrowRight {
+            right: 0;
+            .rsArrowIcn {
+                &::before {
+                    content: "\f054";
+                }
+            }
+        }
+    }
+    @at-root #{&}-tabs {
+        .rsThumbs {
+            display: none;
+            width: 100%;
+            @include breakpoint($medium-tall) {
+                border-bottom: 1px solid darken($color-white, 15%);
+                display: block;
+            }
+        }
+        .rsOverflow {
+            @extend %clearfix;
+            display: block;
+            position: relative;
+        }
+        .rsThumb {
+            @include breakpoint($medium-tall) {
+                color: darken($color-white, 50%);
+                float: left;
+                font-size: 16px;
+                margin-right: 12px !important;
+                padding: 5px 8px;
+                text-transform: uppercase;
+                width: auto;
+                @include breakpoint($medium-wide) {
+                    font-size: 20px;
+                    margin-right: 18px !important;
+                }
+            }
+            &:focus, &:hover {
+                border-bottom: 4px solid $color-ras-green--dark;
+                color: $color-white;
+            }
+        }
+        .rsNavSelected {
+            @extend %font-body--bold;
+            @include breakpoint($medium-tall) {
+                background-color: $color-white;
+                border-bottom: 4px solid $color-ras-green--dark;
+                color: $color-ras-green--dark;
+            }
+        }
+        @at-root #{&}--rsb {
+            .rsThumb {
+                &:focus, &:hover {
+                    border-bottom: 4px solid $color-school-rsb-dark;
+                    color: $color-school-rsb-dark;
+                }
+            }
+            .rsNavSelected {
+                @include breakpoint($medium-tall) {
+                    border-bottom: 4px solid $color-school-rsb-dark;
+                    color: $color-school-rsb-dark;
+                }
+            }
+        }
+        @at-root #{&}--rst {
+            .rsThumb {
+                &:focus, &:hover {
+                    border-bottom: 4px solid $color-school-rst;
+                    color: $color-school-rst;
+                }
+            }
+            .rsNavSelected {
+                @include breakpoint($medium-tall) {
+                    border-bottom: 4px solid $color-school-rst;
+                    color: $color-school-rst;
+                }
+            }
+        }
+    }
+}
+
+.swipe {
+    @include animation(swipe 2700ms 250ms linear infinite);
+    display: block;
+    margin-left: -5%;
+    text-align: center;
+    @include breakpoint($medium-tall) {
+        display: none;
+    }
+    .fa {
+        color: darken($color-white, 35%);
+        display: inline;
+        font-size: 16px;
+        padding: 0 2px;
+    }
+    .fa-long-arrow-left {
+        @include transform(scaleX(0.75) skew(20deg) translateY(-0.9em) translateX(1.25em));
+    }
+    .fa-long-arrow-right {
+        @include transform(scaleX(0.75) skew(20deg) translateY(-0.9em) translateX(-0.95em));
+    }
+    .fa-hand-o-up {
+        @include transform(scaleY(1.2));
+    }
+}

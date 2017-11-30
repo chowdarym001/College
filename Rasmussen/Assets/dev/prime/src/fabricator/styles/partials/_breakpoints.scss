@@ -1,0 +1,40 @@
+/*======
+Breakpoint Sass http://breakpoint-sass.com
+- Assume min-width (by default) if only a number
+- Set min-width/max-width if both values are numbers
+- If one value is a string, assume a feature/value pair
+- String tests together within parentheses, assume each item is a feature value pair
+- Declare our breakpoints. All min-width for now.
+
+"tp" = tweak point
+======*/
+
+$small: 480px;
+$small-wide: 640px;
+$medium-tall: 760px;
+$medium-wide: 960px;
+$large: 1100px;
+$minmax-large: 1200px 1599px;
+$tp-xlarge: 1200px;
+$tp-huge: 1300px;
+$tp-ginormous: 1400px;
+$tp-omgwide: 1500px;
+$tp-ridiculously-wide: 1600px;
+$tp-4k: 1800px;
+/*======
+Repeat list only because I dont think Breakpoint Sass can use these variables
+These values have to be displayed in a list
+=======*/
+$breakpoints: (
+    small: 480px,
+    small-wide: 640px,
+    medium-tall: 760px,
+    medium-wide: 960px,
+    large: 1100px,
+    $minmax-large: 1200px 1599px,
+    tp-xlarge: 1200px,
+    tp-huge: 1300px,
+    tp-ginormous: 1400px,
+    tp-omgwide: 1500px,
+    tp-ridiculously-wide: 1600px
+);

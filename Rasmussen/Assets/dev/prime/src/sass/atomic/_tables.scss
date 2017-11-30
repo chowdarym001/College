@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+    th {
+        background-color: lighten($color-text, 60%);
+        font-family: $font-headings;
+        text-align: left;
+    }
+    td {}
+    th,
+    td {
+        border: 1px solid lighten($color-text, 50%);
+        padding: 4px;
+    }
+}

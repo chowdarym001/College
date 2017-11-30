@@ -1,0 +1,147 @@
+<section class="section-content rmi" id="js-rmi">
+    <div class="container">
+        <h1 class="rmi__title">Questions? Talk with a program manager today.</h1>
+
+        <div class="rmi__wrapper" id="rmi__wrapper">
+            <div class="rmi__content">
+                <div class="rmi__info" id="rmi__info">
+                    <h2 class="rmi__subtitle">Request More Information</h2>
+                    <p>Fill out the form to receive:</p>
+
+                    <ul class="form-checklist" id="form-checklist">
+                        <li>
+                            <i class="fa fa-check-square-o color-ras--dark"></i> Personalized Financial Aid
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o color-ras--dark"></i> Customized Support Services
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o color-ras--dark"></i> Detailed Program Plan
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="thank-you.php" class="rmi__form rmi__form--ppc" method="post" novalidate="novalidate">
+                    <fieldset class="form-fieldset rmi__form-fieldset">
+                        <legend class="form-legend rmi__form-legend">Contact Information</legend>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="first_name">First name</label>
+                            <input class="form-input form-input--text" id="first_name" name="firstname" type="text" required="required" aria-required="true">
+                            <label for="first_name" class="form-label form-label--error">First name is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="last_name">Last name</label>
+                            <input class="form-input form-input--text" id="last_name" name="lastname" type="text" required="required" aria-required="true">
+                            <label for="last_name" class="form-label form-label--error">Last name is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="email">Email address</label>
+                            <input class="form-input form-input--email" id="email" name="emailaddress" type="email" required="required" aria-required="true">
+                            <label for="email" class="form-label form-label--error">Email address is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="phone">Phone number</label>
+                            <input class="form-input form-input--tel" id="phone" name="phone" type="tel" required="required" aria-required="true">
+                            <label for="phone" class="form-label form-label--error">Phone number is required.</label>
+                            <input name="phonehp" type="tel" id="phoneHP">
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="zip_code">ZIP code</label>
+                            <input class="form-input form-input--tel" id="zip_code" name="ziph" type="tel" required="required" aria-required="true" maxlength="5" min="11111" max="99999" pattern="[0-9]{0,5}">
+                            <label for="zip_code" class="form-label form-label--error">ZIP code is required.</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-fieldset rmi__form-fieldset">
+                        <legend class="form-legend rmi__form-legend">Educational Preferences</legend>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_school" name="school" data-after="preferred_program" data-target="preferred_program">
+                                <option value="" selected="selected">I'm Interested in…</option>
+                                <option value="bu">School of Business</option>
+                                <option value="de">School of Design</option>
+                                <option value="ed">School of Education</option>
+                                <option value="ah">School of Health Sciences</option>
+                                <option value="js">School of Justice Studies</option>
+                                <option value="nu">School of Nursing</option>
+                                <option value="te">School of Technology</option>
+                            </select>
+                            <label for="preferred_school" class="form-label--error">School is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_program" name="program" required="required" aria-required="true">
+                                <option value="">Preferred Program</option>
+                                <option value="SoB-Acctng"> Accounting</option>
+                                <option value="SoB-BusinessMgmt-BusAnalysis"> Business Analysis</option>
+                                <option value="SoB-BusinessMgmt"> Business Management</option>
+                                <option value="SoB-BusinessMgmt-Entrep"> Entrepreneurship</option>
+                                <option value="SoB-Finance"> Finance</option>
+                                <option value="SoB-HealthMgmt"> Healthcare Management</option>
+                                <option value="SoB-HR"> HR and Organizational Leadership</option>
+                                <option value="SoB-Marketing"> Marketing</option>
+                                <option value="SoB-SupplyChain"> Supply Chain and Logistics Management</option>
+                                <option value="SoB-Undecided"> Undecided</option>
+                            </select>
+                            <label for="preferred_program" class="form-label--error">Program is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_campus" name="campus" data-target="preferred_school" data-after="preferred_program" style="" required="required" aria-required="true">
+                                <option value="" class="no_class">Preferred Campus</option>
+                                <option value="Undecided">Undecided</option>
+                                <option disabled="">ONLINE CAMPUS</option>
+                                <option value="Online">Online</option>
+                                <option disabled="">MINNESOTA CAMPUSES</option>
+                                <option value="Blaine">Blaine</option>
+                                <option value="EdenPrairie">Bloomington</option>
+                                <option value="BrooklynPark">Brooklyn Park/Maple Grove</option>
+                                <option value="Eagan">Eagan</option>
+                                <option value="LakeElmo">Lake Elmo/Woodbury</option>
+                                <option value="Mankato">Mankato</option>
+                                <option value="Moorhead">Moorhead</option>
+                                <option value="StCloud">St. Cloud</option>
+                                <option disabled="">ILLINOIS CAMPUSES</option>
+                                <option value="Aurora">Aurora/Naperville</option>
+                                <option value="Mokena">Mokena/Tinley Park</option>
+                                <option value="Rockford">Rockford</option>
+                                <option value="Romeoville">Romeoville/Joliet</option>
+                                <option disabled="">FLORIDA CAMPUSES</option>
+                                <option value="FortMyers">Fort Myers</option>
+                                <option value="Pasco">New Port Richey/West Pasco</option>
+                                <option value="Ocala">Ocala</option>
+                                <option value="PascoSun">Land O' Lakes/East Pasco</option>
+                                <option value="Brandon">Tampa/Brandon</option>
+                                <option disabled="">WISCONSIN CAMPUSES</option>
+                                <option value="Appleton">Appleton</option>
+                                <option value="GreenBay">Green Bay</option>
+                                <option value="Wausau">Wausau</option>
+                                <option disabled="">NORTH DAKOTA CAMPUS</option>
+                                <option value="Fargo">Fargo</option>
+                                <option disabled="">KANSAS CAMPUSES</option>
+                                <option value="OverlandPark">Kansas City/Overland Park</option>
+                                <option value="Topeka">Topeka</option>
+                            </select>
+                            <label for="preferred_campus" class="form-label--error">Campus is required.</label>
+                        </div>
+
+                        <a class="button button--primary js-smooth-scroll" href="#">
+                            <button class="button__input" type="submit">
+                                <div class="button__icon"></div>
+                                <span class="button__title">Request Info Now</span>
+                            </button>
+                        </a>
+
+                        <div class="disclaimer">
+                            <p class="disclaimer__text">By requesting information, I authorize Rasmussen College to contact me by email, phone or text message at the number provided.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- Hidden Fields -->
+                    <input type="hidden" name="source" value="School Site">
+                    <input name="start_date" type="hidden" id="start_date" value="10 New Lead">
+                    <input name="subject" type="hidden" id="subject" value="School Site Request Info">
+                    <input name="campaign_code" type="hidden" id="campaign_code" value="SE - Google-LiveBall">
+                    <input name="formname" type="hidden" value="ras - Sendmeinfo">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>

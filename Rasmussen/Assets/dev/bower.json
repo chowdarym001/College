@@ -1,0 +1,21 @@
+{
+    "name": "rasmussen-college-sitecore-edu",
+    "description": "Rasmussen College EDU site in SiteCore CMS",
+    "authors": [
+    "Collegis Education"
+  ],
+    "private": true,
+    "ignore": [
+    "**/.*",
+    "test",
+    "tests"
+  ],
+    "devDependencies": {
+        "breakpoint-sass": "^2.6.1",
+        "infieldLabel": "^1.0.2",
+        "jquery": "~3.1.x",
+        "matchHeight": "matchheight#^0.7.0",
+        "normalize-css": "^4.1.1",
+        "susy": "^2.2.12"
+    }
+}

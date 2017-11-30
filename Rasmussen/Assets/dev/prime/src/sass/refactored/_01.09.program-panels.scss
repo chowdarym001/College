@@ -1,0 +1,489 @@
+.program-panels {
+    @extend %clearfix;
+    //@include program-panels;
+    overflow: hidden;
+    position: relative;
+    @at-root #{&}__container {
+        @extend %clearfix;
+        @extend %margin-centered;
+        width: 100%;
+    }
+    @at-root #{&}__header {
+        @extend %clearfix;
+        display: block;
+        margin-bottom: 40px;
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        @include font-size($h1-font-sizes);
+        margin: 0;
+    }
+    @at-root #{&}__subtitle {
+        @include font-size($intro-text-font-sizes);
+        //font-size: 20px;
+    }
+    // PROGRAM PANNELS COLUMNS: one, two, three
+    @at-root #{&}--one {
+        @at-root #{&} .program-card__banner {
+            @include breakpoint($medium-wide) {
+                @include span(first 5.5 of 12 no-gutters);
+            }
+        }
+        @at-root #{&} .program-card__details {
+            @include breakpoint($medium-wide) {
+                @include span(last 6.5 of 12 no-gutters);
+                padding: 20px 40px 20px 0;
+                &:first-child {
+                    &::before {
+                        left: -105px;
+                        width: 100%;
+                    }
+                }
+                &:last-child {
+                    &::before {
+                        left: -115px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @at-root #{&}--two {
+        @at-root #{&} .program-card {
+            @include breakpoint($large) {
+                @include span(first 5.975 of 12);
+                margin-bottom: 2%;
+                &:nth-child(2n) {
+                    @include span(last 5.975 of 12);
+                }
+            }
+        }
+        @at-root #{&} .program-card__banner {
+            @include breakpoint($small-wide) {
+                @include span(first 5.5 of 12 no-gutters);
+            }
+        }
+        @at-root #{&} .program-card__details {
+            @include breakpoint($small-wide) {
+                @include span(last 6.5 of 12 no-gutters);
+                padding: 20px 40px 20px 0;
+            }
+        }
+    }
+    @at-root #{&}--three {
+        @at-root #{&} .program-card {
+            @include breakpoint($large) {
+                @include span(first 5.975 of 12);
+                margin-bottom: 2%;
+                &:nth-child(2n) {
+                    @include span(last 5.975 of 12);
+                }
+            }
+            @include breakpoint($tp-ridiculously-wide) {
+                @include span(first 4 of 12);
+                margin-bottom: 2%;
+                &:nth-child(2n) {
+                    @include span(first 4 of 12);
+                }
+                &:nth-child(3n) {
+                    @include span(last 4 of 12);
+                }
+            }
+        }
+        @at-root #{&} .program-card__banner {
+            @include breakpoint($small-wide) {
+                @include span(first 5.5 of 12 no-gutters);
+            }
+        }
+        @at-root #{&} .program-card__details {
+            @include breakpoint($small-wide) {
+                @include span(last 6.5 of 12 no-gutters);
+                padding: 20px 40px 20px 0;
+            }
+        }
+    }
+}
+
+.program-card {
+    @extend %clearfix;
+    @include box-shadow(0, 3px, 3px, 3px, rgba($color-black, .05));
+    border: 1px solid darken($color-white, 20%);
+    background: $color-white;
+    overflow: hidden;
+    margin-bottom: 3%;
+    position: relative;
+    z-index: 0;
+    @at-root #{&} a {
+        display: block;
+        overflow: hidden;
+        text-decoration: none;
+        @at-root #{&}:focus {
+            .cta-inline--button {
+                background-color: $color-ras-green--light;
+                color: $color-white;
+            }
+        }
+        @at-root #{&}:hover {
+            .cta-inline--button {
+                background-color: $color-ras-green--light;
+                color: $color-white;
+            }
+        }
+    }
+    @at-root #{&}__banner {
+        @extend %clearfix;
+        background-color: gray;
+        background-image: url('http://lorempicsum.com/nemo/375/385/1');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 100%;
+        min-height: 125px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        @include breakpoint($small) {
+            min-height: 200px;
+        }
+        @at-root #{&} picture {
+            @extend %clearfix;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        @at-root #{&} img {
+            max-width: 100%;
+        }
+    }
+    @at-root #{&}__details {
+        @extend %clearfix;
+        height: 100%;
+        padding: 20px;
+        position: relative;
+        text-align: left;
+        z-index: 1;
+        @at-root #{&}::before {
+            background-color: $color-white;
+            display: block;
+            content: '';
+            height: 100%;
+            left: -60px;
+            position: absolute;
+            top: 0;
+            transform: skew(-16deg, 0);
+            width: 50%;
+            z-index: -1;
+        }
+    }
+    @at-root #{&}__text {
+        @extend %clearfix;
+        color: $color-text;
+        z-index: 2;
+        @at-root #{&} p {
+            margin: 10px 0;
+        }
+    }
+    @at-root #{&}__title {
+        display: inline-block;
+        font-family: $font-klavika--medium;
+        font-size: 24px;
+        margin: 10px 0;
+        position: relative;
+        &::after {
+            background-color: darken($color-white, 20%);
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 100%;
+        }
+    }
+    @at-root #{&}__subtitle {
+        color: darken($color-white, 40%);
+        border: 0;
+        display: inline-block;
+        font-family: $font-flama--book-italic;
+        font-size: 18px;
+        margin: 0;
+        text-decoration: none;
+        width: 100%;
+    }
+    @at-root #{&} .cta-inline--button {
+        @at-root #{&}:hover::after {
+            @include transform(translate(0, 0));
+        }
+    }
+}
+
+// PROGRAM PANNELS BACKGROUND IMAGES; DEFAULT STYLING FOR 3columns
+.program-card__banner {
+    // PATIENT CARE
+    @at-root #{&}--medical-assisting {
+        background-image: url(../../images/program-panels/program-panel-medical-assisting-xsmall.jpg);
+        background-position: 100% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-medical-assisting-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-medical-assisting-medium.jpg);
+            background-position: 50% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-medical-assisting-large.jpg);
+            background-position: 25% 50%;
+        }
+    }
+    @at-root #{&}--medical-laboratory-technician {
+        background-image: url(../../images/program-panels/program-panel-medical-laboratory-technician-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-medical-laboratory-technician-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-medical-laboratory-technician-medium.jpg);
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-medical-laboratory-technician-large.jpg);
+            background-position: 20% 50%;
+        }
+    }
+    @at-root #{&}--pharmacy-technician {
+        background-image: url(../../images/program-panels/program-panel-pharmacy-technician-xsmall.jpg);
+        background-position: 100% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-pharmacy-technician-small.jpg);
+            background-position: 50% 50%;
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-pharmacy-technician-medium.jpg);
+            background-position: 0 0;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-pharmacy-technician-large.jpg);
+        }
+    }
+    @at-root #{&}--phlebotomy {
+        background-image: url(../../images/program-panels/program-panel-phlebotomy-xsmall.jpg);
+        background-position: 100% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-phlebotomy-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-phlebotomy-medium.jpg);
+            background-position: 50% 100%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-phlebotomy-large.jpg);
+            background-position: 100% 100%;
+        }
+    }
+    @at-root #{&}--physical-therapist-assistant {
+        background-image: url(../../images/program-panels/program-panel-physical-therapist-assistant-xsmall.jpg);
+        background-position: 100% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-physical-therapist-assistant-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-physical-therapist-assistant-medium.jpg);
+            background-position: 40% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-physical-therapist-assistant-large.jpg);
+            background-position: 100% 100%;
+        }
+    }
+    @at-root #{&}--radiologic-technology {
+        background-image: url(../../images/program-panels/program-panel-radiologic-technology-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-radiologic-technology-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-radiologic-technology-medium.jpg);
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-radiologic-technology-large.jpg);
+            background-position: 75% 50%;
+        }
+        @include breakpoint($tp-ridiculously-wide) {
+            background-position: 65% 50%;
+        }
+    }
+    @at-root #{&}--surgical-technologist {
+        background-image: url(../../images/program-panels/program-panel-surgical-technologist-xsmall.jpg);
+        background-position: 100% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-surgical-technologist-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-surgical-technologist-medium.jpg);
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-surgical-technologist-large.jpg);
+        }
+    }
+    // PATIENT ADMINISTRATION
+    @at-root #{&}--health-information-management {
+        background-image: url(../../images/program-panels/program-panel-health-information-management-xsmall.jpg);
+        background-position: 80% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-health-information-management-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-health-information-management-medium.jpg);
+            background-position: 60% 50%;
+        }
+        @include breakpoint($large) {
+            background-position: 90% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-health-information-management-large.jpg);
+            background-position: 100% 75%;
+        }
+    }
+    @at-root #{&}--health-information-technician {
+        background-image: url(../../images/program-panels/program-panel-health-information-technician-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-health-information-technician-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-health-information-technician-medium.jpg);
+            background-position: 65% 50%;
+        }
+        @include breakpoint($large) {
+            background-position: 60% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-health-information-technician-large.jpg);
+            background-position: 80% 80%;
+        }
+    }
+    @at-root #{&}--health-sciences {
+        background-image: url(../../images/program-panels/program-panel-health-sciences-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-health-sciences-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-health-sciences-medium.jpg);
+            background-position: 70% 30%;
+        }
+        @include breakpoint($large) {
+            background-position: 60% 30%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-health-sciences-large.jpg);
+            background-position: 65% 50%;
+        }
+    }
+    @at-root #{&}--healthcare-management {
+        background-image: url(../../images/program-panels/program-panel-healthcare-management-xsmall.jpg);
+        background-position: 80% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-healthcare-management-small.jpg);
+            background-position: 50% 50%;
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-healthcare-management-medium.jpg);
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-healthcare-management-large.jpg);
+        }
+    }
+    @at-root #{&}--medical-administrative-assistant {
+        background-image: url(../../images/program-panels/program-panel-medical-administrative-assistant-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-medical-administrative-assistant-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-medical-administrative-assistant-medium.jpg);
+            background-position: 10% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-medical-administrative-assistant-large.jpg);
+        }
+    }
+    @at-root #{&}--medical-billing-coding {
+        background-image: url(../../images/program-panels/program-panel-medical-billing-coding-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-medical-billing-coding-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-medical-billing-coding-medium.jpg);
+            background-position: 40% 50%;
+        }
+        @include breakpoint($large) {
+            background-position: 50% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-medical-billing-coding-large.jpg);
+        }
+    }
+    // SOCIAL WELLNESS
+    @at-root #{&}--health-wellness {
+        background-image: url(../../images/program-panels/program-panel-health-wellness-xsmall.jpg);
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-health-wellness-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-health-wellness-medium.jpg);
+            background-position: 5% 50%;
+        }
+        @include breakpoint($medium-wide) {
+            background-position: 50% 50%;
+        }
+        @include breakpoint($large) {
+            background-position: 5% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-health-wellness-large.jpg);
+            background-position: 55% 25%;
+        }
+    }
+    @at-root #{&}--human-services {
+        background-image: url(../../images/program-panels/program-panel-human-services-xsmall.jpg);
+        background-position: 80% 50%;
+        @include breakpoint($small) {
+            background-image: url(../../images/program-panels/program-panel-human-services-small.jpg);
+        }
+        @include breakpoint($small-wide) {
+            background-image: url(../../images/program-panels/program-panel-human-services-medium.jpg);
+            background-position: 40% 50%;
+        }
+        @include breakpoint($medium-wide) {
+            background-position: 60% 50%;
+        }
+        @include breakpoint($large) {
+            background-position: 40% 50%;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url(../../images/program-panels/program-panel-human-services-large.jpg);
+            background-position: 50% 65%;
+        }
+    }
+}
+
+.program-panels {
+    @at-root #{&}--one {
+        @at-root #{&} .program-card__banner {
+            @at-root #{&}--medical-assisting {
+                background-size: cover;
+                @include breakpoint($small-wide) {
+                    background-position: 50% 20%;
+                }
+                @include breakpoint($medium-tall) {
+                    background-image: url(../../images/program-panels/program-panel-medical-assisting-xlarge.jpg);
+                    background-size: auto;
+                }
+            }
+            @at-root #{&}--medical-laboratory-technician {
+                background-size: cover;
+                @include breakpoint($small-wide) {
+                    background-position: 50% 20%;
+                }
+                @include breakpoint($medium-tall) {
+                    background-image: url(../../images/program-panels/program-panel-medical-laboratory-technician-xlarge.jpg);
+                    background-position: 75% 20%;
+                    background-size: auto;
+                }
+            }
+        }
+    }
+}

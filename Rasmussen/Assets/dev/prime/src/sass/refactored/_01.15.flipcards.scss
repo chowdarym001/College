@@ -1,0 +1,106 @@
+// FLIP CARDS
+.flip {
+    @include clearfix;
+    @at-root #{&}__grid {
+        @extend %reset-list;
+        @include span(12 of 12);
+    }
+    @at-root #{&}__card {
+        @include clearfix;
+        margin-bottom: 20px;
+        @include breakpoint($medium-tall) {
+            @include span(6 of 12);
+            margin-bottom: 40px;
+        }
+        @include breakpoint($tp-xlarge) {
+            @include span(4 of 12);
+        }
+        &:nth-of-type(2n) {
+            @include breakpoint($medium-tall) {
+                @include span(last 6 of 12);
+            }
+            @include breakpoint($tp-xlarge) {
+                @include span(first 4 of 12);
+            }
+        }
+        &:nth-of-type(3n) {
+            @include breakpoint($tp-xlarge) {
+                @include span(last 4 of 12);
+            }
+        }
+    }
+    @at-root #{&}__header {
+        @include clearfix;
+        text-align: center;
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        margin: 0 0 10px;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {}
+            @at-root #{&}-2 {}
+            @at-root #{&}-3 {
+                @include font-headings;
+                font-size: 28px;
+            }
+        }
+    }
+    @at-root #{&}__image {
+        background-color: $flipcard-bgcolor;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        @at-root #{&}::before {
+            background-color: rgba($flipcard-bgcolor, 0.75);
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+        &:focus, &:hover {
+            // on focus/hover, transition out psuedo bgcolor for full colored icons
+            &::before {
+                @include transition(all 250ms ease-in-out);
+                background-color: transparent;
+            }
+        }
+        @at-root #{&}::after {
+            content: "\f05a"; // FontAwesome info-circle
+            color: darken($color-white, 5%);
+        }
+        .svg {
+            display: block;
+            margin: auto;
+            max-height: 150px;
+            max-width: 275px;
+        }
+    }
+    @at-root #{&}__copy {
+        background-color: $color-white;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        @at-root #{&}::after {
+            content: "\f112"; // FontAwesome icon reply
+            color: darken($color-white, 15%);
+        }
+    }
+    .flip__image, .flip__copy {
+        padding: 20px;
+        &::after {
+            @include animation(flip 2.5s linear 0.5s infinite);
+            bottom: 10px;
+            display: block;
+            font-family: $font-fontawesome;
+            font-size: 24px;
+            position: absolute;
+            right: 10px;
+            @include breakpoint($tp-ridiculously-wide) {
+                right: 20px;
+            }
+        }
+    }
+}

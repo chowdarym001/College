@@ -1,0 +1,147 @@
+// PROGRAM PAGE
+.program {
+    @at-root #{&}-page {
+        @include clearfix;
+    }
+    @at-root #{&}-card-basic {
+        @include clearfix;
+        @at-root #{&}__grid {
+            @include clearfix;
+        }
+        @at-root #{&}__list {
+            @extend %reset-list;
+            @include clearfix;
+        }
+        @at-root #{&}__item {
+            @include clearfix;
+            @include span(12 of 12);
+            border-style: solid;
+            border-width: 3px;
+            border-top-width: 20px;
+            margin-bottom: 2.5%;
+            height: 280px;
+            padding: 30px;
+            position: relative;
+            @include breakpoint($small-wide) {
+                @include span(6 of 12);
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 4 of 12);
+                max-width: 280px;
+            }
+            @include breakpoint($tp-huge) {
+                @include span(first 3 of 12);
+            }
+            &:nth-of-type(2n) {
+                @include breakpoint($small-wide) {
+                    @include span(last 6 of 12);
+                }
+                @include breakpoint($medium-wide) {
+                    @include span(first 4 of 12);
+                }
+                @include breakpoint($tp-huge) {
+                    @include span(first 3 of 12);
+                }
+                @include breakpoint($tp-4k) {
+                    @include span(first 2.5 of 12);
+                }
+            }
+            &:nth-of-type(3n) {
+                @include breakpoint($medium-wide) {
+                    @include span(first 4 of 12);
+                    margin-right: 0;
+                }
+                @include breakpoint($tp-huge) {
+                    @include span(first 3 of 12);
+                }
+                @include breakpoint($tp-4k) {
+                    @include span(first 2.5 of 12);
+                }
+            }
+            &:nth-of-type(4n) {
+                @include breakpoint($tp-huge) {
+                    @include span(first 3 of 12);
+                    margin-right: 0;
+                }
+                @include breakpoint($tp-4k) {
+                    @include span(first 2.5 of 12);
+                }
+            }
+            &:nth-of-type(5n) {
+                @include breakpoint($tp-4k) {
+                    @include span(first 2.5 of 12);
+                    margin-right: 0;
+                }
+            }
+            @at-root #{&}--clear {
+                border-color: darken($color-white, 10%);
+            }
+            @at-root #{&}--rsb {
+                border-color: $color-school-rsb-dark;
+            }
+            @at-root #{&}--rsd {
+                border-color: $color-school-rsd;
+            }
+            @at-root #{&}--rse {
+                border-color: $color-school-rse;
+            }
+            @at-root #{&}--rshs {
+                border-color: $color-school-rshs--primary;
+            }
+            @at-root #{&}--rsjs {
+                border-color: $color-school-rsjs;
+            }
+            @at-root #{&}--rsn {
+                border-color: $color-school-rsn--primary;
+            }
+            @at-root #{&}--rst {
+                border-color: $color-school-rst;
+            }
+        }
+        @at-root #{&}__link {
+            @extend %cta-inline-arrow-absolute;
+            @include font-headings($font-headings--regular, 1);
+            color: $color-text;
+            border: 0;
+            display: inline-block;
+            font-size: 14px;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: $font-size-base;
+            }
+            &:focus, &:hover {
+                border: 0;
+                color: $color-ras-gold--dark;
+            }
+        }
+        @at-root #{&}__headline {
+            @include clearfix;
+            @at-root #{&}--lvl {
+                @at-root #{&}-1 {}
+                @at-root #{&}-2 {}
+                @at-root #{&}-3 {
+                    @include font-headings;
+                    font-size: 20px;
+                    @include breakpoint($tp-ridiculously-wide) {
+                        font-size: 24px;
+                    }
+                }
+                @at-root #{&}-4 {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    @include breakpoint($tp-ridiculously-wide) {
+                        font-size: $font-size-base;
+                    }
+                }
+            }
+        }
+        @at-root #{&}__cta {
+            @include clearfix;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+    }
+}

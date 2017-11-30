@@ -1,0 +1,34 @@
+<svg id="icon-mortarboard--gray" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 315.54 165.83">
+    <defs>
+        <style>
+            .fill-7f7f7f {
+                fill: #7f7f7f;
+            }
+            
+            .fill-898989 {
+                fill: #898989;
+            }
+            
+            .fill-e8b417 {
+                fill: #e8b417;
+            }
+            
+            .fill-f6d20a {
+                fill: #f6d20a;
+            }
+        </style>
+    </defs>
+    <title>icon-mortarboard--gray</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <g id="icon-mortarboard--gray">
+                <polygon class="fill-7f7f7f" points="315.54 49.21 157.98 102.67 36.34 61.51 32.69 60.28 0 49.21 32.69 39.01 36.34 37.87 157.78 0 315.54 49.21" />
+                <path class="fill-898989" d="M157.77,55.26c-44.25,0-80.14,9.68-80.14,21.62V130.6h.14c17-5.31,75.12,1.08,80,5.9,4.88-4.82,63-11.22,80-5.9h.14V76.88C237.91,64.94,202,55.26,157.77,55.26Z" />
+                <polygon class="fill-e8b417" points="36.34 37.87 36.34 115.78 32.69 115.78 32.69 39.01 36.34 37.87" />
+                <path class="fill-f6d20a" d="M34.74,107.73H34.5A8,8,0,0,0,31,123l-6.71,32.16c-1,5.62,2.72,10.66,10.16,10.66h.24Z" />
+                <path class="fill-e8b417" d="M34.26,107.73h.24A8,8,0,0,1,38,123l6.71,32.16c1,5.62-2.72,10.66-10.16,10.66h-.24Z" />
+                <image width="81" height="82" transform="translate(157.01 54.55)" xlink:href="data:image/png;base64,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" />
+            </g>
+        </g>
+    </g>
+</svg>

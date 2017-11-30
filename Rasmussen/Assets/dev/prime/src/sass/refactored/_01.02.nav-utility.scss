@@ -1,0 +1,247 @@
+// SECTION NAV
+.section-nav {
+    position: relative;
+    @at-root #{&}--utility {
+        @extend %clearfix;
+        background-color: $color-ras-gold--dark;
+    }
+    @at-root #{&}__contents {
+        @include breakpoint($medium-tall) {
+            float: right;
+            width: auto;
+        }
+    }
+    .container {
+        position: relative;
+    }
+}
+
+// NAV SECONDARY
+.nav-secondary {
+    @extend %clearfix;
+    display: none;
+    @include breakpoint($large) {
+        display: block;
+        float: left;
+        margin-right: 40px;
+        width: auto;
+    }
+    @at-root #{&}__list {
+        @extend %clearfix;
+        @extend %reset-list;
+        color: $color-text;
+        display: block;
+    }
+    @at-root #{&}__item {
+        display: block;
+        float: left;
+        @at-root #{&}--last {
+            .nav-secondary__link {
+                border-right: 0;
+            }
+        }
+    }
+    @at-root #{&}__link {
+        @extend %clearfix;
+        @extend %font-headings--medium;
+        border: 0;
+        color: $color-text;
+        display: inline-block;
+        float: left;
+        font-size: 14px;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: auto;
+        &:focus, &:hover {
+            border: 0;
+            color: $color-white;
+        }
+    }
+    @at-root #{&}__divider {
+        float: left;
+        padding: 4px 0;
+        width: auto;
+    }
+}
+
+// NAV UTILITY
+.nav-utility {
+    @extend %clearfix;
+    @include breakpoint($small-wide) {
+        float: right;
+        width: auto;
+    }
+    @at-root #{&}__list {
+        @extend %clearfix;
+        @extend %reset-list;
+        float: left;
+        margin-left: -20px;
+        width: 110%;
+        @include breakpoint($small) {
+            float: right;
+            margin-left: 0;
+            margin-right: 20px;
+            width: auto;
+        }
+    }
+    @at-root #{&}__item {
+        @extend %clearfix;
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        position: relative;
+        text-align: center;
+        width: 40px;
+        &::after {
+            @include transform(translate(-50%, -50%) skewX(40deg));
+            background-color: $color-ras-gold--light;
+            display: block;
+            content: '';
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+        @at-root #{&}--search {}
+        @at-root #{&}--call {}
+        @at-root #{&}--chat {}
+        @at-root #{&}--request {
+            padding-left: 10px;
+            width: auto;
+            &::after {
+                @include transform(translate(0, -50%) skewX(40deg));
+                background-color: $color-white;
+                display: block;
+                content: '';
+                height: 200%;
+                left: 0%;
+                position: absolute;
+                top: 50%;
+                width: 120%;
+            }
+        }
+    }
+    @at-root #{&}__link {
+        @extend %clearfix;
+        @extend %font-headings--medium;
+        border: 0;
+        color: $color-text;
+        display: block;
+        float: left;
+        font-size: 13px;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+        z-index: 1;
+        &:focus, &:hover {
+            border: 0;
+            color: $color-white;
+        }
+        .nav-utility__item--request & {
+            @extend %font-headings--bold;
+            &:focus, &:hover {
+                color: $color-ras-gold--dark;
+            }
+        }
+        @at-root #{&}--icon {
+            padding: 7px 10px;
+            @include breakpoint($small-wide) {
+                padding: 9px 10px;
+            }
+        }
+        @at-root #{&}--text {
+            padding: 10px;
+            &::after {
+                // fontawesome caret right
+                content: "\f0da";
+                display: inline-block;
+                font-family: $font-fontawesome;
+                font-size: 14px;
+                padding: 0 0 0 5px;
+                position: absolute;
+                top: 8px;
+                right: 0;
+            }
+        }
+    }
+    @at-root #{&}__label {
+        @extend %font-headings--medium;
+        display: none;
+        font-size: 13px;
+        letter-spacing: 0;
+        position: relative;
+        text-transform: uppercase;
+        @include breakpoint($small-wide) {
+            font-size: 14px;
+        }
+        @at-root #{&}--show {
+            display: inline-block;
+        }
+    }
+    .svg {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+    }
+}
+
+.utility-search {
+    @extend %clearfix;
+    clear: both;
+    display: none;
+    height: 170px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 50;
+    @at-root #{&}__container {
+        @extend %clearfix;
+        position: relative;
+        @include breakpoint($medium-tall) {
+            margin: auto;
+            max-width: 85%;
+        }
+    }
+    @at-root #{&}__contents {
+        @extend %clearfix;
+        background-color: rgba($color-text, .97);
+        padding: 20px 20px 0;
+        @include breakpoint($medium-tall) {
+            position: absolute;
+            right: 0;
+        }
+    }
+    @at-root #{&}__close {
+        border: 0;
+        color: $color-white;
+        position: absolute;
+        right: 20px;
+        text-decoration: none;
+        top: 5px;
+        &:focus, &:hover {
+            border: 0;
+            color: $color-ras-gold--dark;
+        }
+    }
+    @at-root #{&}__form {
+        @extend %clearfix;
+        .form__label {
+            @include span(12 of 12);
+            color: $color-white;
+        }
+        .form__input {
+            margin-bottom: 10px;
+            @include breakpoint($small) {
+                @include span(8 of 12 no-gutters);
+            }
+        }
+        .form__input--submit {
+            @include button-simple--primary;
+            @include breakpoint($small) {
+                @include span(4 of 12 no-gutters);
+            }
+        }
+    }
+}

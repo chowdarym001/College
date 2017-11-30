@@ -1,0 +1,73 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.HeaderNavModel
+
+
+   
+  <div class="global-header__inner">
+    <div class="brand-toggle-container">
+        <div class="header-brand header-brand--col11">
+            <a class="header-brand__link" href="#">
+                <svg class="svg header-brand__logo">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ras-logo-horizontal"></use>
+                </svg>
+            </a>
+        </div>
+        <a class="nav-toggle nav-toggle--mmenu js-nav-toggle--mmenu" href="#">
+            <div class="menu-burger">
+                <div class="menu-burger__layer menu-burger__layer--colored"></div>
+                <div class="menu-burger__layer menu-burger__layer--white"></div>
+                <div class="menu-burger__layer menu-burger__layer--colored"></div>
+                <div class="menu-burger__layer menu-burger__layer--white"></div>
+                <div class="menu-burger__layer menu-burger__layer--colored"></div>
+                <div class="menu-burger__title">Menu</div>
+            </div>
+        </a>
+        <div class="nav-skip">
+            <a class="nav-skip__link" href="#main-contents">Skip navigation, go to contents</a>
+        </div>
+    </div>
+   	<section class="section-mega-menu" role="group">
+           <nav class="mega-menu" id="mega-menu" role="navigation">
+               <ul class="mega-menu__list mega-menu__list--level1" role="menubar">
+                @foreach (var columns in Model.MultipleContentCards)
+                {
+                   <li class="mega-menu__item mega-menu__item--level1" role="menuitem" aria-haspopup="true">
+                       @Html.Sitecore().Field("Body", columns.ParentCard)
+                       <section class="mega-menu__submenu mega-menu__submenu--areas" aria-hidden="true">
+                           <div class="container">
+                               <a href="#" class="mega-menu__toggle mega-menu__toggle--close">
+                                   <i class="fa fa-close"></i>
+                               </a>
+                               <div class="mega-menu__multicolumn mega-menu__multicolumn--alpha mega-menu__multicolumn--@Html.Sitecore().Field("Title", columns.ParentCard)">
+                                   <section class="mega-menu__column mega-menu__column--alpha">
+                                       <ul class="mega-menu__list mega-menu__list--level2" role="menu">
+                                        @foreach (var row in columns.ChildCardlist)
+                                        {
+                                           <li class="mega-menu__item mega-menu__item--level2 " role="menuitem">
+                                               @Html.Sitecore().Field("Footer", row)
+                                               <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+                                                   @Html.Sitecore().Field("Body", row)
+                                                   
+                                               </div>
+                                           </li>
+                                        }
+                                        
+                                           <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+                                               @Html.Sitecore().BeginField("CTA", columns.ParentCard, new { @class = "mega-menu__link mega-menu__link--level2 mega-menu__link--childless" })
+                                               @Html.Sitecore().EndField()
+                                           </li>
+                                       
+                                       </ul>
+                                   </section>
+                               </div>
+                           </div>
+                       </section>
+                   </li>
+                  
+                }
+               </ul>
+           </nav>   
+    </section>
+</div>
+   

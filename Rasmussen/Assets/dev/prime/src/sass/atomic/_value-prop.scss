@@ -1,0 +1,350 @@
+.value-prop {
+    @include value-prop();
+    clear: both;
+    display: block;
+    height: auto;
+    position: relative;
+    margin: 0 0 2px 0;
+    min-height: 480px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+}
+// Value-Prop Card: First-Child, Last-Child, Only-Child
+.value-prop-card {
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    z-index: +1;
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+    &:first-child,
+    &:last-child {
+        @include span(12 of 12 inside first no-gutters);
+        color: currentColor;
+        height: inherit;
+    }
+    &:first-child {
+        color: currentColor;
+        float: left;
+        @include breakpoint($small-wide $medium-wide) {
+            margin: 32px 0 32px 0;
+        }
+        @include breakpoint($medium-wide) {
+            @include span(6.6 of 12 first inside no-gutters);
+        }
+        &::after {
+            background: inherit;
+            content: '';
+            display: block;
+            height: 100%;
+            left: -10%;
+            position: absolute;
+            top: 0;
+            transform: skew(-12deg, 0);
+            width: 100%;
+            z-index: -1;
+        }
+        .value-prop-content {
+            margin: 0 auto 0 auto;
+            padding: 48px 20px 24px 20px;
+            @include breakpoint($medium-tall) {
+                padding: 48px 20px 0 20px;
+            }
+            @include breakpoint($medium-wide) {
+                margin: 0;
+                padding: 64px 22.5% 64px 0;
+            }
+        }
+    }
+    &:last-child {
+        background: transparent;
+        color: currentColor;
+        float: right;
+        width: 100%;
+        @include breakpoint($small-wide $medium-wide) {
+            margin: 0 0 48px 0;
+        }
+        @include breakpoint($medium-wide) {
+            background: transparent;
+            @include span(5.4 of 12 last inside no-gutters);
+        }
+        &::before,
+        &::after {
+            background: currentColor;
+        }
+        // The left side is the diagonal psuedo-background piece.
+        &::before {
+            content: none;
+            @include breakpoint($medium-wide) {
+                content: '';
+            }
+            display: block;
+            height: 100%;
+            left: -10%;
+            position: absolute;
+            transform: skew(-12deg, 0);
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        // The right side of the matching color of the left side diagonal container that extends the background farther rightward.
+        &::after {
+            height: 150%;
+            left: -50%;
+            transform: skew(0, -6deg);
+            width: 200%;
+            z-index: -1;
+            @include breakpoint($medium-wide) {
+                left: 55%;
+                transform: skew(0, 0);
+                width: 400%;
+            }
+        }
+        .value-prop-content {
+            margin: 0 auto 0 auto;
+            padding: 64px 29px 48px 20px;
+            @include breakpoint($small-wide $medium-wide) {
+                margin: 32px 0 32px 0;
+            }
+            @include breakpoint($medium-wide) {
+                margin: 0;
+                padding: 64px 0 64px 5%;
+            }
+        }
+    }
+    &:last-child:only-child {
+        @include span(12 of 12 no-gutters);
+        background: $color-ras-green--dark;
+        float: left;
+        width: 520px;
+        transform: skew(0, 0);
+        float: left;
+        &::after,
+        &::before {
+            background: inherit;
+            transform: skew(0, 0);
+            width: 100%;
+        }
+        &::after {
+            left: 0;
+        }
+        &::before {
+            left: 0;
+        }
+        .value-prop-content {
+            margin: 0 auto;
+            max-width: 768px;
+            padding: 64px 48px;
+        }
+    }
+    .cta-inline {
+        clear: both;
+        color: $color-white;
+        display: block;
+        font-family: $font-klavika-bold;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1.33;
+        margin: 32px auto 48px auto;
+        max-width: 200px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: capitalize;
+        @include breakpoint($small-wide $medium-wide) {
+            text-align: left;
+            float: left;
+        }
+        @include breakpoint($medium-wide) {
+            text-align: center;
+            margin: 12px 0 32px 0;
+        }
+        @include breakpoint($small) {
+            max-width: 100%;
+        }
+        &::after {
+            content: '\00a0\f054';
+            display: inline;
+            font: 14px/150% 'FontAwesome';
+            margin: -2px 0 0 0;
+            position: relative;
+        }
+        @include breakpoint($small-wide) {
+            &::after {
+                display: inline-block;
+                transform: translate(0, 0);
+                transition: transform .250s ease-in-out;
+            }
+            &:hover::after {
+                transform: translate(4px, 0);
+            }
+        }
+    }
+}
+// Value-Prop Card: Inner Container for Padding
+.value-prop-content {
+    color: $color-white;
+    text-align: center;
+    @include breakpoint($small) {
+        text-align: left;
+    }
+    @include breakpoint($medium-wide) {
+        text-align: center;
+    }
+}
+.value-prop-accreditation {
+    background: currentColor;
+    box-shadow: 0 0 8px rgba($color-gray-dark, .2);
+    color: $color-white;
+    display: block;
+    height: 51px;
+    margin: 45px auto;
+    object-fit: cover;
+    position: relative;
+    width: 60px;
+    &.accreditation-ccne-left {
+        background: url("../images/ppc/rsn/value-prop-accreditation-ccne-760.png") 50% 50%/cover $color-white;
+        @include breakpoint($small-wide) {
+            position: absolute;
+            margin: 15px 15px 0 0;
+            right: 40px;
+        }
+        @include breakpoint($medium-wide) {
+            display: block;
+            height: 62px;
+            left: calc(50% - 115px);
+            margin-top: 15px;
+            width: 80px;
+            position: absolute;
+        }
+    }
+    &.accreditation-ccne-right {
+        background: url("../images/ppc/rsn/value-prop-accreditation-ccne-760.png") 50% 50%/cover $color-white;
+        display: block;
+        @include breakpoint($small-wide) {
+            position: absolute;
+            margin: 15px 15px 0 0;
+            right: 40px;
+        }
+        @include breakpoint($medium-wide) {
+            height: 62px;
+            margin: 15px 0 0 0;
+            right: calc(50% - 60px);
+            width: 80px;
+        }
+    }
+    @include breakpoint($small-wide) {
+        margin: 75px auto 0;
+    }
+    @include breakpoint($medium-wide) {
+        margin: 75px auto 0;
+    }
+}
+.value-prop-group {
+    @extend %prop-group;
+}
+.value-prop-heading,
+.value-prop-paragraph {
+    color: currentColor;
+    display: inline-block;
+}
+.value-prop-heading {
+    @extend %prop-heading;
+    font-weight: normal;
+    padding: 0;
+    position: relative;
+    margin: 12px auto 4px auto;
+    @include breakpoint($small-wide $medium-tall) {
+        margin-left: 5%;
+        margin-left: calc(0% + 0px);
+    }
+    @include breakpoint($small-wide $medium-wide) {
+        margin: 0 auto 12px auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @include breakpoint($medium-tall $medium-wide) {
+        margin: 0 auto 24px auto;
+        padding: 0;
+    }
+    @include breakpoint($medium-wide) {
+        margin: 0 auto 12px auto;
+        padding: 15px 0 10px 0;
+    }
+}
+.value-prop-paragraph {
+    @extend %prop-paragraph;
+    @include breakpoint($small $small-wide) {
+        padding: 10px 0 0 0;
+        text-align: center;
+    }
+}
+// Value Prop Card: School Colors
+.value-prop-rsb {
+    @include value-prop($color-school-rsb,
+    $color-school-rsb-light,
+    $color-school-rsb-dark);
+}
+.value-prop-rsd {
+    @include value-prop($color-school-rsd,
+    $color-school-rsd-light,
+    $color-school-rsd-dark);
+}
+.value-prop-rse {
+    @include value-prop($color-school-rse,
+    $color-school-rse-light,
+    $color-school-rse-dark);
+}
+.value-prop-rshs {
+    @include value-prop($color-school-rshs--primary,
+        $color-school-rshs--support--light,
+        $color-school-rshs--support--dark);
+}
+.value-prop-rsjs {
+    @include value-prop($color-school-rsjs,
+    $color-school-rsjs-light,
+    $color-school-rsjs-dark);
+}
+.value-prop-rsn {
+    @include value-prop($color-school-rsn--support--light,
+        $color-school-rsn--primary,
+        $color-school-rsn--support--dark);
+}
+.value-prop-rst {
+    @include value-prop($color-school-rst,
+    $color-school-rst-light,
+    $color-school-rst-dark);
+    .value-prop-card:first-child .value-prop-heading,
+    .value-prop-card:first-child .value-prop-paragraph,
+    .value-prop-card:first-child .cta-inline {
+        color: $color-body-text;
+    }
+}
+// Horizontal Rule
+.value-prop-rule {
+    @extend %prop-rule;
+    background: transparentize($color-white, .625);
+    color: transparentize($color-black, .625);
+    margin: 24px 0 12px -8px;
+    mix-blend-mode: overlay; // Experimental, Newer Browsers
+    @include breakpoint($medium-wide) {
+        margin: 40px 0 100px -8px;
+        opacity: 1;
+    }
+}
+// Value-Prop Card: SVG-Container
+.value-prop-svg {
+    @extend %prop-svg;
+    margin: 0 auto 0 auto;
+    @include breakpoint($small-wide $medium-tall) {
+        margin: 0;
+    }
+}

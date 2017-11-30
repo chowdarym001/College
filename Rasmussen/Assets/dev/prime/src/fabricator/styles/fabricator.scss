@@ -1,0 +1,37 @@
+/**
+ * Fabricator styles
+ * @author Luke Askew
+ * Class selectors are namespaced with "f-"
+ */
+
+$settings: (
+	theme: light,
+	accent: hsl(0, 0%, 46%),
+	menu-width: 14rem
+);
+
+@import 'susy';
+@import 'breakpoint';
+
+// import project dependencies
+@import '../../sass/utilities/_01.breakpoints';
+@import '../../sass/utilities/_02.variables';
+@import '../../sass/utilities/_03.01.colors';
+@import '../../sass/utilities/_04.fonts';
+@import '../../sass/utilities/_08.mixins';
+@import '../../sass/utilities/_09.placeholders';
+
+@import 'partials/variables';
+@import 'partials/code';
+@import 'partials/color-chips';
+@import 'partials/controls';
+@import 'partials/item';
+@import 'partials/layout';
+@import 'partials/menu';
+
+
+
+
+@import 'partials/f-overrides';
+
+

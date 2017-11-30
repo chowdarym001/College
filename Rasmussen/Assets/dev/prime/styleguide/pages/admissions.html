@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+
+
+
+        <!-- project styles -->
+        <link rel="stylesheet" href="../../css/styles.css">
+        <!-- /project styles -->
+
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <!-- // Bugherd testing script required for QA -->
+        <script type='text/javascript'>
+            (function(d, t) {
+                var bh = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                bh.type = 'text/javascript';
+                bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xwwmnrlzrjcehtljffzjlw';
+                s.parentNode.insertBefore(bh, s);
+            })(document, 'script');
+        </script>
+
+    </head>
+
+    <body>
+
+            <div class="page-wrapper"><header class="global-header" role="banner">
+	<section class="section-nav section-nav--utility">
+	    <div class="container">
+	        <div class="section-nav__contents">
+	            <section class="nav-secondary">
+	                <ul class="nav-secondary__list">
+	                    <li class="nav-secondary__item">
+	                        <a href="#" class="nav-secondary__link">
+	                            Student Login
+	                        </a>
+	                    </li>
+	                    <span class="nav-secondary__divider">|</span>
+	                    <li class="nav-secondary__item nav-secondary__item--last">
+	                        <a href="#" class="nav-secondary__link">
+	                            About Us
+	                        </a>
+	                    </li>
+	                </ul>
+	            </section>
+	            <section class="nav-utility">
+	                <ul class="nav-utility__list">
+	                    <li class="nav-utility__item nav-utility__item--search">
+	                        <a class="nav-utility__link nav-utility__link--icon js-search-toggle" href="#utility-search">
+	                            <svg class="svg icon-search-glasses--gray">
+	                                <use xlink:href="#icon-search-glasses--gray"></use>
+	                            </svg>
+	                            <span class="nav-utility__label">Search Site</span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-utility__item nav-utility__item--call">
+	                        <a class="nav-utility__link nav-utility__link--icon" href="tel:888-549-6755">
+	                            <svg class="svg icon-phone-ring--gray">
+	                                <use xlink:href="#icon-phone-ring--gray"></use>
+	                            </svg>
+	                            <span class="nav-utility__label">Call Us</span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-utility__item nav-utility__item--chat">
+	                        <a class="nav-utility__link nav-utility__link--icon" href="#">
+	                            <svg class="svg icon-chat-bubbles--gray">
+	                                <use xlink:href="#icon-chat-bubbles--gray"></use>
+	                            </svg>
+	                            <span class="nav-utility__label">Live Chat</span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-utility__item nav-utility__item--request">
+	                        <a href="#js-rmi" class="nav-utility__link nav-utility__link--text js-smooth-scroll">
+	                            <span class="nav-utility__label nav-utility__label--show">Request Info</span>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </section>
+	        </div>
+	    </div>
+	
+	    <div class="utility-search" id="utility-search">
+	        <div class="utility-search__container">
+	            <div class="utility-search__contents">
+	                <a class="utility-search__close" href="#">
+	                    <i class="fa fa-close"></i>
+	                </a>
+	                <form action="#" class="form utility-search__form" method="get">
+	                    <div class="field-group field-group--odd">
+	                        <label data-role="label" class="form__label" for="form-input--search" id="form-label--search">Search our site</label>
+	                        <input class="form__input" id="form-input--search" name="form-input--search" type="text" tabindex="1" placeholder="Nursing, business, etc" required />
+	                        <input class="form__input form__input--submit" id="submit-utility-search" name="form__input--submit" type="submit" value="Search now">
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</section>	<div class="global-header__inner">
+		<div class="brand-toggle-container">
+            <div class="header-brand">
+				<a class="header-brand__link" href="#">
+					<svg class="svg header-brand__logo">
+                        <use xlink:href="#ras-logo-horizontal"></use>
+                    </svg>
+				</a>
+			</div>
+			<a class="nav-toggle nav-toggle--mmenu js-nav-toggle--mmenu" href="#">
+				<div class="menu-burger">
+					<div class="menu-burger__layer menu-burger__layer--colored"></div>
+					<div class="menu-burger__layer menu-burger__layer--white"></div>
+					<div class="menu-burger__layer menu-burger__layer--colored"></div>
+					<div class="menu-burger__layer menu-burger__layer--white"></div>
+					<div class="menu-burger__layer menu-burger__layer--colored"></div>
+					<div class="menu-burger__title">Menu</div>
+				</div>
+			</a>
+            <div class="nav-skip">
+                <a class="nav-skip__link" href="#main-contents">Skip navigation, go to contents</a>
+            </div>
+		</div>
+		<nav class="offcanvas-nav offcanvas-nav--mmenu" id="offcanvas-nav--mmenu" role="navigation">
+		    <div class="offcanvas-nav__container">
+		        <ul class="offcanvas-nav__list offcanvas-nav__list--level1" role="menu">
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Home</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem">
+		                <span class="offcanvas-nav__link offcanvas-nav__link--level1">Areas of Study</span>
+		                <ul class="offcanvas-nav__list offcanvas-nav__list--level2" role="menu">
+		                   <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--childless" href="#">All areas of study</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Business</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All Business programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Accounting</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Accounting programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Business Management</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Business Management programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Finance</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Finance programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Healthcare Management</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Healthcare Management programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Human Resoures and Organizational Leadership</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Human Resources and Organizational Leadership programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Marketing</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Marketing programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Supply Chain and Logistics Management</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Supply Chain and Logistics Management programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Business</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Business Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Design</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Design programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Graphic Design</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Graphic Design programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Design</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Design Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Education</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Education programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Early Childhood Education</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Early Childhood Education program</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Education</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Education Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Healthcare</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Healthcare programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health and Wellness</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health and Wellness programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health Information Management</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health Information Management programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health Information Technician</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health Information Technician programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Health Sciences</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Health Sciences programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Human Services</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Human Services programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Administrative Assistant</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Administrative Assistant programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Assisting</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Assisting programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Diploma</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Billing and Coding</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Billing and Coding programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Medical Laboratory Technician</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Medical Laboratory Technician programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Pharmacy Technican</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Pharmacy Technician programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Physical Therapist Assistant</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Physical Therapist Assistant programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Radiologic Technology</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Radiologic Technology programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Surgical Technologist</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Surgical Technologist programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Health Sciences</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Healthcare Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Justice Studies</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Justice Studies programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Criminal Justice</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Criminal Justice programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Law Enforcement</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Law Enforcement programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Academic Certificate</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Law Enforcement Skills Certificate</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Paralegal</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Paralegal programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Certificate</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Justice Studies</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Justice Studies Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Nursing</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Nursing programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Professional Nursing (ADN)</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Professional Nursing (ADN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Professional Nursing Associates</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">ADN Mobility Entrance Option</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Practical Nursing (LPN)</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Practical Nursing (LPN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Diploma</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Bachelor of Science in Nursing (BSN)</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Bachelor of Science in Nursing (BSN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">BSN Standard Entrance Option</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">BSN Second Degree Option</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">RN to BSN Entrance Option</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">RN to BSN programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Master of Science in Nursing</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Master of Science in Nursing (MSN) programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Master's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Nursing</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Nursing Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Technology</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">All Technology programs</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Computer Science</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Computer Science programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Data Analytics</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Data Analytics programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Information Security</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Information Security programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Information Technology Management</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Information Technology Management programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Software Application Development</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Software Application Development programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Web Programming</span>
+		                                <ul class="offcanvas-nav__list offcanvas-nav__list--level4" role="menu">
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless" href="#">Web Programming programs</a>
+		                                    </li>
+		                                    <li class="offcanvas-nav__item offcanvas-nav__item--level4" role="menuitem">
+		                                        <a class="offcanvas-nav__link offcanvas-nav__link--level4 offcanvas-nav__link--childless offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3 offcanvas-nav__item--divider" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">About the School of Technology</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--childless" href="#">Technology Blog</a>
+		                            </li>
+		                        </ul>
+		                    </li>    </ul>    
+		            </li>            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem">
+		                <span class="offcanvas-nav__link offcanvas-nav__link--level1">Degrees</span>
+		                <ul class="offcanvas-nav__list offcanvas-nav__list--level2" role="menu">
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--childless" href="#">Find your degree</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program" href="#">Diploma</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program" href="#">Certificate</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program" href="#">Associate's Degree</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program" href="#">Bachelor's Degree</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program" href="#">Master's Degree</a>
+		                    </li>
+		                </ul>
+		            </li>            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem">
+		                <span class="offcanvas-nav__link offcanvas-nav__link--level1">Locations</span>
+		                <ul class="offcanvas-nav__list offcanvas-nav__list--level2" role="menu">
+		                   <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <a class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--childless" href="#">Explore all locations</a>
+		                    </li>
+		                    <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Florida</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All Florida campuses</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program">Fort Myers</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Ocala</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Tampa/Brandon</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Land O'Lakes</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">New Port Richey/West Pasco</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Illinois</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All Illinois campuses</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Aurora/Naperville</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Mokena/Tinley Park</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Rockford</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Romeoville/Joliet</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Kansas</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All Illinois campuses</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Kansas City/Overland Park</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Topeka</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Minnesota</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All Minnesota campuses</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Blaine</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Bloomington</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Brooklyn Park/Maple Grove</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Eagan</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Lake Elmo/Woodbury</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Mankato</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Moorhead</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">St. Cloud</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">North Dakota</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All North Dakota campuses</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Fargo</a>
+		                            </li>
+		                        </ul>
+		                    </li>        <li class="offcanvas-nav__item offcanvas-nav__item--level2" role="menuitem">
+		                        <span class="offcanvas-nav__link offcanvas-nav__link--level2 offcanvas-nav__link--program">Wisconsin</span>
+		                        <ul class="offcanvas-nav__list offcanvas-nav__list--level3" role="menu">
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3" href="#">All Wisconsin campuses</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Green Bay</a>
+		                            </li>
+		                            <li class="offcanvas-nav__item offcanvas-nav__item--level3" role="menuitem">
+		                                <a class="offcanvas-nav__link offcanvas-nav__link--level3 offcanvas-nav__link--program" href="#">Wausau</a>
+		                            </li>
+		                        </ul>
+		                    </li>    </ul>
+		            </li>            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Student Experience</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Tuition &#38; Aid</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Admissions</a>
+		            </li>
+		        </ul>
+		        <ul class="offcanvas-nav__list offcanvas-nav__list--level1 offcanvas-nav__list--alternate" role="menu">
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">About Us</a>
+		            </li>
+		            <li class="offcanvas-nav__item offcanvas-nav__item--level1" role="menuitem" aria-haspopup="false">
+		                <a class="offcanvas-nav__link offcanvas-nav__link--childless" href="#">Student Login</a>
+		            </li>
+		        </ul>
+		    </div>
+		</nav>		<section class="section-mega-menu" role="group">
+		    <nav class="mega-menu" id="mega-menu" role="navigation">
+		        <ul class="mega-menu__list mega-menu__list--level1" role="menubar">
+		            <li class="mega-menu__item mega-menu__item--level1" role="menuitem" aria-haspopup="true">
+		                <a class="mega-menu__link mega-menu__link--level1" href="#">Areas of Study</a>
+		                <section class="mega-menu__submenu mega-menu__submenu--areas" aria-hidden="true">
+		                    <div class="container">
+		                       <a href="#" class="mega-menu__toggle mega-menu__toggle--close">
+		                            <i class="fa fa-close"></i>
+		                        </a>
+		                        <div class="mega-menu__multicolumn mega-menu__multicolumn--alpha mega-menu__multicolumn--descendants">
+		                           <section class="mega-menu__column mega-menu__column--alpha">
+		                                <ul class="mega-menu__list mega-menu__list--level2" role="menu">
+		                                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rsb" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Business</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Accounting</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Business Management</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Finance</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Healthcare Management</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Human Resources and Oragnizational Leadership</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Marketing</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Supply Chain and Logistcis Management</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Business programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Business Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rsd" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Design</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Graphic Design</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link  mega-menu__link--level3 mega-menu__link--childless">All Design programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link  mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Design Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rse" role="menu">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Education</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Early Childhood Education</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link  mega-menu__link--level3 mega-menu__link--childless">All Education programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link  mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Education Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rshs" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Health Sciences</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Health and Wellness</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Health Information Management</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Health Information Technician</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Health Sciences</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Human Services</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Medical Administrative Assistant</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Medical Assisting</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Diploma</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Medical Billing and Coding</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Medical Laboratory Technician</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Pharmacy Technician</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Physical Therapist Assistant</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Radiologic Technology</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Surgical Technologist</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="list">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Health Sciences programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Health Sciences Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rsjs" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Justice Studies</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Criminal Justice</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Law Enforcement</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Academic Certificate</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Skills Certificate</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Paralegal</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Certificate</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Justice Studies programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Justice Studies Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rsn" role="menu">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Nursing</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Professional Nursing (ADN)</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Professional Nursing Associates</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">ADN Mobility Entrance Option</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Practical Nursing (LPN)</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">LPN Diploma</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Bachelor of Science in Nursing (BSN)</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">BSN Standard Entrance Option</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">BSN Second Degree Option</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">RN to BSN Entrance Option</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">RN to BSN Credential</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Master of Science in Nursing</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Master’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Nursing programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Nursing Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--rst" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Technology</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Computer Science</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Data Analytics</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelor’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Information Security</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Bachelors’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Information Technology Management</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Associate's Degree</a>
+		                                                            </li>
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link mega-menu__link--level4 mega-menu__link--childless">Bachelor's Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Software Application Development</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3">Web Programming</a>
+		                                                    <div class="mega-menu__multicolumn mega-menu__multicolumn--gamma">
+		                                                        <ul class="mega-menu__list mega-menu__list--level4" role="menu">
+		                                                            <li class="mega-menu__item mega-menu__item--level4" role="menuitem">
+		                                                                <a href="#" class="mega-menu__link  mega-menu__link--level4 mega-menu__link--childless">Associate’s Degree</a>
+		                                                            </li>
+		                                                        </ul>
+		                                                    </div>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Technology programs</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Leadership and Mission</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Technology Blog</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Explore all areas of study</a>
+		                                    </li>
+		                                </ul>
+		                            </section>
+		                        </div>
+		                    </div>
+		                </section>            </li>
+		            <li class="mega-menu__item mega-menu__item--level1" role="menuitem" aria-haspopup="true">
+		                <a class="mega-menu__link mega-menu__link--level1" href="#">Degrees</a>
+		                <section class="mega-menu__submenu mega-menu__submenu--degrees" aria-hidden="true">
+		                    <div class="container">
+		                        <div class="mega-menu__multicolumn mega-menu__multicolumn--alpha mega-menu__multicolumn--centered">
+		                            <section class="mega-menu__column mega-menu__column--alpha">
+		                                <ul class="mega-menu__list mega-menu__list--level2" role="menu">
+		                                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Certificate</a>
+		                                    </li>
+		                                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Diploma</a>
+		                                    </li>
+		                                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Associate's Degree</a>
+		                                    </li>
+		                                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Bachelor's Degree</a>
+		                                    </li>
+		                                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Master's Degree</a>
+		                                    </li>
+		                                    <li class="mega-menu__item mega-menu__item--level2" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Find your degree</a>
+		                                    </li>
+		                                </ul>
+		                            </section>
+		                        </div>
+		                    </div>
+		                </section>            </li>
+		            <li class="mega-menu__item mega-menu__item--level1" role="menuitem" aria-haspopup="true">
+		                <a class="mega-menu__link mega-menu__link--level1" href="#">Locations</a>
+		                <section class="mega-menu__submenu mega-menu__submenu--locations" aria-hidden="true">
+		                    <div class="container">
+		                        <a href="#" class="mega-menu__toggle mega-menu__toggle--close">
+		                            <i class="fa fa-close"></i>
+		                        </a>
+		                        <div class="mega-menu__multicolumn mega-menu__multicolumn--alpha mega-menu__multicolumn--descendants">
+		                           <section class="mega-menu__column mega-menu__column--alpha">
+		                                <ul class="mega-menu__list mega-menu__list--level2" role="menu">
+		                                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--fl" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Florida</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Fort Myers</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Land O'Lakes/East Pasco</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">New Port Richey/West Pasco</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Ocala</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Tampa/Brandon</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Florida campuses</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--il" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Illinois</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Aurora/Naperville</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Mokena/Tinley Park</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Rockford</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Romeoville/Joliet</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Illinois campuses</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--ks" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Kansas</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Kansas City/Overland Park</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Topeka</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Kansas campuses</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--mn" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Minnesota</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Blaine</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Bloomington</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Brooklyn Park/Maple Grove</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Eagan</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Lake Elmo/Woodbury</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Mankato</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Moorhead</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">St. Cloud</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Minnesota campuses</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--nd" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">North Dakota</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Fargo</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All North Dakota campuses</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--wi" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2">Wisconsin</a>
+		                                        <div class="mega-menu__multicolumn mega-menu__multicolumn--beta">
+		                                            <ul class="mega-menu__list mega-menu__list--level3" role="menu">
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Green Bay</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">Wausau</a>
+		                                                </li>
+		                                                <li class="mega-menu__item mega-menu__item--level3 mega-menu__item--divider" role="menuitem">
+		                                                    <a href="#" class="mega-menu__link mega-menu__link--level3 mega-menu__link--childless">All Wisconsin campuses</a>
+		                                                </li>
+		                                            </ul>
+		                                        </div>
+		                                    </li>                    <li class="mega-menu__item mega-menu__item--level2 mega-menu__item--childless" role="menuitem">
+		                                        <a href="#" class="mega-menu__link mega-menu__link--level2 mega-menu__link--childless">Explore all locations</a>
+		                                    </li>
+		                                </ul>
+		                            </section>
+		                        </div>
+		                    </div>
+		                </section>            </li>
+		            <li class="mega-menu__item mega-menu__item--level1 mega-menu__item--childless" role="menuitem" aria-haspopup="false">
+		                <a class="mega-menu__link mega-menu__link--level1 mega-menu__link--childless" href="#">Student Experience</a>
+		            </li>
+		            <li class="mega-menu__item mega-menu__item--level1 mega-menu__item--childless" role="menuitem" aria-haspopup="false">
+		                <a class="mega-menu__link mega-menu__link--level1 mega-menu__link--childless" href="#">Tuition &#38; Aid</a>
+		            </li>
+		            <li class="mega-menu__item mega-menu__item--level1 mega-menu__item--childless" role="menuitem" aria-haspopup="false">
+		                <a class="mega-menu__link mega-menu__link--level1 mega-menu__link--childless" href="#">Admissions</a>
+		            </li>
+		        </ul>
+		    </nav>
+		</section>	</div>
+</header><main class="main-contents" id="main-contents" role="main">
+<div class="banner-full banner-full--short">
+    <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="../../images/edu/banners/admissions/admissions-2000.jpg" media="(min-width: 1600px)">
+        <source srcset="../../images/edu/banners/admissions/admissions-1600.jpg" media="(min-width: 1200px)">
+        <source srcset="../../images/edu/banners/admissions/admissions-1200.jpg" media="(min-width: 960px)">
+        <source srcset="../../images/edu/banners/admissions/admissions-960.jpg" media="(min-width: 640px)">
+        <source srcset="../../images/edu/banners/admissions/admissions-640.jpg" media="(min-width: 480px)">
+        <source srcset="../../images/edu/banners/admissions/admissions-480.jpg" media="(min-width: 0)">
+        <!--[if IE 9]></video><![endif]-->
+        <img srcset="" alt="" data-object-fit="cover">
+    </picture>
+    <div class="container">
+        <div class="banner-text banner-text--beneath-small-overlay-large">
+            <h1 class="banner-text__title">Admissions</h1>
+        </div>
+    </div>
+</div><section class="section-content intro">
+    <div class="container">
+        <article class="intro__copy intro__copy--left">
+            <h1 class="heading heading--title">Enrolling: Let’s do this together.</h1>
+            <p class="intro__text">Congratulations&#8212;you’re ready to become a Rasmussen College student! And your Program Manager is right there to help. While the instructions below take you step-by-step through the enrollment process, just reach out if you have questions.</p>
+        </article>
+        <aside class="intro__menu">
+            <h3 class="intro__menu--title">TAKE ME TO:</h3>
+            <ul class="sidebar-nav sidebar-nav--admissions">
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience01')">First-Time College Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience02')">Transfer Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience03')">Nursing Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll-sidebar" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience04')">Military Students</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll" href="#admissions-faq">FAQs</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll" href="#admissions-next-steps">I’ve Enrolled! What Now?</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a class="sidebar-nav__link js-smooth-scroll" href="#js-rmi">Request More Information ›</a>
+                </li>
+            </ul>
+            <hr class="rule-stripe rule-stripe--vertical">
+        </aside>
+    </div>
+</section><section class="section-content admissions-audience">
+    <div class="container">
+
+        <article class="accortabs accortabs--vertical">
+            <ul class="accortabs__list">
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience01')" rel="admissions-audience01">First-Time College Students</li>
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience02')" rel="admissions-audience02">Transfer Students</li>
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience03')" rel="admissions-audience03">Nursing Students</li>
+                <li class="accortabs__item" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience04')" rel="admissions-audience04">Military Students</li>
+            </ul>
+            <div class="accortabs__container">
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience01')" rel="admissions-audience01">First-Time College Students</h1>
+                <div class="accortabs__content" id="admissions-audience01">
+                    <h1 class="accortabs__title">First-Time College Students</h1>
+                    <p>Adding school to an already full schedule can seem daunting. But we’ve worked hard to make it easier, designing flexible, skills-based programs that are schedule-friendly while still delivering the competitive edge necessary to succeed.</p>
+
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+                </div>
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience02')" rel="admissions-audience02">Transfer Students</h1>
+                <div class="accortabs__content" id="admissions-audience02">
+                    <h1 class="accortabs__title">Transfer Students</h1>
+                    <p>We believe you should earn credit for the course work you’ve already completed. In fact, in 2015 we accepted more than XXX,000 transfer credits, saving our students $XX million.* Our seamless transfer policies work to maximize your credits, helping you save money and graduate as fast as possible.</p>
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+
+                    <h2 class="accortabs__subtitle">Transfer credit information</h2>
+                    <p>If you have prior college credit, it may transfer. For an overview of how we handle transfer credits, <a href="#" class="cta-inline">click here</a>. * For the entire Transfer Credit Policy, <a href="#" class="cta-inline">click here</a>. </p>
+                </div>
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience03')" rel="admissions-audience03">Nursing Students</h1>
+                <div class="accortabs__content" id="admissions-audience03">
+                    <h1 class="accortabs__title">Nursing Students</h1>
+                    <p>One of the most in-demand jobs—nursing—is also one of the most sought-after programs. You won’t wait to start or advance your education with us—many programs have no wait list for qualified candidates and four starts a year.</p>
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">TEAS Exam</h2>
+                    <p>Upon receiving a qualifying TEAS score, your program manager will help you submit required immunizations, physical exam and CPR certification.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+                </div>
+                <h1 class="accortabs__expander" onclick="expandAccorTabAndSetToTopOfScreen('admissions-audience04')" rel="admissions-audience04">Military Students</h1>
+                <div class="accortabs__content" id="admissions-audience04">
+                    <h1 class="accortabs__title">Military Students</h1>
+                    <p>Military service is a major achievement, but today’s competitive job market often requires an education related to your field. To honor military service, our programs teach you the skills to integrate seamlessly into the workforce and start the next chapter of your professional life.</p>
+                    <h2 class="accortabs__subtitle">Online enrollment</h2>
+                    <p>Basic information that takes just 5-10 minutes.</p>
+
+                    <h2 class="accortabs__subtitle">Entrance Placement Exam</h2>
+                    <p>This helps prepare you to succeed. Your program manager helps determine if this step is necessary.</p>
+
+                    <h2 class="accortabs__subtitle">Financial aid</h2>
+                    <p>After submitting a FAFSA application (<a href="http://fafsa.ed.gov" target="_blank">fafsa.ed.gov</a>), your program manager will review financial aid options and tuition costs.</p>
+
+                    <h2 class="accortabs__subtitle">Transfer credit information</h2>
+                    <p>If you have prior college credit, it may transfer. For an overview of how we handle transfer credits, <a href="#" class="cta-inline">click here</a>. *For the entire Transfer Credit Policy, <a href="#" class="cta-inline">click here</a>. (takes them to catalog copy)</p>
+
+                    <h2 class="accortabs__subtitle">Enrollment documents</h2>
+                    <p>Your program manager will send enrollment documents to sign, have you complete a background check and collect any previous college transcripts.*</p>
+                </div>
+            </div>
+
+            <footer class="accortabs__footer">
+                <h2 class="accortabs__subtitle">Want personalized assistance?</h2>
+                <a href="#js-rmi" class="cta-inline js-smooth-scroll">Turn to a Program Manager</a>
+            </footer>
+        </article>
+
+        <hr class="rule-stripe rule-stripe--ras">
+    </div>
+</section><section class="section-content make-contact">
+    <div class="container">
+        <h1 class="heading heading--title heading--reverse">Three quick ways to make contact:</h1>
+        <ul class="make-contact__list">
+            <li class="make-contact__item">
+                <a class="make-contact__link" href="#">
+                    <i class="fa fa-phone"></i>
+                    <h3 class="cta-inline cta-inline--reverse">Call us</h3>
+                    <span class="make-contact__detail">[NUMBER]</span>
+                </a>
+            </li>
+            <li class="make-contact__item">
+                <a class="make-contact__link" href="#">
+                    <i class="fa fa-comments-o"></i>
+                    <h3 class="cta-inline cta-inline--reverse">Chat with us</h3>
+                    <span class="make-contact__detail">[LINK]</span>
+                </a>
+            </li>
+            <li class="make-contact__item">
+                <a class="make-contact__link" href="#">
+                    <i class="fa fa-envelope"></i>
+                    <h3 class="cta-inline cta-inline--reverse">Email us</h3>
+                    <span class="make-contact__detail">[EMAIL ADDRESS]</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section><section class="section-content faq" id="admissions-faq">
+    <div class="container">
+
+        <h1 class="heading heading--title">Frequently Asked Questions</h1>
+        <div class="accordion accordion-plus">
+            <div class="accordion__container">
+                <h3 class="accordion-plus__panel" rel="accordion-plus01">Cost/Funding</h3>
+                <div class="accordion-plus__content" id="accordion-plus01">
+                    <div class="accordion accordion-chevron">
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron01-01">How much is tuition?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron01-01">
+                            <p>A good place to start is our tuition estimator, found on the Tuition page. Just fill in the required fields for your tuition estimate. For more specific inquiries, speak with a program manager.</p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron01-02">What are financial aid options?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron01-02">
+                            <p>Our Tuition page outlines some financial aid options. As part of the enrollment process, your program manager will walk you through an overview of financial aid and what type of aid may be specifically suited to you.</p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron01-03">Will financial aid cover my tuition?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron01-03">
+                            <p>You’ll find an overview of financial aid on our Tuition page. For more specific questions, see your program manager. </p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron01-04">What is a Transfer of Credit?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron01-04">
+                            <p>Transfer of credit is credit for previously completed college courses you have taken. For questions, reach out to work a program manager who can guide you on collecting the required information needed to take this step. </p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron01-05">What is the Rasmussen College School Code for FAFSA? </h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron01-05">
+                            <p>To look up a school code, <a href="https://fafsa.ed.gov/FAFSA/app/schoolSearch?locale=en_EN" target="_blank">visit the online FAFSA application.</a> Connect with a program manager if you are unsure on what code to use. Codes are dependent on location and program.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h3 class="accordion-plus__panel" rel="accordion-plus02">Program/Classes</h3>
+                <div class="accordion-plus__content" id="accordion-plus02">
+
+                    <div class="accordion accordion-chevron">
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-01">Is Rasmussen an accredited college? </h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-01">
+                            <p>Rasmussen College is regionally accredited by the Higher Learning Commission. For more information about other accreditation within certain programs, visit our Degrees page. </p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-02">What will my class schedule be?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-02">
+                            <p>As a student, you will work with your program manager and an advisor to create your class schedule. For a high-level view on courses in a specific program, visit the course catalog.</p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-03">What does a full time schedule look like?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-03">
+                            <p>As a student, you will work with a program manager and an advisor to create a schedule that works best for you. Class schedules vary by program and credits per course.</p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-04">What are online classes like?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-04">
+                            <p>[navigating an online class - we have a lot of Q1 students who are having issues with navigating as well so maybe something more can be incorporated into the orientation?] We could leverage demo video here or blog content.
+                            </p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-05">How does CBA/Flex Choice work?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-05">
+                            <p>We could link to demo video or blog content. </p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-06">Am I able to test out of classes?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-06">
+                            <p>For information on testing out of classes, <a href="#" target="_blank">visit our Ways to Learn page</a>. </p>
+                        </div>
+
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron02-07">What kind of computer hardware do I need?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron02-07">
+                            <p>To help ensure success, Rasmussen College has minimum computer requirements. They are listed in the class description of the course catalog. Page 110 in the catalog has a blurb we could shorten to make sense here.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="accordion-plus__panel" rel="accordion-plus03">Time</h3>
+                <div class="accordion-plus__content" id="accordion-plus03">
+                    
+                    <div class="accordion accordion-chevron">
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-01">When do classes start and end?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-01">
+                            <p>You’ll find a calendar outlining important academic dates, including start/end days, in the course catalog’s academic calendar.</p>
+                        </div>
+                        
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-02">What hours are day/night classes?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-02">
+                            <p>Class schedules and times vary by campus.  Connect with a program manager to learn more about a specific program.</p>
+                        </div>
+                        
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-03">Will there be days I need to be on campus for my online classes?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-03">
+                            <p>Each program varies and courses carry different requirements. Connect with a program manager to learn more about a specific program.</p>
+                        </div>
+                        
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-04">How long will it take me to finish my degree?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-04">
+                            <p>Each program varies and courses carry different requirements. Connect with a program manager to learn more about a specific program.</p>
+                        </div>
+                        
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-05">What are the steps to apply/enroll?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-05">
+                            <p>Each program varies and courses carry different requirements. Connect with a program manager to learn more about a specific program.</p>
+                        </div>
+                        
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-06">Are there immunization requirements for incoming nursing students?  </h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-06">
+                            <p>Some programs, including nursing, have additional steps in the enrollment process. A program manager can review the immunization requirements with you.</p>
+                        </div>
+                        
+                        <h3 class="accordion-chevron__panel" rel="accordion-chevron03-07">How do I set an appointment with a Program Manager?</h3>
+                        <div class="accordion-chevron__content" id="accordion-chevron03-07">
+                            <p>You can <a href="#">connect to a program manager here</a>.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><section class="section-content next-steps" id="admissions-next-steps">
+    <div class="container">
+        <h1 class="heading heading--title">I’ve enrolled! What now?</h1>
+        <p>Before classes start, check out these student resources:</p>
+        <ul class="colored-click-boxes">
+            <li class="colored-click-boxes__item">
+                <a class="colored-click-boxes__link" href="#">
+                    <i class="fa fa-desktop"></i>
+                    <h3 class="heading heading--tertiary heading--reverse">Student Portal</h3>
+                    <p>Our student portal is your one-stop for all student information.</p>
+                </a>
+            </li>
+            <li class="colored-click-boxes__item">
+                <a class="colored-click-boxes__link" href="#">
+                    <i class="fa fa-group"></i>
+                    <h3 class="heading heading--tertiary heading--reverse">Ras Lounge</h3>
+                    <p>Ras Lounge is a private, online student community connecting through Facebook.</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section><section class="section-content rmi" id="js-rmi">
+    <div class="container">
+        <h1 class="rmi__title">Questions? Talk with a program manager today.</h1>
+
+        <div class="rmi__wrapper" id="rmi__wrapper">
+            <div class="rmi__content">
+                <div class="rmi__info" id="rmi__info">
+                    <h2 class="rmi__subtitle">Request More Information</h2>
+                    <p>Fill out the form to receive:</p>
+
+                    <ul class="form-checklist" id="form-checklist">
+                        <li>
+                            <i class="fa fa-check-square-o color-ras--dark"></i> Personalized Financial Aid
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o color-ras--dark"></i> Customized Support Services
+                        </li>
+                        <li>
+                            <i class="fa fa-check-square-o color-ras--dark"></i> Detailed Program Plan
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="thank-you.php" class="rmi__form rmi__form--ppc" method="post" novalidate="novalidate">
+                    <fieldset class="form-fieldset rmi__form-fieldset">
+                        <legend class="form-legend rmi__form-legend">Contact Information</legend>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="first_name">First name</label>
+                            <input class="form-input form-input--text" id="first_name" name="firstname" type="text" required="required" aria-required="true">
+                            <label for="first_name" class="form-label form-label--error">First name is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="last_name">Last name</label>
+                            <input class="form-input form-input--text" id="last_name" name="lastname" type="text" required="required" aria-required="true">
+                            <label for="last_name" class="form-label form-label--error">Last name is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="email">Email address</label>
+                            <input class="form-input form-input--email" id="email" name="emailaddress" type="email" required="required" aria-required="true">
+                            <label for="email" class="form-label form-label--error">Email address is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="phone">Phone number</label>
+                            <input class="form-input form-input--tel" id="phone" name="phone" type="tel" required="required" aria-required="true">
+                            <label for="phone" class="form-label form-label--error">Phone number is required.</label>
+                            <input name="phonehp" type="tel" id="phoneHP">
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="zip_code">ZIP code</label>
+                            <input class="form-input form-input--tel" id="zip_code" name="ziph" type="tel" required="required" aria-required="true" maxlength="5" min="11111" max="99999" pattern="[0-9]{0,5}">
+                            <label for="zip_code" class="form-label form-label--error">ZIP code is required.</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-fieldset rmi__form-fieldset">
+                        <legend class="form-legend rmi__form-legend">Educational Preferences</legend>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_school" name="school" data-after="preferred_program" data-target="preferred_program">
+                                <option value="" selected="selected">I'm Interested in…</option>
+                                <option value="bu">School of Business</option>
+                                <option value="de">School of Design</option>
+                                <option value="ed">School of Education</option>
+                                <option value="ah">School of Health Sciences</option>
+                                <option value="js">School of Justice Studies</option>
+                                <option value="nu">School of Nursing</option>
+                                <option value="te">School of Technology</option>
+                            </select>
+                            <label for="preferred_school" class="form-label--error">School is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_program" name="program" required="required" aria-required="true">
+                                <option value="">Preferred Program</option>
+                                <option value="SoB-Acctng"> Accounting</option>
+                                <option value="SoB-BusinessMgmt-BusAnalysis"> Business Analysis</option>
+                                <option value="SoB-BusinessMgmt"> Business Management</option>
+                                <option value="SoB-BusinessMgmt-Entrep"> Entrepreneurship</option>
+                                <option value="SoB-Finance"> Finance</option>
+                                <option value="SoB-HealthMgmt"> Healthcare Management</option>
+                                <option value="SoB-HR"> HR and Organizational Leadership</option>
+                                <option value="SoB-Marketing"> Marketing</option>
+                                <option value="SoB-SupplyChain"> Supply Chain and Logistics Management</option>
+                                <option value="SoB-Undecided"> Undecided</option>
+                            </select>
+                            <label for="preferred_program" class="form-label--error">Program is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_campus" name="campus" data-target="preferred_school" data-after="preferred_program" style="" required="required" aria-required="true">
+                                <option value="" class="no_class">Preferred Campus</option>
+                                <option value="Undecided">Undecided</option>
+                                <option disabled="">ONLINE CAMPUS</option>
+                                <option value="Online">Online</option>
+                                <option disabled="">MINNESOTA CAMPUSES</option>
+                                <option value="Blaine">Blaine</option>
+                                <option value="EdenPrairie">Bloomington</option>
+                                <option value="BrooklynPark">Brooklyn Park/Maple Grove</option>
+                                <option value="Eagan">Eagan</option>
+                                <option value="LakeElmo">Lake Elmo/Woodbury</option>
+                                <option value="Mankato">Mankato</option>
+                                <option value="Moorhead">Moorhead</option>
+                                <option value="StCloud">St. Cloud</option>
+                                <option disabled="">ILLINOIS CAMPUSES</option>
+                                <option value="Aurora">Aurora/Naperville</option>
+                                <option value="Mokena">Mokena/Tinley Park</option>
+                                <option value="Rockford">Rockford</option>
+                                <option value="Romeoville">Romeoville/Joliet</option>
+                                <option disabled="">FLORIDA CAMPUSES</option>
+                                <option value="FortMyers">Fort Myers</option>
+                                <option value="Pasco">New Port Richey/West Pasco</option>
+                                <option value="Ocala">Ocala</option>
+                                <option value="PascoSun">Land O' Lakes/East Pasco</option>
+                                <option value="Brandon">Tampa/Brandon</option>
+                                <option disabled="">WISCONSIN CAMPUSES</option>
+                                <option value="Appleton">Appleton</option>
+                                <option value="GreenBay">Green Bay</option>
+                                <option value="Wausau">Wausau</option>
+                                <option disabled="">NORTH DAKOTA CAMPUS</option>
+                                <option value="Fargo">Fargo</option>
+                                <option disabled="">KANSAS CAMPUSES</option>
+                                <option value="OverlandPark">Kansas City/Overland Park</option>
+                                <option value="Topeka">Topeka</option>
+                            </select>
+                            <label for="preferred_campus" class="form-label--error">Campus is required.</label>
+                        </div>
+
+                        <a class="button button--primary js-smooth-scroll" href="#">
+                            <button class="button__input" type="submit">
+                                <div class="button__icon"></div>
+                                <span class="button__title">Request Info Now</span>
+                            </button>
+                        </a>
+
+                        <div class="disclaimer">
+                            <p class="disclaimer__text">By requesting information, I authorize Rasmussen College to contact me by email, phone or text message at the number provided.</p>
+                        </div>
+                    </fieldset>
+
+                    <!-- Hidden Fields -->
+                    <input type="hidden" name="source" value="School Site">
+                    <input name="start_date" type="hidden" id="start_date" value="10 New Lead">
+                    <input name="subject" type="hidden" id="subject" value="School Site Request Info">
+                    <input name="campaign_code" type="hidden" id="campaign_code" value="SE - Google-LiveBall">
+                    <input name="formname" type="hidden" value="ras - Sendmeinfo">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<!-- // .main-contents --><footer class="global-footer global-footer--multicolumn" role="contentinfo">
+    <section class="footer-content footer-content--links">
+        <div class="container">
+            <section class="footer-column footer-column--about">
+                <h4 class="footer-column__title">About Us</h4>
+                <ul class="list list--unordered list--about">
+                    <li class="list__item">
+                        <a href="">History</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Leadership</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Letter from the President</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Corporate Social Responsibility</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Careers</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">News Center</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Accreditation</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-column footer-column--schools">
+                <h4 class="footer-column__title">Areas of Study</h4>
+                <ul class="list list--unordered list--schools">
+                    <li class="list__item">
+                        <a href="">Business</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Design</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Education</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Health Sciences</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Justice Studies</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Nursing</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Technology</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-column footer-column--locations">
+                <h4 class="footer-column__title">Campus Locations</h4>
+                <ul class="list list--unordered list--locations">
+                    <li class="list__item">
+                        <a href="">Florida</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Illinois</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Kansas</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Minnesota</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">North Dakota</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Wisconsin</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    <section class="footer-content footer-content--sid">
+        <div class="container">
+            <p>
+                <a class="footer-column__link footer-column__link--caps" href="#">Student Investment Disclosure Information</a>
+            </p>
+        </div>
+    </section>
+    <div class="footer-content footer-content--colored">
+        <div class="container">
+            <section class="footer-column footer-column--metadata">
+                <ul class="list list--unordered list--metadata">
+                    <li class="list__item">
+                        <a class="" id="js-footer-disclaimers__toggle" href="#">Disclaimers (+)</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Sitemap</a>
+                    </li>
+                </ul>
+                <div class="footer-disclaimers">
+                    <div class="footer-disclaimers__container">
+                        <ol class="list list--ordered list--disclaimers">
+                            <li class="list__item">Completion time is dependent on transfer credits accepted and the number of courses completed each term.</li>
+                            <li class="list__item">Bureau of Labor Statistics, U.S. Department of Labor, Occupational Outlook Handbook, [career information accessed February 11, 2016] www.bls.gov/ooh/. Employment conditions in your area may vary.] Reflects a Bachelor's Degree in Business Management, Business Analysis and Business Management Core specializations, Rasmussen College.</li>
+                        </ol>
+                    </div>
+                </div>
+                <ul class="list list--unordered list--copyright">
+                    <li class="list__item">
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="">Copyright</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-column footer-column--social">
+                <div class="footer-column__container">
+                    <ul class="list list--unordered list--social">
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-facebook--white">
+                                    <use xlink:href="#icon-social-facebook--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-google-plus--white">
+                                    <use xlink:href="#icon-social-google-plus--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-instagram--white">
+                                    <use xlink:href="#icon-social-instagram--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-linkedin--white">
+                                    <use xlink:href="#icon-social-linkedin--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="">
+                                <svg class="svg icon-social-youtube--white">
+                                    <use xlink:href="#icon-social-youtube--white"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</footer></div>
+<!-- // .page-wrapper -->
+
+        
+
+        <!-- toolkit scripts -->
+        <script src="../../scripts/display.js"></script>
+        <!-- /toolkit scripts -->
+
+        <!-- DO NOT DELETE: required for script function below to pull sprites from server -->
+        <div class="f-svg-sprite">
+            <div class="svg-sprite"></div>
+        </div>
+        <!-- // DO NOT DELETE: required for script function below to pull sprites from server -->
+        
+        <!-- load svg sprites into body-->
+        <script>
+            $(function() {
+                $.get("../../images/svg-sprite--global.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsb.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rshs.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsn.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

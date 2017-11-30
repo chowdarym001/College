@@ -1,0 +1,34 @@
+<svg id="icon-08-what-learn__white--rsn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.17 49.26">
+    <defs>
+        <style>
+            .fill-white-opacity20 {
+                fill: #fff;
+                opacity: .2;
+            }
+            
+            .fill-empty {
+                fill: none;
+            }
+            
+            .fill-white {
+                fill: #fff;
+            }
+
+        </style>
+    </defs>
+    <title>icon-08-what-learn__white--rsn</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="ON_MEDIUM_BG" data-name="ON MEDIUM BG">
+            <g id="icon-08-what-learn__white--rsn">
+                <path id="location-1" class="fill-white-opacity20" d="M16.33 0C7.76 0 0 6.95 0 15.52S7.08 34.33 16.33 49c9.25-14.67 16.33-24.91 16.33-33.48S24.91 0 16.33 0z" />
+                <path class="fill-white-opacity20" d="M21.33 23.29l6.6 6.6c2.9-5.43 4.65-10.11 4.65-14.37C32.58 6.95 24.82 0 16.25 0A16.86 16.86 0 0 0 3.74 5.71l5.55 5.55z" />
+                <path class="fill-empty" d="M24.76 18.16l-6.59 6.59a8.63 8.63 0 0 0 6.59-6.59z" />
+                <path class="fill-white-opacity20" d="M7.7 35.22c2.48 4.14 5.42 8.69 8.63 13.78 9.25-14.67 16.33-24.91 16.33-33.48a14.19 14.19 0 0 0-.74-4.52l-7.16 7.16z" />
+                <path id="location-1-2" data-name="location-1" class="fill-white-opacity20" d="M43.83.26C35.26.26 27.5 7.2 27.5 15.78s7.08 18.8 16.33 33.48c9.25-14.67 16.33-24.91 16.33-33.48S52.41.26 43.83.26z" />
+                <path class="fill-white-opacity20" d="M48.91 23.55l6.6 6.6c2.9-5.43 4.65-10.11 4.65-14.37C60.17 7.2 52.41.26 43.83.26A16.86 16.86 0 0 0 31.33 6l5.55 5.55z" />
+                <path class="fill-white-opacity20" d="M35.2 35.37c2.48 4.14 5.42 8.69 8.63 13.78 9.25-14.67 16.33-24.91 16.33-33.48a14.19 14.19 0 0 0-.75-4.52l-7.16 7.16z" />
+                <path class="fill-white" d="M32.27 18.66V24h-5v-5.34h-5.38v-5h5.38V8.29h5v5.37h5.38v5z" />
+            </g>
+        </g>
+    </g>
+</svg>

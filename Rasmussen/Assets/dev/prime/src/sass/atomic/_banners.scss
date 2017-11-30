@@ -1,0 +1,195 @@
+// BANNER HEROES: via inline picturefill
+
+.banner-inline {
+	@extend %clearfix;
+	display   : block;
+	height    : 100%;
+	overflow-x: hidden;
+	position  : relative;
+	min-width : 100%;
+	max-width : 150%;
+	// margin-left: -25%;
+	picturefill {
+		@extend %clearfix;
+		display: block;
+		height : inherit;
+		width  : inherit;
+	}
+
+	img,
+	source {
+		display  : block;
+		height   : inherit;
+		max-width: 100%;
+		width    : inherit;
+	}
+
+	img {
+		font-family    : 'object-fit: cover; object-position: middle'; // object-fit-images: IE polyfill
+		object-fit     : cover;
+		object-position: 100% 50%;
+		min-height     : 200px;
+		min-height     : auto\9; // IE 9 and Below Hack
+		min-width      : auto;
+		zoom           : 1;
+		@include breakpoint($small) {
+			min-height: 250px;
+			min-height: auto\9; // IE 9 and Below Hack
+		}
+		@include breakpoint($small-wide) {
+			object-position: 66% 50%;
+			min-height     : 300px;
+			min-height     : auto\9; // IE 9 and Below Hack
+			min-width      : 100%;
+		}
+		@include breakpoint($medium-wide) {
+			object-position: 10% 50%;
+		}
+		@include breakpoint($large) {
+			object-position: 50% 50%;
+		}
+		// Target Mobile Phones with high device-pixel-ratio, make them target beyond the average 100% right 50% top.
+		// iPhone 4/4s
+		@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+			object-position: 150% 50%;
+			min-width      : 110%;
+		}
+		// iPhone 5/5s, 6, 6 Plus
+		@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+			object-position: 150% 50%;
+			min-width      : 110%;
+		}
+		// iPhone 6
+		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+			object-position: 150% 50%;
+			min-width      : 110%;
+		}
+		// Galaxy S3
+		@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+			object-position: 150% 50%;
+			min-width      : 110%;
+		}
+		// Galaxy S4
+		@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+			object-position: 150% 50%;
+			min-width      : 125%;
+		}
+		// Galaxy S5
+		@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+			object-position: 150% 50%;
+			min-width      : 125%;
+		}
+		// IE 10-11
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			min-height: auto !important;
+		}
+	}
+}
+// BANNER HEROES: via background image
+.banner-background {
+	@extend %clearfix;
+	background-color   : transparent;
+	background-position: 50% 0;
+	background-repeat  : no-repeat;
+	background-size    : auto;
+	clear              : both;
+	display            : block;
+	height             : 225px;
+	position           : relative;
+	width              : 100%;
+}
+
+.banner-background-placeholder {
+	background-image: url('http://lorempicsum.com/nemo/480/200/1');
+	@include breakpoint($small) {
+		background-image: url('http://lorempicsum.com/nemo/640/200/1');
+	}
+	@include breakpoint($medium-tall) {
+		background-image: url('http://lorempicsum.com/nemo/960/400/1');
+		height          : 330px;
+	}
+	@include breakpoint($medium-wide) {
+		background-image: url('http://lorempicsum.com/nemo/1200/400/1');
+	}
+	@include breakpoint($tp-xlarge) {
+		background-image: url('http://lorempicsum.com/nemo/1800/400/1');
+	}
+}
+
+.banner-background-rsn-home {
+	@extend %clearfix;
+	background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-home-480.jpg');
+	@include breakpoint($small) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-home-640.jpg');
+	}
+	@include breakpoint($medium-tall) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-home-960.jpg');
+	}
+	@include breakpoint($medium-wide) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-home-1200.jpg');
+	}
+	@include breakpoint($tp-xlarge) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-home-2000.jpg');
+	}
+}
+
+.banner-background-rsn-bsn {
+	@extend %clearfix;
+	background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-bsn-480.jpg');
+	@include breakpoint($small) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-bsn-640.jpg');
+	}
+	@include breakpoint($medium-tall) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-bsn-960.jpg');
+	}
+	@include breakpoint($medium-wide) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-bsn-1200.jpg');
+	}
+	@include breakpoint($tp-xlarge) {
+		background-image: url('/prime/images/ppc/rsn/hero-banner-rsn-bsn-2000.jpg');
+	}
+}
+// BANNER TEXT
+.banner-text {
+	@extend %clearfix;
+	@include centered-vertically;
+	max-width: 280px;
+	padding  : 0 20px;
+	@include breakpoint($small) {
+		max-width: none;
+	}
+	@include breakpoint($medium-wide) {
+		padding: 0;
+	}
+
+	#{headings()} {
+		color : $color-white;
+		margin: 0;
+	}
+}
+
+.banner-subtitle,
+.banner-title {
+	letter-spacing: .5px;
+}
+
+.banner-subtitle {
+	font-family: $font-klavika-light;
+	font-size  : 18px;
+	line-height: 1.2;
+	padding    : 0 0 8px;
+	@include breakpoint($small) {
+		font-size: 24px;
+	}
+}
+
+.banner-title {
+	float      : left;
+	font-family: $font-klavika-bold;
+	font-size  : 36px;
+	line-height: 1;
+	@include breakpoint($small) {
+		font-size  : 48px;
+		line-height: 1.2;
+	}
+}

@@ -1,0 +1,451 @@
+/*======
+PLACEHOLDERS
+======*/
+
+@import "_05.font-sizes.scss";
+@import "_06.font-icons.scss";
+@import "_08.mixins.scss";
+%border-chevron--horizontal--bottom {
+    border-style: hidden hidden solid hidden;
+    border-width: 0 0 3px 0;
+    &::before, &::after {
+        border-style: solid solid hidden solid;
+    }
+    &::before {
+        border-color: currentColor transparent transparent transparent;
+        border-width: 16px 22px 0 22px;
+        left: calc(50% - 22px);
+        bottom: -16px;
+    }
+    &::after {
+        border-color: $color-white transparent transparent transparent;
+        border-width: 13px 18px 0 18px;
+        left: calc(50% - 18px);
+        bottom: -13px;
+    }
+}
+
+%border-chevron--horizontal--top {
+    border-style: solid hidden hidden hidden;
+    border-width: 3px 0 0 0;
+    &::before, &::after {
+        border-style: hidden solid solid solid;
+    }
+    &::before {
+        border-color: transparent transparent currentColor transparent;
+        border-width: 0 22px 16px 22px;
+        left: calc(50% - 22px);
+        top: -17px;
+    }
+    &::after {
+        border-color: transparent transparent $color-white transparent;
+        border-width: 0 18px 13px 18px;
+        left: calc(50% - 18px);
+        top: -13px;
+    }
+}
+
+%border-chevron--mobile {
+    border-style: hidden hidden solid hidden;
+    border-width: 0 0 3px 0;
+    &::before, &::after {
+        border-style: solid solid hidden solid;
+    }
+    &::before {
+        border-color: currentColor transparent transparent transparent;
+        border-width: 16px 22px 0 22px;
+        left: calc(50% - 22px);
+        bottom: -16px;
+    }
+    &::after {
+        border-color: $color-white transparent transparent transparent;
+        border-width: 13px 18px 0 18px;
+        left: calc(50% - 18px);
+        bottom: -13px;
+    }
+    @include breakpoint($medium-tall) {
+        border: 0;
+        &::before, &::after {
+            display: none;
+        }
+    }
+}
+
+%border-chevron--vertical--left {
+    border-style: hidden hidden solid hidden;
+    border-width: 0 0 3px 0;
+    margin: 0 0 24px 0;
+    padding-bottom: 32px;
+    // pushes border to bottom of content
+    @at-root #{&}::before {
+        border-color: currentColor transparent transparent transparent;
+        border-style: solid solid hidden solid;
+        border-width: 22px 22px 0 22px;
+        bottom: initial;
+        left: calc(50% - 17px);
+        right: initial;
+        top: 100%;
+    }
+    @at-root #{&}::after {
+        border-color: $color-white transparent transparent transparent;
+        border-style: solid solid hidden solid;
+        border-width: 19px 19px 0 19px;
+        bottom: initial;
+        left: calc(50% - 14px);
+        right: initial;
+        top: 100%;
+    }
+    @include breakpoint($medium-tall) {
+        border-style: hidden hidden hidden solid;
+        border-width: 0 0 0 3px;
+        padding-bottom: 0;
+        @at-root #{&}::before {
+            border-color: transparent currentColor transparent transparent;
+            border-style: solid solid solid hidden;
+            border-width: 16px 22px 22px 0;
+            bottom: initial;
+            left: -22px;
+            right: initial;
+            top: calc(50% - 18px);
+        }
+        @at-root #{&}::after {
+            border-color: transparent $color-white transparent transparent;
+            border-style: solid solid solid hidden;
+            border-width: 14px 19px 19px 0;
+            bottom: initial;
+            left: -17px;
+            right: initial;
+            top: calc(50% - 16px);
+        }
+    }
+}
+
+%border-chevron--vertical--right {
+    border-style: hidden hidden solid hidden;
+    border-width: 0 0 3px 0;
+    margin: 0 0 24px 0;
+    padding-bottom: 32px;
+    // pushes border to bottom of content
+    @at-root #{&}::before {
+        border-color: currentColor transparent transparent transparent;
+        border-style: solid solid hidden solid;
+        border-width: 22px 22px 0 22px;
+        bottom: initial;
+        left: calc(50% - 17px);
+        right: initial;
+        top: 100%;
+    }
+    @at-root #{&}::after {
+        border-color: $color-white transparent transparent transparent;
+        border-style: solid solid hidden solid;
+        border-width: 19px 19px 0 19px;
+        bottom: initial;
+        left: calc(50% - 14px);
+        right: initial;
+        top: 100%;
+    }
+    @include breakpoint($medium-tall) {
+        border-style: hidden solid hidden hidden;
+        border-width: 0 3px 0 0;
+        padding-bottom: 0;
+        //padding-right: 64px; // pushes border to right of content
+        @at-root #{&}::before {
+            border-color: transparent transparent transparent currentColor;
+            border-style: solid hidden solid solid;
+            border-width: 22px 0 22px 16px;
+            bottom: initial;
+            left: initial;
+            right: -17px;
+            top: calc(50% - 18px);
+        }
+        @at-root #{&}::after {
+            border-color: transparent transparent transparent $color-white;
+            border-style: solid hidden solid solid;
+            border-width: 19px 0 19px 15px;
+            bottom: initial;
+            left: initial;
+            right: -14px;
+            top: calc(50% - 15px);
+        }
+    }
+}
+
+@media all and (-ms-high-contrast: none) {
+    %border-chevron--vertical--right {
+        @include breakpoint($medium-tall) {
+            @at-root #{&}::before {
+                left: 100.033%;
+            }
+            @at-root #{&}::after {
+                left: 100.033%;
+            }
+        }
+    }
+}
+
+%centered-absolutely {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+%chevron-fontawesome {
+    content: '\00a0\f054';
+    display: inline-block;
+    font-family: $font-fontawesome;
+    font-size: 12px;
+    //font: 14px/150% 'FontAwesome';
+    margin: -2px 0 0 0;
+    position: relative;
+}
+
+%chevron-fontawesome-absolute {
+    @include centered-axis-xy(absolute, 102%, 45%, 0%, -45%);
+    content: '\00a0\f054';
+    display: block;
+    font-family: $font-fontawesome;
+    font-size: 12px;
+}
+
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%cta-inline-arrow {
+    cursor: pointer;
+    @at-root #{&}::after {
+        @extend %chevron-fontawesome;
+        @include transform(translate(0, 0));
+        @include transition(transform 0.25s ease-in-out);
+    }
+    @at-root #{&}:hover::after {
+        @include transform(translate(4px, 0));
+    }
+}
+
+%cta-inline-arrow-absolute {
+    cursor: pointer;
+    @at-root #{&}::after {
+        @extend %chevron-fontawesome-absolute;
+        @include transition(transform 0.25s ease-in-out);
+    }
+    @at-root #{&}:hover::after {
+        @include transform(translate(50%, -45%));
+    }
+}
+
+%cta-inline-arrow-static {
+    cursor: pointer;
+    @at-root #{&}::after {
+        @extend %chevron-fontawesome;
+    }
+}
+
+//%cta-secondary {
+//    @extend %clearfix;
+//    background-color: $color-white;
+//    border: 1px solid $color-ras-green--light;
+//    border-radius: 4px;
+//    color: $color-ras-green--light;
+//    display: inline-block;
+//    font-family: $font-headings--bold;
+//    //font-size: 14px;
+//    line-height: 1;
+//    margin: 10px 0;
+//    padding: 5px 10px;
+//    text-transform: uppercase;
+//    @at-root #{&}:focus {
+//        background-color: $color-ras-green--bright;
+//        color: $color-white;
+//    }
+//    @at-root #{&}:hover {
+//        background-color: $color-ras-green--bright;
+//        color: $color-white;
+//    }
+//}
+%font-headings--bold {
+    font-family: $font-headings--bold;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%font-headings--light {
+    font-family: $font-headings--light;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%font-headings--medium {
+    font-family: $font-headings--medium;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%font-headings--regular {
+    font-family: $font-headings--regular;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%font-body--bold {
+    font-family: $font-body--bold;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%font-body--medium {
+    font-family: $font-body--medium;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%font-body--regular {
+    font-family: $font-body--regular;
+    line-height: 1;
+}
+
+%font-body--semibold {
+    font-family: $font-body--semibold;
+    font-weight: normal;
+    line-height: 1;
+}
+
+%heading--title {
+    @extend %font-headings--medium;
+    @include font-size($h1-font-sizes);
+    margin: 0 0 10px;
+}
+
+%heading--subtitle {
+    @extend %font-headings--medium;
+    @include font-size($h2-font-sizes);
+    margin: 0;
+}
+
+%margin-centered {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    ;
+}
+
+%picturefill-images {
+    // children
+    picture {
+        @extend %clearfix;
+        display: block;
+        height: inherit;
+        width: inherit;
+    }
+    img, source {
+        @extend %clearfix;
+        display: block;
+        height: inherit;
+        max-width: 100%;
+        width: inherit;
+    }
+    img {
+        font-family: 'object-fit: cover; object-position: middle';
+        // object-fit-images: IE polyfill
+        object-fit: cover;
+        object-position: 100% 50%;
+        min-height: 200px;
+        min-height: auto\9;
+        // IE 9 and Below Hack
+        min-width: auto;
+        width: 100%;
+        zoom: 1;
+        @include breakpoint($small) {
+            min-height: 250px;
+            min-height: auto\9;
+            // IE 9 and Below Hack
+        }
+        @include breakpoint($medium-tall) {
+            min-height: 300px;
+            min-height: auto\9;
+            // IE 9 and Below Hack
+            min-width: 100%;
+        }
+        /*
+    // Target Mobile Phones with high device-pixel-ratio, make them target beyond the average 100% right 50% top.
+    // iPhone 4/4s
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+        object-position: 100% 50%;
+        min-width: 100%;
+    }
+    // iPhone 5/5s, 6, 6 Plus
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        object-position: 150% 50%;
+        min-width: 110%;
+    }
+    // iPhone 6
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        object-position: 150% 50%;
+        min-width: 110%;
+    }
+    // Galaxy S3
+    @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+        object-position: 150% 50%;
+        min-width: 110%;
+    }
+    // Galaxy S4
+    @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+        object-position: 150% 50%;
+        min-width: 125%;
+    }
+    // Galaxy S5
+    @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+        object-position: 150% 50%;
+        min-width: 125%
+    }
+    // IE 10-11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        min-height: auto !important;
+    }
+    */
+    }
+}
+
+%pseudo-arrow {
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+%pseudo-element-positioning {
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+%reset-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+%visuallyhidden {
+    border: 0px none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    width: 1px;
+}

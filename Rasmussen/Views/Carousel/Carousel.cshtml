@@ -1,0 +1,13 @@
+﻿@model Rasmussen.Models.CarouselViewModel
+<div class="carousel">
+    @foreach (var carouselSlide in Model.CarouselSlides)
+    {
+        <div class="carousel-slide">
+            <h1>@carouselSlide.Header</h1>
+    <p>@carouselSlide.SubHead</p>
+    @carouselSlide.Background
+    @carouselSlide.CallToAction
+        </div>
+    }
+    
+</div>

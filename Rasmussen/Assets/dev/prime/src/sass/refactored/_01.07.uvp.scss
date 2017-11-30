@@ -1,0 +1,393 @@
+$uvp-plain-bgcolor--ras: lighten($color-ras-green--light, 45%);
+$uvp-plain-bgcolor--rsb: $color-school-rsb-dark;
+$uvp-plain-bgcolor--rsd: lighten($color-school-rsd, 25%);
+$uvp-plain-bgcolor--rse: lighten($color-school-rse, 25%);
+$uvp-plain-bgcolor--rshs: lighten($color-school-rshs--primary, 25%);
+$uvp-plain-bgcolor--rsjs: lighten($color-school-rsjs, 25%);
+$uvp-plain-bgcolor--rsn: lighten($color-school-rsn--support--light, 25%);
+$uvp-plain-bgcolor--rst: $color-school-rst-dark;
+.uvp {
+    @at-root #{&}__card {
+        @extend %clearfix;
+        @include bg-extend;
+        @include span(12 of 12 no-gutters);
+        margin: 0;
+        position: relative;
+        text-align: center;
+        @include breakpoint($small-wide) {
+            text-align: left;
+        }
+        @include breakpoint($medium-wide) {
+            text-align: center;
+        }
+        // modifiers
+        @at-root #{&}--plain {
+            .school-of--rsb & {
+                .uvp__title, .uvp__headline h1, .uvp__copy p, .uvp__text, .cta-inline {
+                    color: $color-white;
+                }
+            }
+            .school-of--rst & {
+                .uvp__title, .uvp__headline h1, .uvp__copy p, .uvp__text, .cta-inline {
+                    color: $color-white;
+                }
+            }
+            @at-root #{&}--ras {
+                background-color: $uvp-plain-bgcolor--ras;
+            }
+            @at-root #{&}--rsb {
+                background-color: $uvp-plain-bgcolor--rsb;
+                .uvp__card, .uvp__title, .uvp__copy, .cta-inline {
+                    color: $color-white;
+                }
+            }
+            @at-root #{&}--rsd {
+                background-color: $uvp-plain-bgcolor--rsd;
+            }
+            @at-root #{&}--rse {
+                background-color: $uvp-plain-bgcolor--rse;
+            }
+            @at-root #{&}--rshs {
+                background-color: $uvp-plain-bgcolor--rshs;
+            }
+            @at-root #{&}--rsjs {
+                background-color: $uvp-plain-bgcolor--rsjs;
+            }
+            @at-root #{&}--rsn {
+                background-color: $uvp-plain-bgcolor--rsn;
+            }
+            @at-root #{&}--rst {
+                background-color: $uvp-plain-bgcolor--rst;
+            }
+        }
+        @at-root #{&}--alpha {
+            color: $color-text;
+            @include y-axis-padding(60px, 60px);
+            @include breakpoint($medium-wide) {
+                @include span(first 5.25 of 12);
+            }
+            @at-root #{&}--colorful {
+                color: $color-white;
+                padding-bottom: 80px;
+                @include breakpoint($medium-wide) {
+                    @include span(first 6.5 of 12 no-gutters);
+                    padding-bottom: 60px;
+                    padding-right: 100px;
+                }
+                @include breakpoint($tp-ridiculously-wide) {
+                    padding-right: 250px;
+                }
+                @at-root #{&}::before {
+                    background-color: inherit;
+                    display: block;
+                    content: '';
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 400%;
+                    z-index: -1;
+                }
+                @at-root #{&} .uvp__title {
+                    color: $color-white;
+                }
+                @at-root #{&} .cta-inline {
+                    color: $color-white;
+                }
+                .school-of--rsb &, .school-of--rst & {
+                    .uvp__title, .uvp__headline h1 {
+                        color: $color-white;
+                    }
+                }
+            }
+            @at-root #{&}--ras {
+                background-color: $color-ras-green--light;
+            }
+            @at-root #{&}--rsb {
+                background-color: $color-school-rsb;
+            }
+            @at-root #{&}--rsd {
+                background-color: $color-school-rsd-light;
+            }
+            @at-root #{&}--rse {
+                background-color: $color-school-rse-light;
+            }
+            @at-root #{&}--rshs {
+                background-color: $color-school-rshs--support--light;
+            }
+            @at-root #{&}--rsjs {
+                background-color: $color-school-rsjs-light;
+            }
+            @at-root #{&}--rsn {
+                background-color: $color-school-rsn--primary;
+            }
+            @at-root #{&}--rst {
+                background-color: $color-school-rst;
+            }
+        }
+        @at-root #{&}--beta {
+            @include y-axis-padding(60px, 60px);
+            color: $color-text;
+            @include breakpoint($medium-wide) {
+                @include span(last 5.25 of 12);
+            }
+            @at-root #{&}--colorful {
+                @include y-axis-padding(20px, 60px);
+                color: $color-white;
+                @include breakpoint($medium-wide) {
+                    @include span(last 5.5 of 12 no-gutters);
+                    padding-top: 60px;
+                }
+                @include breakpoint($tp-ridiculously-wide) {
+                    padding-left: 110px;
+                }
+                @at-root #{&}::before {
+                    background-color: inherit;
+                    display: block;
+                    content: '';
+                    height: 100px;
+                    position: absolute;
+                    transform: skew(0, -6deg);
+                    left: -50%;
+                    top: -30px;
+                    width: 200%;
+                    z-index: 0;
+                    @include breakpoint($small-wide) {
+                        top: -50px;
+                    }
+                    @include breakpoint($medium-wide) {
+                        background-color: inherit;
+                        height: 100%;
+                        left: -70px;
+                        top: 0;
+                        transform: skew(-10deg, 0);
+                        width: 50%;
+                    }
+                }
+                @at-root #{&}::after {
+                    background-color: inherit;
+                    display: block;
+                    content: '';
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: -100%;
+                    width: 400%;
+                    z-index: -1;
+                    @include breakpoint($medium-wide) {
+                        width: 200%;
+                    }
+                }
+                @at-root #{&} .uvp__title {
+                    color: $color-white;
+                }
+                @at-root #{&} .cta-inline {
+                    color: $color-white;
+                }
+                .school-of--rsb &, .school-of--rst & {
+                    .uvp__title, .uvp__headline h1 {
+                        color: $color-white;
+                    }
+                }
+            }
+            // school of modifiers
+            @at-root #{&}--ras {
+                background-color: $color-ras-green--dark;
+            }
+            @at-root #{&}--rsb {
+                background-color: $color-school-rsb-dark;
+            }
+            @at-root #{&}--rsd {
+                background-color: $color-school-rsd-dark;
+            }
+            @at-root #{&}--rse {
+                background-color: $color-school-rse-dark;
+            }
+            @at-root #{&}--rshs {
+                background-color: $color-school-rshs--support--dark;
+            }
+            @at-root #{&}--rsjs {
+                background-color: $color-school-rsjs-dark;
+            }
+            @at-root #{&}--rsn {
+                background-color: $color-school-rsn--support--dark;
+            }
+            @at-root #{&}--rst {
+                background-color: $color-school-rst-dark;
+            }
+        }
+        @at-root #{&}--gamma {
+            @include y-axis-padding(60px, 60px);
+        }
+    }
+    @at-root #{&}__divider {
+        @extend %clearfix;
+        @include bg-extend;
+        clear: left;
+        display: block;
+        position: relative;
+        @include breakpoint($medium-wide) {
+            @include transform(translateY(35%));
+            clear: none;
+            float: left;
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 1px;
+        }
+        // same colors as 
+        @at-root #{&}--ras {
+            background-color: $uvp-plain-bgcolor--ras;
+        }
+        @at-root #{&}--rsb {
+            background-color: $uvp-plain-bgcolor--rsb;
+        }
+        @at-root #{&}--rsd {
+            background-color: $uvp-plain-bgcolor--rsd;
+        }
+        @at-root #{&}--rse {
+            background-color: $uvp-plain-bgcolor--rse;
+        }
+        @at-root #{&}--rshs {
+            background-color: $uvp-plain-bgcolor--rshs;
+        }
+        @at-root #{&}--rsjs {
+            background-color: $uvp-plain-bgcolor--rsjs;
+        }
+        @at-root #{&}--rsn {
+            background-color: $uvp-plain-bgcolor--rsn;
+        }
+        @at-root #{&}--rst {
+            background-color: $uvp-plain-bgcolor--rst;
+        }
+    }
+    @at-root #{&}__content {
+        //text-align: center;
+        position: relative;
+    }
+    @at-root #{&}__header {
+        @extend %clearfix;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    @at-root #{&}__image {
+        margin: auto auto 10px;
+        max-height: 100px;
+        max-width: 100px;
+        min-width: 100px;
+        position: relative;
+        @include breakpoint($small-wide) {
+            @include span(first 3 of 12);
+        }
+        @include breakpoint($medium-wide) {
+            float: none;
+            margin: auto auto 10px;
+            //max-height: 120px;
+            //max-width: 140px;
+            max-width: 128px;
+            width: 100%;
+        }
+        @at-root #{&} .svg {
+            max-height: inherit;
+            max-width: inherit;
+        }
+    }
+    @at-root #{&}__headline {
+        @extend %clearfix;
+        @include breakpoint($small-wide) {
+            @include span(last 9 of 12);
+            @include centered-horizontally-vertically(absolute, 50%, 50%, -30%, -50%);
+        }
+        @include breakpoint($medium-wide) {
+            @include span(12 of 12);
+            @include centered-horizontally-vertically(relative, 0, 0, 0, 0);
+        }
+    }
+    &__title, .uvp__headline h1 {
+        @extend %font-headings--medium;
+        @include font-size($uvp-font-sizes);
+        margin: 0;
+    }
+    @at-root #{&}__copy {
+        border: 1px solid transparent;
+        position: relative;
+        vertical-align: top;
+        @include breakpoint($medium-wide) {
+            margin-bottom: 30px;
+        }
+        @at-root #{&} .cta-inline {
+            margin: 20px 0;
+        }
+    }
+    &__text, .uvp__copy p {
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 30px;
+        position: relative;
+        &--quote {
+            font-family: $font-body--italic;
+            .end-quote {
+                font-size: 36px;
+                line-height: 0.1;
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+    @at-root #{&}__accreditation {
+        box-shadow: 0 0 8px rgba($color-gray-dark, .2);
+        color: $color-white;
+        display: block;
+        height: 51px;
+        margin: 45px auto;
+        object-fit: cover;
+        position: relative;
+        width: 60px;
+        z-index: 1;
+        @include breakpoint($small-wide) {
+            margin: -50px auto 0;
+        }
+    }
+    @at-root #{&}--tricolumn {
+        .uvp__card {
+            @include y-axis-padding(40px, 40px);
+            border-bottom: 1px solid darken($color-white, 20%);
+            @include breakpoint($medium-wide) {
+                @include y-axis-padding(40px, 0);
+                border: 0;
+                float: left;
+                margin-right: 5%;
+                width: 30%;
+            }
+            &:last-child {
+                @include y-axis-padding(40px, 0);
+                border-bottom: 0;
+                @include breakpoint($medium-wide) {
+                    float: right;
+                    margin-right: 0;
+                }
+            }
+        }
+        @at-root #{&}--color {
+            @include y-axis-padding(60px, 60px);
+            text-align: center;
+            @include breakpoint($medium-wide) {
+                @include y-axis-padding(60px, 40px);
+            }
+        }
+        @at-root #{&}--plain {
+            @include y-axis-padding(40px, 20px);
+            @include breakpoint($medium-wide) {
+                @include y-axis-padding(40px, 0);
+            }
+            .uvp__card {
+                text-align: left;
+            }
+            .uvp__headline {
+                @include breakpoint($medium-tall) {
+                    @include span(12 of 12);
+                    @include centered-horizontally-vertically(relative, 0, 0, 0, 0);
+                }
+            }
+        }
+    }
+}

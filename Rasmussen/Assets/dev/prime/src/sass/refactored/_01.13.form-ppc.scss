@@ -1,0 +1,41 @@
+.rmi {
+    @extend %clearfix;
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        @include font-size($h1-font-sizes);
+        margin: 0;
+    }
+    @at-root #{&}__subtitle {
+        @extend %font-headings--medium;
+        @include font-size($h3-font-sizes);
+        margin: 0;
+    }
+    @at-root #{&}__wrapper {
+        @extend %clearfix;
+        margin-top: 20px;
+    }
+    @at-root #{&}__content {
+        @extend %clearfix;
+    }
+    @at-root #{&}__info {
+        @extend %clearfix;
+        margin-bottom: 20px;
+        @include breakpoint($medium-wide) {
+            @include span(first 4.1 of 12);
+        }
+    }
+    @at-root #{&}__form-fieldset {
+        @include breakpoint($medium-wide) {
+            @include span(first 3.92 of 12);
+            &:nth-child(2n) {
+                @include span(last 3.92 of 12);
+            }
+        }
+    }
+    @at-root #{&} .fa {
+        font-size: 24px;
+        line-height: 1.75;
+        position: relative;
+        top: 4px;
+    }
+}

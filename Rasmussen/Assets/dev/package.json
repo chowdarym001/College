@@ -1,0 +1,35 @@
+{
+    "name": "rasmussen-college-sitecore-edu",
+    "version": "0.0.1",
+    "description": "Rasmussen College EDU site in SiteCore CMS",
+    "repository": {
+        "type": "git",
+        "url": "git@cegitrepo-ob-1p.deltakedu.corp:collegiseducation/RasmussenCollegeSCEDU.git"
+    },
+    "author": "Collegis Education",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.11.1",
+        "critical": "^0.8.1",
+        "del": "^2.2.2",
+        "gulp": "^3.9.1",
+        "gulp-compile-handlebars": "^0.6.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^2.3.1",
+        "gulp-connect-php": "0.0.7",
+        "gulp-critical-css": "^1.0.1",
+        "gulp-cssmin": "^0.1.7",
+        "gulp-imagemin": "^3.1.1",
+        "gulp-insert": "^0.5.0",
+        "gulp-livereload": "^3.8.1",
+        "gulp-notify": "^2.2.0",
+        "gulp-plumber": "^1.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-replace": "^0.5.4",
+        "gulp-sass": "^3.0.0",
+        "gulp-uglify": "^2.0.0",
+        "gulp-url-replace": "^1.0.2",
+        "gulp-util": "^3.0.7",
+        "gulp-watch": "^4.3.5"
+    }
+}

@@ -1,0 +1,12 @@
+.horizontal-rule {
+    @extend %prop-rule;
+    @include breakpoint($medium-wide) {
+        background: currentColor;
+        color: currentColor;
+        margin: 48px 0 0 0;
+        opacity: .875;
+        &::after {
+            opacity: .25;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.FourColumnContentBlockModel 
+
+
+<section class="section quadrant-boxes quadrant-boxes--plain">
+    <div class="container">
+        <section class="section-content">
+            <div class="quadrant-boxes__grid">
+                <ul class="quadrant-boxes__list">
+                    @foreach (var column in Model.ContentCards)
+                    {
+                        <li class="quadrant-boxes__item">
+                            <h1 class="quadrant-boxes__headline--lvl-1 color-rsn--primary" >@Html.Raw(column.Title)</h1>
+                            <p>@Html.Raw(column.Body)</p>
+                        </li>
+
+                    }
+                </ul>
+            </div>
+        </section>
+        <footer class="section-footer">
+            <h3 class="section__headline section__headline--lvl-3">
+                <a href="#js-rmi" class="cta-inline js-smooth-scroll">@Html.Raw(Model.Title)</a>
+            </h3>
+        </footer>
+    </div>
+</section>
+
+
+
+
+
+
+
+

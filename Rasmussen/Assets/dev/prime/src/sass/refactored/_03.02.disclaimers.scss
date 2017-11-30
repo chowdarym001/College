@@ -1,0 +1,82 @@
+.disclaimer {
+    @include clearfix;
+    @at-root #{&}-full {
+        @include clearfix;
+        @at-root #{&} .container {
+            @include y-axis-padding(40px, 40px);
+        }
+    }
+    @at-root #{&}__header {
+        @include clearfix;
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        margin: 0;
+    }
+    @at-root #{&}__text {
+        font-size: 14px;
+        margin: 0 auto;
+        @include breakpoint($large) {
+            font-size: $font-size-base;
+        }
+    }
+    @at-root #{&}__cdi {
+        @include breakpoint($tp-xlarge) {
+            font-size: 18px;
+        }
+    }
+    @at-root #{&}__container {
+        position: relative;
+        clear: both;
+    }
+    @at-root #{&}-accordion {
+        @include clearfix;
+        display: none;
+        font-size: 16px;
+        height: 0;
+        overflow: hidden;
+        padding: 20px;
+        @at-root #{&}--opened {
+            height: 100%;
+        }
+        @at-root #{&}__title {
+            font-size: 20px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+    @at-root #{&}__column {
+        @include clearfix;
+        @include span(12 of 12);
+        @include breakpoint($large) {
+            &:first-of-type {
+                @include span(first 5.75 of 12);
+            }
+            &:last-of-type {
+                @include span(last 5.75 of 12);
+            }
+        }
+    }
+    @at-root #{&}--center-third {
+        margin: auto;
+        @include breakpoint($small-wide) {
+            max-width: 85%;
+        }
+        @include breakpoint($medium-wide) {
+            max-width: 65%;
+        }
+        @include breakpoint($tp-xlarge) {
+            max-width: 50%;
+        }
+    }
+}
+
+.js-disclaimer-accordion__toggle {
+    bottom: 0;
+    color: $color-white;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}

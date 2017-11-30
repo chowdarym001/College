@@ -1,0 +1,158 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.RequestInformationModel
+
+<script src="~/Assets/dist/prime/scripts/jquery.validate.js" />
+<script src="~/Assets/dist/prime/scripts/jquery.validate.unobtrusive.js" />
+<script>
+    var validator = $("#infoform").validate({
+        errorClass: 'error',
+        validClass: 'valid',
+        rules: {
+            'first_name': "required",
+            'last_name': "required",
+            'content[message]': {
+                required: true,
+                minlength: 1
+            }
+        }
+    });
+
+    $('#infoform').valid();
+</script>
+<section class="section-content rmi" id="js-rmi">
+    <div class="container">
+        <h1 class="rmi__title">@Html.Raw(Model.Title)</h1>
+        <div class="rmi__wrapper" id="rmi__wrapper">
+            <div class="rmi__content">
+                <div class="rmi__info" id="rmi__info">
+                    @Html.Raw(Model.Body)
+                </div>
+                <form id="infoform" action="/Thankyou" class="rmi__form rmi__form--ppc" method="post" novalidate>
+                    <fieldset class="form-fieldset rmi__form-fieldset">
+                        <legend class="form-legend rmi__form-legend">Contact Information</legend>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="first_name" style="opacity: 1;">First name</label>
+                            <input class="form-input form-input--text" id="first_name" name="firstname" type="text" required="required" aria-required="true">
+                            <label for="first_name" class="form-label form-label--error">First name is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="last_name">Last name</label>
+                            <input class="form-input form-input--text" id="last_name" name="lastname" type="text" required="required" aria-required="true">
+                            <label for="last_name" class="form-label form-label--error">Last name is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="email">Email address</label>
+                            <input class="form-input form-input--email" id="email" name="emailaddress" type="email" required="required" aria-required="true">
+                            <label for="email" class="form-label form-label--error">Email address is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="phone">Phone number</label>
+                            <input class="form-input form-input--tel" id="phone" name="phone" type="tel" required="required" aria-required="true">
+                            <label for="phone" class="form-label form-label--error">Phone number is required.</label>
+                            <input name="phonehp" type="tel" id="phoneHP">
+                        </div>
+                        <div class="form-controls">
+                            <label class="form-label form-label--inlined" for="zip_code">ZIP code</label>
+                            <input class="form-input form-input--tel" id="zip_code" name="ziph" type="tel" required="required" aria-required="true" maxlength="5" min="11111" max="99999" pattern="[0-9]{0,5}">
+                            <label for="zip_code" class="form-label form-label--error">ZIP code is required.</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-fieldset rmi__form-fieldset">
+                        <legend class="form-legend rmi__form-legend">Educational Preferences</legend>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_school" name="school" data-after="preferred_program" data-target="preferred_program">
+                                <option value="" selected="selected">I'm Interested in..</option>
+                                <option value="bu">School of Business</option>
+                                <option value="de">School of Design</option>
+                                <option value="ed">School of Education</option>
+                                <option value="ah">School of Health Sciences</option>
+                                <option value="js">School of Justice Studies</option>
+                                <option value="nu">School of Nursing</option>
+                                <option value="te">School of Technology</option>
+                            </select>
+                            <label for="preferred_school" class="form-label--error">School is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_program" name="program" required="required" aria-required="true">
+                                <option value="">Preferred Program</option>
+                                <option value="SoB-Acctng"> Accounting</option>
+                                <option value="SoB-BusinessMgmt-BusAnalysis"> Business Analysis</option>
+                                <option value="SoB-BusinessMgmt"> Business Management</option>
+                                <option value="SoB-BusinessMgmt-Entrep"> Entrepreneurship</option>
+                                <option value="SoB-Finance"> Finance</option>
+                                <option value="SoB-HealthMgmt"> Healthcare Management</option>
+                                <option value="SoB-HR"> HR and Organizational Leadership</option>
+                                <option value="SoB-Marketing"> Marketing</option>
+                                <option value="SoB-SupplyChain"> Supply Chain and Logistics Management</option>
+                                <option value="SoB-Undecided"> Undecided</option>
+                            </select>
+                            <label for="preferred_program" class="form-label--error">Program is required.</label>
+                        </div>
+                        <div class="form-controls">
+                            <select class="form-select" id="preferred_campus" name="campus" data-target="preferred_school" data-after="preferred_program" style="" required="required" aria-required="true">
+                                <option value="" class="no_class">Preferred Campus</option>
+                                <option value="Undecided">Undecided</option>
+                                <option disabled="">ONLINE CAMPUS</option>
+                                <option value="Online">Online</option>
+                                <option disabled="">MINNESOTA CAMPUSES</option>
+                                <option value="Blaine">Blaine</option>
+                                <option value="EdenPrairie">Bloomington</option>
+                                <option value="BrooklynPark">Brooklyn Park/Maple Grove</option>
+                                <option value="Eagan">Eagan</option>
+                                <option value="LakeElmo">Lake Elmo/Woodbury</option>
+                                <option value="Mankato">Mankato</option>
+                                <option value="Moorhead">Moorhead</option>
+                                <option value="StCloud">St. Cloud</option>
+                                <option disabled="">ILLINOIS CAMPUSES</option>
+                                <option value="Aurora">Aurora/Naperville</option>
+                                <option value="Mokena">Mokena/Tinley Park</option>
+                                <option value="Rockford">Rockford</option>
+                                <option value="Romeoville">Romeoville/Joliet</option>
+                                <option disabled="">FLORIDA CAMPUSES</option>
+                                <option value="FortMyers">Fort Myers</option>
+                                <option value="Pasco">New Port Richey/West Pasco</option>
+                                <option value="Ocala">Ocala</option>
+                                <option value="PascoSun">Land O' Lakes/East Pasco</option>
+                                <option value="Brandon">Tampa/Brandon</option>
+                                <option disabled="">WISCONSIN CAMPUSES</option>
+                                <option value="Appleton">Appleton</option>
+                                <option value="GreenBay">Green Bay</option>
+                                <option value="Wausau">Wausau</option>
+                                <option disabled="">NORTH DAKOTA CAMPUS</option>
+                                <option value="Fargo">Fargo</option>
+                                <option disabled="">KANSAS CAMPUSES</option>
+                                <option value="OverlandPark">Kansas City/Overland Park</option>
+                                <option value="Topeka">Topeka</option>
+                            </select>
+                            <label for="preferred_campus" class="form-label--error">Campus is required.</label>
+                        </div>
+
+                        <span class="button button--primary js-smooth-scroll" onclick="submitform()">
+                            <button  class="button__input" type="submit">
+                                <div class="button__icon"></div>
+                                <span class="button__title">Request Info Now</span>
+                            </button>
+                        </span>
+                        <input name="successmsg" value="@Model.FormType" style="display:none" />
+                        @Html.Raw(Model.Disclaimer)
+                    </fieldset>
+
+                    <!-- Hidden Fields -->
+                    <input type="hidden" name="source" value="School Site">
+                    <input name="start_date" type="hidden" id="start_date" value="10 New Lead">
+                    <input name="subject" type="hidden" id="subject" value="School Site Request Info">
+                    <input name="campaign_code" type="hidden" id="campaign_code" value="SE - Google-LiveBall">
+                    <input name="formname" type="hidden" value="ras - Sendmeinfo">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function submitform() {
+        document.getElementById("infoform").submit();
+    }
+    
+</script>

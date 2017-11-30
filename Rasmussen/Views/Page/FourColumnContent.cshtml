@@ -1,0 +1,28 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.FourColumnContentBlockModel
+
+
+<section class="section-content section-student-approach">
+    <div class="container">
+        <hr class="rule-stripe rule-stripe--ras">
+
+        <header class="section-content__header">
+            <h1 class="heading heading--title">@Html.Raw(Model.Title)</h1>
+            @Html.Raw(Model.Body)
+        </header>
+        <section class="columns columns--four">
+        @foreach (var column in Model.ContentCards)
+        {
+
+        <div class="columns__item columns__item--alpha">
+            <h3 class="heading heading--tertiary">@Html.Raw(column.Title)</h3>
+            @Html.Raw(column.Body)
+            @Html.Raw(column.CTA)
+        </div> 
+        }
+        </section>
+
+        <hr class="rule-stripe rule-stripe--ras">
+    </div>
+</section>

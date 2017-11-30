@@ -1,0 +1,24 @@
+.mm-menu {
+  .mm-listview {
+    &.mm-multiline > li > {
+      a, span {
+        text-overflow: clip;
+        white-space: normal;
+      }
+    }
+
+    > li.mm-multiline > {
+      a, span {
+        text-overflow: clip;
+        white-space: normal;
+      }
+    }
+  }
+
+  &.mm-multiline .mm-listview > li > {
+    a, span {
+      text-overflow: clip;
+      white-space: normal;
+    }
+  }
+}

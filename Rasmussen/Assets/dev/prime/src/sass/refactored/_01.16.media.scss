@@ -1,0 +1,257 @@
+// LAZY LOADING MEDIA (IMAGES, IFRAMES, etc)
+.lazyload, .lazyloading, .lazyloaded {
+    @include transition(all, 1.5s, linear);
+}
+
+.lazyload {
+    background: transparent url(../../images/animations/animted-spinner-ras-green.gif) no-repeat center;
+    opacity: 0;
+}
+
+.lazyloading {
+    background: transparent url(../../images/animations/animted-spinner-ras-green.gif) no-repeat center;
+    opacity: 1;
+}
+
+.lazyloaded {
+    opacity: 1;
+}
+
+// VIDEO
+.section-video {
+    @extend %clearfix;
+    @include y-axis-padding(60px, 60px);
+}
+
+.video {
+    @extend %clearfix;
+    @at-root #{&}__text {
+        @include span(12 of 12);
+        @include breakpoint($medium-wide) {
+            @include span(4.75 of 12);
+        }
+    }
+    @at-root #{&}__player {
+        // video--responsive + iframe wrapper
+        @include span(12 of 12);
+        @include breakpoint($medium-wide) {
+            @include span(last 7 of 12);
+        }
+        @at-root #{&}--wistia {}
+        @at-root #{&}--youtube {
+            .video--responsive {
+                // video container, must be inside of video__player for YouTube iframe videos to be scaled responsively
+                height: 0;
+                overflow: hidden;
+                padding-bottom: 56.25%;
+                position: relative;
+                iframe, object, embed {
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @at-root #{&}--dark {
+        // Typical dark colored video section, use white text
+        .heading, .video__text, .widget-cta__title {
+            color: $color-white;
+        }
+    }
+    @at-root #{&}--light {
+        // For RST light colored video section, use white text
+        .school-of--rst & {
+            .heading, .video__text, .widget-cta__title {
+                color: $color-white;
+            }
+        }
+    }
+    @at-root #{&}-container {
+        @include clearfix;
+        height: 100%;
+        width: 100%;
+        @at-root #{&}__outline {
+            @include span(12 of 12);
+            border-style: solid;
+            border-width: 3px;
+            @at-root #{&}--gold {
+                border-color: $color-ras-gold--dark;
+            }
+        }
+    }
+    @at-root #{&}-desc {
+        @include clearfix;
+        font-size: $font-size-base;
+        text-align: center;
+    }
+    //    @at-root #{&}-carousel {
+    //        @include clearfix;
+    //        @at-root #{&}--flexchoice {
+    //            margin: auto;
+    //            height: 250px;
+    //            width: 90%;
+    //            @include breakpoint($medium-wide) {
+    //                height: 300px;
+    //                width: 70%;
+    //            }
+    //        }
+    //        .flickity-viewport {
+    //            @include transition(height, 250ms, linear);
+    //        }
+    //        .flickity-carousel__cell {
+    //            height: 100%;
+    //            width: 100%;
+    //        }
+    //    }
+}
+
+// illustration figures
+.figure {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    // figure caption
+    picture source, picture img {
+        @include span(12 of 12);
+        max-width: 100%;
+    }
+    @at-root #{&}__caption {
+        @include clearfix;
+        @include span(12 of 12);
+        margin: 0;
+        padding: 20px;
+        p {
+            font-size: $font-size-base;
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include font-body($font-body--bold);
+                font-size: 22px;
+                margin: 0;
+            }
+            @at-root #{&}-2 {}
+            @at-root #{&}-3 {}
+        }
+    }
+    @at-root #{&}--light-on-dark {
+        * {
+            color: $color-white;
+        }
+    }
+    @at-root #{&}--dark-on-light {
+        * {
+            color: $color-text;
+        }
+    }
+}
+
+.figure-image {
+    @include clearfix;
+    @at-root #{&}__outline {
+        @include span(12 of 12);
+        border-style: solid;
+        border-width: 3px;
+        @at-root #{&}--gold {
+            border-color: $color-ras-gold--dark;
+        }
+    }
+    img {
+        float: left;
+        max-width: 100%;
+    }
+}
+
+.image {
+    // image spans full width of parent
+    @at-root #{&}--span-width-parent {
+        @include span(12 of 12);
+        max-width: 100%;
+    }
+    @at-root #{&}-box-shadow {
+        @extend %picturefill-images;
+        @include clearfix;
+        @include box-shadow(0, 0, 10px, 0, rgba($color-black, 0.25));
+    }
+}
+
+.flickity-carousel {
+    @at-root #{&}--arrows {
+        /* smaller, dark, rounded square */
+        .flickity-prev-next-button {
+            background-color: transparent;
+            color: $color-white;
+            height: 44px;
+            width: 44px;
+        }
+        .flickity-prev-next-button:hover {
+            background-color: transparent;
+        }
+        /* arrow color */
+        .flickity-prev-next-button .arrow {
+            fill: $color-white;
+        }
+        .flickity-prev-next-button.no-svg {
+            color: $color-white;
+        }
+        /* position outside */
+        .flickity-prev-next-button.previous {
+            left: -40px;
+        }
+        .flickity-prev-next-button.next {
+            right: -40px;
+        }
+    }
+}
+
+.slick-carousel {
+    @include clearfix;
+    @at-root #{&}__content {
+        @include clearfix;
+    }
+    .video-desc {
+        @include clearfix;
+        padding: 10px 0;
+    }
+    .slick-dots {
+        li {
+            button {
+                height: 24px;
+                width: 24px;
+                &::before {
+                    font-size: 48px;
+                    height: inherit;
+                    line-height: 1.5rem;
+                    width: inherit;
+                    @include breakpoint($medium-wide) {
+                        font-size: 70px;
+                    }
+                }
+            }
+        }
+    }
+    .slick-prev, .slick-next {
+        top: 30%;
+        &::before {
+            font-family: $font-fontawesome;
+            font-size: 32px;
+        }
+    }
+    .slick-prev {
+        left: -30px;
+        &::before {
+            content: '\f053';
+        }
+    }
+    .slick-next {
+        right: -30px;
+        &::before {
+            content: '\f054';
+        }
+    }
+}

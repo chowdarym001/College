@@ -1,0 +1,244 @@
+// INTRO
+.intro {
+    @at-root #{&}__copy {
+        @extend %clearfix;
+        @include span(12 of 12);
+        padding-bottom: 40px;
+        @include breakpoint($medium-tall) {
+            padding-bottom: 0;
+        }
+        @at-root #{&}--left {
+            @include breakpoint($medium-tall) {
+                @include span(first 7 of 12);
+                padding-right: 64px;
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 8 of 12);
+            }
+        }
+        @at-root #{&}--right {
+            @include breakpoint($medium-tall) {
+                @include span(last 7 of 12);
+                padding-left: 64px;
+            }
+            @include breakpoint($medium-wide) {
+                @include span(last 8 of 12);
+            }
+        }
+    }
+    .heading--title, h1 {
+        @extend %heading--title;
+    }
+    .heading--subtitle, h2 {
+        @extend %heading--subtitle;
+    }
+    &__text, & p {
+        @include font-size($intro-text-font-sizes);
+        line-height: 1.5;
+    }
+    @at-root #{&}__data {
+        @extend %clearfix;
+        @include span(12 of 12);
+        text-align: center;
+        @include breakpoint($medium-tall) {
+            text-align: left;
+        }
+        @at-root #{&}--left {
+            @include breakpoint($medium-tall) {
+                @include span(first 5 of 12);
+                padding-right: 64px;
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 4 of 12);
+            }
+        }
+        @at-root #{&}--right {
+            @include breakpoint($medium-tall) {
+                @include span(last 5 of 12);
+                padding-left: 64px;
+            }
+            @include breakpoint($medium-wide) {
+                @include span(last 4 of 12);
+            }
+        }
+        .intro__subtitle, h2 {
+            @include font-headings;
+            font-size: 24px;
+        }
+    }
+    @at-root #{&}__menu {
+        clear: both;
+        padding-left: 30px;
+        position: relative;
+        @include breakpoint($medium-tall) {
+            @include span(last 5 of 12);
+            clear: none;
+        }
+        @include breakpoint($medium-wide) {
+            @include span(last 4 of 12);
+        }
+        &--title {
+            @include font-headings;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    }
+    @at-root #{&}-menu {
+        @include clearfix;
+        clear: both;
+        padding-left: 30px;
+        position: relative;
+        @include breakpoint($medium-tall) {
+            @include span(last 5 of 12);
+            clear: none;
+        }
+        @include breakpoint($medium-wide) {
+            @include span(last 4 of 12);
+        }
+        @at-root #{&}__headline {
+            @include clearfix;
+            @at-root #{&}--lvl {
+                @at-root #{&}-1 {}
+                @at-root #{&}-2 {}
+                @at-root #{&}-3 {
+                    @include font-headings;
+                    font-size: 24px;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.colorful-stats {
+    @extend %clearfix;
+    @extend %reset-list;
+    @at-root #{&}__item {
+        @include span(12 of 12 no-gutters);
+        list-style: none;
+        margin-bottom: 40px;
+    }
+    @at-root #{&}--two {
+        @at-root #{&} .colorful-stats__item {
+            @include breakpoint($small-wide) {
+                @include span(6 of 12);
+                &:last-of-type {
+                    @include span(last 6 of 12);
+                }
+            }
+            @include breakpoint($medium-tall) {
+                @include span(12 of 12);
+                &:last-of-type {
+                    @include span(12 of 12);
+                }
+            }
+        }
+    }
+    @at-root #{&}--three {
+        @at-root #{&} .colorful-stats__item {
+            @include breakpoint($small-wide) {
+                @include span(4 of 12);
+                &:last-of-type {
+                    @include span(last 4 of 12);
+                }
+            }
+            @include breakpoint($medium-tall) {
+                @include span(12 of 12);
+                &:last-of-type {
+                    @include span(12 of 12);
+                }
+            }
+        }
+    }
+    &__title {
+        @include span(12 of 12 inside no-gutters);
+        @include font-size($stats-title-font-sizes);
+        font-family: $font-headings--medium;
+        margin: 10px 0 -5px 0;
+        line-height: 1.5;
+        text-align: center;
+        @include breakpoint($medium-tall) {
+            font-size: 72px;
+            line-height: 0.85;
+            text-align: left;
+        }
+        small {
+            font-family: $font-klavika--light;
+            @include breakpoint($medium-wide) {
+                font-size: 80%;
+                margin: 0;
+            }
+        }
+        sup {
+            top: -20px;
+        }
+    }
+    &__subtitle {
+        @include span(12 of 12 inside no-gutters);
+        @include font-size($stats-subtitle-font-sizes);
+        font-family: $font-flama--medium;
+        line-height: 1;
+        margin: 10px auto 0;
+        padding: 0;
+        text-align: center;
+        @include breakpoint($medium-tall) {
+            @include span(12 of 12 inside no-gutters);
+            line-height: $line-height-base;
+            text-align: left;
+        }
+        sup {
+            top: -10px;
+            @include breakpoint($medium-wide) {
+                top: -14px;
+            }
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include span(12 of 12);
+                @include font-headings($font-headings--bold, 1);
+                @include font-size($stats-title-font-sizes);
+                margin-bottom: 0;
+                text-align: center;
+                @include breakpoint($medium-tall) {
+                    font-size: 72px;
+                    line-height: 0.85;
+                    text-align: left;
+                }
+                small {
+                    @include font-headings($font-headings--light, 1);
+                    @include breakpoint($medium-wide) {
+                        font-size: 80%;
+                        margin: 0;
+                    }
+                }
+                sup {
+                    top: -20px;
+                }
+            }
+            @at-root #{&}-2 {}
+            @at-root #{&}-3 {}
+            @at-root #{&}-4 {
+                @include span(12 of 12 no-gutters);
+                @include font-body($font-body--medium, 1);
+                @include font-size($stats-subtitle-font-sizes);
+                margin-bottom: 0;
+                padding: 0;
+                text-align: center;
+                @include breakpoint($medium-tall) {
+                    @include span(12 of 12 no-gutters);
+                    line-height: $line-height-base;
+                    text-align: left;
+                }
+                sup {
+                    top: -10px;
+                    @include breakpoint($medium-wide) {
+                        top: -14px;
+                    }
+                }
+            }
+        }
+    }
+}

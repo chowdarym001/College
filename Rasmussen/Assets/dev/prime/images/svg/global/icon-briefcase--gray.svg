@@ -1,0 +1,38 @@
+<svg id="icon-briefcase--gray" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 226 184.21">
+    <defs>
+        <style>
+            .fill-494949 {
+                fill: #494949;
+            }
+            
+            .fill-898989 {
+                fill: #898989;
+            }
+            
+            .fill-505050 {
+                fill: #505050;
+            }
+            
+            .fill-686868 {
+                fill: #686868;
+            }
+            
+            .fill-e8b417 {
+                fill: #e8b417;
+            }
+        </style>
+    </defs>
+    <title>icon-briefcase--gray</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <g id="icon-briefcase--gray">
+                <rect class="fill-494949" y="58.05" width="223.68" height="126.16" rx="10.35" ry="10.35" />
+                <rect class="fill-898989" y="55.73" width="223.68" height="126.16" rx="10.35" ry="10.35" />
+                <path class="fill-505050" d="M127.32,62.69h-31A31.35,31.35,0,0,1,96.36,0h31a31.35,31.35,0,0,1,0,62.69Zm-31-47.21a15.87,15.87,0,0,0,0,31.73h31a15.87,15.87,0,0,0,0-31.73Z" />
+                <rect class="fill-686868" x="6.07" y="105.26" width="214.19" height="75.46" rx="12.15" ry="12.15" />
+                <path class="fill-e8b417" d="M118.16,109.9H105.52a4.9,4.9,0,0,0-4.9,4.9v12.64a4.9,4.9,0,0,0,4.9,4.9h12.64a4.9,4.9,0,0,0,4.9-4.9V114.81A4.9,4.9,0,0,0,118.16,109.9Zm1,15.74a2.06,2.06,0,0,1-2.06,2.06H106.54a2.06,2.06,0,0,1-2.06-2.06V122.8a2.06,2.06,0,0,1,2.06-2.06h4.91v5.42h2.32v-5.42h3.36a2.06,2.06,0,0,1,2.06,2.06Z" />
+                <image width="226" height="84" transform="translate(0 32.1)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAABUCAYAAACfg+u/AAAACXBIWXMAAAsSAAALEgHS3X78AAABK0lEQVR4Xu3TIQ7DQBAEwXvi/f8zGyVSLCvEJJYbFCg2A3vNzDrbew9wr9/uxAcPEyIEfEK8GgH3EyIECBEChAgBQoQAIUKAECFAiBAgRAgQIgQIEQKECAFChAAhQoAQIUCIECBECBAiBAgRAoQIAUKEACFCgBAhQIgQIEQIECIECBEChAgBQoQAIUKAECFAiBAgRAgQIgQIEQKECAFChAAhQoAQIUCIECBECBAiBAgRAoQIAUKEACFCgBAhQIgQIEQIECIECBEChAgBQoQAIUKAECFAiBAgRAgQIgQIEQKECAFChAAhQoAQIUCIECBECBAiBAgRAoQIAUKEACFCgBAhQIgQIEQIECIECBEChAgBQoQAIULAmhEjPOndoBDhYUeIX1cH4H/O7b0AtyyC7oBnVNoAAAAASUVORK5CYII=" />
+            </g>
+        </g>
+    </g>
+</svg>

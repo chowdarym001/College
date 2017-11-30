@@ -1,0 +1,83 @@
+---
+title: Overview | Rasmussen College Style Guide 2016
+fabricator: true
+---
+
+<h1>Overview</h1>
+
+
+<p>This UI toolkit is a highly-modular design system for the rapid development of the <b>Rasmussen College</b> rebranded website. It contains different materials that can be assembled into more complex page layouts.</p>
+
+<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+
+<hr>
+
+<h2>Development Usage</h2>
+
+<p>Start by adding the following files to your page:</p>
+
+<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/styles.css&quot;&gt;</code></pre>
+
+<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;scripts/display.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+<hr>
+
+<h2>Taxonomies</h2>
+<ol class="f-item-ordered-list">
+    <li>
+        <strong>Atoms:</strong>
+        <ul>
+            <li>Basic HTML tags that can't be broken down any further without ceasing to be functional</li>
+            <li>Includes abstract elements like color palettes, font stacks, invisible things like animation</li>
+            <li>Eg. <i>form labels, inputs, buttons, links</i></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Molecules:</strong>
+        <ul>
+            <li>Relatively simple groups of UI elements functioning together as a unit</li>
+            <li>Atoms assembled/combined in specific combination/formation to serve a purpose</li>
+            <li>Eg. <i>form label, search input, and button</i> combined to create a search form</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Organisms:</strong>
+        <ul>
+            <li>Relatively complex UI components composed of groups of molecules and/or atoms, and/or other organisms</li>
+            <li>eg. search form (from molecule example) placed within context of a global header</li>
+            <li>Consist of similar or different molecule types
+                <ul>
+                    <li>Similar types: <i>categorical page of products, repeated molecules (clothing or programs)</i></li>
+                    <li>Different types: <i>header with logo image, primary navigation, search form</i></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Templates:</strong>
+        <ul>
+            <li>Page-level objects that place components into a layout and articulate the design's underlying content structure</li>
+            <li>eg. <i>header with search form on homepage</i></li>
+            <li>Provides context for relatively abstract molecules and organisms</li>
+            <li>Demonstrate how components look/function together in context of layout to prove the parts add up to a well-functioning whole</li>
+            <li>Focus on the page's underlying content structure {rather than the page's final content}
+                <ul>
+                    <li>Articulate important properties like image sizes and character lengths for headings/text passages</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <strong>Pages:</strong>
+        <ul>
+            <li>Specific instances of templates that replace placeholder content with real representative content</li>
+            <li>Essential for testing the effectiveness of the underlying design system
+                <ul>
+                    <li>Able to take a look at how patterns hold up when real content is applied to the design system</li>
+                </ul>
+            </li>
+            <li>Provide a place to articulate variations in templates</li>
+        </ul>
+    </li>
+</ol>

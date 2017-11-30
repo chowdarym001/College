@@ -1,0 +1,405 @@
+
+
+// import vendor depedencies
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+$font-fabricator: 'Lora', Georgia, 'Times New Roman', Times, serif;
+.f-menu, .f-container {
+    font-family: $font-fabricator;
+}
+
+.f-container > h1, .f-container > h2, .f-menu__heading, .f-item-heading, .f-item-heading-desc {
+    font-weight: 700;
+}
+
+.f-container > h1, .f-container > h2, h2.f-item-heading {
+    letter-spacing: 7px;
+}
+
+.f-container > h1, .f-container > h2, .f-menu__heading {
+    text-transform: uppercase;
+}
+
+.f-container {
+    > h1 {
+        margin-bottom: 0;
+    }
+    > h2 {
+        font-size: 2em;
+    }
+}
+
+.f-menu {
+    background-color: lighten($color-black, 30%);
+    a {
+        border: 0;
+        color: $color-white;
+        &:hover {
+            background-color: lighten($color-black, 50%);
+            border: 0;
+            color: $color-white;
+            text-decoration: none;
+        }
+        &.f-active {
+            background-color: $color-white;
+            color: $color-black;
+        }
+    }
+    .f-menu__heading {
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.f-item-wrap > .f-item-group {
+    border-bottom: 1px dashed lighten($color-text, 45%);
+    &:last-child {
+        border: 0;
+    }
+}
+
+h2.f-item-heading {
+    background-color: lighten($color-text, 65%);
+    border-top: 2px solid lighten($color-text, 50%);
+    display: block;
+    font-size: 1.75em;
+    letter-spacing: 3px;
+    padding: 10px;
+}
+
+h3.f-item-heading {
+    font-size: 1.35em;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+.f-item-heading-desc {
+    display: block;
+    float: left;
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+.f-color-chip {
+    @at-root #{&}__details {
+        @extend %clearfix;
+    }
+    @at-root #{&}__name {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    @at-root #{&}__details {
+        font-weight: normal;
+    }
+    // GENERAL COLORs
+    @at-root #{&}--text-darkbg {
+        border-top-color: $color-white;
+    }
+    @at-root #{&}--text-lightbg {
+        border-top-color: $color-text;
+    }
+    // RAS COLORS
+    @at-root #{&}--ras-green-light {
+        border-top-color: $color-ras-green--light;
+    }
+    @at-root #{&}--ras-green-medium {
+        border-top-color: $color-ras-green--bright;
+    }
+    @at-root #{&}--ras-green-dark {
+        border-top-color: $color-ras-green--dark;
+    }
+    @at-root #{&}--ras-yellow-light {
+        border-top-color: $color-ras-gold--light;
+    }
+    @at-root #{&}--ras-yellow {
+        border-top-color: $color-ras-gold--dark;
+    }
+    // RSB COLORS
+    @at-root #{&}--rsb-light {
+        border-top-color: $color-school-rsb-light;
+    }
+    @at-root #{&}--rsb {
+        border-top-color: $color-school-rsb;
+    }
+    @at-root #{&}--rsb-dark {
+        border-top-color: $color-school-rsb-dark;
+    }
+    // RSD COLORS
+    @at-root #{&}--rsd-light {
+        border-top-color: $color-school-rsd-light;
+    }
+    @at-root #{&}--rsd {
+        border-top-color: $color-school-rsd;
+    }
+    @at-root #{&}--rsd-dark {
+        border-top-color: $color-school-rsd-dark;
+    }
+    // RSE COLORS
+    @at-root #{&}--rse-light {
+        border-top-color: $color-school-rse-light;
+    }
+    @at-root #{&}--rse {
+        border-top-color: $color-school-rse;
+    }
+    @at-root #{&}--rse-dark {
+        border-top-color: $color-school-rse-dark;
+    }
+    // RSHS COLORS
+    @at-root #{&}--rshs {
+        border-top-color: $color-school-rshs--primary;
+    }
+    @at-root #{&}--rshs-medium {
+        border-top-color: $color-school-rshs--support--light;
+    }
+    @at-root #{&}--rshs-dark {
+        border-top-color: $color-school-rshs--support--dark;
+    }
+    // RSJS COLORS
+    @at-root #{&}--rsjs-light {
+        border-top-color: $color-school-rsjs-light;
+    }
+    @at-root #{&}--rsjs {
+        border-top-color: $color-school-rsjs;
+    }
+    @at-root #{&}--rsjs-dark {
+        border-top-color: $color-school-rsjs-dark;
+    }
+    // RSN COLORS
+    @at-root #{&}--rsn--primary {
+        border-top-color: $color-school-rsn--primary;
+    }
+    @at-root #{&}--rsn--support-light {
+        border-top-color: $color-school-rsn--support--light;
+    }
+    @at-root #{&}--rsn--support-dark {
+        border-top-color: $color-school-rsn--support--dark;
+    } // RST COLORS
+    @at-root #{&}--rst-light {
+        border-top-color: $color-school-rst-light;
+    }
+    @at-root #{&}--rst {
+        border-top-color: $color-school-rst;
+    }
+    @at-root #{&}--rst-dark {
+        border-top-color: $color-school-rst-dark;
+    }
+}
+
+.f-item-preview {
+    #{headings()} {
+        font-family: $font-headings--medium;
+    }
+    p, ul, ol {
+        font-family: $font-body;
+    }
+    .f-colored-bg .list {
+        margin: 0;
+        padding: 0;
+        li {
+            @include span(12 of 12);
+            display: inline-block;
+            margin-bottom: 20px;
+            max-height: 180px;
+            text-align: center;
+            @include breakpoint($small) {
+                @include span(6 of 12);
+                &:nth-child(2n) {
+                    @include span(last 6 of 12);
+                }
+            }
+            @include breakpoint($medium-tall) {
+                @include span(4 of 12);
+                &:nth-child(2n) {
+                    @include span(first 4 of 12);
+                }
+                &:nth-child(3n) {
+                    @include span(last 4 of 12);
+                }
+            }
+            @include breakpoint($tp-huge) {
+                @include span(3 of 12);
+                &:nth-child(2n) {
+                    @include span(first 3 of 12);
+                }
+                &:nth-child(3n) {
+                    @include span(first 3 of 12);
+                }
+                &:nth-child(4n) {
+                    @include span(last 3 of 12);
+                }
+            }
+            @include breakpoint($tp-ridiculously-wide) {
+                @include span(2.4 of 12);
+                &:nth-child(2n) {
+                    @include span(first 2.4 of 12);
+                }
+                &:nth-child(3n) {
+                    @include span(first 2.4 of 12);
+                }
+                &:nth-child(4n) {
+                    @include span(last 2.4 of 12);
+                }
+                &:nth-child(5nn) {
+                    @include span(last 2.4 of 12);
+                }
+            }
+            .svg {
+                display: block;
+                margin: auto;
+                max-width: 128px;
+                width: auto;
+            }
+        }
+    }
+    .nav-toggle {
+        display: block;
+        width: auto;
+    }
+    .identity-menu-toggle {
+        .nav-toggle {
+            @include span(2 of 12 last);
+            @include breakpoint($medium-wide) {
+                display: none;
+            }
+        }
+    }
+    .banner-text {
+        position: relative;
+        top: auto;
+        transform: translateY(0);
+    }
+    .banner-text__title, .banner-text__subtitle {
+        position: relative;
+        z-index: 0;
+        &::before {
+            background-color: $color-text;
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    .banner-text__subtitle {
+        &::before {
+            height: 30px;
+        }
+    }
+    .banner-text__title {
+        &::before {
+            height: 50px;
+        }
+    }
+    .banner-full {
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .banner-text__title, .banner-text__subtitle {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .l-line {
+        margin: 0 50%;
+    }
+    .line-stripe {
+        margin-bottom: 20px;
+    }
+}
+
+.f-container {
+    b, strong {
+        font-weight: normal;
+    }
+}
+
+.f-item-notes {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.f-colored-bg {
+    @extend %clearfix;
+    padding: 10px 0;
+    position: relative;
+    @at-root #{&}--dark {
+        background-color: darken($color-white, 65%);
+        color: $color-white;
+    }
+    @at-root #{&}--light {
+        background-color: darken($color-white, 10%);
+        color: $color-text;
+    }
+    @at-root #{&}--short {
+        min-height: 100px;
+    }
+    @at-root #{&}--tall {
+        min-height: 500px;
+    }
+}
+
+.f-svg-sprite {
+    display: none;
+}
+
+.f-svg-icon {
+    &-light {}
+    &-dark {
+        background-color: lighten($color-text, 10%);
+    }
+}
+
+// Add pseudo background colors for l-lines only in Fabricator mode
+.f-item-group {
+    // To allow IDs with periods in its name w/o it being a class, escape the period like so
+    
+    &#dividers\.l-line-ras, &#dividers\.l-line-rsb, &#dividers\.l-line-rsd, &#dividers\.l-line-rse, &#dividers\.l-line-rshs, &#dividers\.l-line-rsjs, &#dividers\.l-line-rsn, &#dividers\.l-line-rst {
+        .f.item-preview {
+            padding: 20px 0;
+        }
+    }
+    &#dividers\.l-line-ras {
+        .f-item-preview {
+            background-color: lighten($color-ras-green--light, 45%);
+        }
+    }
+    &#dividers\.l-line-rsb {
+        .f-item-preview {
+            background-color: $color-school-rsb-dark;
+        }
+    }
+    &#dividers\.l-line-rsd {
+        .f-item-preview {
+            background-color: $color-school-rsd;
+        }
+    }
+    &#dividers\.l-line-rse {
+        .f-item-preview {
+            background-color: lighten($color-school-rse, 25%);
+        }
+    }
+    &#dividers\.l-line-rshs {
+        .f-item-preview {
+            background-color: lighten($color-school-rshs--primary, 25%);
+        }
+    }
+    &#dividers\.l-line-rsjs {
+        .f-item-preview {
+            background-color: lighten($color-school-rsjs, 25%);
+        }
+    }
+    &#dividers\.l-line-rsn {
+        .f-item-preview {
+            background-color: lighten($color-school-rsn--support--light, 25%);
+        }
+    }
+    &#dividers\.l-line-rst {
+        .f-item-preview {
+            background-color: lighten($color-school-rst, 25%);
+        }
+    }
+    
+}

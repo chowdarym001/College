@@ -1,0 +1,530 @@
+//$toms-tiles-gap: 4px;
+$toms-tiles-gap: 0;
+$toms-tiles-zigzag-2c1r-height-min: 250px;
+$toms-tiles-zigzag-2c1r-height: 325px;
+$toms-tiles-zigzag-2c2r-height-min: 300px;
+$toms-tiles-zigzag-2c2r-height: 500px;
+.toms-tiles {
+    @include clearfix;
+    padding: 40px 0;
+    .text--dark-on-light * {
+        color: $color-text;
+    }
+    .text--light-on-dark * {
+        color: $color-white;
+    }
+    // TOMS TILES CONTENT SECTIONS
+    @at-root #{&}__header {
+        @include clearfix;
+    }
+    @at-root #{&}__content {
+        @include clearfix;
+    }
+    @at-root #{&}__footer {
+        @include clearfix;
+        bottom: 0;
+        height: auto;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        @include breakpoint($small) {
+            padding: 40px;
+        }
+    }
+    // TOMS TILES CHILDREN ELEMENTS
+    @at-root #{&}__item {
+        //display: inline-block;
+        display: block;
+        position: relative;
+        @at-root #{&}--no-padding {
+            padding: 0 !important;
+        }
+    }
+    @at-root #{&}__bgimage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        padding-bottom: 2px;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include font-headings;
+                font-size: 24px;
+                line-height: 1.2;
+                @include breakpoint($medium-wide) {
+                    font-size: 32px;
+                }
+            }
+            @at-root #{&}-2 {
+                @include font-headings;
+                border-bottom: 4px solid $color-ras-green--bright;
+                display: inline-block;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+            @at-root #{&}-3 {
+                @include font-headings;
+                display: inline-block;
+                font-size: 24px;
+                margin: 0;
+                @include breakpoint($medium-wide) {
+                    font-size: 30px;
+                }
+            }
+            @at-root #{&}-4 {
+                @include font-headings;
+                border-bottom: 4px solid $color-white;
+                display: inline-block;
+                font-size: 18px;
+            }
+        }
+    }
+    // modifiers, variations
+    &--2c3r-zigzag {
+        // Non CSS grid browsers
+        @include breakpoint($medium-tall) {
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+            column-gap: $toms-tiles-gap;
+            column-width: 100%;
+        }
+        .toms-tiles__item {
+            padding: 20px;
+            @include breakpoint($small) {
+                padding: 40px;
+            }
+            @include breakpoint($medium-tall) {
+                float: left;
+                page-break-inside: avoid; // For Firefox
+                -webkit-column-break-inside: avoid; // For Chrome & friends
+                break-inside: avoid; // For standard browsers like IE
+                margin: 0 0 $toms-tiles-gap 0;
+                vertical-align: top;
+                width: 100%;
+            }
+            &--1 {}
+            &--2 {}
+            &--3 {}
+            &--4 {}
+            &--2c1r {
+                @include breakpoint($medium-tall) {
+                    height: $toms-tiles-zigzag-2c1r-height-min;
+                }
+                @include breakpoint($medium-wide) {
+                    height: $toms-tiles-zigzag-2c1r-height;
+                }
+            }
+            &--2c2r {
+                min-height: $toms-tiles-zigzag-2c2r-height-min;
+                @include breakpoint($medium-tall) {
+                    height: $toms-tiles-zigzag-2c2r-height;
+                }
+            }
+        }
+    }
+    &--2c3r-tall {
+        //        -moz-column-count: 2;
+        //        -webkit-column-count: 2;
+        //        column-count: 2;
+        //        column-gap: $toms-tiles-gap;
+        //        column-width: 100%;
+        .toms-tiles__item {
+            @include span(12 of 12);
+            //            grid-column: span 4;
+            //            page-break-inside: avoid; // For Firefox
+            //            -webkit-column-break-inside: avoid; // For Chrome & friends
+            //            break-inside: avoid; // For standard browsers like IE
+            //            margin: 0 0 $toms-tiles-gap 0;
+            //            padding: 40px;
+            //            vertical-align: top;
+            //            width: 100%;
+        }
+        .toms-tiles__subgrid {
+            @include clearfix;
+            align-content: stretch;
+            display: flex;
+            flex-direction: column;
+            flex-flow: row wrap;
+            flex-wrap: wrap;
+        }
+        .toms-tiles__subitem {
+            flex-grow: 1;
+            &--2c1r {
+                width: 50%;
+                &:first-of-type {
+                    background: salmon;
+                    float: left;
+                }
+                &:last-of-type {
+                    background: orange;
+                    float: right;
+                }
+            }
+            &--2c2r {
+                width: 50%;
+                &:first-of-type {
+                    float: left;
+                    background: aliceblue;
+                }
+                &:last-of-type {
+                    background: blue;
+                    float: right;
+                }
+            }
+            img {
+                float: left;
+                &.image-full {
+                    width: 100%;
+                }
+                &.image-half {
+                    width: 50%;
+                }
+            }
+        }
+        .toms-tiles__subtext {
+            padding: 40px;
+        }
+        .toms-tiles__bgimage {
+            height: 100%;
+        }
+    }
+    &--2c3r-top-heavy {
+        .toms-tiles__item {
+            padding: 40px;
+            float: left;
+            &--1 {
+                background-color: aquamarine;
+            }
+            &--2 {
+                background-color: blue;
+            }
+            &--3 {
+                background-color: gold;
+            }
+            &--4 {
+                background-color: green;
+            }
+            &--5 {
+                background-color: indigo
+            }
+            &--6 {
+                background-color: darkred;
+            }
+            &--1c1r {
+                //height: 25vmin;
+                height: 350px;
+                width: 25%;
+            }
+            &--2c2r {
+                //height: 50vmin;
+                height: 700px;
+                width: 50%;
+            }
+        }
+    }
+    &--2c3r-xtall {
+        .toms-tiles__item {}
+    }
+}
+
+.cssgrid {
+    // Browsers that support CSS grid. Currently using combination of Modernizr cssgrid class browser feature detection
+    // Replace the .cssgrid part once libsass can safely compile @supports(display:grid)
+    .toms-tiles {
+        // generic, shared grid
+        display: grid;
+        //margin-bottom: 40px;
+        // generic shared grid item styles
+        &__item {
+            // reset margins when css-grid is supported
+            grid-column: span 1;
+            display: block;
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            @include breakpoint($medium-wide) {
+                padding: 40px;
+            }
+            &--1 {
+                order: 1;
+            }
+            &--2 {
+                order: 2;
+            }
+            &--3 {
+                order: 3;
+            }
+            &--4 {
+                order: 4;
+            }
+            &--5 {
+                order: 5;
+            }
+            &--6 {
+                order: 6;
+            }
+            //            &--1x1 {
+            //                grid-row: span 1;
+            //                height: 25vmin;
+            //            }
+            //            &--4x4 {
+            //                height: 50vmin;
+            //            }
+        }
+        &--2c3r-zigzag {
+            grid-template-column: 1fr;
+            grid-template-row: 4fr;
+            grid-gap: $toms-tiles-gap;
+            @include breakpoint($medium-tall) {
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: $toms-tiles-gap;
+            }
+            .toms-tiles__item--2c1r {
+                @include breakpoint($medium-tall) {
+                    height: $toms-tiles-zigzag-2c1r-height;
+                    &.toms-tiles__item--1 {
+                        grid-column: 1 / span 2;
+                        grid-row: 1;
+                    }
+                    &.toms-tiles__item--4 {
+                        grid-column: 3 / span 2;
+                        grid-row: 3;
+                    }
+                }
+            }
+            .toms-tiles__item--2c2r {
+                min-height: $toms-tiles-zigzag-2c2r-height-min;
+                @include breakpoint($medium-tall) {
+                    height: $toms-tiles-zigzag-2c2r-height;
+                    &.toms-tiles__item--2 {
+                        grid-column: 3 / span 2;
+                        grid-row: 1 / span 2;
+                    }
+                    &.toms-tiles__item--3 {
+                        grid-column: 1 / span 2;
+                        grid-row: 2 / span 2;
+                    }
+                }
+            }
+        }
+        &--2col-3row-xl {
+            //            display: grid;
+            //            grid-gap: $toms-tiles-gap;
+            //            grid-template-columns: repeat(4, 1fr);
+            //            .toms-tiles__item {
+            //                padding: 0;
+            //            }
+            //            .toms-tiles__subgrid {
+            //                display: grid;
+            //                grid-gap: $toms-tiles-gap;
+            //                grid-template-columns: repeat(4, 1fr);
+            //                padding: 0;
+            //                img {
+            //                    display: block;
+            //                    float: left;
+            //                    max-width: 100%;
+            //                }
+            //            }
+            //            .toms-tiles__subitem {
+            //                &--1x2 {
+            //                    grid-column: span 2;
+            //                    grid-row: span 1;
+            //                }
+            //                &--2x3 {
+            //                    grid-column: span 2;
+            //                    grid-row: span 3;
+            //                    &:first-of-type {
+            //                        background: red;
+            //                    }
+            //                    &:last-of-type {
+            //                        background: orange;
+            //                    }
+            //                }
+            //                &--4x4 {
+            //                    grid-column: span 2;
+            //                    grid-row: span 1;
+            //                    &:first-of-type {
+            //                        background: green;
+            //                    }
+            //                    &:last-of-type {
+            //                        background: blue;
+            //                    }
+            //                }
+            //                &--center {
+            //                    img {
+            //                        align-self: center;
+            //                    }
+            //                }
+            //                &--center, &--single, &--top {
+            //                    img {
+            //                        width: 100%;
+            //                    }
+            //                }
+            //                &--double {
+            //                    img {
+            //                        align-self: end;
+            //                        width: 50%;
+            //                    }
+            //                }
+            //                &--single {
+            //                    img {
+            //                        align-self: end;
+            //                    }
+            //                }
+            //                &--top {
+            //                    img {
+            //                        align-self: start;
+            //                    }
+            //                }
+            //                &--image {
+            //                    padding: 0;
+            //                }
+            //            }
+            //            .toms-tiles__subtext {
+            //                clear: both;
+            //                padding: 40px;
+            //            }
+        }
+        &--2col-3row-top-heavy {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: $toms-tiles-gap;
+            //grid-template-rows: repeat(3, 1fr);
+            .toms-tiles__item {
+                padding: 40px;
+            }
+            .toms-tiles__item--1x1 {
+                grid-column: span 1;
+            }
+            .toms-tiles__item--4x4 {
+                &.toms-tiles__item--1 {
+                    grid-column: 1 / span 2;
+                }
+                &.toms-tiles__item--2 {
+                    grid-column: 3 / span 2;
+                }
+            }
+        }
+    }
+}
+
+.scroll-horizontal {
+    overflow: auto;
+    height: 280px;
+    width: 100%;
+}
+
+.fb-post {
+    @include clearfix;
+    border: 1px solid darken($color-white, 35%);
+    border-top-width: 20px;
+    height: 280px;
+    .flickity-carousel__cell {
+        @include span(10.133 of 12 no-gutters);
+        overflow-y: auto;
+        @include breakpoint($medium-wide) {
+            @include span(5.133 of 12 no-gutters);
+        }
+        @include breakpoint($tp-ridiculously-wide) {
+            @include span(3.33 of 12 no-gutters);
+        }
+        &:first-of-type {
+            .fb-post__content {
+                border-left: 0;
+            }
+        }
+    }
+    @at-root #{&}__content {
+        @include clearfix;
+        @include span(12 of 12);
+        background-color: $color-white;
+        border-left: 10px solid darken($color-white, 35%);
+        height: inherit;
+        padding: 20px;
+    }
+}
+
+.ras-lounge {
+    @include clearfix;
+    padding: 20px;
+    @include breakpoint($small) {
+        padding: 40px;
+    }
+}
+
+.toms-tiles {
+    .social-icons--2x2 {
+        .list {
+            align-content: stretch;
+            display: flex;
+            flex-direction: column;
+            flex-flow: row wrap;
+            flex-wrap: wrap;
+            .cssgrid & {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                //grid-template-rows: repeat(2, 1fr);
+                grid-gap: 0;
+                @include breakpoint($medium-wide) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                &::before {
+                    content: '';
+                    display: none;
+                }
+            }
+        }
+        .list__item {
+            flex-grow: 1;
+            width: 25%;
+            @include breakpoint($medium-wide) {
+                height: $toms-tiles-zigzag-2c1r-height/2;
+                width: 50%;
+            }
+            .cssgrid & {
+                grid-column: span 1;
+                grid-row: span 1;
+                width: 100%;
+            }
+        }
+        .list__link--social {
+            // setting as flex parent to horizontall/vertically center .fa, since cannot use both animation transform: scale() and transform: translate() together
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-flow: row wrap;
+            flex-wrap: wrap;
+            &:focus, &:hover {
+                .fa {
+                    @include animation(rubberBand 750ms linear infinite forwards);
+                    //@include animation(centered 1ms linear 1 forwards, rubberBand 750ms linear infinite forwards);
+                    //@include animation(bounch 750ms linear infinite forwards);
+                    //@include animation(pulse2 750ms linear infinite);
+                    //@include animation(flash 750ms linear infinite forwards);
+                }
+            }
+        }
+        .fa {
+            flex-grow: 1;
+            @include breakpoint($medium-wide) {
+                //@include centered-horizontally-vertically(absolute, 50%, 50%, -50%, -50%);
+                font-size: 85px;
+            }
+        }
+    }
+    .ras-lounge, .social-icons--2x2 {
+        @include breakpoint($medium-wide) {
+            float: left;
+            width: 50%;
+        }
+    }
+}

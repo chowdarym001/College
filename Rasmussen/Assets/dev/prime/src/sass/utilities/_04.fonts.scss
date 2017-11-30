@@ -1,0 +1,127 @@
+// FONTS
+//  FONT LEGEND
+//  1st .eot instance: IE9 Compatibility Modes;
+//  2nd .eot instance: /* IE6-IE8;
+//  SVG instance: Legacy iOS and Chrome;
+//  WOFF instance: Modern Browsers;
+//  TTF instance:  Safari, Android, iOS;
+// FONT: Flama (body copy)
+
+@font-face {
+  font-family: 'Flama Book';
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Book.eot");
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Book.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/flama/Flama-Book.svg#Flama-Book") format("svg"), url("#{$path-fonts-dev-prime}/flama/Flama-Book.woff") format("woff"), url("#{$path-fonts-dev-prime}/flama/Flama-Book.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/flama/Flama-Book.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Flama Book Italic';
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-BookItalic.eot");
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-BookItalic.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/flama/Flama-BookItalic.svg#Flama-Book") format("svg"), url("#{$path-fonts-dev-prime}/flama/Flama-BookItalic.woff") format("woff"), url("#{$path-fonts-dev-prime}/flama/Flama-BookItalic.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/flama/Flama-BookItalic.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Flama Medium';
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Medium.eot");
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Medium.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/flama/Flama-Medium.svg#Flama-Book") format("svg"), url("#{$path-fonts-dev-prime}/flama/Flama-Medium.woff") format("woff"), url("#{$path-fonts-dev-prime}/flama/Flama-Medium.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/flama/Flama-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Flama Medium Italic';
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-MediumItalic.eot");
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-MediumItalic.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/flama/Flama-MediumItalic.svg#Flama-Book") format("svg"), url("#{$path-fonts-dev-prime}/flama/Flama-MediumItalic.woff") format("woff"), url("#{$path-fonts-dev-prime}/flama/Flama-MediumItalic.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/flama/Flama-MediumItalic.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Flama Semibold';
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Semibold.eot");
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Semibold.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/flama/Flama-Semibold.svg#Flama-Book") format("svg"), url("#{$path-fonts-dev-prime}/flama/Flama-Semibold.woff") format("woff"), url("#{$path-fonts-dev-prime}/flama/Flama-Semibold.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/flama/Flama-Semibold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Flama Bold';
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Bold.eot");
+  src: url("#{$path-fonts-dev-prime}/flama/Flama-Bold.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/flama/Flama-Bold.svg#Flama-Book") format("svg"), url("#{$path-fonts-dev-prime}/flama/Flama-Bold.woff") format("woff"), url("#{$path-fonts-dev-prime}/flama/Flama-Bold.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/flama/Flama-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+// FONT: Klavika (headlings)
+@font-face {
+  font-family: 'Klavika Light';
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Light.eot");
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Light.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Light.svg#Klavika-Light") format("svg"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Light.woff") format("woff"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Light.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Light.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Klavika Medium';
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Medium.eot");
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Medium.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Medium.svg#Klavika-Medium") format("svg"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Medium.woff") format("woff"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Medium.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Klavika Bold';
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Bold.eot");
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Bold.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Bold.svg#Klavika-Bold") format("svg"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Bold.woff") format("woff"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Bold.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Klavika Regular';
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Regular.eot");
+  src: url("#{$path-fonts-dev-prime}/klavika/Klavika-Regular.eot?#iefix") format("embedded-opentype"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Regular.svg#Klavika-Bold") format("svg"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Regular.woff") format("woff"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Regular.woff2") format("woff2"), url("#{$path-fonts-dev-prime}/klavika/Klavika-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+}
+
+// FONTS VARIABLES
+$font-fallback: Calibri, Arial, sans-serif;
+$font-fallback--alt: "Segoe UI", Cambria, Tahoma, sans-serif;
+
+$font-flama--bold: "Flama Bold", $font-fallback;
+$font-flama--book: "Flama Book", $font-fallback;
+$font-flama--book-italic: "Flama Book Italic", $font-fallback;
+$font-flama--medium: "Flama Medium", $font-fallback;
+$font-flama--medium-italic: "Flama Medium Italic", $font-fallback;
+$font-flama--semibold: "Flama Semibold", $font-fallback;
+
+$font-klavika--bold: "Klavika Bold", $font-fallback--alt;
+$font-klavika--light: "Klavika Light", $font-fallback--alt;
+$font-klavika--medium: "Klavika Medium", $font-fallback--alt;
+$font-klavika--regular: "Klavika Regular", $font-fallback--alt;
+
+$font-body: $font-flama--book;
+$font-headings--bold: $font-klavika--bold;
+$font-headings--light: $font-klavika--light;
+$font-headings--medium: $font-klavika--medium;
+$font-headings--regular: $font-klavika--regular;
+
+$font-body--bold: $font-flama--bold;
+$font-body--italic: $font-flama--book-italic;
+$font-body--medium: $font-flama--medium;
+$font-body--regular: $font-flama--book;
+$font-body--semibold: $font-flama--semibold;

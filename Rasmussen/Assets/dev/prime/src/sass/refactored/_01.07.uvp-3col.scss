@@ -1,0 +1,83 @@
+.uvp-3col-full {
+    @include clearfix;
+    @at-root #{&}__header {
+        @include clearfix;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include font-headings;
+                font-size: 28px;
+                @include breakpoint($medium-tall) {
+                    font-size: 36px;
+                }
+                @include breakpoint($tp-xlarge) {
+                    font-size: 43px;
+                }
+            }
+            @at-root #{&}-2 {}
+            @at-root #{&}-3 {
+                @include font-headings;
+                font-size: 20px;
+                @include breakpoint($medium-wide) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    @at-root #{&}__grid {
+        @include clearfix;
+        + .rule-stripe {
+            margin-top: 40px;
+        }
+    }
+    @at-root #{&}__list {
+        @extend %reset-list;
+        @include clearfix;
+    }
+    @at-root #{&}__item {
+        @include clearfix;
+        @include span(12 of 12);
+        margin-bottom: 40px;
+        text-align: center;
+        &:last-of-type {
+            margin: 0;
+        }
+        @include breakpoint($medium-tall) {
+            @include span(4.133 of 12 no-gutters);
+            margin: 0;
+            padding: 0 20px;
+        }
+        @include breakpoint($medium-wide) {
+            padding: 0 40px;
+        }
+        &:nth-of-type(2n) {
+            @include breakpoint($medium-tall) {
+                @include span(first 4.133 of 12 no-gutters);
+            }
+        }
+        &:nth-of-type(3n) {
+            @include breakpoint($medium-tall) {
+                @include span(last 4.133 of 12 no-gutters);
+            }
+        }
+    }
+    @at-root #{&}__image {
+        margin-bottom: 20px;
+    }
+    @at-root #{&}__text {
+        @include clearfix;
+        //color: $color-text--lightened;
+    }
+    .svg {
+        max-height: 120px;
+        max-width: 120px;
+        @at-root #{&}--small {
+            max-height: 60px;
+            max-width: 60px;
+        }
+    }
+}

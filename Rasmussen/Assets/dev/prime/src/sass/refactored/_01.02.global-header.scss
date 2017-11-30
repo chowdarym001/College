@@ -1,0 +1,182 @@
+// refactored global header
+.global-header {
+    @extend %clearfix;
+    background-color: $color-white;
+    display: block;
+    min-height: 66px;
+    position: relative;
+    width: 100%;
+    // sticky header modifier
+    @at-root #{&}--sticky {
+        background: $color-white;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    // children elements
+    @at-root #{&}__inner {
+        @extend %clearfix;
+        @include breakpoint($medium-wide) {
+            @include container;
+        }
+    }
+    // modifier class for showing/hiding header on scroll
+    &--down, &--up {
+        @include transition(top 0.25s linear);
+    }
+    @at-root #{&}--up {
+        top: -300px !important;
+    }
+}
+
+.brand-toggle-container {
+    @extend %clearfix;
+    @include container;
+    position: relative;
+    @include breakpoint($medium-wide) {
+        @include span(2.9 of 12 no-gutters);
+    }
+    @at-root #{&}--full {
+        @include breakpoint($medium-wide) {
+            @include span(12 of 12);
+            max-width: 100%;
+        }
+    }
+}
+
+.header-brand {
+    @extend %clearfix;
+    @include span(8 of 12 no-gutters);
+    display: block;
+    padding: 10px 0;
+    @include breakpoint($medium-wide) {
+        @include span(12 of 12 no-gutters);
+    }
+    @at-root #{&}__link {
+        @extend %clearfix;
+        border: 0;
+        display: block;
+        &:focus, &:hover {
+            border: 0;
+        }
+    }
+    @at-root #{&}__logo {
+        @extend %clearfix;
+        display: block;
+        height: 100%;
+        max-height: 50px;
+        max-width: 225px;
+    }
+    @at-root #{&}--col11 {
+        @include breakpoint($medium-wide) {
+            @include span(11 of 12 no-gutters);
+        }
+    }
+    // TODO: changed this to full; need to update in Umbraco
+    @at-root #{&}--full {
+        @include span(12 of 12);
+        .header-brand__link {
+            @include span(6 of 12 no-gutters);
+        }
+        .button {
+            float: right;
+            width: auto;
+            @include breakpoint($small) {
+                margin: 0 auto;
+            }
+            &:focus, &:hover {
+                .button__input {
+                    background: $color-ras-green--dark;
+                }
+            }
+        }
+        .button__input {
+            @include span(last 12 of 12 no-gutters);
+            padding: 7px 10px;
+            @include breakpoint($small) {
+                padding: 10px 16px;
+            }
+            @include breakpoint($small-wide) {
+                padding: 7px 20px 7px 30px;
+            }
+        }
+        .button__icon {
+            display: none;
+            @include breakpoint($small-wide) {
+                display: block;
+            }
+        }
+        .button__title {
+            font-size: 14px;
+            line-height: $line-height-base;
+            @include breakpoint($small-wide) {
+                line-height: 2.5;
+            }
+            @at-root #{&}--end {
+                display: none;
+                @include breakpoint($small) {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+.nav-toggle {
+    border: 0;
+    float: right;
+    color: $color-text;
+    padding-top: 14px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    &:focus, &:hover {
+        border: 0;
+    }
+    @include breakpoint($medium-tall) {
+        padding-top: 16px;
+    }
+    @include breakpoint($medium-wide) {
+        display: none;
+        @at-root #{&}--alternate {
+            float: left;
+        }
+    }
+    @at-root #{&}--large-screens {
+        @include breakpoint($medium-wide) {
+            display: block;
+        }
+    }
+    @at-root #{&}--mmenu {
+        @include breakpoint($medium-wide) {
+            display: block;
+        }
+        @include breakpoint($large) {
+            display: none;
+        }
+    }
+}
+
+.cross-promo {
+    @at-root #{&}--simple {
+        @include cross-promo--simple;
+    }
+    @at-root #{&}--complex {
+        @include cross-promo--complex;
+    }
+    @at-root #{&}--rsn {
+        background-color: rgba($color-school-rsn--support--light, .25);
+        border-bottom: 5px solid rgba($color-school-rsn--support--light, .40);
+    }
+}
+
+.nav-skip {
+    @include clearfix;
+    clear: both;
+    left: -9999px;
+    position: absolute;
+    top: 0;
+    @at-root #{&}__link {}
+}

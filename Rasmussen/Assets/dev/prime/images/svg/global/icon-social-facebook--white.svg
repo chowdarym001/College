@@ -1,0 +1,16 @@
+<svg id="icon-social-facebook--white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.3 48.3">
+    <defs>
+        <style>
+            .fill-color--white {
+                fill: #fff;
+            }
+
+        </style>
+    </defs>
+    <title>icon-social-facebook--white</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path id="White" class="fill-color--white" d="M45.64,0h-43A2.67,2.67,0,0,0,0,2.67v43A2.67,2.67,0,0,0,2.67,48.3H25.8V29.6H19.51V22.31H25.8V16.93c0-6.24,3.81-9.64,9.38-9.64a51.65,51.65,0,0,1,5.63.29V14.1H36.94c-3,0-3.61,1.44-3.61,3.55v4.65h7.22l-.94,7.29H33.33V48.3H45.64a2.67,2.67,0,0,0,2.67-2.67v-43A2.67,2.67,0,0,0,45.64,0Z" />
+        </g>
+    </g>
+</svg>

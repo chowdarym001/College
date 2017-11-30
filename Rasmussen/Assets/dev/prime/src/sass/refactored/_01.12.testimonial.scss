@@ -1,0 +1,96 @@
+.testimonial {
+    @extend %clearfix;
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    @at-root #{&}__card {
+        background-color: transparent;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        min-height: 440px;
+        position: relative;
+        @at-root #{&}::before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 1%;
+            vertical-align: middle;
+        }
+        @at-root #{&}--alpha {
+            margin-bottom: 2px;
+            @include breakpoint($medium-wide) {
+                @include span(first 6.09 of 12 no-gutters);
+                margin-bottom: 0;
+            }
+        }
+        @at-root #{&}--beta {
+            @include breakpoint($medium-wide) {
+                @include span(last 6.09 of 12 no-gutters);
+            }
+        }
+    }
+    @at-root #{&}__banner {
+        background-color: rgba($color-black, .75);
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @at-root #{&} img {
+            @include centered-horizontally-vertically(-50%, -50%);
+            bottom: 50%;
+            height: 100%;
+            object-fit: cover;
+            left: 50%;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    @at-root #{&}__quote {
+        @include centered-horizontally-vertically;
+        color: $color-white;
+        display: inline-block;
+        left: 50%;
+        margin: 0 auto;
+        //max-width: 800px;
+        //padding: 0 50px;
+        position: absolute;
+        //text-align: center;
+        top: 50%;
+        vertical-align: middle;
+        width: 80%;
+        z-index: 1;
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        @include font-size($uvp-font-sizes);
+        color: $color-white;
+        //font-family: $font-headings;
+        //font-size: 30px;
+        //font-size: 32px;
+        //font-weight: normal;
+        margin: 0;
+    }
+    @at-root #{&}__text {}
+    @at-root #{&}__qmark {
+        @at-root #{&}--end {
+            font-size: 1.875em;
+            line-height: 0;
+            margin-top: 18px;
+            position: absolute;
+        }
+    }
+    @at-root #{&}__footer {
+        color: $color-white;
+    }
+    @at-root #{&}__attribution {
+        color: $color-white;
+    }
+}

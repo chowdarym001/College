@@ -1,0 +1,18 @@
+// NEWS EXCERPT on TOMS TILES
+.news-excerpt {
+    @include clearfix;
+    margin-bottom: 20px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    p {
+        margin: 0;
+    }
+    @at-root #{&}__date {
+        @include font-body($font-body--bold);
+        font-size: $font-size-base;
+        @include breakpoint($medium-wide) {
+            font-size: 18px;
+        }
+    }
+}

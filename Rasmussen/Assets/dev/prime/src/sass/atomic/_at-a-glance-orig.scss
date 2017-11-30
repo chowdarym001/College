@@ -1,0 +1,337 @@
+.glance,
+.glance-bottom,
+.glance-top {
+    @extend %clearfix;
+}
+.glance {
+    @include span(12 of 12 inside no-gutters);
+    @include at-a-glance();
+    margin: 75px 0 0 0;
+    @include breakpoint($small-wide) { margin: 100px 0 0 0; }
+}
+
+.glance-bottom,
+.glance-top {
+    margin: 0 20px 20px 20px;
+    text-align: left;
+}
+// Holds the 2 card-style areas
+.glance-bottom {
+    @extend %clearfix;
+    border-color: currentColor;
+    border-width: 0;
+    border-style: hidden;
+    color: currentColor;
+    clear: both;
+    display: block;
+    height: auto;
+    padding: 50px 0;
+    position: relative;
+    margin: 0 20px 20px 20px;
+    @include breakpoint($small-wide $medium-wide) {
+        background: inherit;
+        padding: 100px 0;
+        margin: 40px 20px 40px 20px;
+    }
+    @include breakpoint($medium-wide) {
+        padding: 80px 0;
+        margin: 60px auto 60px auto;
+    }
+}
+.glance-bottom-bg {
+    //    background-color: lighten($color-ras-green--light, 10%);
+    display: block;
+    height: 100%;
+    left: -50%;
+    opacity: .25;
+    position: absolute;
+    top: 0;
+    width: 200%;
+    z-index: -1;
+    &.glance-bottom-bg-brand {
+        background-color: lighten($color-ras-green--light, 10%);
+    }
+    .glance-rsn &, .glance-bottom-bg-rsn {
+        background-color: lighten($color-school-rsn--support--light, 10%);
+    }
+}
+
+.glance-top {
+    background: inherit;
+    @include breakpoint($medium-tall) { margin: 0 0 72px 0; }
+
+    .button {
+        margin: 16px 16px 16px 0;
+        min-width: 280px;
+        max-width: 320px;
+        @include breakpoint(max-width $medium-wide) { margin: 16px 16px 16px 16px; }
+    }
+    .button-link {
+        @include breakpoint(max-width $medium-wide) {
+            margin: 0 auto 40px auto;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .glance-top-cta {
+        font-family: $font-flama-book;
+        float: left;
+        margin: 40px 0 0 0;
+        @include breakpoint(max-width $medium-wide) {
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+}
+.glance-courses,
+.glance-stats {
+    @include span(12 of 12 last);
+    color: $color-gray-dark;
+}
+.glance-courses {
+    padding: 0 0 10px 0;
+    margin: 0 0 50px 0;
+    @include breakpoint($medium-tall) {
+        @include span(7.92 of 12 inside first no-gutters);
+        padding: 20px 50px 0 0;
+        margin: 0;
+    }
+}
+.glance-course-heading,
+.glance-course-paragraph {
+    font-family: $font-flama-book;
+}
+.glance-course-heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33;
+    margin-bottom: 0;
+}
+.glance-course-paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+.glance-header {
+    background: currentColor;
+    height: 36px;
+    margin: 0 0 16px 0;
+    text-align: left;
+}
+.glance-header-skew {
+    color: $color-gray-dark;
+    float: right;
+    font-family: $font-klavika-bold;
+    font-size: 32px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    transform: translatey(-4px);
+    z-index: +1;
+    @include breakpoint($small) {
+        font-size: 36px;
+        margin: 0 18px 0 0;
+        transform: translatey(-8px);
+    }
+    @include breakpoint($medium-tall) {
+        float: none;
+        font-size: 48px;
+        margin: 0 0 0 18px;
+        transform: translatey(8px);
+    }
+    &::before {
+        background: $color-white;
+        border-top: 2px solid $color-white; // to fix small line on glance's skewed title
+        content: '';
+        display: block;
+        height: 36px;
+        left: -5%;
+        position: absolute;
+        top: 0;
+        transform: translateY(4px) skew(-18deg, 0);
+        width: 115%;
+        z-index: -1;
+        @include breakpoint($small) {
+            transform: translateY(8px) skew(-18deg, 0);
+        }
+        @include breakpoint($medium-tall) {
+            transform: translateY(-8px) skew(-18deg, 0);
+        }
+    }
+}
+.glance-header-title {
+    color: $color-white;
+    font-size: 24px;
+    font-family: $font-klavika-medium;
+    line-height: 1.5;
+    margin: 0 8px;
+    height: inherit;
+    z-index: 0;
+    @include breakpoint($medium-tall) { line-height: .5; }
+    &-bsn {
+        @include breakpoint(max-width $small) {
+            font-size: 12px;
+            text-indent: 2px;
+            transform: translateY(10px);
+            .glance-header-skew {
+                font-size: 28px;
+                transform: translateY(-10px);
+                &::before { transform: skew(-18deg, 0) translateY(0); }
+            }
+        }
+    }
+}
+.glance-prop-card {
+    @include span(12 of 12 first);
+    display: inline-block;
+    margin: 20px auto 50px auto;
+    position: relative;
+    text-align: center;
+    &:last-child { margin: 50px auto 0 auto; }
+    @include breakpoint($small-wide $medium-wide) {
+        text-align: left;
+        margin: 0 auto 150px auto;
+        &:last-child { margin: 10px auto 0 auto; }
+    }
+    @include breakpoint($medium-wide) {
+        @include span(5.1 of 12 first inside no-gutters);
+        padding: 0;
+        text-align: center;
+        margin: 0 auto 50px auto;
+        &:last-child {
+            @include span(5.1 of 12 last inside no-gutters);
+            margin: 0 auto 50px auto;
+        }
+    }
+}
+.glance-prop-card-divider {
+    background-color: currentColor;
+    border: 0;
+    left: 0;
+    height: 1px;
+    position: absolute;
+    top: calc(100% + 32px);
+    width: 100%;
+    &::before, &::after {
+        content: '';
+        height: 32px;
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 0;
+    }
+    &::before {
+        border-left: 1px solid currentColor;
+        border-right: 3px solid #ECF0DC;
+        left: calc(50% + 8px);
+        top: -6px;
+        .glance-rsn & {
+            border-right: 3px solid lighten($color-school-rsn--support--light, 25%);
+        }
+    }
+    &::after {
+        border-left: 3px solid #ECF0DC;
+        border-right: 1px solid currentColor;
+        left: calc(50% - 8px);
+        top: -26px;
+        .glance-rsn & {
+            border-left: 3px solid lighten($color-school-rsn--support--light, 25%);
+        }
+    }
+    @include breakpoint($small-wide) { top: calc(100% + 64px); }
+    @include breakpoint($medium-wide) {
+        height: 50%;
+        left: calc(100% + 88px);
+        top: 150px;
+        width: 1px;
+        &::before {
+            //            border-left: 1px solid currentColor;
+            //            border-right: 3px solid lighten($color-ras-green--light, 25%);
+            left: -12px;
+            top: calc(50% - 28px);
+        }
+        &::after {
+            //            border-left: 3px solid lighten($color-ras-green--light, 25%);
+            //            border-right: 1px solid currentColor;
+            left: 8px;
+            top: calc(50% - 10px);
+        }
+    }
+}
+.glance-prop-group {
+    @extend %prop-group;
+
+    .glance-prop-heading {
+        @extend %prop-heading;
+        margin: 24px auto 12px auto;
+        padding: 0;
+        @include breakpoint($small-wide $medium-wide) {
+            margin: 0 auto 24px 140px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @include breakpoint($medium-wide) {
+            padding: 10px 0 10px 0;
+        }
+    }
+}
+.glance-prop-heading,
+.glance-prop-paragraph {
+    color: $color-gray-dark;
+}
+
+.glance-prop-paragraph {
+    @extend %prop-paragraph;
+}
+.glance-prop-svg {
+    @extend %prop-svg;
+    margin: 0 auto 0 auto;
+    @include breakpoint($small-wide $medium-wide) { margin-bottom: 12px; transform: translateX(-8px); }
+    @include breakpoint($medium-wide) { margin: 0 auto 18px auto; }
+    &.icon-degree-blue,
+    &.icon-degree-white { transform: translateX(15px); }
+}
+.glance-prop-rule {
+    @extend %prop-rule;
+    @include breakpoint($medium-wide) {
+        background: currentColor;
+        color: currentColor;
+        margin: 48px 0 0 0;
+        opacity: .875;
+        &::after { opacity: .25; }
+    }
+}
+// School of [X] Colors
+.glance-rsb  { @include at-a-glance($color-school-rsb-light, $color-school-rsb, $color-school-rsb-dark); }
+.glance-rsd  { @include at-a-glance($color-school-rsd-light, $color-school-rsd, $color-school-rsd-dark); }
+.glance-rse  { @include at-a-glance($color-school-rse-light, $color-school-rse, $color-school-rse-dark); }
+.glance-rshs { @include at-a-glance($color-school-rshs--primary, $color-school-rshs--support--light, $color-school-rshs--support--dark); }
+.glance-rsjs { @include at-a-glance($color-school-rsjs-light, $color-school-rsjs, $color-school-rsjs-dark); }
+.glance-rsn  { @include at-a-glance($color-school-rsn--support--light, $color-school-rsn--primary, $color-school-rsn--support--dark); }
+.glance-rst  { @include at-a-glance($color-school-rst-light, $color-school-rst, $color-school-rst-dark); }
+.glance-stats {
+    padding: 0;
+    position: relative;
+    @include breakpoint($small $small-wide) { padding: 0 0 20px 0; }
+    @include breakpoint($small-wide $medium-tall) { padding: 0 0 50px 0; }
+    @include breakpoint($medium-tall) {
+        @include span(3.96 of 12 last inside no-gutters);
+        margin: -12px 0 0 0;
+        padding: 0 0 0 0;
+    }
+}
+.glance-stat { @extend .intro-data-point; }
+// Hide long stat-names between certain sizes
+.glance-stat-abbr-hide { @include breakpoint($medium-tall $tp-xlarge) { display: none; } }
+.glance-stat-large,
+.glance-stat-small {}
+.glance-stat-large { @extend .intro-data-point-heading; }
+.glance-stat-small { @extend .intro-data-point-subheading; }
+.glance-subhead {
+    font-family: $font-klavika-light;
+    font-size: 30px;
+    margin-top: 12px;
+} 

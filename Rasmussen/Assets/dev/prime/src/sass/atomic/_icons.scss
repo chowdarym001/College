@@ -1,0 +1,5 @@
+.svg-icon {
+    @at-root #{&}--dark {
+        background-color: lighten($color-text, 10%);
+    }
+}

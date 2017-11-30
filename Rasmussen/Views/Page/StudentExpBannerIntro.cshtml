@@ -1,0 +1,42 @@
+﻿@model Rasmussen.Models.HomeBannerModel
+
+<div class="banner-full banner-full--inline">
+    <picture>
+        
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_2000))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_2000)" media="(min-width: 1600px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1600))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_1600)" media="(min-width: 1200px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1200))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_1200)" media="(min-width: 960px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_960))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_960)" media="(min-width: 640px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_640))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_640)" media="(min-width: 480px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_480))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_480)" media="(min-width: 0px)">
+        }
+        <img srcset="" alt="" class="lazyload" data-object-fit="cover" data-sizes="auto">
+    </picture>
+    <div class="container">
+        <div class="banner-text banner-text--beneath-small-overlay-large">
+            <h1 class="banner-text__headline banner-text__headline--lvl-1">@Html.Sitecore().Field("Heading", Model.Item)</h1>
+        </div>
+    </div>
+</div>
+<section class="section intro">
+    <div class="container">
+        @Html.Sitecore().Field("SubHeading", Model.Item)  
+    </div>
+</section>

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F62BD6F0-75B6-4DF4-B929-D27F46C7B32C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rasmussen</RootNamespace>
+    <AssemblyName>Rasmussen</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LandingPagesCore">
+      <HintPath>..\Dependencies\LandingPagesCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\Dependencies\Sitecore\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\Dependencies\Sitecore\Sitecore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarouselController.cs" />
+    <Compile Include="Controllers\FormController.cs" />
+    <Compile Include="Controllers\GlobalComponentController.cs" />
+    <Compile Include="Controllers\GlobalController.cs" />
+    <Compile Include="Controllers\DegreesController.cs" />
+    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Controllers\ThankyouController.cs" />
+    <Compile Include="Models\CarouselSlideViewModel.cs" />
+    <Compile Include="Models\CarouselViewModel.cs" />
+    <Compile Include="Models\ContentCardModel.cs" />
+    <Compile Include="Models\FourColumnContentBlockModel.cs" />
+    <Compile Include="Models\HeaderFooterModel.cs" />
+    <Compile Include="Models\GenericContentBlockModel.cs" />
+    <Compile Include="Models\GlobalComponent\HeaderData.cs" />
+    <Compile Include="Models\HeaderNavModel.cs" />
+    <Compile Include="Models\HomeBannerModel.cs" />
+    <Compile Include="Models\RequestInformationModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GetHeader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\dist\prime\css\styles.css" />
+    <Content Include="Assets\dist\prime\css\styles.min.css" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Bold.svg" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Book.svg" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-BookItalic.svg" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Medium.svg" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-MediumItalic.svg" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Semibold.svg" />
+    <Content Include="Assets\dist\prime\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Bold.svg" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Light.svg" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Medium.svg" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Regular.svg" />
+    <Content Include="Assets\dist\prime\images\svg-sprite--global.svg" />
+    <Content Include="Assets\dist\prime\images\svg-sprite--rsb.svg" />
+    <Content Include="Assets\dist\prime\images\svg-sprite--rshs.svg" />
+    <Content Include="Assets\dist\prime\images\svg-sprite--rsn.svg" />
+    <Content Include="Assets\dist\prime\images\svg-sprite--rst.svg" />
+    <Content Include="Assets\dist\prime\scripts\display.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Bold.eot" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Bold.ttf" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Bold.woff" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Bold.woff2" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Book.eot" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Book.ttf" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Book.woff" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Book.woff2" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-BookItalic.eot" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-BookItalic.ttf" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-BookItalic.woff" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-BookItalic.woff2" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Medium.eot" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Medium.ttf" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Medium.woff" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Medium.woff2" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-MediumItalic.eot" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-MediumItalic.ttf" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-MediumItalic.woff" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-MediumItalic.woff2" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Semibold.eot" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Semibold.ttf" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Semibold.woff" />
+    <Content Include="Assets\dist\prime\fonts\flama\Flama-Semibold.woff2" />
+    <Content Include="Assets\dist\prime\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Assets\dist\prime\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Assets\dist\prime\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Assets\dist\prime\fonts\fontawesome\fontawesome-webfont.woff2" />
+    <Content Include="Assets\dist\prime\fonts\fontawesome\fontawesome.otf" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Bold.eot" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Bold.ttf" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Bold.woff" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Bold.woff2" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Light.eot" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Light.ttf" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Light.woff" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Light.woff2" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Medium.eot" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Medium.ttf" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Medium.woff" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Medium.woff2" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Regular.eot" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Regular.ttf" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Regular.woff" />
+    <Content Include="Assets\dist\prime\fonts\klavika\Klavika-Regular.woff2" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\PROD1.pubxml" />
+    <None Include="Properties\PublishProfiles\QA.pubxml" />
+    <None Include="Properties\PublishProfiles\STG.pubxml" />
+    <None Include="Assets\dist\prime\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Assets\dist\prime\images\explore-grid\explore-grid-hero-blog--large.jpg" />
+    <Content Include="Assets\dist\prime\images\explore-grid\explore-grid-hero-msn--xlarge.jpg" />
+    <Content Include="Assets\dist\prime\scripts\display.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery-1.10.2.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery-1.10.2.min.js" />
+    <None Include="Assets\dist\prime\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery.validate.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery.validate.min.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\dist\prime\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\Page\AdmissionBanner.cshtml" />
+    <Content Include="Views\Page\AdmissionIntro.cshtml" />
+    <Content Include="Views\Page\AdmissionAudience.cshtml" />
+    <Content Include="Views\Page\AdmissionContact.cshtml" />
+    <Content Include="Views\Page\AdmissionFaq.cshtml" />
+    <Content Include="Views\Page\AdmissionNextsteps.cshtml" />
+    <Content Include="Views\Thankyou\Thankyou.cshtml" />
+    <Content Include="Views\Global\HeaderNav.cshtml" />
+    <Content Include="Views\Global\MobileHeaderNav.cshtml" />
+    <Content Include="Views\Page\AreasofStudy.cshtml" />
+    <Content Include="Views\Page\NursingProgramBanner.cshtml" />
+    <Content Include="Views\Page\NursingProgramQuadrant.cshtml" />
+    <Content Include="Views\Page\NursingProgramCredentialOffering.cshtml" />
+    <Content Include="Views\Page\NursingProgramBannerTwo.cshtml" />
+    <Content Include="Views\Page\NursingProgramCareerPath.cshtml" />
+    <Content Include="Views\Page\NursingProgramDualCol.cshtml" />
+    <Content Include="Views\Page\NursingProgramRelatedContent.cshtml" />
+    <Content Include="Views\Page\NursingCredentialOverview.cshtml" />
+    <Content Include="Views\Page\NursingCredentialIntro.cshtml" />
+    <Content Include="Views\Page\NursingCredentialDoDone.cshtml" />
+    <Content Include="Views\Page\NursingCredentialSkillGain.cshtml" />
+    <Content Include="Views\Page\NursingCredentialGlance.cshtml" />
+    <Content Include="Views\Page\NursingCredentialBeforeEnroll.cshtml" />
+    <Content Include="Views\Page\NursingCredentialLocations.cshtml" />
+    <Content Include="Views\Page\NursingIndustryContent.cshtml" />
+    <Content Include="Views\Page\NursingIndustryTiles.cshtml" />
+    <Content Include="Views\Page\NursingIndustryBanner.cshtml" />
+    <Content Include="Views\Global\LineStripe.cshtml" />
+    <Content Include="Views\Page\StudentExpBannerIntro.cshtml" />
+    <Content Include="Views\Page\StudentExpSupportQuote.cshtml" />
+    <Content Include="Views\Page\StudentExpOnlineOncampus.cshtml" />
+    <Content Include="Views\Page\StudentExpCommunity.cshtml" />
+    <Content Include="Views\Degrees\DegreeFilter.cshtml" />
+    <Content Include="Views\Degrees\DegreeBanner.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\dev\" />
+    <Folder Include="Assets\dist\prime\images\banners\" />
+    <Folder Include="Controllers\Test\" />
+    <Folder Include="Models\Test\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Local Deploy.pubxml" />
+    <Content Include="Assets\dist\prime\scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\GlobalComponent\Header.cshtml" />
+    <Content Include="Views\layouts\SiteLayout.cshtml" />
+    <Content Include="Views\Carousel\Carousel.cshtml" />
+    <Content Include="Views\layouts\CarouselSite.cshtml" />
+    <Content Include="Views\Page\HomeBanner.cshtml" />
+    <Content Include="Views\Page\FourColumnContent.cshtml" />
+    <Content Include="Views\Page\Slides.cshtml" />
+    <Content Include="Views\Page\SearchBar.cshtml" />
+    <Content Include="Views\Form\RequestInformation.cshtml" />
+    <Content Include="Views\Global\Header.cshtml" />
+    <Content Include="Views\Global\Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rasmussen.Lib\Rasmussen.Lib.csproj">
+      <Project>{e58cf1d1-0833-4d57-8a37-b2373d5f4de8}</Project>
+      <Name>Rasmussen.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2413</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1861/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

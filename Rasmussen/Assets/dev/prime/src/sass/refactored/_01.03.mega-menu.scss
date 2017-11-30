@@ -1,0 +1,342 @@
+$mega-menu__column--alpha-width-default: 250px;
+$mega-menu__column--alpha-width-large: 300px;
+.section-mega-menu {
+    @extend %clearfix;
+    display: none;
+    @include breakpoint($large) {
+        @include span(last 9.25 of 12);
+        display: block;
+        overflow: visible;
+        position: static;
+        padding: 25px 0;
+    }
+}
+
+.mega-menu {
+    @extend %clearfix;
+    @at-root #{&}__toggle {
+        @extend %clearfix;
+        @at-root #{&}--close {
+            border: 0;
+            color: $color-text;
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            z-index: 10;
+            @include breakpoint($tp-huge) {
+                right: 30px;
+            }
+            &:focus, &:hover {
+                border: 0;
+                color: $color-ras-gold--dark;
+            }
+        }
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        border-bottom: 1px solid $color-white;
+        color: $color-white;
+        display: inline-block;
+        font-size: 21px;
+        margin: 0 0 10px;
+        padding: 5px 0;
+        text-transform: uppercase;
+    }
+    @at-root #{&}__subtitle {
+        @extend %font-headings--medium;
+        @include span(12 of 12);
+        color: $color-text;
+        font-size: 21px;
+        margin: 10px 0;
+    }
+    @at-root #{&}__submenu {
+        @extend %clearfix;
+        @include box-shadow(0, 3px, 10px, 0, rgba($color-text, .25));
+        background-color: darken($color-white, 5%);
+        display: none;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 105px;
+        width: 100%;
+        z-index: 1;
+        @at-root #{&}--fixed {
+            left: 0;
+            padding: 10px 20px;
+            top: 60px;
+            width: $mega-menu__column--alpha-width-default;
+            .mega-menu__multicolumn--alpha {
+                padding: 0;
+            }
+            .mega-menu__column--alpha {
+                &::before {
+                    left: -100%;
+                }
+            }
+        }
+        .container {
+            position: relative;
+        }
+    }
+    @at-root #{&}__multicolumn {
+        @extend %clearfix;
+        @at-root #{&}--alpha {
+            @include span(12 of 12);
+        }
+        @at-root #{&}--beta {
+            clear: both;
+            display: none;
+            padding: 20px;
+            position: absolute;
+            width: 62vw;
+            .mega-menu__item--level2:first-of-type & {
+                display: block;
+            }
+            @include breakpoint($tp-ridiculously-wide) {
+                padding: 20px 40px;
+            }
+            &.mega-menu__multicolumn--beta {
+                left: 100%;
+                top: -20px;
+            }
+            &.mega-menu__multicolumn--gamma {
+                top: -20px;
+            }
+        }
+        @at-root #{&}--gamma {
+            @include span(12 of 12);
+            padding: 0 20px;
+        }
+        @at-root #{&}--centered {
+            position: relative;
+            z-index: 0;
+        }
+    }
+    @at-root #{&}__column {
+        @extend %clearfix;
+        padding: 20px 0;
+        position: relative;
+        @at-root #{&}--alpha {
+            background-color: $color-text;
+            max-width: $mega-menu__column--alpha-width-default;
+            @include breakpoint($tp-ridiculously-wide) {
+                max-width: $mega-menu__column--alpha-width-large;
+            }
+            &::before {
+                // pseudo element for school of background color extension
+                background-color: inherit;
+                display: block;
+                content: '';
+                height: 100vh;
+                left: -200%;
+                position: absolute;
+                top: -20px;
+                width: 300%;
+                z-index: -1;
+            }
+            .mega-menu__multicolumn--centered & {
+                margin: auto;
+                &::before {
+                    background-color: inherit;
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 100vh;
+                    left: -500%;
+                    width: 200vw;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    @at-root #{&}__list {
+        @extend %clearfix;
+        @extend %reset-list;
+        @at-root #{&}--level1 {
+            float: right;
+        }
+        @at-root #{&}--level2 {
+            @include span(12 of 12);
+            position: relative;
+        }
+        @at-root #{&}--level3 {
+            @include span(12 of 12);
+            // https://css-tricks.com/arranging-elements-top-bottom-instead-left-right-float/
+            // force list elements to be in two columns, alphabetically and vertically
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+            column-gap: 0;
+            @include breakpoint($tp-xlarge) {
+                -moz-column-count: 3;
+                -webkit-column-count: 3;
+                column-count: 3;
+                column-gap: 0;
+            }
+        }
+    }
+    @at-root #{&}__item {
+        @extend %clearfix;
+        @at-root #{&}--level1 {
+            display: inline-block;
+            float: left;
+            padding-right: 30px;
+            width: auto;
+            @at-root #{&}--fixed {
+                position: relative;
+            }
+            @include breakpoint($tp-huge) {
+                padding-right: 50px;
+            }
+            &.mega-menu__item--childless {
+                padding-right: 15px;
+                @include breakpoint($tp-huge) {
+                    padding-right: 30px;
+                }
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+        @at-root #{&}--level2 {
+            margin-left: -10px;
+            &:focus, &:hover {
+                .mega-menu__link--level2 {
+                    color: $color-ras-gold--dark;
+                }
+            }
+            &:first-of-type {
+                // show first category links as default
+                .mega-menu__multicolumn--beta {
+                    display: block;
+                }
+            }
+            &.mega-menu__item--active {
+                background-color: darken($color-white, 5%);
+                .mega-menu__link--level2 {
+                    color: $color-ras-gold--dark;
+                }
+            }
+        }
+        @at-root #{&}--level3 {
+            // display: inline-block/table must be used for column-count to work on mega-menu__list--level3
+            display: table;
+            page-break-inside: avoid; // For Firefox
+            -webkit-column-break-inside: avoid; // For Chrome & friends
+            break-inside: avoid; // For standard browsers like IE
+            margin-left: 10px;
+            margin-bottom: 20px;
+            vertical-align: top;
+            width: 90%;
+        }
+        @at-root #{&}--level4 {
+            @include span(12 of 12);
+        }
+        @at-root #{&}--divider {
+            display: block;
+            width: 100%;
+            + .mega-menu__item {
+                display: block;
+                width: 100%;
+            }
+        }
+        @at-root #{&}--active {
+            @include transition(all 0.25s ease-in-out);
+            &::before {
+                @include transition(all 0.25s ease-in-out);
+            }
+        }
+    }
+    @at-root #{&}__link {
+        @extend %font-headings--medium;
+        border: 0;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        z-index: 0;
+        @at-root #{&}--level1 {
+            border-bottom: 3px solid transparent;
+            color: $color-text;
+            font-size: 14px;
+            text-transform: uppercase;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: $font-size-base;
+            }
+            &:focus, &:hover, &.mega-menu__link--active {
+                color: $color-ras-gold--dark;
+                border-bottom: 3px solid $color-ras-gold--dark;
+            }
+            &::after {
+                content: "\f078";
+                display: block;
+                font-family: $font-fontawesome;
+                font-size: 12px;
+                position: absolute;
+                right: -15px;
+                top: 0;
+            }
+        }
+        @at-root #{&}--level2 {
+            @include span(12 of 12);
+            color: $color-white;
+            font-size: $font-size-base;
+            padding: 10px;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: 20px;
+            }
+            &:focus, &:hover {
+                border: 0;
+                color: $color-ras-gold--dark;
+            }
+            &::after {
+                content: "\f054";
+                display: block;
+                font-family: $font-fontawesome;
+                font-size: 12px;
+                position: absolute;
+                right: 20px;
+                top: 35%;
+            }
+        }
+        &--level2, &--level3, &--level3a, &--level4 {
+            &:focus, &:hover, &.mega-menu__link--active {
+                border: 0;
+                color: $color-ras-gold--dark;
+            }
+        }
+        @at-root #{&}--level3 {
+            border: 0;
+        }
+        &--level3, &--level3a {
+            @extend %font-headings--medium;
+            @include span(12 of 12);
+            color: $color-text;
+            font-size: $font-size-base;
+            padding: 4px 0;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: 20px;
+            }
+        }
+        @at-root #{&}--level4 {
+            @extend %font-headings--regular;
+            @include span(12 of 12);
+            border: 0;
+            color: $color-text;
+            font-size: 14px;
+            padding: 2px 0;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: $font-size-base;
+            }
+        }
+        @at-root #{&}--childless {
+            // removes pseudo arrow after childless links
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

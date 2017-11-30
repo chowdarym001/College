@@ -1,0 +1,107 @@
+%prop-heading {
+    float: left;
+    font-family: $font-headings--medium;
+    font-size: 24px;
+    line-height: 1.33;
+    max-width: none;
+    text-align: center;
+    width: 100%;
+    @include breakpoint($small-wide $medium-tall) {
+        max-width: 70%; // Fallback
+        max-width: calc(100% - 172px);
+        text-align: left;
+    }
+    @include breakpoint($medium-tall $medium-wide) {
+        max-width: 380px;
+        text-align: left;
+    }
+    @include breakpoint($medium-wide) {
+        @include span(12 of 12 inside no-gutters);
+        float: none;
+        font-size: 30px;
+        max-width: none;
+        text-align: center;
+    }
+}
+
+%prop-group {
+    @extend %clearfix;
+    @include span(12 of 12 inside no-gutters);
+    height: auto;
+    margin: 0 auto 10px auto;
+    position: relative;
+}
+
+%prop-paragraph {
+    font-family: $font-flama--book;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 8px 0 8px 0;
+    @include breakpoint($medium-wide) {
+        margin: 0 0 24px 0;
+    }
+}
+
+%prop-rule {
+    display: none;
+    @include breakpoint($medium-wide) {
+        border: 0;
+        bottom: 0;
+        clear: both;
+        display: block;
+        float: right;
+        height: 14px;
+        position: relative;
+        opacity: 0;
+        width: 100%;
+        &::after {
+            background: currentColor;
+            content: '';
+            display: block;
+            left: 70%;
+            height: 100%;
+            opacity: .5;
+            position: absolute;
+            transform: skew(-12deg, 0);
+            width: 5%;
+        }
+    }
+}
+
+%prop-svg {
+    background: transparent;
+    float: none;
+    left: 0;
+    min-height: 120px;
+    min-width: 80px;
+    max-width: 25%;
+    max-width: calc(105px - 0px);
+    position: relative;
+    @include breakpoint($small-wide $medium-wide) {
+        float: left;
+        left: 0;
+        margin-right: 32px;
+        min-width: 100px;
+        max-width: 25%;
+        max-width: calc(120px - 0px);
+    }
+    @include breakpoint($medium-wide) {
+        float: none;
+        left: 0;
+        min-height: 120px;
+        min-width: 120px;
+        max-width: 140px;
+    }
+    svg {
+        background: transparent;
+        height: 120px;
+        margin: 0;
+        width: 105px;
+        @include breakpoint($small) {
+            width: 120px;
+        }
+        @include breakpoint($medium-wide) {
+            width: 140px;
+        }
+    }
+}

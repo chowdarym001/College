@@ -1,0 +1,20 @@
+---
+notes: |
+    Full width banners using inline `<picture>` element. Images controlled via `<source>` tags and inline media queries.
+---
+
+<div class="banner-full banner-full--inline">
+    <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="http://placehold.it/2000x335" media="(min-width: 1200px)">
+            <source srcset="http://placehold.it/1200x330" media="(min-width: 960px)">
+            <source srcset="http://placehold.it/960x300" media="(min-width: 640px)">
+            <source srcset="http://placehold.it/640x225" media="(min-width: 480px)">
+            <source srcset="http://placehold.it/480x225" media="(min-width: 0)">
+        <!--[if IE 9]></video><![endif]-->
+        <img srcset="" alt="" data-object-fit="cover">
+    </picture>
+    <div class="container">
+        {{> banners.banners-text}}
+    </div>
+</div>

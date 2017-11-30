@@ -1,0 +1,41 @@
+.cta-inline {
+    @include cta-inline;
+    &--reverse, &--light {
+        color: $color-white;
+    }
+    @at-root #{&}--button {
+        @include cta-inline--button;
+    }
+}
+
+.cta-text {
+    @extend %cta-inline-arrow;
+}
+
+.widget-cta {
+    @extend %clearfix;
+    @include span(12 of 12);
+    text-align: center;
+    @include breakpoint($medium-tall) {
+        text-align: left;
+    }
+    @at-root #{&}__title {
+        @include font-size($glance-cta-font-sizes);
+        font-family: $font-headings--medium;
+        margin-bottom: 0;
+    }
+    .section-video & {
+        margin-top: 50px;
+        @include breakpoint($medium-wide) {
+            @include span(4.75 of 12);
+        }
+        @include breakpoint($tp-ridiculously-wide) {
+            margin-top: 100px;
+        }
+    }
+    .video--dark & {
+        .widget-cta__title {
+            color: $color-white;
+        }
+    }
+}

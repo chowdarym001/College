@@ -1,0 +1,53 @@
+.global-footer {
+    background: $color-ras-green--dark;
+    clear: both;
+    color: $color-white;
+    display: block;
+    min-height: 116px;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+}
+.global-footer-inner {
+    @include clearfix;
+}
+
+// Global Footer: Schools of [X] Color References.
+.global-footer-rsb  { background: $color-school-rsb-dark; }
+.global-footer-rsd  { background: $color-school-rsd-dark; }
+.global-footer-rse  { background: $color-school-rse-dark; }
+.global-footer-rshs { background: $color-school-rshs--support--dark; }
+.global-footer-rsjs { background: $color-school-rsjs-dark; }
+.global-footer-rsn  { background: $color-school-rsn--support--dark; }
+.global-footer-rst  { background: $color-school-rst-dark; }
+
+// PPC Specific
+.global-footer-content {
+    line-height: 1.5;
+    padding: 28px 0;
+    margin: 0 auto;
+}
+.global-footer-disclosures {
+    display: none;
+}
+.global-footer-link {
+    border-bottom: 1px solid $color-ras-green--light;
+    color: $color-white;
+    text-decoration: none;
+    &:focus, &:hover {
+        border-bottom-color: $color-ras-gold--dark;
+        color: $color-ras-gold--dark;
+    }
+}
+
+.global-footer-ppc,
+.global-footer-ppc-disclaimer,
+.global-footer-ppc-privacy { @extend %clearfix; }
+.global-footer-ppc-disclaimer,
+.global-footer-ppc-privacy {
+    @include span(10 of 12);
+    text-align: left;
+    @include breakpoint($medium-tall) { @include span(5.875 of 12); }
+}
+.global-footer-ppc-disclaimer { @include breakpoint(max-width $medium-tall) { margin: 24px 0 0 0; } }
+.global-footer-ppc-privacy { margin: 0 0 36px 0; }

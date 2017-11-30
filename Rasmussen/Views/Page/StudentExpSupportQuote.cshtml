@@ -1,0 +1,36 @@
+@model Rasmussen.Models.FourColumnContentBlockModel
+
+<section class="section student-support" id="student-experience-support">
+    <div class="container">
+        <header class="section-header">
+            <h1 class="section__headline section__headline--lvl-1 text--centered">@Html.Raw(Model.Title)</h1>
+        </header>
+        <section class="section-content">
+            <div class="flip">
+                <ul class="flip__grid">
+                @foreach (var column in Model.ContentCards)
+                {
+                    <li class="flip__card">
+                        <header class="flip__header">
+                            <h3 class="flip__headline flip__headline--lvl-3">@Html.Raw(column.Title)</h3>
+                        </header>
+                        @Html.Raw(column.Body)
+                    </li>
+                }
+                </ul>
+            </div>
+        </section>
+    </div>
+</section>
+<section class="section section-blockquote">
+    <div class="container">
+        <blockquote class="blockquote blockquote--centered">
+           @Html.Raw(Model.Body)
+        </blockquote>
+    </div>
+</section>
+<section class="section uvp-3col-full uvp-3col-ful--plain" id="">
+    <div class="container">
+        @Html.Raw(Model.Footer)
+    </div>
+</section>

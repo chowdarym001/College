@@ -1,0 +1,184 @@
+.line-stripe {
+    // styles are in _mixin partial for global-nav-border
+    @include global-nav-border(ras);
+    // school of modifiers
+    @at-root #{&}--rsb {
+        @include global-nav-border(rsb);
+    }
+    @at-root #{&}--rsd {
+        @include global-nav-border(rsd);
+    }
+    @at-root #{&}--rse {
+        @include global-nav-border(rse);
+    }
+    @at-root #{&}--rshs {
+        @include global-nav-border(rshs);
+    }
+    @at-root #{&}--rsjs {
+        @include global-nav-border(rsjs);
+    }
+    @at-root #{&}--rsn {
+        @include global-nav-border(rsn);
+    }
+    @at-root #{&}--rst {
+        @include global-nav-border(rst);
+    }
+}
+
+.border-chevron {
+    // add these classes to the container in which the border is to show up in so the contents determine the height of the border chevron
+    @extend %clearfix;
+    display: inline-block;
+    position: relative;
+    @at-root #{&}::after {
+        @extend %pseudo-element-positioning;
+    }
+    @at-root #{&}::before {
+        @extend %pseudo-element-positioning;
+    }
+    @at-root #{&}--mobile {
+        @include border-chevron--horizontal;
+        @extend %border-chevron--mobile;
+        margin-bottom: 20px;
+        padding-bottom: 40px;
+        min-height: 1px;
+        width: 100%;
+        @include breakpoint($medium-tall) {
+            margin-bottom: 0;
+        }
+    }
+    @at-root #{&}--horizontal {
+        @include border-chevron--horizontal;
+        min-height: 1px;
+        width: 100%;
+        @at-root #{&}--bottom {
+            @extend %border-chevron--horizontal--bottom;
+            padding-bottom: 40px;
+        }
+        @at-root #{&}--top {
+            @extend %border-chevron--horizontal--top;
+            padding-top: 40px;
+        }
+    }
+    @at-root #{&}--vertical {
+        @include border-chevron--vertical;
+        border: 0;
+        min-height: 200px;
+        @at-root #{&}--left {
+            @extend %border-chevron--vertical--left;
+        }
+        @at-root #{&}--right {
+            @extend %border-chevron--vertical--right;
+        }
+    }
+    // school of modifiers: just add 'border-chevron' followed by double hyphen and school acryonm in markup
+}
+
+.rule-stripe {
+    @include rule-stripe;
+    @at-root #{&}--ras {
+        background-color: $color-ras-green--bright;
+        color: $color-ras-green--dark;
+    }
+    @at-root #{&}--rsb {
+        background-color: $color-school-rsb;
+        color: $color-school-rsb-dark;
+    }
+    @at-root #{&}--rsd {
+        background-color: $color-school-rsd;
+        color: $color-school-rsd-dark;
+    }
+    @at-root #{&}--rse {
+        background-color: $color-school-rse;
+        color: $color-school-rse-dark;
+    }
+    @at-root #{&}--rshs {
+        background-color: $color-school-rshs--support--light;
+        color: $color-school-rshs--support--dark;
+    }
+    @at-root #{&}--rsjs {
+        background-color: $color-school-rsjs;
+        color: $color-school-rsjs-dark;
+    }
+    @at-root #{&}--rsn {
+        background-color: $color-school-rsn--support--light;
+        color: $color-school-rsn--support--dark;
+    }
+    @at-root #{&}--rst {
+        background-color: $color-school-rst;
+        color: $color-school-rst-dark;
+    }
+    &--vertical {
+        @include rule-stripe--vertical;
+    }
+    .widget-cta & {
+        @include rule-stripe;
+        opacity: 1;
+    }
+    .section-video .widget-cta & {
+        @include rule-stripe--overlay;
+        opacity: 1;
+    }
+    .uvp__card & {
+        @include breakpoint($medium-wide) {
+            @include rule-stripe--overlay;
+            opacity: 1;
+        }
+    }
+    //    .school-of--rst .widget-cta & {
+    //        @include rule-stripe--overlay($color-white, 0.375, $color-black, 0.375, normal, 1);
+    //    }
+    .school-of--rst .uvp__card & {
+        @include breakpoint($medium-wide) {
+            @include rule-stripe--overlay($color-white, 0.5, $color-black, 0.375, overlay, 1);
+        }
+    }
+}
+
+.l-line {
+    @include l-line;
+    border: 0;
+    display: inline-block;
+    float: left;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    @at-root #{&}::before {
+        content: '';
+        height: 32px;
+        left: calc(50% + 8px);
+        position: absolute;
+        transform: rotate(-45deg);
+        top: -6px;
+        width: 0;
+    }
+    @at-root #{&}::after {
+        content: '';
+        height: 32px;
+        left: calc(50% - 8px);
+        position: absolute;
+        transform: rotate(-45deg);
+        top: -26px;
+        width: 0;
+    }
+    @include breakpoint($medium-wide) {
+        min-height: 300px;
+        width: 1px;
+        &::before {
+            left: -12px;
+            top: calc(50% - 28px);
+        }
+        &::after {
+            left: 8px;
+            top: calc(50% - 10px);
+        }
+    }
+}
+
+.rule-line {
+    @include rule-line;
+    @at-root #{&}--gold {
+        @include rule-line($color-ras-gold--dark, $color-ras-gold--dark);
+    }
+}

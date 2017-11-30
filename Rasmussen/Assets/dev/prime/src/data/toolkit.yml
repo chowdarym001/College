@@ -1,0 +1,37 @@
+colors:
+    primary:
+        Green: "#2B5337"
+        Green, Light: "#9FB14E"
+        Yellow: "#E8C43A"
+        Yellow, Light: "#FAFCE5"
+    copy:
+        General Copy, Dark: "#343434"
+        General Copy, Light: "#FFFFFF"
+    business:
+        School of Business: "#C32032"
+        School of Business, Light: "#E1C5AC"
+        School of Business, Dark: "#5B1F2A"
+    design:
+        School of Design: "#9F1B96"
+        School of Design, Light: "#C2B2C7"
+        School of Design, Dark: "#411F1F"
+    education:
+        School of Education: "#F47920"
+        School of Education, Light: "#FFCA4E"
+        School of Education, Dark: "#9A1924"
+    health-sciences:
+        School of Health Sciences: "#81BFB0"
+        School of Health Sciences, Medium: "#2A8D82"
+        School of Health Sciences, Dark: "#004261"
+    justice-studies:
+        School of Justice Studies: "#758CA5"
+        School of Justice Studies, Light: "#B4CDD0"
+        School of Justice Studies, Dark: "#334671"
+    nursing:
+        School of Nursing: "#79BEE4"
+        School of Nursing, Medium: "#0073AD"
+        School of Nursing, Dark: "#334570"
+    technology:
+        School of Technology: "#8E847A"
+        School of Technology, Light: "#02BED6"
+        School of Technology, Dark: "#140E37"

@@ -1,0 +1,147 @@
+// Intro
+.intro {
+    @extend %clearfix;
+    padding: 20px 20px;
+    @include breakpoint($small-wide) { padding: 40px 20px; }
+}
+
+.intro-copy-content {
+    line-height: 36px;
+    font-size: 21px;
+    padding-bottom: 25px;
+    .font-light { font-family: $font-klavika-light; }
+}
+
+.intro-data,
+.intro-data-content {
+    @extend %clearfix;
+    position: relative;
+}
+.intro-data {
+    display: none;
+    @include breakpoint($medium-tall) { display: block; }
+}
+.intro-data-content {
+    margin: 20px 0 0 0;
+    text-align: center;
+    @include breakpoint($medium-tall) { text-align: left; margin: 0; }
+}
+
+// Intro: Data Point Parent Container, Holds Heading/Subheading
+.intro-data-point {
+    @include span(12 of 12 last inside no-gutters);
+    margin: 0 auto 10px auto;
+    &:first-child { margin: 0 auto 10px auto; }
+    &:last-child { margin: 10px auto 50px auto; }
+    @include breakpoint($small-wide $medium-tall) {
+        margin: 0 auto 10px auto;
+        &:first-child,
+        &:nth-child(2) {
+            @include span(4 of 12 first inside no-gutters);
+            margin: 10px auto 20px auto;
+        }
+        &:last-child {
+            @include span(4 of 12 last inside no-gutters);
+            margin: 10px auto 20px auto;
+        }
+    }
+    @include breakpoint($medium-tall) {
+        @include span(12 of 12 first inside no-gutters);
+        clear: both;
+        margin: 10px auto 10px auto;
+        width: auto;
+        &:first-child { margin: 20px auto; }
+        &:last-child { margin: 5px auto 20px auto; width: auto; }
+    }
+}
+
+// Intro: Large Text in Data Points (Percentage/Measurements/Time)
+.intro-data-point-heading {
+    @include span(12 of 12 inside no-gutters);
+    margin: 10px 0 -5px 0;
+    line-height: 1;
+    text-align: center;
+    @include breakpoint($medium-tall) {
+        font-size: 72px;
+        line-height: 1.2;
+        text-align: left;
+    }
+    small {
+        font-family: $font-klavika-light;
+        color: $color-gray-dark;
+        @include breakpoint($medium-tall $medium-wide) {
+            font-size: 70%;
+            margin: 0 0 0 -10px;
+        }
+        @include breakpoint($medium-wide) {
+            font-size: 80%;
+            margin: 0;
+        }
+    }
+    sup { top: -16px; font-size: 66%; }
+}
+
+// Intro: Small Text in Data Points (Description of Percents/Measurements/Time)
+.intro-data-point-subheading {
+    @include span(12 of 12 inside no-gutters);
+    font-family: $font-flama-book;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    @include breakpoint($medium-tall) {
+        @include span(12 of 12 inside no-gutters);
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: left;
+    }
+}
+
+// Intro: Data Points on Left and Copy Content on Right
+.intro-data-left {
+    .intro-copy {
+        @include span(12 of 12);
+        @include breakpoint($medium-tall) { @include span(last 8 of 12); }
+    }
+    .intro-copy-content {
+        @extend %clearfix;
+        @include breakpoint($medium-tall) {
+            padding-left: 72px;
+        }
+    }
+    .intro-data {
+        @include span(12 of 12);
+        @include breakpoint($medium-tall) { @include span(first 4 of 12) }
+    }
+    .intro-data-content {
+        padding-right: 0;
+        @include breakpoint($medium-tall) { padding-right: 2.9em; text-align: right; }
+        @include breakpoint($medium-wide) { padding-right: 4.5em; }
+    }
+}
+
+// Intro: Data Points on Right, Copy Content on Left
+.intro-data-right {
+    .intro-copy {
+        @include span(12 of 12);
+        @include breakpoint($medium-tall) { @include span(first 8 of 12); }
+    }
+    .intro-copy-content {
+        @extend %clearfix;
+        @include breakpoint($medium-tall) {
+            padding-right: 64px;
+        }
+    }
+    .intro-data {
+        @include span(12 of 12);
+        @include breakpoint($medium-tall) { @include span(last 4 of 12) }
+    }
+    .intro-data-content {
+        padding-left: 0;
+        @include breakpoint($medium-tall) { padding-left: 2.9em; text-align: left; }
+        @include breakpoint($medium-wide) { padding-left: 4.5em; }
+    }
+}
+
+.intro-heading { margin-top: 24px; }

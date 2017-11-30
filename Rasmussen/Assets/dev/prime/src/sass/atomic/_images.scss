@@ -1,0 +1,16 @@
+.imageset-single {
+	margin: 0 0 25px 0;
+    @include breakpoint($medium-tall) {
+        @include span(3.5 of 12);
+		overflow-x: hidden;
+		padding-bottom: 16px;
+		&:nth-of-type(4n) { clear: left; }
+		&:nth-child(1):nth-last-child(1) { @include push(3.375 of 12); }
+		&:nth-child(1):nth-last-child(2) { @include push(1.625 of 12); }
+    }
+    img {
+		@include breakpoint(max-width $small) { max-width: 240px; }
+		object-fit: cover;
+		object-position: 50% 50%;
+    }
+}

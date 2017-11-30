@@ -1,0 +1,74 @@
+//  Module: Global Header
+.global-header {
+    background: $color-white;
+    display: block;
+    min-height: 72px;
+    position: relative;
+    width: 100%;
+}
+
+// Module: Global Header, Sticky
+.sticky-header {
+    background: $color-white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.global-header-contents {
+    @extend %clearfix;
+    position: relative;
+    @include breakpoint($medium-wide) {
+        @include container;
+    }
+}
+
+.identity-menu-toggle {
+    @extend %clearfix;
+    @extend %margin-centered;
+    padding: 10px 0;
+    width: 90%;
+    @include breakpoint($medium-wide) { @include span(3 of 12 first inside no-gutters); }
+}
+
+.brand-identity {
+    @extend %clearfix;
+    @include span(7 of 12 first inside no-gutters);
+    margin: 0;
+    padding: 0;
+    @include breakpoint($medium-wide) { @include span(12 of 12 first inside no-gutters); }
+}
+
+.brand-logo {
+    height: 60px;
+    // What happens when someone says, "MAKE THE LOGO BIGGER!"
+    @include breakpoint(max-width 280px) { min-width: 160px; max-width: 200px; }
+    @include breakpoint(280px 320px)     { min-width: 210px; max-width: 200px; }
+    @include breakpoint(320px 380px)     { min-width: 220px; max-width: 240px; }
+    @include breakpoint(380px $small)    { min-width: 240px; max-width: 280px; }
+    @include breakpoint($small)          { min-width: 240px; max-width: 300px; }
+    @include breakpoint($medium-tall)    { min-width: 240px; max-width: 280px; }
+    @include breakpoint($large)          { min-width: 240px; max-width: 300px; transform: translateY(5px); }
+}
+
+.nav-toggle {
+    @include span(2 of 12 last);
+    color: $color-text;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    @include breakpoint($medium-wide) { display: none; }
+    &.nav-toggle-default {
+        float: right;
+    }
+    &.nav-toggle-alternate {
+        float: left;
+    }
+    .fa { font-size: 24px; }
+}
+.nav-toggle-label {
+    clear: both;
+    display: block;
+}

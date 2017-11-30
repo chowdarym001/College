@@ -1,0 +1,19 @@
+{
+  "name": "ras-styleguide",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "breakpoint-sass": "~2.6.1",
+    "flip": "^1.1.2",
+    "jquery": "~3.1.x",
+    "jquery-horunge": "^0.0.7",
+    "jquery-infield-label": "~0.1.x",
+    "matchHeight": "matchheight#^0.7.0",
+    "picturefill": "3.0.x",
+    "rangetouch": "^0.0.9",
+    "susy": "^2.2.12"
+  },
+  "resolutions": {
+    "jquery": "~3.1.x"
+  }
+}

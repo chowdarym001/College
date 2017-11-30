@@ -1,0 +1,29 @@
+<svg id="icon-04-certficiate-exam__colored--" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.67 48.83">
+    <defs>
+        <style>
+            .fill-rsn-opacity20 {
+                fill: #047dae;
+                opacity: .2
+            }
+            
+            .opacity20 {
+                opacity: .2
+            }
+            
+            .fill-rsn {
+                fill: #047dae
+            }
+
+        </style>
+    </defs>
+    <title>icon-04-certficiate-exam__colored--rsn</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="ON_WHITE_BG" data-name="ON WHITE BG">
+            <g id="icon-04-certficiate-exam__colored--rsn">
+                <path class="fill-rsn-opacity20" d="M42.67 48.83H0V0h42.67zM38.83 7.28a1.46 1.46 0 0 0-1.42-1.5H5.73a1.46 1.46 0 0 0-1.42 1.5 1.46 1.46 0 0 0 1.42 1.5h31.68a1.46 1.46 0 0 0 1.42-1.5zm-8.4 10.12a3 3 0 0 0-4.14 1.17l-7 12.49-3.41-3.41a3 3 0 1 0-4.3 4.3l6.26 6.26a3 3 0 0 0 2.16.89h.42a3 3 0 0 0 2.24-1.53l9-16a3 3 0 0 0-1.23-4.17z" />
+                <path class="fill-rsn-opacity20" d="M28.54 27l-5.9 10.53a3 3 0 0 1-2.24 1.53h-.42a3 3 0 0 1-2.15-.89l-.25-.17L6.72 48.83h36v-36z" />
+                <path class="opacity20 fill-rsn" d="M39.17 34.27l-9.42-9.42-7.12 12.69a3 3 0 0 1-2.24 1.53h-.42a3 3 0 0 1-2.15-.89L11.57 32a3 3 0 0 1 4.3-4.3l3.41 3.41 6-10.68-11.6-11.65h-8a1.46 1.46 0 0 1-1.42-1.5 1.46 1.46 0 0 1 1.42-1.5h5L9.2 4.31 4.9 0H0v48.83h42.67V37.77z" />
+            </g>
+        </g>
+    </g>
+</svg>

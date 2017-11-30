@@ -1,0 +1,15 @@
+﻿@model Rasmussen.Models.GenericContentBlockModel
+<section class="section-content section-explore">
+    <div class="container">
+        <section class="explore-grid">
+            <header class="explore-grid__header">
+                <h1 class="explore-grid__title">@Html.Raw(@Model.Title)</h1>
+            </header>
+
+           @Html.Raw(@Model.Body)
+            <footer class="explore-grid__footer">
+                <h2 class="explore-grid__subtitle">@Html.Raw(@Model.Footer)</h2>
+            </footer>
+        </section>
+    </div>
+</section>

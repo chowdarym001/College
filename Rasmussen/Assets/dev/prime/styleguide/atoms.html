@@ -1,0 +1,3097 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+
+        <link rel="stylesheet" href="fabricator/css/f.css"> 
+
+        <!-- project styles -->
+        <link rel="stylesheet" href="/../css/styles.css">
+        <!-- /project styles -->
+
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <!-- // Bugherd testing script required for QA -->
+        <script type='text/javascript'>
+            (function(d, t) {
+                var bh = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                bh.type = 'text/javascript';
+                bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xwwmnrlzrjcehtljffzjlw';
+                s.parentNode.insertBefore(bh, s);
+            })(document, 'script');
+        </script>
+
+    </head>
+
+    <body>
+
+            <!-- fabricator icons -->
+            <svg style="display: none;">
+            	<symbol id="f-icon-code" viewBox="0 0 512 512">
+            		<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+            	</symbol>
+            	<symbol id="f-icon-notes" viewBox="0 0 512 512">
+            		<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+            	</symbol>
+            	<symbol id="f-icon-labels" viewBox="0 0 512 512">
+            		<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+            	</symbol>
+            	<symbol id="f-icon-menu" viewBox="0 0 512 512">
+            		<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+            	</symbol>
+            	<symbol id="f-icon-settings" viewBox="0 0 512 512">
+            		<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+            	</symbol>
+            </svg>
+            <!-- /fabricator icons -->
+
+            <!-- fabricator menu -->
+            <div class="f-menu">
+            
+                <div class="f-controls">
+                	<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+                		<svg>
+                			<use xlink:href="#f-icon-labels" />
+                		</svg>
+                	</div>
+                	<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+                		<svg>
+                			<use xlink:href="#f-icon-notes" />
+                		</svg>
+                	</div>
+                	<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+                		<svg>
+                			<use xlink:href="#f-icon-code" />
+                		</svg>
+                	</div>
+                </div>
+            
+                <ul>
+                    <li>
+                        <a href="index.html" class="f-menu__heading">Overview</a>
+                    </li>
+            
+            <!-- ORIGINAL AUTOMATED MENU
+                    <li>
+                        <a href="1atoms.html" class="f-menu__heading">Atoms</a>
+                        <ul>
+                            <li>
+                                <a href="1atoms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#color-palette">Color Palette</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#dividers">Dividers</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#headings">Headings</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#images">Images</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#links">Links</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#menu">Menu</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#paragraph">Paragraph</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#social-proof">Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#tables">Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="2molecules.html" class="f-menu__heading">Molecules</a>
+                        <ul>
+                            <li>
+                                <a href="2molecules.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="2molecules.html#images-icons">Images Icons</a>
+                            </li>
+                            <li>
+                                <a href="2molecules.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="3organisms.html" class="f-menu__heading">Organisms</a>
+                        <ul>
+                            <li>
+                                <a href="3organisms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#campuses">Campuses</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#intro">Intro</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="hidden.html" class="f-menu__heading">Hidden</a>
+                        <ul>
+                            <li>
+                                <a href="hidden.html#hidden-accreditors">Hidden Accreditors</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-admissions">Hidden Admissions</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-areas">Hidden Areas</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-banners">Hidden Banners</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-credential">Hidden Credential</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-footer">Hidden Footer</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-global">Hidden Global</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-home">Hidden Home</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-industry">Hidden Industry</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-intro">Hidden Intro</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-nav">Hidden Nav</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-program">Hidden Program</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-social-proof">Hidden Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-student-experience">Hidden Student Experience</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-toms-tiles">Hidden Toms Tiles</a>
+                            </li>
+                        </ul>
+                    </li>
+            -->
+                    
+                    <li>
+                        <a href="atoms.html" class="f-menu__heading">Atoms</a>
+                        <ul>
+                            <li>
+                                <a href="atoms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#color-palette">Color Palette</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#dividers">Dividers</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#headings">Headings</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#images">Images</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#links">Links</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#menu">Menu</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#paragraph">Paragraph</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#social-proof">Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#tables">Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="molecules.html" class="f-menu__heading">Molecules</a>
+                        <ul>
+                            <li>
+                                <a href="molecules.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="molecules.html#images-icons">Images Icons</a>
+                            </li>
+                            <li>
+                                <a href="molecules.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="organisms.html" class="f-menu__heading">Organisms</a>
+                        <ul>
+                            <li>
+                                <a href="organisms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#campuses">Campuses</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#intro">Intro</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="templates.html" class="f-menu__heading">Templates</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    
+            <!--
+                    <li>
+                        <a href="pages.html" class="f-menu__heading">5. Pages</a>
+                        <ul>
+                        </ul>
+                    </li>
+            -->
+                    
+                    <li>
+                        <a href="pages.html" class="f-menu__heading">Pages</a>
+                        <ul>
+                            <li>
+                                <a href="pages/admissions.html" target="_blank">Admissions</a>
+                            </li>
+                            <li>
+                                <a href="pages/areas-study.html" target="_blank">Areas Study</a>
+                            </li>
+                            <li>
+                                <a href="pages/credential-lpn.html" target="_blank">Credential Lpn</a>
+                            </li>
+                            <li>
+                                <a href="pages/homepage.html" target="_blank">Homepage</a>
+                            </li>
+                            <li>
+                                <a href="pages/industry-rsn.html" target="_blank">Industry Rsn</a>
+                            </li>
+                            <li>
+                                <a href="pages/program-lpn.html" target="_blank">Program Lpn</a>
+                            </li>
+                            <li>
+                                <a href="pages/student-experience.html" target="_blank">Student Experience</a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                </ul>
+            
+            
+            </div>
+            <!-- /fabricator menu -->            <div class="f-container">
+                <div class="f-control-bar">
+                	<div class="f-control f-menu-toggle">
+                		<svg>
+                			<use xlink:href="#f-icon-menu" />
+                		</svg>
+                	</div>
+                </div>
+
+            
+<h1 data-f-toggle="labels">1. Atoms</h1>
+<div class="f-item-notes" data-f-toggle="notes">
+    <p>Basic HTML tags that can't be broken down any further without ceasing to be functional.</p>
+</div>
+
+
+<div class="f-item-wrap" id="banners">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Banners</h2>
+	</div>
+		<div class="f-item-group" id="banners.banner-text-subtitle">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Banner Text Subtitle</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Banner text subtitle. Shown on dark background.</p>
+
+</div>
+<div class="f-item-preview">
+	<h2 class="banner-text__subtitle">Banner subtitle</h2>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h2 class&#x3D;&quot;banner-text__subtitle&quot;&gt;Banner subtitle&lt;/h2&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="banners.banner-text-title">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Banner Text Title</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Banner text title. Shown on dark background.</p>
+
+</div>
+<div class="f-item-preview">
+	<h1 class="banner-text__title">Banner title</h1>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1 class&#x3D;&quot;banner-text__title&quot;&gt;Banner title&lt;/h1&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="banners.hero-banner-inline">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Hero Banner Inline</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Hero banner with inline images. Dedicated space for banner headlines and copy.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="banner-full banner-full--inline">
+	<picture>
+		<!--[if IE 9]><video style="display: none;"><![endif]-->
+		<source srcset="../../images/banners/home/home-2000.jpg" media="(min-width: 1200px)">
+		<source srcset="../../images/banners/home/home-1200.jpg" media="(min-width: 960px)">
+		<source srcset="../../images/banners/home/home-960.jpg" media="(min-width: 640px)">
+		<source srcset="../../images/banners/home/home-640.jpg" media="(min-width: 480px)">
+		<source srcset="../../images/banners/home/home-480.jpg" media="(min-width: 0)">
+		<!--[if IE 9]></video><![endif]-->
+		<img srcset="" alt="" data-object-fit="cover">
+	</picture>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;banner-full banner-full--inline&quot;&gt;
+	&lt;picture&gt;
+		&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+		&lt;source srcset&#x3D;&quot;../../images/banners/home/home-2000.jpg&quot; media&#x3D;&quot;(min-width: 1200px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;../../images/banners/home/home-1200.jpg&quot; media&#x3D;&quot;(min-width: 960px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;../../images/banners/home/home-960.jpg&quot; media&#x3D;&quot;(min-width: 640px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;../../images/banners/home/home-640.jpg&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;../../images/banners/home/home-480.jpg&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+		&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+		&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot; data-object-fit&#x3D;&quot;cover&quot;&gt;
+	&lt;/picture&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="buttons">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Buttons</h2>
+	</div>
+		<div class="f-item-group" id="buttons.button-cta-primary">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Button Cta Primary</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Main call-to-action (CTA) button treatment and text. Anchors to on-page Request Info form.</p>
+
+</div>
+<div class="f-item-preview">
+	<a class="button button--primary js-smooth-scroll" href="#js-rmi">
+    <button class="button__input" type="button">
+        <div class="button__icon"></div>
+        <span class="button__title">Request Info Now</span>
+    </button>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a class&#x3D;&quot;button button--primary js-smooth-scroll&quot; href&#x3D;&quot;#js-rmi&quot;&gt;
+    &lt;button class&#x3D;&quot;button__input&quot; type&#x3D;&quot;button&quot;&gt;
+        &lt;div class&#x3D;&quot;button__icon&quot;&gt;&lt;/div&gt;
+        &lt;span class&#x3D;&quot;button__title&quot;&gt;Request Info Now&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.button-cta-secondary">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Button Cta Secondary</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Secondary call-to-action (CTA) button treatment.</p>
+
+</div>
+<div class="f-item-preview">
+	<a href="#" class="cta-inline--button">Learn More</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline--button&quot;&gt;Learn More&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.hamburger-menu-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Hamburger Menu Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Hamburger menu, alternate left placement.</p>
+
+</div>
+<div class="f-item-preview">
+	<a class="nav-toggle nav-toggle--alternate js-nav-toggle" href="#">
+	<div class="menu-burger">
+		<div class="menu-burger__layer menu-burger__layer--colored"></div>
+		<div class="menu-burger__layer menu-burger__layer--white"></div>
+		<div class="menu-burger__layer menu-burger__layer--colored"></div>
+		<div class="menu-burger__layer menu-burger__layer--white"></div>
+		<div class="menu-burger__layer menu-burger__layer--colored"></div>
+		<div class="menu-burger__title">Menu</div>
+	</div>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a class&#x3D;&quot;nav-toggle nav-toggle--alternate js-nav-toggle&quot; href&#x3D;&quot;#&quot;&gt;
+	&lt;div class&#x3D;&quot;menu-burger&quot;&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--colored&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--white&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--colored&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--white&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--colored&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__title&quot;&gt;Menu&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="buttons.hamburger-menu-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Hamburger Menu Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Hamburger menu, default right placement.</p>
+
+</div>
+<div class="f-item-preview">
+	<a class="nav-toggle js-nav-toggle" href="#">
+	<div class="menu-burger">
+		<div class="menu-burger__layer menu-burger__layer--colored"></div>
+		<div class="menu-burger__layer menu-burger__layer--white"></div>
+		<div class="menu-burger__layer menu-burger__layer--colored"></div>
+		<div class="menu-burger__layer menu-burger__layer--white"></div>
+		<div class="menu-burger__layer menu-burger__layer--colored"></div>
+		<div class="menu-burger__title">Menu</div>
+	</div>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a class&#x3D;&quot;nav-toggle js-nav-toggle&quot; href&#x3D;&quot;#&quot;&gt;
+	&lt;div class&#x3D;&quot;menu-burger&quot;&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--colored&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--white&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--colored&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--white&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__layer menu-burger__layer--colored&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;menu-burger__title&quot;&gt;Menu&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="color-palette">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Color Palette</h2>
+	</div>
+		<div class="f-item-group" id="color-palette.color-palette-brand">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Brand</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Rasmussen College general brand color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--ras-green-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Ras Inner Shield, Dark Green</div>
+			<div class="f-color-chip__colors">
+				Hex: #004712
+				<br>RGB: 0, 71, 18
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--ras-green-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Ras Outer Shield, Light Green</div>
+			<div class="f-color-chip__colors">
+				Hex: #517f56
+				<br>RGB: 81, 127, 86
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--ras-green-medium">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Ras Green, Bright</div>
+			<div class="f-color-chip__colors">
+				Hex: #9bad4c
+				<br>RGB: 155, 173, 76
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--ras-yellow">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Ras Flame, Yellow</div>
+			<div class="f-color-chip__colors">
+				Hex: #eeb111
+				<br>RGB: 238, 177, 17
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--ras-yellow-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Ras Inner Flame, Light Yellow</div>
+			<div class="f-color-chip__colors">
+				Hex: #f9dda9
+				<br>RGB: 249, 221, 169
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--text-lightbg">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Body text, on light backgrounds</div>
+			<div class="f-color-chip__colors">
+				Hex: #414143
+				<br>RGB: 65, 65, 67
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--text-darkbg">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">Body text, on dark backgrounds</div>
+			<div class="f-color-chip__colors">
+				Hex: #fff
+				<br>RGB: 255, 255, 255
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--ras-green-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Ras Inner Shield, Dark Green&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #004712
+				&lt;br&gt;RGB: 0, 71, 18
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--ras-green-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Ras Outer Shield, Light Green&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #517f56
+				&lt;br&gt;RGB: 81, 127, 86
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--ras-green-medium&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Ras Green, Bright&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #9bad4c
+				&lt;br&gt;RGB: 155, 173, 76
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--ras-yellow&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Ras Flame, Yellow&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #eeb111
+				&lt;br&gt;RGB: 238, 177, 17
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--ras-yellow-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Ras Inner Flame, Light Yellow&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #f9dda9
+				&lt;br&gt;RGB: 249, 221, 169
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--text-lightbg&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Body text, on light backgrounds&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #414143
+				&lt;br&gt;RGB: 65, 65, 67
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--text-darkbg&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;Body text, on dark backgrounds&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #fff
+				&lt;br&gt;RGB: 255, 255, 255
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rsb">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rsb</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Business (RSB) color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rsb-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSB, Light</div>
+			<div class="f-color-chip__colors">
+				Hex: #e1c5ac
+				<br>RGB: 225, 197, 172
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsb">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSB</div>
+			<div class="f-color-chip__colors">
+				Hex: #c32032
+				<br>RGB: 195, 32, 50
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsb-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSB, Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #5b1f2a
+				<br>RGB: 91, 31, 42
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsb-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSB, Light&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #e1c5ac
+				&lt;br&gt;RGB: 225, 197, 172
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsb&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSB&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #c32032
+				&lt;br&gt;RGB: 195, 32, 50
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsb-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSB, Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #5b1f2a
+				&lt;br&gt;RGB: 91, 31, 42
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rsd">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rsd</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Design (RSD) color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rsd-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSD, Light</div>
+			<div class="f-color-chip__colors">
+				Hex: #c2b2c7
+				<br>RGB: 194, 178, 199
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsd">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSD</div>
+			<div class="f-color-chip__colors">
+				Hex: #9f1b96
+				<br>RGB: 159, 27, 150
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsd-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSD, Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #411f1f
+				<br>RGB: 65, 31, 31
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsd-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSD, Light&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #c2b2c7
+				&lt;br&gt;RGB: 194, 178, 199
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsd&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSD&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #9f1b96
+				&lt;br&gt;RGB: 159, 27, 150
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsd-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSD, Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #411f1f
+				&lt;br&gt;RGB: 65, 31, 31
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rse">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rse</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Education (RSE)  color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rse-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSE, Light</div>
+			<div class="f-color-chip__colors">
+				Hex: #ffca4e
+				<br>RGB: 255, 202, 78
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rse">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSE</div>
+			<div class="f-color-chip__colors">
+				Hex: #f47920
+				<br>RGB: 244, 121, 32
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rse-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSE, Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #9a1924
+				<br>RGB: 154, 25, 36
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rse-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSE, Light&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #ffca4e
+				&lt;br&gt;RGB: 255, 202, 78
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rse&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSE&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #f47920
+				&lt;br&gt;RGB: 244, 121, 32
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rse-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSE, Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #9a1924
+				&lt;br&gt;RGB: 154, 25, 36
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rshs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rshs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Health Sciences (RSHS) color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rshs">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSHS</div>
+			<div class="f-color-chip__colors">
+				Hex: #81bfb0
+				<br>RGB: 129, 191, 176
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rshs-medium">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSHS, Medium</div>
+			<div class="f-color-chip__colors">
+				Hex: #2a8d82
+				<br>RGB: 42, 141, 130
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rshs-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSHS, Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #004261
+				<br>RGB: 0, 66, 97
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rshs&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSHS&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #81bfb0
+				&lt;br&gt;RGB: 129, 191, 176
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rshs-medium&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSHS, Medium&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #2a8d82
+				&lt;br&gt;RGB: 42, 141, 130
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rshs-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSHS, Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #004261
+				&lt;br&gt;RGB: 0, 66, 97
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rsjs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rsjs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Justice Studies (RSJS) color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rsjs-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSJS, Light</div>
+			<div class="f-color-chip__colors">
+				Hex: #b4cdd0
+				<br>RGB: 180, 205, 208
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsjs">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSJS</div>
+			<div class="f-color-chip__colors">
+				Hex: #758ca5
+				<br>RGB: 117, 140, 165
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsjs-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSJS, Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #334671
+				<br>RGB: 51, 70, 113
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsjs-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSJS, Light&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #b4cdd0
+				&lt;br&gt;RGB: 180, 205, 208
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsjs&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSJS&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #758ca5
+				&lt;br&gt;RGB: 117, 140, 165
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsjs-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSJS, Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #334671
+				&lt;br&gt;RGB: 51, 70, 113
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rsn">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rsn</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Nursing (RSN) color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rsn--primary">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSN, Primary</div>
+			<div class="f-color-chip__colors">
+				Hex: #047dae
+				<br>RGB: 4, 125, 174
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsn--support-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSN, Support Light</div>
+			<div class="f-color-chip__colors">
+				Hex: #7bbfe4
+				<br>RGB: 123, 191, 228
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rsn--support-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RSN, Support Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #324671
+				<br>RGB: 50, 70, 113
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsn--primary&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSN, Primary&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #047dae
+				&lt;br&gt;RGB: 4, 125, 174
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsn--support-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSN, Support Light&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #7bbfe4
+				&lt;br&gt;RGB: 123, 191, 228
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rsn--support-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RSN, Support Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #324671
+				&lt;br&gt;RGB: 50, 70, 113
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="color-palette.color-palette-rst">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Color Palette Rst</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Technology (RST) color palette</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-color-chips">
+	<div class="f-color-chip f-color-chip--rst-light">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RST, Light</div>
+			<div class="f-color-chip__colors">
+				Hex: #02bed6
+				<br>RGB: 2, 190, 214
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rst">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RST</div>
+			<div class="f-color-chip__colors">
+				Hex: #8e847a
+				<br>RGB: 142, 132, 122
+			</div>
+		</div>
+	</div>
+	<div class="f-color-chip f-color-chip--rst-dark">
+		<div class="f-color-chip__details">
+			<div class="f-color-chip__name">RST, Dark</div>
+			<div class="f-color-chip__colors">
+				Hex: #140e37
+				<br>RGB: 20, 14, 55
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rst-light&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RST, Light&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #02bed6
+				&lt;br&gt;RGB: 2, 190, 214
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rst&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RST&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #8e847a
+				&lt;br&gt;RGB: 142, 132, 122
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;f-color-chip f-color-chip--rst-dark&quot;&gt;
+		&lt;div class&#x3D;&quot;f-color-chip__details&quot;&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;RST, Dark&lt;/div&gt;
+			&lt;div class&#x3D;&quot;f-color-chip__colors&quot;&gt;
+				Hex: #140e37
+				&lt;br&gt;RGB: 20, 14, 55
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="dividers">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Dividers</h2>
+	</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-ras">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Ras</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. Ras brand colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--ras">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-green--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--ras">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-green--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--ras&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-green--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--ras&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-green--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rsb">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rsb</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Business (RSB) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsb">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsb--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsb">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsb--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsb&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsb--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsb&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsb--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rsd">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rsd</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Design (RSD) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsd">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsd--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsd">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsd--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsd&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsd--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsd&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsd--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rse">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rse</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Education (RSE) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rse">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rse--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rse">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rse--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rse&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rse--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rse&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rse--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rshs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rshs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Health Sciences (RSHS) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rshs">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rshs--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rshs">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rshs--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rshs&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rshs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rshs&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rshs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rsjs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rsjs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Justice Studies (RSJS) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsjs">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsjs--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsjs">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsjs--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsjs&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsjs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsjs&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsjs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rsn">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rsn</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Nursing (RSN) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (aligned left) shown on top, alternate layout (align right) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsn">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsn--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsn">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsn--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsn&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsn--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsn&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsn--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.border-chevron-vertical-rst">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Border Chevron Vertical Rst</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored vertical-left pointing, chevron divider line. School of Technology (RST) colors shown. Arrow points downward on small screens/mobile.</p>
+<p>Used in &quot;intro&quot; sections on ppc microsites. Height of divider depends on amount of copy. Length of divider depends on width of container.</p>
+<p>Default layout (left aligned) shown on top, alternate layout (right aligned) shown on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rst">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rst--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rst">
+	<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+	<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rst--dark">Aliqua commodo pariatur te proident labore</b>		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rst&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rst--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rst&quot;&gt;
+	&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+	&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rst--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;		laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-ras">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Ras</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>Ras brand colors shown. School of colors available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--ras">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--ras&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rsb">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rsb</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Business (RSB) colors shown. School of colors available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rsb">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rsb&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rsd">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rsd</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Design (RSD) colors shown. School of colors available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rsd">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rsd&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rse">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rse</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Education (RSE) colors shown. School of colors available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rse">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rse&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rshs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rshs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Health Sciences (RSHS) colors shown.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rshs">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rshs&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rsjs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rsjs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Justice Studies (RSJS) colors shown.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rsjs">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rsjs&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rsn">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rsn</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Nursing (RSN) colors shown.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rsn">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rsn&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.l-line-rst">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">L Line Rst</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>L-line vertical divider. Used in &quot;value props&quot; within &quot;at-a-glance&quot; section.</p>
+<p>School of Technology (RST) colors shown.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="l-line l-line--rst">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;l-line l-line--rst&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-ras">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Ras</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>Brand colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--brand">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--brand&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rsb">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rsb</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Business (RSB) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rsb">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rsb&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rsd">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rsd</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Design (RSD) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rsd">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rsd&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rse">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rse</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Education (RSE) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rse">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rse&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rshs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rshs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Health Sciences (RSHS) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rshs">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rshs&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rsjs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rsjs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Justice Studies (RSJS) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rsjs">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rsjs&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rsn">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rsn</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Nursing (RSN) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rsn">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rsn&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.line-stripe-rst">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Line Stripe Rst</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful line stripe. Used in global header and cross promotion banner.</p>
+<p>School of Technology (RST) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="line-stripe line-stripe--rst">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;line-stripe line-stripe--rst&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-ras">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Ras</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>Brand colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--ras">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--ras&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rsb">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rsb</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Business (RSB) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rsb">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rsb&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rsd">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rsd</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Business (RSD) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rsd">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rsd&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rse">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rse</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Education (RSE) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rse">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rse&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rshs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rshs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Health Sciences (RSHS) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rshs">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rshs&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rsjs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rsjs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Justice Studies (RSJS) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rsjs">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rsjs&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rsn">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rsn</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Nursing (RSN) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rsn">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rsn&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="dividers.rule-stripe-rst">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rule Stripe Rst</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colored rule stripe. Used in &quot;colorful value props&quot; sections. Only visible at desktop or larger screens of 960px and above.</p>
+<p>School of Technology (RST) colors shown. School of colors modifier available.</p>
+
+</div>
+<div class="f-item-preview">
+	<hr class="rule-stripe rule-stripe--rst">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;hr class&#x3D;&quot;rule-stripe rule-stripe--rst&quot;&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="headings">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Headings</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Default headings</p>
+
+</div>
+<div class="f-item-preview">
+	<h1 class="heading heading--title">Heading Level 1</h1>
+<h2 class="heading heading--subtitle">Heading Level 2</h2>
+<h3 class="heading heading--tertiary">Heading Level 3</h3>
+<h4 class="heading heading--quatemary">Heading Level 4</h4>
+<h5 class="heading">Heading Level 5</h5>
+<h6 class="heading">Heading Level 6</h6>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Heading Level 1&lt;/h1&gt;
+&lt;h2 class&#x3D;&quot;heading heading--subtitle&quot;&gt;Heading Level 2&lt;/h2&gt;
+&lt;h3 class&#x3D;&quot;heading heading--tertiary&quot;&gt;Heading Level 3&lt;/h3&gt;
+&lt;h4 class&#x3D;&quot;heading heading--quatemary&quot;&gt;Heading Level 4&lt;/h4&gt;
+&lt;h5 class&#x3D;&quot;heading&quot;&gt;Heading Level 5&lt;/h5&gt;
+&lt;h6 class&#x3D;&quot;heading&quot;&gt;Heading Level 6&lt;/h6&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-wrap" id="images">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Images</h2>
+	</div>
+		<div class="f-item-group" id="images.logo-main">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Logo Main</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Main logo. Use on .edu and all microsites, except Nursing microsite.</p>
+
+</div>
+<div class="f-item-preview">
+	<svg class="svg header-brand__logo">
+    <use xlink:href="#ras-logo-horizontal"></use>
+</svg>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;svg class&#x3D;&quot;svg header-brand__logo&quot;&gt;
+    &lt;use xlink:href&#x3D;&quot;#ras-logo-horizontal&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="images.logo-rsn-modifier">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Logo Rsn Modifier</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>School of Nursing (RSN) logo modifier. Use on Nursing microsite.</p>
+
+</div>
+<div class="f-item-preview">
+	<svg class="svg header-brand__logo">
+    <use xlink:href="#ras-logo-rsn"></use>
+</svg>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;svg class&#x3D;&quot;svg header-brand__logo&quot;&gt;
+    &lt;use xlink:href&#x3D;&quot;#ras-logo-rsn&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="images.svg-icon-on-dark">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Svg Icon On Dark</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Light colored scalable vector graphic (SVG) icon. Use on dark backgrounds.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--dark">
+	<svg class="svg icon-09-faculty__white--rshs">
+        <use xlink:href="#icon-09-faculty__white--rshs"></use>
+    </svg>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--dark&quot;&gt;
+	&lt;svg class&#x3D;&quot;svg icon-09-faculty__white--rshs&quot;&gt;
+        &lt;use xlink:href&#x3D;&quot;#icon-09-faculty__white--rshs&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="images.svg-icon-on-light">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Svg Icon On Light</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Dark colored scalable vector graphic (SVG) icon. Use on light backgrounds.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--light">
+	<svg class="svg icon-09-faculty__colored--rshs">
+        <use xlink:href="#icon-09-faculty__colored--rshs"></use>
+    </svg>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--light&quot;&gt;
+	&lt;svg class&#x3D;&quot;svg icon-09-faculty__colored--rshs&quot;&gt;
+        &lt;use xlink:href&#x3D;&quot;#icon-09-faculty__colored--rshs&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="links">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Links</h2>
+	</div>
+		<div class="f-item-group" id="links.inline-cta-button">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Inline Cta Button</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Inline call-to-action (CTA) button link</p>
+
+</div>
+<div class="f-item-preview">
+	<a class="cta-inline--button" href="#">Learn More</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a class&#x3D;&quot;cta-inline--button&quot; href&#x3D;&quot;#&quot;&gt;Learn More&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="links.inline-cta-text">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Inline Cta Text</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Inline call-to-action (CTA) text link</p>
+
+</div>
+<div class="f-item-preview">
+	<p><a class="cta-inline js-smooth-scroll" href="#js-rmi">Talk With A Program Manager Today</a></p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;&lt;a class&#x3D;&quot;cta-inline js-smooth-scroll&quot; href&#x3D;&quot;#js-rmi&quot;&gt;Talk With A Program Manager Today&lt;/a&gt;&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="menu">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Menu</h2>
+	</div>
+		<div class="f-item-group" id="menu.tier-one-nav-link-with-icon">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Tier One Nav Link With Icon</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Navigation link tier 1 atom with icon.</p>
+
+</div>
+<div class="f-item-preview">
+	<li class="simple-nav__tier1-item">
+	<a class="simple-nav__tier1-link simple-nav__tier1-link--current" href="#">
+        <i class="simple-nav__list-icon fa fa-home"></i>
+        <span class="simple-nav__label simple-nav__label--first">Home</span>
+    </a>
+</li>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;li class&#x3D;&quot;simple-nav__tier1-item&quot;&gt;
+	&lt;a class&#x3D;&quot;simple-nav__tier1-link simple-nav__tier1-link--current&quot; href&#x3D;&quot;#&quot;&gt;
+        &lt;i class&#x3D;&quot;simple-nav__list-icon fa fa-home&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;simple-nav__label simple-nav__label--first&quot;&gt;Home&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="menu.tier-one-nav-link">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Tier One Nav Link</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Navigation link tier 1 atom.</p>
+
+</div>
+<div class="f-item-preview">
+	<li class="simple-nav__tier1-item has-children">
+	<a class="simple-nav__tier1-link simple-nav__tier1-link--current" href="#">
+        <span class="simple-nav__label">Patient <span class="line-break"></span> Care</span>
+    </a>
+</li>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;li class&#x3D;&quot;simple-nav__tier1-item has-children&quot;&gt;
+	&lt;a class&#x3D;&quot;simple-nav__tier1-link simple-nav__tier1-link--current&quot; href&#x3D;&quot;#&quot;&gt;
+        &lt;span class&#x3D;&quot;simple-nav__label&quot;&gt;Patient &lt;span class&#x3D;&quot;line-break&quot;&gt;&lt;/span&gt; Care&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="paragraph">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Paragraph</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Paragraphs</p>
+
+</div>
+<div class="f-item-preview">
+	<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+	nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+	nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-wrap" id="social-proof">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Social Proof</h2>
+	</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-subtitle">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Subtitle</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline subtitle. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job&nbsp;growth, 2014–2024<sup>2</sup></h4>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job&amp;nbsp;growth, 2014–2024&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-title">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Title</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites.</p>
+<p>Colors can be changed with CSS class modifiers.</p>
+
+</div>
+<div class="f-item-preview">
+	<h1 class="colorful-stats__title color-green--light">17<sup>%</sup></h1>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1 class&#x3D;&quot;colorful-stats__title color-green--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.testimonial-banner">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Testimonial Banner</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Testimonial banner with responsive inline graphic.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--tall">
+	<div class="testimonial__banner">
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="http://lorempicsum.com/nemo/1000/500/1" media="(min-width: 768px)">
+			<source srcset="http://lorempicsum.com/nemo/760/500/1" media="(min-width: 480px)">
+			<source srcset="http://lorempicsum.com/nemo/480/500/1" media="(min-width: 0)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="" alt="">
+		</picture>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--tall&quot;&gt;
+	&lt;div class&#x3D;&quot;testimonial__banner&quot;&gt;
+		&lt;picture&gt;
+			&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/1000/500/1&quot; media&#x3D;&quot;(min-width: 768px)&quot;&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/760/500/1&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/480/500/1&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+			&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+			&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot;&gt;
+		&lt;/picture&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.testimonial-quote">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Testimonial Quote</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Testimonial quote</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--tall f-colored-bg--dark">
+	<blockquote class="testimonial__quote">
+		<h2 class="testimonial__title">Senserit culpa excepteur est in te.</h2>
+		<p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aliquam doloribus veniam fugiat quidem in et, laudantium ea, facilis aliquid fuga magnam perspiciatis explicabo distinctio necessitatibus harum debitis dolor cum.</p>
+	</blockquote>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--tall f-colored-bg--dark&quot;&gt;
+	&lt;blockquote class&#x3D;&quot;testimonial__quote&quot;&gt;
+		&lt;h2 class&#x3D;&quot;testimonial__title&quot;&gt;Senserit culpa excepteur est in te.&lt;/h2&gt;
+		&lt;p class&#x3D;&quot;testimonial__text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam aliquam doloribus veniam fugiat quidem in et, laudantium ea, facilis aliquid fuga magnam perspiciatis explicabo distinctio necessitatibus harum debitis dolor cum.&lt;/p&gt;
+	&lt;/blockquote&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="tables">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Tables</h2>
+	</div>
+		<div class="f-item-group" id="tables.tables-basic">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Tables Basic</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Basic tables</p>
+
+</div>
+<div class="f-item-preview">
+	<table>
+	<thead>
+		<tr>
+			<th>Table Heading 1</th>
+			<th>Table Heading 2</th>
+			<th>Table Heading 3</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>Table Footer 1</th>
+			<th>Table Footer 2</th>
+			<th>Table Footer 3</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+		<tr>
+			<td>Table Cell 1</td>
+			<td>Table Cell 2</td>
+			<td>Table Cell 3</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Table Heading 1&lt;/th&gt;
+			&lt;th&gt;Table Heading 2&lt;/th&gt;
+			&lt;th&gt;Table Heading 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Table Footer 1&lt;/th&gt;
+			&lt;th&gt;Table Footer 2&lt;/th&gt;
+			&lt;th&gt;Table Footer 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Table Cell 1&lt;/td&gt;
+			&lt;td&gt;Table Cell 2&lt;/td&gt;
+			&lt;td&gt;Table Cell 3&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+
+        
+            </div>
+            
+        <script src="fabricator/scripts/f.js"></script>
+
+        <!-- toolkit scripts -->
+        <script src="/../scripts/display.js"></script>
+        <!-- /toolkit scripts -->
+
+        <!-- DO NOT DELETE: required for script function below to pull sprites from server -->
+        <div class="f-svg-sprite">
+            <div class="svg-sprite"></div>
+        </div>
+        <!-- // DO NOT DELETE: required for script function below to pull sprites from server -->
+        
+        <!-- load svg sprites into body-->
+        <script>
+            $(function() {
+                $.get("../../images/svg-sprite--global.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsb.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rshs.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsn.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

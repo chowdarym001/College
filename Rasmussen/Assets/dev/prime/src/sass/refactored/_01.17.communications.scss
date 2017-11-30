@@ -1,0 +1,47 @@
+.make-contact {
+    @extend %clearfix;
+    background: $color-ras-green--bright;
+    color: $color-white;
+    text-align: center;
+    @at-root #{&}__list {
+        @extend %clearfix;
+        @extend %reset-list;
+        text-align: center;
+    }
+    @at-root #{&}__item {
+        @include span(12 of 12);
+        margin-bottom: 40px;
+        @include breakpoint($small-wide) {
+            @include span(4.033 of 12 no-gutters);
+        }
+    }
+    @at-root #{&} .heading--title {
+        @include y-axis-margin(40px, 40px);
+    }
+    @at-root #{&}__link {
+        @extend %clearfix;
+        border: 1px solid transparent;
+        display: block;
+        padding: 20px;
+        &:focus, &:hover {
+            background-color: $color-ras-green--dark;
+            border: 1px solid $color-ras-green--light;
+            border-radius: 4px;
+        }
+    }
+    @at-root #{&} .fa {
+        color: $color-ras-green--light;
+        display: block;
+        font-size: 32px;
+        @include breakpoint($medium-tall) {
+            font-size: 48px;
+        }
+    }
+    @at-root #{&} .cta-inline {
+        font-size: 24px;
+    }
+    @at-root #{&}__detail {
+        color: $color-white;
+        display: block;
+    }
+}

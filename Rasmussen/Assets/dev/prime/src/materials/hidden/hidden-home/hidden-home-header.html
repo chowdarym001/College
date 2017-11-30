@@ -1,0 +1,25 @@
+<header class="global-header" role="banner">
+	{{> hidden-nav.hidden-utility-nav}}
+	<div class="global-header__inner">
+		<div class="brand-toggle-container">
+			<div class="header-brand">
+				<a class="header-brand__link" href="#">
+					<svg class="svg header-brand__logo">
+                        <use xlink:href="#ras-logo-horizontal"></use>
+                    </svg>
+				</a>
+			</div>
+			<a class="nav-toggle js-nav-toggle" href="#">
+				<div class="menu-burger">
+					<div class="menu-burger__layer menu-burger__layer--colored"></div>
+					<div class="menu-burger__layer menu-burger__layer--white"></div>
+					<div class="menu-burger__layer menu-burger__layer--colored"></div>
+					<div class="menu-burger__layer menu-burger__layer--white"></div>
+					<div class="menu-burger__layer menu-burger__layer--colored"></div>
+					<div class="menu-burger__title">Menu</div>
+				</div>
+			</a>
+		</div>
+		{{> hidden-global.hidden-global-nav-edu}}
+	</div>
+</header>

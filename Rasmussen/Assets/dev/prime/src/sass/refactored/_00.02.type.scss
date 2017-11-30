@@ -1,0 +1,79 @@
+.heading {
+    line-height: 1;
+    @at-root #{&}--title {
+        @extend %heading--title;
+    }
+    @at-root #{&}--subtitle {
+        @extend %heading--subtitle;
+    }
+    @at-root #{&}--tertiary {
+        @extend %font-headings--medium;
+        @include font-size($h3-font-sizes);
+    }
+    @at-root #{&}--quatemary {
+        @include font-size($h4-font-sizes);
+    }
+    @at-root #{&}--reverse {
+        color: $color-white;
+    }
+}
+
+.abbr-hide {
+    @include breakpoint($medium-tall) {
+        display: none;
+    }
+}
+
+.emphasis-heading {
+    @at-root #{&}--light {
+        font-family: $font-headings--light;
+        font-weight: lighter;
+    }
+}
+
+.emphasis-body {
+    @at-root #{&}--strong {
+        font-family: $font-body--bold;
+    }
+}
+
+.line-break {
+    display: inline-block;
+    @include breakpoint($tp-huge) {
+        display: inline;
+    }
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+.text {
+    @include clearfix;
+    @at-root #{&}--centered {
+        text-align: center;
+    }
+    @at-root #{&}--chevron {
+        @at-root #{&}::after {
+            @extend %chevron-fontawesome;
+        }
+    }
+    @at-root #{&}--deemphasized {
+        color: $color-text--lightened;
+    }
+    @at-root #{&}--dark-on-light {
+        // light text on dark background
+        * {
+            color: $color-text;
+        }
+    }
+    @at-root #{&}--light-on-dark {
+        // light text on dark background
+        * {
+            color: $color-white;
+        }
+    }
+    @at-root #{&}--reduced25 {
+        font-size: 75%;
+    }
+}

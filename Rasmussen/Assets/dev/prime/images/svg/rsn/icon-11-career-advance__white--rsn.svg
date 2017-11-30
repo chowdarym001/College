@@ -1,0 +1,21 @@
+<svg id="icon-11-career-advance__white--rsn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.61 48.76">
+    <defs>
+        <style>
+            .fill-white-opacity30 {
+                fill: #fff;
+                opacity: .3;
+            }
+
+        </style>
+    </defs>
+    <title>icon-11-career-advance__white--rsn</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="ON_MEDIUM_BG" data-name="ON MEDIUM BG">
+            <g id="icon-11-career-advice__white--rsn">
+                <path class="fill-white-opacity30" d="M80.73 22.26L59.15.67C58-.5 57-.1 57 1.55v5.57H30c2.09 1.09 9.41 3.33 13.55 8.64-8-4.16-21.84-6.5-32.88-2.75 9.11.68 17.82 1.78 21.13 8.64-4.64-4.06-21.7-5.89-31.79 1.3 11.79 0 26 2.45 29.37 10.64C21.63 36 15.36 32.51 11 30a22.07 22.07 0 0 0 19 11.64h27v5.57c0 1.65 1 2 2.12.88L80.73 26.5a3 3 0 0 0 0-4.24z" />
+                <path class="fill-white-opacity30" d="M80.73 22.26L59.15.67C58-.5 57-.1 57 1.55v5.57H30c2.09 1.09 9.41 3.33 13.55 8.64A42.09 42.09 0 0 0 31.85 12l31.72 31.67L80.73 26.5a3 3 0 0 0 0-4.24z" />
+                <path class="fill-white-opacity30" d="M80.73 22.26L70.11 11.64l-30 30H57v5.57c0 1.65 1 2 2.12.88L80.73 26.5a3 3 0 0 0 0-4.24z" />
+            </g>
+        </g>
+    </g>
+</svg>

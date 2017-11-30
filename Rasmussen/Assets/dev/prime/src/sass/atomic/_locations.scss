@@ -1,0 +1,41 @@
+.locations {
+    @extend %clearfix;
+    text-align: center;
+    @include breakpoint(max-width $small) { padding: 0 20px; }
+
+    .single-select {
+        @include span(12 of 12);
+        position: relative;
+        option { padding: 0; }
+        select {
+            @include span(12 of 12);
+            -webkit-appearance: menulist;
+            -moz-appearance: menulist;
+            background-color: inherit;
+            border: 1px solid rgba($color-gray-dark, .5);
+            border-radius: 0;
+            font-family: $font-flama-book;
+            font-size: 19px;
+            height: 54px;
+            margin-top: 16px;
+            margin-bottom: 64px;
+            outline: none;
+            position: relative;
+            text-indent: 12px; // Padding doesn't show on Safari or IE
+            @include breakpoint($small) {
+                @include span(10 of 12);
+                @include push(1 of 12);
+                margin-top: 20px;
+                margin-bottom: 64px;
+
+            }
+            @include breakpoint($medium-tall) {
+                @include span(6 of 12);
+                @include push(3 of 12);
+                margin-top: 30px;
+                margin-bottom: 70px;
+            }
+        }
+    }
+    
+}

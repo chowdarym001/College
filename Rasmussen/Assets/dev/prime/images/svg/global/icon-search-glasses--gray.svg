@@ -1,0 +1,16 @@
+<svg id="icon-search-glasses--gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.48 66.48">
+    <defs>
+        <style>
+            .fill-color-black--85 {
+                fill: #58595b;
+            }
+
+        </style>
+    </defs>
+    <title>icon-search-glasses--gray</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path id="icon-search-glasses" class="fill-color-black--85" d="M65.87,56.93,54.27,45.34a29.53,29.53,0,1,0-8.93,8.93l11.59,11.6a2.11,2.11,0,0,0,3,0l6-6A2.11,2.11,0,0,0,65.87,56.93Zm-36.4-6.42a21,21,0,1,1,21-21A21.07,21.07,0,0,1,29.47,50.51Z" />
+        </g>
+    </g>
+</svg>

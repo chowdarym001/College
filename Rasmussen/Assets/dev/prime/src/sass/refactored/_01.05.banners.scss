@@ -1,0 +1,189 @@
+// BANNERS
+.banner {
+    @extend %clearfix;
+}
+
+.banner-full {
+    @extend %clearfix;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    min-width: 100%;
+    max-width: 150%;
+    width: 100%;
+    // modifier
+    @at-root #{&}--inline {
+        @extend %picturefill-images;
+    }
+    @at-root #{&}--imageless {
+        @include span(12 of 12);
+        padding: 40px 0;
+    }
+    // BANNER HEROES: via background image
+    @at-root #{&}--bg {
+        @extend %clearfix;
+        background-color: transparent;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: auto;
+        clear: both;
+        display: block;
+        height: 225px;
+        position: relative;
+        width: 100%;
+        @at-root #{&}-placeholder {
+            background-image: url("http://lorempicsum.com/nemo/480/200/1");
+            @include breakpoint($small) {
+                background-image: url("http://lorempicsum.com/nemo/640/200/1");
+            }
+            @include breakpoint($medium-tall) {
+                background-image: url("http://lorempicsum.com/nemo/960/400/1");
+                height: 330px;
+            }
+            @include breakpoint($medium-wide) {
+                background-image: url("http://lorempicsum.com/nemo/1200/400/1");
+            }
+            @include breakpoint($tp-xlarge) {
+                background-image: url("http://lorempicsum.com/nemo/1800/400/1");
+            }
+        }
+    }
+    @at-root #{&}--tall {
+        @extend %picturefill-images;
+    }
+    @at-root #{&}--rsn {
+        background-color: $color-school-rsn--primary;
+        color: $color-white;
+    }
+}
+
+// BANNER TEXT
+.banner-text {
+    @extend %clearfix;
+    padding: 0;
+    // banner-text headline naming structure as of July 2017
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @extend %font-headings--bold;
+                @include font-size($banner-title-font-sizes);
+                margin: 0 0 10px;
+                .banner-text--overlay-small-large & {
+                    color: $color-white;
+                    letter-spacing: 0.5px;
+                    line-height: 1;
+                    margin: 0;
+                }
+                .banner-text--beneath-small-overlay-large & {
+                    color: $color-text;
+                    margin: 0;
+                    padding: 30px 0 0;
+                    @include breakpoint($medium-wide) {
+                        color: $color-white;
+                        padding: 0;
+                    }
+                }
+            }
+            @at-root #{&}-2 {
+                @extend %font-headings--light;
+                @include font-size($banner-subtitle-font-sizes);
+                line-height: 1.2;
+                margin: 0;
+            }
+            @at-root #{&}-3 {
+                @extend %font-headings--bold;
+                font-size: 28px;
+                margin: 0;
+                @include breakpoint($medium-wide) {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+    &__title, & h1 {
+        @extend %font-headings--bold;
+        @include font-size($banner-title-font-sizes);
+        .banner-text--overlay-small-large & {
+            color: $color-white;
+            letter-spacing: 0.5px;
+            line-height: 1;
+            margin: 0;
+        }
+        .banner-text--beneath-small-overlay-large & {
+            color: $color-text;
+            margin: 0;
+            padding: 30px 0 0;
+            @include breakpoint($medium-wide) {
+                color: $color-white;
+                padding: 0;
+            }
+        }
+    }
+    &__subtitle, &__title-secondary, & h2 {
+        @extend %font-headings--light;
+        @include font-size($banner-subtitle-font-sizes);
+        .banner-text--overlay-small-large & {
+            color: $color-white;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            margin: 0 0 10px;
+            padding: 0 0 8px;
+        }
+        .banner-text--beneath-small-overlay-large & {
+            display: none;
+            @include breakpoint($tp-huge) {
+                color: $color-white;
+                display: block;
+                margin: 0 0 10px;
+            }
+        }
+    }
+    &__title-tertiary, & h3 {
+        @extend %font-headings--bold;
+        font-size: 28px;
+        @include breakpoint($medium-wide) {
+            font-size: 34px;
+        }
+    }
+    &__title--light, &__subtitle--light {
+        color: $color-white;
+    }
+    @at-root #{&}--overlay-small-large {
+        @include centered-vertically;
+        max-width: 88%;
+        @include breakpoint($medium-wide) {
+            max-width: 500px;
+        }
+        @include breakpoint($tp-huge) {
+            max-width: 700px;
+        }
+        @include breakpoint($tp-ridiculously-wide) {
+            max-width: 800px;
+        }
+        @include breakpoint($tp-4k) {
+            max-width: 1100px;
+        }
+    }
+    @at-root #{&}--beneath-small-overlay-large {
+        @include centered-vertically(relative, 0, 0);
+        color: $color-text;
+        max-width: 100%;
+        @include breakpoint($medium-wide) {
+            @include centered-vertically;
+            color: $color-white;
+            max-width: 400px;
+            padding: 0;
+        }
+        @include breakpoint($tp-xlarge) {
+            max-width: 600px;
+        }
+        @include breakpoint($tp-huge) {
+            max-width: 750px;
+        }
+        @include breakpoint($tp-4k) {
+            max-width: 850px;
+        }
+    }
+}

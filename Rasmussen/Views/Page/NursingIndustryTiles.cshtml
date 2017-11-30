@@ -1,0 +1,12 @@
+﻿@model Rasmussen.Models.GenericContentBlockModel
+
+<section class="section industry-media no-padding">
+    <section class="toms-tiles toms-tiles--2c3r-zigzag no-padding">
+        @Html.Raw(Model.Body)
+        
+    </section>
+    <div class="flickity-carousel fb-post">
+        @Html.Raw(Model.Footer)
+        
+    </div>
+</section>

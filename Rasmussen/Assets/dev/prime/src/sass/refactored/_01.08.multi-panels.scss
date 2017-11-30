@@ -1,0 +1,210 @@
+$panel-text-height: 230px;
+.multi-panels {
+    @extend %clearfix;
+    @include multi-panels--new;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    @at-root #{&}__container {
+        @extend %clearfix;
+        @extend %margin-centered;
+        width: 100%;
+    }
+    @at-root #{&}__header {
+        @extend %clearfix;
+        @at-root #{&}-title {
+            @extend %font-headings--medium;
+            @include font-size($h1-font-sizes);
+        }
+    }
+    @at-root #{&} a {
+        @extend %clearfix;
+        border: 0;
+        display: block;
+        overflow: hidden;
+        text-decoration: none;
+        &:focus, &:hover {
+            border: 0;
+        }
+    }
+    @at-root #{&}__card {
+        @extend %clearfix;
+        background: transparent;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+        &:hover {
+            border: 0;
+            @at-root #{&} .multi-panels__text {
+                padding: 30px 20px;
+            }
+            @at-root #{&} .multi-panels__cta {
+                border-bottom: 1px solid rgba($color-ras-gold--dark, 0.5);
+                color: $color-ras-gold--dark;
+            }
+        }
+        @at-root #{&}--alt {
+            @at-root #{&} .multi-panels__details {
+                margin: auto;
+                width: 88%;
+            }
+            .school-of--rsb & {
+                .multi-panels__banner {
+                    background-color: transparent;
+                    background-image: url("../../prime/images/multi-panels/cta/rsb/multi-panel-cta-02-small.jpg");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    @include breakpoint($small) {
+                        background-image: url("../../prime/images/multi-panels/cta/rsb/multi-panel-cta-03-medium.jpg");
+                    }
+                    @include breakpoint($small-wide) {
+                        background-image: url("../../prime/images/multi-panels/cta/rsb/multi-panel-cta-04-large.jpg");
+                    }
+                    @include breakpoint($medium-wide) {
+                        background-image: url("../../prime/images/multi-panels/cta/rsb/multi-panel-cta-05-xlarge.jpg");
+                    }
+                }
+            }
+            @at-root #{&} .multi-panels__banner {
+                picture, img {
+                    display: none;
+                }
+            }
+            @at-root #{&} .multi-panels__title {
+                @extend %font-body--regular;
+                border: 0;
+                display: inline-block;
+                font-size: 19px;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 100%;
+            }
+            @at-root #{&} .multi-panels__subtitle {
+                text-transform: uppercase;
+            }
+            @at-root #{&} .multi-panels__text {
+                background-color: transparent;
+                @include breakpoint($small-wide) {
+                    @include centered-horizontally-vertically(relative, 50%, 0, -50%, 50%);
+                    border-bottom: 3px solid $color-white;
+                    border-top: 3px solid $color-white;
+                    width: 88%;
+                }
+                @include breakpoint($medium-tall) {
+                    @include centered-horizontally-vertically(relative, 50%, 0, -50%, 60%);
+                }
+                @include breakpoint($medium-wide) {
+                    @include centered-horizontally-vertically(relative, 50%, 0, -50%, 45%);
+                }
+                @include breakpoint($tp-huge) {
+                    @include centered-horizontally-vertically(relative, 50%, 0, -50%, 50%);
+                }
+                @include breakpoint($tp-ridiculously-wide) {
+                    width: 80%;
+                }
+                @include breakpoint($tp-4k) {
+                    width: 70%;
+                }
+            }
+            @at-root #{&} a {
+                &:focus, &:hover {
+                    @at-root #{&} .multi-panels__cta {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+    @at-root #{&}__banner {
+        @extend %clearfix;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        @extend %picturefill-images;
+        @at-root #{&} img {
+            object-fit: none;
+            object-position: 50% 50%;
+            min-width: auto;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+    @at-root #{&}__details {
+        @extend %clearfix;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        @include breakpoint($small-wide) {
+            min-height: 350px;
+        }
+    }
+    @at-root #{&}__text {
+        @extend %clearfix;
+        @include transition(all 0.15s linear);
+        @include centered-bottom(relative, 0, 0, 0, 0, 0);
+        background-color: rgba($color-black, 0.7);
+        color: $color-white;
+        padding: 20px;
+        z-index: 3;
+        @include breakpoint($small-wide) {
+            position: absolute;
+        }
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        color: $color-white;
+        display: inline-block;
+        font-size: 30px;
+        margin: 10px 0 0;
+        position: relative;
+        text-transform: uppercase;
+    }
+    @at-root #{&}__subtitle {
+        color: $color-white;
+        border: 0;
+        display: inline-block;
+        font-family: $font-flama--book;
+        font-size: 19px;
+        margin: 10px 0;
+        text-decoration: none;
+        width: 100%;
+    }
+    @at-root #{&}__cta {
+        @include cta-inline--arrow-inactive;
+        @at-root #{&}:hover::after {
+            @include transform(translate(0, 0));
+        }
+    }
+    @at-root #{&}--three {
+        // SHOW ALTERNATE CTA CARD IN 3 CARDS STACK BETWEEN 640~960px
+        @at-root #{&} .multi-panels__card--alt {
+            display: none;
+            @include breakpoint($small-wide) {
+                display: block;
+            }
+            @include breakpoint($medium-wide) {
+                display: none;
+            }
+        }
+    }
+    &.multi-panels--four {
+        // ALTERNATE CTA CARD FILLS GAP IN 4 CARDS STACK BETWEEN 960~1300px
+        .multi-panels__card--alt {
+            @include breakpoint($medium-wide) {
+                width: 66.66%;
+            }
+            .multi-panels__text {
+                @include breakpoint($medium-wide) {
+                    @include centered-horizontally-vertically(relative, 50%, 0, -50%, 75%);
+                }
+                @include breakpoint($tp-huge) {
+                    @include centered-horizontally-vertically(relative, 50%, 0, -50%, 40%);
+                }
+            }
+        }
+    }
+}

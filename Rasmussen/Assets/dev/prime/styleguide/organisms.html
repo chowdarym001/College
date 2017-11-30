@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+
+        <link rel="stylesheet" href="fabricator/css/f.css"> 
+
+        <!-- project styles -->
+        <link rel="stylesheet" href="/../css/styles.css">
+        <!-- /project styles -->
+
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <!-- // Bugherd testing script required for QA -->
+        <script type='text/javascript'>
+            (function(d, t) {
+                var bh = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                bh.type = 'text/javascript';
+                bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xwwmnrlzrjcehtljffzjlw';
+                s.parentNode.insertBefore(bh, s);
+            })(document, 'script');
+        </script>
+
+    </head>
+
+    <body>
+
+            <!-- fabricator icons -->
+            <svg style="display: none;">
+            	<symbol id="f-icon-code" viewBox="0 0 512 512">
+            		<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+            	</symbol>
+            	<symbol id="f-icon-notes" viewBox="0 0 512 512">
+            		<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+            	</symbol>
+            	<symbol id="f-icon-labels" viewBox="0 0 512 512">
+            		<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+            	</symbol>
+            	<symbol id="f-icon-menu" viewBox="0 0 512 512">
+            		<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+            	</symbol>
+            	<symbol id="f-icon-settings" viewBox="0 0 512 512">
+            		<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+            	</symbol>
+            </svg>
+            <!-- /fabricator icons -->
+
+            <!-- fabricator menu -->
+            <div class="f-menu">
+            
+                <div class="f-controls">
+                	<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+                		<svg>
+                			<use xlink:href="#f-icon-labels" />
+                		</svg>
+                	</div>
+                	<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+                		<svg>
+                			<use xlink:href="#f-icon-notes" />
+                		</svg>
+                	</div>
+                	<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+                		<svg>
+                			<use xlink:href="#f-icon-code" />
+                		</svg>
+                	</div>
+                </div>
+            
+                <ul>
+                    <li>
+                        <a href="index.html" class="f-menu__heading">Overview</a>
+                    </li>
+            
+            <!-- ORIGINAL AUTOMATED MENU
+                    <li>
+                        <a href="1atoms.html" class="f-menu__heading">Atoms</a>
+                        <ul>
+                            <li>
+                                <a href="1atoms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#color-palette">Color Palette</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#dividers">Dividers</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#headings">Headings</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#images">Images</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#links">Links</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#menu">Menu</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#paragraph">Paragraph</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#social-proof">Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#tables">Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="2molecules.html" class="f-menu__heading">Molecules</a>
+                        <ul>
+                            <li>
+                                <a href="2molecules.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="2molecules.html#images-icons">Images Icons</a>
+                            </li>
+                            <li>
+                                <a href="2molecules.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="3organisms.html" class="f-menu__heading">Organisms</a>
+                        <ul>
+                            <li>
+                                <a href="3organisms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#campuses">Campuses</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#intro">Intro</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="hidden.html" class="f-menu__heading">Hidden</a>
+                        <ul>
+                            <li>
+                                <a href="hidden.html#hidden-accreditors">Hidden Accreditors</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-admissions">Hidden Admissions</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-areas">Hidden Areas</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-banners">Hidden Banners</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-credential">Hidden Credential</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-footer">Hidden Footer</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-global">Hidden Global</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-home">Hidden Home</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-industry">Hidden Industry</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-intro">Hidden Intro</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-nav">Hidden Nav</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-program">Hidden Program</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-social-proof">Hidden Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-student-experience">Hidden Student Experience</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-toms-tiles">Hidden Toms Tiles</a>
+                            </li>
+                        </ul>
+                    </li>
+            -->
+                    
+                    <li>
+                        <a href="atoms.html" class="f-menu__heading">Atoms</a>
+                        <ul>
+                            <li>
+                                <a href="atoms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#color-palette">Color Palette</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#dividers">Dividers</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#headings">Headings</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#images">Images</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#links">Links</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#menu">Menu</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#paragraph">Paragraph</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#social-proof">Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#tables">Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="molecules.html" class="f-menu__heading">Molecules</a>
+                        <ul>
+                            <li>
+                                <a href="molecules.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="molecules.html#images-icons">Images Icons</a>
+                            </li>
+                            <li>
+                                <a href="molecules.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="organisms.html" class="f-menu__heading">Organisms</a>
+                        <ul>
+                            <li>
+                                <a href="organisms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#campuses">Campuses</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#intro">Intro</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="templates.html" class="f-menu__heading">Templates</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    
+            <!--
+                    <li>
+                        <a href="pages.html" class="f-menu__heading">5. Pages</a>
+                        <ul>
+                        </ul>
+                    </li>
+            -->
+                    
+                    <li>
+                        <a href="pages.html" class="f-menu__heading">Pages</a>
+                        <ul>
+                            <li>
+                                <a href="pages/admissions.html" target="_blank">Admissions</a>
+                            </li>
+                            <li>
+                                <a href="pages/areas-study.html" target="_blank">Areas Study</a>
+                            </li>
+                            <li>
+                                <a href="pages/credential-lpn.html" target="_blank">Credential Lpn</a>
+                            </li>
+                            <li>
+                                <a href="pages/homepage.html" target="_blank">Homepage</a>
+                            </li>
+                            <li>
+                                <a href="pages/industry-rsn.html" target="_blank">Industry Rsn</a>
+                            </li>
+                            <li>
+                                <a href="pages/program-lpn.html" target="_blank">Program Lpn</a>
+                            </li>
+                            <li>
+                                <a href="pages/student-experience.html" target="_blank">Student Experience</a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                </ul>
+            
+            
+            </div>
+            <!-- /fabricator menu -->            <div class="f-container">
+                <div class="f-control-bar">
+                	<div class="f-control f-menu-toggle">
+                		<svg>
+                			<use xlink:href="#f-icon-menu" />
+                		</svg>
+                	</div>
+                </div>
+
+            
+<h1 data-f-toggle="labels">3. Organisms</h1>
+<div class="f-item-notes" data-f-toggle="notes">
+    <p>Relatively complex UI components composed of groups of molecules and/or atoms, and/or other organisms.</p>
+</div>
+
+
+<div class="f-item-wrap" id="banners">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Banners</h2>
+	</div>
+		<div class="f-item-group" id="banners.banner-full-background">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Banner Full Background</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Full width banner using background images. Images controlled via stylesheet with class modifiers.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="banner-full banner-full--bg banner-full--bg-placeholder">
+	<div class="container">
+		<div class="banner-text">
+			<h2 class="banner-text__subtitle">Banner subtitle</h2>
+			<h1 class="banner-text__title">Banner title</h1>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;banner-full banner-full--bg banner-full--bg-placeholder&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;div class&#x3D;&quot;banner-text&quot;&gt;
+			&lt;h2 class&#x3D;&quot;banner-text__subtitle&quot;&gt;Banner subtitle&lt;/h2&gt;
+			&lt;h1 class&#x3D;&quot;banner-text__title&quot;&gt;Banner title&lt;/h1&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="banners.banner-full-inline">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Banner Full Inline</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Full width banners using inline <code>&lt;picture&gt;</code> element. Images controlled via <code>&lt;source&gt;</code> tags and inline media queries.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="banner-full banner-full--inline">
+	<picture>
+		<!--[if IE 9]><video style="display: none;"><![endif]-->
+		<source srcset="http://placehold.it/2000x335" media="(min-width: 1200px)">
+		<source srcset="http://placehold.it/1200x330" media="(min-width: 960px)">
+		<source srcset="http://placehold.it/960x300" media="(min-width: 640px)">
+		<source srcset="http://placehold.it/640x225" media="(min-width: 480px)">
+		<source srcset="http://placehold.it/480x225" media="(min-width: 0)">
+		<!--[if IE 9]></video><![endif]-->
+		<img srcset="" alt="" data-object-fit="cover">
+	</picture>
+	<div class="container">
+		<div class="banner-text">
+			<h2 class="banner-text__subtitle">Banner subtitle</h2>
+			<h1 class="banner-text__title">Banner title</h1>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;banner-full banner-full--inline&quot;&gt;
+	&lt;picture&gt;
+		&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+		&lt;source srcset&#x3D;&quot;http://placehold.it/2000x335&quot; media&#x3D;&quot;(min-width: 1200px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;http://placehold.it/1200x330&quot; media&#x3D;&quot;(min-width: 960px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;http://placehold.it/960x300&quot; media&#x3D;&quot;(min-width: 640px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;http://placehold.it/640x225&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+		&lt;source srcset&#x3D;&quot;http://placehold.it/480x225&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+		&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+		&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot; data-object-fit&#x3D;&quot;cover&quot;&gt;
+	&lt;/picture&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;div class&#x3D;&quot;banner-text&quot;&gt;
+			&lt;h2 class&#x3D;&quot;banner-text__subtitle&quot;&gt;Banner subtitle&lt;/h2&gt;
+			&lt;h1 class&#x3D;&quot;banner-text__title&quot;&gt;Banner title&lt;/h1&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="campuses">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Campuses</h2>
+	</div>
+		<div class="f-item-group" id="campuses.campuses-4col-fl-contact">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses 4col Fl Contact</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<section class="imageset imageset--4">
+	<ul class="imageset__list">
+		<li class="imageset__item">
+			<img src="../../images/campus/florida/ras-college-fl-fort-myers.jpg" />
+			<h4 class="imageset__title">Fort Myers</h4>
+			<p>
+				9160 Forum Corporate Parkway
+				<br>Suite 100
+				<br>Fort Myers, FL 33905</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/florida/ras-college-fl-land-o-lakes.jpg" />
+			<h4 class="imageset__title">Land O'Lakes / East Pasco</h4>
+			<p>
+				18600 Fernview Street
+				<br> Land O'Lakes, FL 34638
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/florida/ras-college-fl-new-port-richey.jpg" />
+			<h4 class="imageset__title">New Port Richey/West Pasco</h4>
+			<p>
+				8661 Citizens Drive
+				<br>New Port Richey, FL 34654
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/florida/ras-college-fl-ocala.jpg" />
+			<h4 class="imageset__title">Ocala</h4>
+			<p>
+				4755 SW 46th Court
+				<br>Ocala, FL 34474
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/florida/ras-college-fl-tampa.jpg" />
+			<h4 class="imageset__title">Tampa/Brandon</h4>
+			<p>
+				4042 Park Oaks Blvd
+				<br>Suite 100
+				<br>Tampa, FL 33610
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+	</ul>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;imageset imageset--4&quot;&gt;
+	&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/florida/ras-college-fl-fort-myers.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Fort Myers&lt;/h4&gt;
+			&lt;p&gt;
+				9160 Forum Corporate Parkway
+				&lt;br&gt;Suite 100
+				&lt;br&gt;Fort Myers, FL 33905&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/florida/ras-college-fl-land-o-lakes.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Land O&#x27;Lakes / East Pasco&lt;/h4&gt;
+			&lt;p&gt;
+				18600 Fernview Street
+				&lt;br&gt; Land O&#x27;Lakes, FL 34638
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/florida/ras-college-fl-new-port-richey.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;New Port Richey/West Pasco&lt;/h4&gt;
+			&lt;p&gt;
+				8661 Citizens Drive
+				&lt;br&gt;New Port Richey, FL 34654
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/florida/ras-college-fl-ocala.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Ocala&lt;/h4&gt;
+			&lt;p&gt;
+				4755 SW 46th Court
+				&lt;br&gt;Ocala, FL 34474
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/florida/ras-college-fl-tampa.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Tampa/Brandon&lt;/h4&gt;
+			&lt;p&gt;
+				4042 Park Oaks Blvd
+				&lt;br&gt;Suite 100
+				&lt;br&gt;Tampa, FL 33610
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-4col-mn-contact">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses 4col Mn Contact</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<section class="imageset imageset--4">
+	<ul class="imageset__list">
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-blaine.jpg" />
+			<h4 class="imageset__title">Blaine</h4>
+			<p>
+				3629 95th Avenue NE
+				<br>Blaine, MN 55014
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-bloomington.jpg" />
+			<h4 class="imageset__title">Bloomington</h4>
+			<p>
+				4400 West 78th Street
+				<br>6th Floor
+				<br>Bloomington, MN 55435
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-brooklyn-park.jpg" />
+			<h4 class="imageset__title">Brooklyn Park/Maple Grove</h4>
+			<p>
+				8301 93rd Avenue North
+				<br>Brooklyn Park, MN 55445
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-eagan.jpg" />
+			<h4 class="imageset__title">Eagan</h4>
+			<p>
+				3500 Federal Drive
+				<br>Eagan, MN 55122
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-lake-elmo.jpg" />
+			<h4 class="imageset__title">Lake Elmo/Woodbury</h4>
+			<p>
+				8565 Eagle Point Circle
+				<br>Lake Elmo, MN 55042
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-mankato.jpg" />
+			<h4 class="imageset__title">Mankato</h4>
+			<p>
+				130 Saint Andrews Drive
+				<br>Mankato, MN 56001
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-moorhead.jpg" />
+			<h4 class="imageset__title">Moorhead</h4>
+			<p>
+				1250 29th Avenue South
+				<br>Moorhead, MN 56560
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+		<li class="imageset__item">
+			<img src="../../images/campus/minnesota/ras-college-mn-saint-cloud.jpg" />
+			<h4 class="imageset__title">St. Cloud</h4>
+			<p>
+				226 Park Avenue South
+				<br>St. Cloud, MN 56301
+			</p>
+			<p><a href="#" class="cta-inline">Contact campus</a></p>
+		</li>
+	</ul>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;imageset imageset--4&quot;&gt;
+	&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-blaine.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Blaine&lt;/h4&gt;
+			&lt;p&gt;
+				3629 95th Avenue NE
+				&lt;br&gt;Blaine, MN 55014
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-bloomington.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Bloomington&lt;/h4&gt;
+			&lt;p&gt;
+				4400 West 78th Street
+				&lt;br&gt;6th Floor
+				&lt;br&gt;Bloomington, MN 55435
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-brooklyn-park.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Brooklyn Park/Maple Grove&lt;/h4&gt;
+			&lt;p&gt;
+				8301 93rd Avenue North
+				&lt;br&gt;Brooklyn Park, MN 55445
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-eagan.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Eagan&lt;/h4&gt;
+			&lt;p&gt;
+				3500 Federal Drive
+				&lt;br&gt;Eagan, MN 55122
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-lake-elmo.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Lake Elmo/Woodbury&lt;/h4&gt;
+			&lt;p&gt;
+				8565 Eagle Point Circle
+				&lt;br&gt;Lake Elmo, MN 55042
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-mankato.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Mankato&lt;/h4&gt;
+			&lt;p&gt;
+				130 Saint Andrews Drive
+				&lt;br&gt;Mankato, MN 56001
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-moorhead.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Moorhead&lt;/h4&gt;
+			&lt;p&gt;
+				1250 29th Avenue South
+				&lt;br&gt;Moorhead, MN 56560
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+			&lt;img src&#x3D;&quot;../../images/campus/minnesota/ras-college-mn-saint-cloud.jpg&quot; /&gt;
+			&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;St. Cloud&lt;/h4&gt;
+			&lt;p&gt;
+				226 Park Avenue South
+				&lt;br&gt;St. Cloud, MN 56301
+			&lt;/p&gt;
+			&lt;p&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;cta-inline&quot;&gt;Contact campus&lt;/a&gt;&lt;/p&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-florida">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses Florida</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Florida campuses. Use on programmatic pages, locations section on microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="locations">
+	<section id="Florida" class="imageset imageset--3">
+		<h3 class="locations__subtitle">Florida Campuses</h3>
+		<ul class="imageset__list">
+			<li class="imageset__item">
+				<img src="../images/campus/florida/ras-college-fl-fort-myers.jpg" />
+				<h4 class="imageset__title">Fort Myers</h4>
+				<p>
+					9160 Forum Corporate Parkway
+					<br>Suite 100
+					<br>Fort Myers, FL 33905</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/florida/ras-college-fl-land-o-lakes.jpg" />
+				<h4 class="imageset__title">Land O'Lakes / East Pasco</h4>
+				<p>
+					18600 Fernview Street
+					<br> Land O'Lakes, FL 34638
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/florida/ras-college-fl-new-port-richey.jpg" />
+				<h4 class="imageset__title">New Port Richey/West Pasco</h4>
+				<p>
+					8661 Citizens Drive
+					<br>New Port Richey, FL 34654
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/florida/ras-college-fl-ocala.jpg" />
+				<h4 class="imageset__title">Ocala</h4>
+				<p>
+					4755 SW 46th Court
+					<br>Ocala, FL 34474
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/florida/ras-college-fl-tampa.jpg" />
+				<h4 class="imageset__title">Tampa/Brandon</h4>
+				<p>
+					4042 Park Oaks Blvd
+					<br>Suite 100
+					<br>Tampa, FL 33610
+				</p>
+			</li>
+		</ul>
+	</section>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;locations&quot;&gt;
+	&lt;section id&#x3D;&quot;Florida&quot; class&#x3D;&quot;imageset imageset--3&quot;&gt;
+		&lt;h3 class&#x3D;&quot;locations__subtitle&quot;&gt;Florida Campuses&lt;/h3&gt;
+		&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/florida/ras-college-fl-fort-myers.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Fort Myers&lt;/h4&gt;
+				&lt;p&gt;
+					9160 Forum Corporate Parkway
+					&lt;br&gt;Suite 100
+					&lt;br&gt;Fort Myers, FL 33905&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/florida/ras-college-fl-land-o-lakes.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Land O&#x27;Lakes / East Pasco&lt;/h4&gt;
+				&lt;p&gt;
+					18600 Fernview Street
+					&lt;br&gt; Land O&#x27;Lakes, FL 34638
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/florida/ras-college-fl-new-port-richey.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;New Port Richey/West Pasco&lt;/h4&gt;
+				&lt;p&gt;
+					8661 Citizens Drive
+					&lt;br&gt;New Port Richey, FL 34654
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/florida/ras-college-fl-ocala.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Ocala&lt;/h4&gt;
+				&lt;p&gt;
+					4755 SW 46th Court
+					&lt;br&gt;Ocala, FL 34474
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/florida/ras-college-fl-tampa.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Tampa/Brandon&lt;/h4&gt;
+				&lt;p&gt;
+					4042 Park Oaks Blvd
+					&lt;br&gt;Suite 100
+					&lt;br&gt;Tampa, FL 33610
+				&lt;/p&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-illinois">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses Illinois</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Illinois campuses. Use on programmatic pages, locations section on microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="locations">
+	<section id="Illinois" class="imageset imageset--3">
+		<h3 class="locations__subtitle">Illinois Campuses</h3>
+		<ul class="imageset__list">
+			<li class="imageset__item">
+				<img src="../images/campus/illinois/ras-college-il-aurora.jpg" />
+				<h4 class="imageset__title">Aurora/Naperville</h4>
+				<p>
+					2363 Sequoia Drive
+					<br>Aurora, IL 60506
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/illinois/ras-college-il-mokena.jpg" />
+				<h4 class="imageset__title">Mokena/Tinley Park</h4>
+				<p>
+					8650 West Spring Lake Road
+					<br>Mokena, IL 60448
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/illinois/ras-college-il-rockford.jpg" />
+				<h4 class="imageset__title">Rockford</h4>
+				<p>
+					6000 East State Street
+					<br>4th Floor
+					<br>Rockford, IL 61108
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/illinois/ras-college-il-romeoville.jpg" />
+				<h4 class="imageset__title">Romeoville/Joliet</h4>
+				<p>
+					1400 West Normantown Road
+					<br>Romeoville, IL 60446
+				</p>
+			</li>
+		</ul>
+	</section>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;locations&quot;&gt;
+	&lt;section id&#x3D;&quot;Illinois&quot; class&#x3D;&quot;imageset imageset--3&quot;&gt;
+		&lt;h3 class&#x3D;&quot;locations__subtitle&quot;&gt;Illinois Campuses&lt;/h3&gt;
+		&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/illinois/ras-college-il-aurora.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Aurora/Naperville&lt;/h4&gt;
+				&lt;p&gt;
+					2363 Sequoia Drive
+					&lt;br&gt;Aurora, IL 60506
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/illinois/ras-college-il-mokena.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Mokena/Tinley Park&lt;/h4&gt;
+				&lt;p&gt;
+					8650 West Spring Lake Road
+					&lt;br&gt;Mokena, IL 60448
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/illinois/ras-college-il-rockford.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Rockford&lt;/h4&gt;
+				&lt;p&gt;
+					6000 East State Street
+					&lt;br&gt;4th Floor
+					&lt;br&gt;Rockford, IL 61108
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/illinois/ras-college-il-romeoville.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Romeoville/Joliet&lt;/h4&gt;
+				&lt;p&gt;
+					1400 West Normantown Road
+					&lt;br&gt;Romeoville, IL 60446
+				&lt;/p&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-kansas">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses Kansas</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Kansas campuses. Use on programmatic pages, locations section on microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="locations">
+	<section id="Kansas" class="imageset imageset--3">
+		<h3 class="locations__subtitle">Kansas Campuses</h3>
+		<ul class="imageset__list">
+			<li class="imageset__item">
+				<img src="../images/campus/kansas/ras-college-ks-overland-park.jpg" />
+				<h4 class="imageset__title">Kansas City/Overland Park</h4>
+				<p>
+					11600 College Boulevard
+					<br>Overland Park, KS 66210
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/kansas/ras-college-ks-topeka.jpg" />
+				<h4 class="imageset__title">Topeka</h4>
+				<p>
+					620 SW Governor View
+					<br>Topeka, KS 66606
+				</p>
+			</li>
+		</ul>
+	</section>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;locations&quot;&gt;
+	&lt;section id&#x3D;&quot;Kansas&quot; class&#x3D;&quot;imageset imageset--3&quot;&gt;
+		&lt;h3 class&#x3D;&quot;locations__subtitle&quot;&gt;Kansas Campuses&lt;/h3&gt;
+		&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/kansas/ras-college-ks-overland-park.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Kansas City/Overland Park&lt;/h4&gt;
+				&lt;p&gt;
+					11600 College Boulevard
+					&lt;br&gt;Overland Park, KS 66210
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/kansas/ras-college-ks-topeka.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Topeka&lt;/h4&gt;
+				&lt;p&gt;
+					620 SW Governor View
+					&lt;br&gt;Topeka, KS 66606
+				&lt;/p&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-minnesota">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses Minnesota</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Minnesota campuses. Use on programmatic pages, locations section on microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="locations">
+	<section id="Minnesota" class="imageset imageset--3">
+		<h3 class="locations__subtitle">Minnesota Campuses</h3>
+		<ul class="imageset__list">
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-blaine.jpg" />
+				<h4 class="imageset__title">Blaine</h4>
+				<p>
+					3629 95th Avenue NE
+					<br>Blaine, MN 55014
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-bloomington.jpg" />
+				<h4 class="imageset__title">Bloomington</h4>
+				<p>
+					4400 West 78th Street
+					<br>6th Floor
+					<br>Bloomington, MN 55435
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-brooklyn-park.jpg" />
+				<h4 class="imageset__title">Brooklyn Park/Maple Grove</h4>
+				<p>
+					8301 93rd Avenue North
+					<br>Brooklyn Park, MN 55445
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-eagan.jpg" />
+				<h4 class="imageset__title">Eagan</h4>
+				<p>
+					3500 Federal Drive
+					<br>Eagan, MN 55122
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-lake-elmo.jpg" />
+				<h4 class="imageset__title">Lake Elmo/Woodbury</h4>
+				<p>
+					8565 Eagle Point Circle
+					<br>Lake Elmo, MN 55042
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-mankato.jpg" />
+				<h4 class="imageset__title">Mankato</h4>
+				<p>
+					130 Saint Andrews Drive
+					<br>Mankato, MN 56001
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-moorhead.jpg" />
+				<h4 class="imageset__title">Moorhead</h4>
+				<p>
+					1250 29th Avenue South
+					<br>Moorhead, MN 56560
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/minnesota/ras-college-mn-saint-cloud.jpg" />
+				<h4 class="imageset__title">St. Cloud</h4>
+				<p>
+					226 Park Avenue South
+					<br>St. Cloud, MN 56301
+				</p>
+			</li>
+		</ul>
+	</section>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;locations&quot;&gt;
+	&lt;section id&#x3D;&quot;Minnesota&quot; class&#x3D;&quot;imageset imageset--3&quot;&gt;
+		&lt;h3 class&#x3D;&quot;locations__subtitle&quot;&gt;Minnesota Campuses&lt;/h3&gt;
+		&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-blaine.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Blaine&lt;/h4&gt;
+				&lt;p&gt;
+					3629 95th Avenue NE
+					&lt;br&gt;Blaine, MN 55014
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-bloomington.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Bloomington&lt;/h4&gt;
+				&lt;p&gt;
+					4400 West 78th Street
+					&lt;br&gt;6th Floor
+					&lt;br&gt;Bloomington, MN 55435
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-brooklyn-park.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Brooklyn Park/Maple Grove&lt;/h4&gt;
+				&lt;p&gt;
+					8301 93rd Avenue North
+					&lt;br&gt;Brooklyn Park, MN 55445
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-eagan.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Eagan&lt;/h4&gt;
+				&lt;p&gt;
+					3500 Federal Drive
+					&lt;br&gt;Eagan, MN 55122
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-lake-elmo.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Lake Elmo/Woodbury&lt;/h4&gt;
+				&lt;p&gt;
+					8565 Eagle Point Circle
+					&lt;br&gt;Lake Elmo, MN 55042
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-mankato.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Mankato&lt;/h4&gt;
+				&lt;p&gt;
+					130 Saint Andrews Drive
+					&lt;br&gt;Mankato, MN 56001
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-moorhead.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Moorhead&lt;/h4&gt;
+				&lt;p&gt;
+					1250 29th Avenue South
+					&lt;br&gt;Moorhead, MN 56560
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/minnesota/ras-college-mn-saint-cloud.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;St. Cloud&lt;/h4&gt;
+				&lt;p&gt;
+					226 Park Avenue South
+					&lt;br&gt;St. Cloud, MN 56301
+				&lt;/p&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-north-dakota">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses North Dakota</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>North Dakota campus. Use on programmatic pages, locations section on microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="locations">
+	<section id="NorthDakota" class="imageset imageset--3">
+		<h3 class="locations__subtitle">North Dakota Campus</h3>
+		<ul class="imageset__list">
+			<li class="imageset__item">
+				<img src="../images/campus/north-dakota/ras-college-nd-fargo.jpg" />
+				<h4 class="imageset__title">Fargo</h4>
+				<p>
+					4012 19th Avenue South
+					<br>Fargo, ND 58103
+				</p>
+			</li>
+		</ul>
+	</section>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;locations&quot;&gt;
+	&lt;section id&#x3D;&quot;NorthDakota&quot; class&#x3D;&quot;imageset imageset--3&quot;&gt;
+		&lt;h3 class&#x3D;&quot;locations__subtitle&quot;&gt;North Dakota Campus&lt;/h3&gt;
+		&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/north-dakota/ras-college-nd-fargo.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Fargo&lt;/h4&gt;
+				&lt;p&gt;
+					4012 19th Avenue South
+					&lt;br&gt;Fargo, ND 58103
+				&lt;/p&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="campuses.campuses-wisconsin">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Campuses Wisconsin</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Wisconsin campuses. Use on programmatic pages, locations section on microsites.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="locations">
+	<section id="Wisconsin" class="imageset imageset--3">
+		<h3 class="locations__subtitle">Wisconsin Campuses</h3>
+		<ul class="imageset__list">
+			<li class="imageset__item">
+				<img src="../images/campus/wisconsin/ras-college-wi-green-bay.jpg" />
+				<h4 class="imageset__title">Green Bay</h4>
+				<p>
+					904 South Taylor Street
+					<br>Suite 100
+					<br>Green Bay, WI 54303
+				</p>
+			</li>
+			<li class="imageset__item">
+				<img src="../images/campus/wisconsin/ras-college-wi-wausau.jpg" />
+				<h4 class="imageset__title">Wausau</h4>
+				<p>
+					1101 Westwood Drive
+					<br>Wausau, WI 54401
+				</p>
+			</li>
+		</ul>
+	</section>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;locations&quot;&gt;
+	&lt;section id&#x3D;&quot;Wisconsin&quot; class&#x3D;&quot;imageset imageset--3&quot;&gt;
+		&lt;h3 class&#x3D;&quot;locations__subtitle&quot;&gt;Wisconsin Campuses&lt;/h3&gt;
+		&lt;ul class&#x3D;&quot;imageset__list&quot;&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/wisconsin/ras-college-wi-green-bay.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Green Bay&lt;/h4&gt;
+				&lt;p&gt;
+					904 South Taylor Street
+					&lt;br&gt;Suite 100
+					&lt;br&gt;Green Bay, WI 54303
+				&lt;/p&gt;
+			&lt;/li&gt;
+			&lt;li class&#x3D;&quot;imageset__item&quot;&gt;
+				&lt;img src&#x3D;&quot;../images/campus/wisconsin/ras-college-wi-wausau.jpg&quot; /&gt;
+				&lt;h4 class&#x3D;&quot;imageset__title&quot;&gt;Wausau&lt;/h4&gt;
+				&lt;p&gt;
+					1101 Westwood Drive
+					&lt;br&gt;Wausau, WI 54401
+				&lt;/p&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/section&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="intro">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Intro</h2>
+	</div>
+		<div class="f-item-group" id="intro.00.01-intro-stats-ras-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Ras Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with Rasmussen College brand colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--ras">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-green--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-green--medium">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--ras&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-green--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-green--medium&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.00.02-intro-stats-ras-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Ras Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with Rasmussen College brand colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--ras">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-green--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-green--medium">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--ras&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-green--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-green--medium&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.01.01-intro-stats-rsb-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsb Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Business (RSB) colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsb">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsb--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsb">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsb&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsb--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsb&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.01.02-intro-stats-rsb-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsb Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Business (RSB) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsb">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsb--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsb">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsb&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsb--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsb&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.02.01-intro-stats-rsd-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsd Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Design (RSD) colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsd">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsd--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsd">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsd&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsd--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsd&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.02.02-intro-stats-rsd-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsd Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Design (RSD) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsd">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsd--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsd">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsd&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsd--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsd&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.03.01-intro-stats-rse-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rse Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Education (RSE) colors.</p>
+<p>Default layout (intro on left, stats on right) on top, alternate layout (stats on left, intro on right) on bottom.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rse">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rse--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rse">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rse&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rse--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rse&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.03.02-intro-stats-rse-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rse Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Education (RSE) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rse">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rse--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rse">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rse&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rse--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rse&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.04.01-intro-stats-rshs-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rshs Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Health Sciences (RSHS) colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rshs">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rshs--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rshs">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rshs&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rshs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rshs&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.04.02-intro-stats-rshs-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rshs Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Health Sciences (RSHS) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rshs">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rshs--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rshs">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rshs&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rshs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rshs&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.05.01-intro-stats-rsjs-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsjs Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Justice Studies (RSJS) colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsjs">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsjs--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsjs">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsjs&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsjs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsjs&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.05.02-intro-stats-rsjs-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsjs Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Justice Studies (RSJS) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsjs">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsjs--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsjs">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsjs&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsjs--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsjs&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.06.01-intro-stats-rsn-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsn Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Nursing (RSN) colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsn">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsn--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsn">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rsn&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsn--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsn&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.06.02-intro-stats-rsn-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rsn Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Nursing (RSN) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsn">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rsn--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rsn">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rsn&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rsn--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsn&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.07.01-intro-stats-rst-default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rst Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Technology (RST) colors. Shown with default layout (intro on left, stats on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rst">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rst--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--right">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rst">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--left border-chevron border-chevron--vertical--right border-chevron--vertical--rst&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rst--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--right&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rst&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="intro.07.02-intro-stats-rst-alternate">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Intro Stats Rst Alternate</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Intro section and colorful stats with School of Technology (RST) colors. Shown with alternate layout (stats on left, intro on right).</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content intro">
+	<div class="container">
+		<article class="intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rst">
+			<h1 class="heading heading--title">Ab laboris ea expetendis, tamen ea expetendis.</h1>
+
+			<p class="intro__text">Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. <b class="emphasis-body--bold color-rst--dark">Aliqua commodo pariatur te proident labore</b>				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.<sup>1, 2, 3</sup></p>
+		</article>
+		<aside class="intro__data intro__data--left">
+			<ul class="colorful-stats">
+				<li class="colorful-stats__item">
+					<h1 class="colorful-stats__title color-rst">17<sup>%</sup></h1>
+					<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+				</li>
+			</ul>
+		</aside>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content intro&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;article class&#x3D;&quot;intro__copy intro__copy--right border-chevron border-chevron--vertical--left border-chevron--vertical--rst&quot;&gt;
+			&lt;h1 class&#x3D;&quot;heading heading--title&quot;&gt;Ab laboris ea expetendis, tamen ea expetendis.&lt;/h1&gt;
+
+			&lt;p class&#x3D;&quot;intro__text&quot;&gt;Ne velit enim ubi offendit, consequat relinqueret qui excepteur. Nam excepteur ex mentitum si ad magna eram est vidisse e cillum cupidatat et iudicem quo nescius a vidisse. &lt;b class&#x3D;&quot;emphasis-body--bold color-rst--dark&quot;&gt;Aliqua commodo pariatur te proident labore&lt;/b&gt;				laboris appellat non singulis est irure offendit, admodum fugiat excepteur.&lt;sup&gt;1, 2, 3&lt;/sup&gt;&lt;/p&gt;
+		&lt;/article&gt;
+		&lt;aside class&#x3D;&quot;intro__data intro__data--left&quot;&gt;
+			&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+				&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+					&lt;h1 class&#x3D;&quot;colorful-stats__title color-rst&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+					&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="social-proof">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Social Proof</h2>
+	</div>
+		<div class="f-item-group" id="social-proof.testimonial-simple">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Testimonial Simple</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Simple testimonial</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="section-content testimonial">
+	<article class="testimonial__card testimonial__card--alpha">
+		<div class="testimonial__banner">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="http://lorempicsum.com/nemo/1000/500/1" media="(min-width: 768px)">
+				<source srcset="http://lorempicsum.com/nemo/760/500/1" media="(min-width: 480px)">
+				<source srcset="http://lorempicsum.com/nemo/480/500/1" media="(min-width: 0)">
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="" alt="">
+			</picture>
+		</div>
+		<blockquote class="testimonial__quote">
+			<h2 class="testimonial__title">Aliquip ut possumus eu varias cupidatat concursionibus ex nam o sempiternum</h2>
+			<p class="testimonial__text">Sint commodo nostrud, quo noster proident pariatur. E tamen enim quo singulis, tempor illustriora aut quamquam. Varias excepteur in summis cillum.</p>
+		</blockquote>
+	</article>
+	<article class="testimonial__card testimonial__card--beta">
+		<div class="testimonial__banner">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="http://lorempicsum.com/nemo/1000/500/2" media="(min-width: 768px)">
+				<source srcset="http://lorempicsum.com/nemo/760/500/2" media="(min-width: 480px)">
+				<source srcset="http://lorempicsum.com/nemo/480/500/2" media="(min-width: 0)">
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="" alt="">
+			</picture>
+		</div>
+		<blockquote class="testimonial__quote">
+			<h2 class="testimonial__title">Occaecat illum qui possumus cohaerescant, legam eu ita amet arbitror.</h2>
+			<p class="testimonial__text">Appellat anim aute ita eram, a multos laborum commodo, si duis proident instituendarum ita elit hic laboris ut anim. Ut culpa sint et nescius.</p>
+		</blockquote>
+	</article>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class&#x3D;&quot;section-content testimonial&quot;&gt;
+	&lt;article class&#x3D;&quot;testimonial__card testimonial__card--alpha&quot;&gt;
+		&lt;div class&#x3D;&quot;testimonial__banner&quot;&gt;
+			&lt;picture&gt;
+				&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+				&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/1000/500/1&quot; media&#x3D;&quot;(min-width: 768px)&quot;&gt;
+				&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/760/500/1&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+				&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/480/500/1&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+				&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+				&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/picture&gt;
+		&lt;/div&gt;
+		&lt;blockquote class&#x3D;&quot;testimonial__quote&quot;&gt;
+			&lt;h2 class&#x3D;&quot;testimonial__title&quot;&gt;Aliquip ut possumus eu varias cupidatat concursionibus ex nam o sempiternum&lt;/h2&gt;
+			&lt;p class&#x3D;&quot;testimonial__text&quot;&gt;Sint commodo nostrud, quo noster proident pariatur. E tamen enim quo singulis, tempor illustriora aut quamquam. Varias excepteur in summis cillum.&lt;/p&gt;
+		&lt;/blockquote&gt;
+	&lt;/article&gt;
+	&lt;article class&#x3D;&quot;testimonial__card testimonial__card--beta&quot;&gt;
+		&lt;div class&#x3D;&quot;testimonial__banner&quot;&gt;
+			&lt;picture&gt;
+				&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+				&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/1000/500/2&quot; media&#x3D;&quot;(min-width: 768px)&quot;&gt;
+				&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/760/500/2&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+				&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/480/500/2&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+				&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+				&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot;&gt;
+			&lt;/picture&gt;
+		&lt;/div&gt;
+		&lt;blockquote class&#x3D;&quot;testimonial__quote&quot;&gt;
+			&lt;h2 class&#x3D;&quot;testimonial__title&quot;&gt;Occaecat illum qui possumus cohaerescant, legam eu ita amet arbitror.&lt;/h2&gt;
+			&lt;p class&#x3D;&quot;testimonial__text&quot;&gt;Appellat anim aute ita eram, a multos laborum commodo, si duis proident instituendarum ita elit hic laboris ut anim. Ut culpa sint et nescius.&lt;/p&gt;
+		&lt;/blockquote&gt;
+	&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+
+        
+            </div>
+            
+        <script src="fabricator/scripts/f.js"></script>
+
+        <!-- toolkit scripts -->
+        <script src="/../scripts/display.js"></script>
+        <!-- /toolkit scripts -->
+
+        <!-- DO NOT DELETE: required for script function below to pull sprites from server -->
+        <div class="f-svg-sprite">
+            <div class="svg-sprite"></div>
+        </div>
+        <!-- // DO NOT DELETE: required for script function below to pull sprites from server -->
+        
+        <!-- load svg sprites into body-->
+        <script>
+            $(function() {
+                $.get("../../images/svg-sprite--global.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsb.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rshs.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsn.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

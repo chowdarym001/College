@@ -1,0 +1,145 @@
+.columns {
+    @extend %clearfix;
+    @include y-axis-padding(0, 40px);
+    @at-root #{&}__item {
+        @include span(12 of 12);
+        padding: 20px 0;
+}
+@at-root #{&}--four {
+    .columns__item {
+        @include breakpoint($tp-xlarge) {
+            border: 0;
+        }
+    }
+    .columns__item--alpha {
+        border-bottom: 1px solid darken($color-white, 15%);
+        @include breakpoint($small-wide) {
+            @include span(5.75 of 12);
+        }
+        @include breakpoint($tp-xlarge) {
+            margin-right: 4%;
+            width: 21%;
+        }
+    }
+    .columns__item--beta {
+        border-bottom: 1px solid darken($color-white, 15%);
+        @include breakpoint($small-wide) {
+            @include span(last 5.75 of 12);
+        }
+        @include breakpoint($tp-xlarge) {
+            float: left;
+            margin-right: 4%;
+            width: 21%;
+        }
+    }
+    .columns__item--gamma {
+        border-bottom: 1px solid darken($color-white, 15%);
+        @include breakpoint($small-wide) {
+            @include span(5.75 of 12);
+            border: 0;
+        }
+        @include breakpoint($tp-xlarge) {
+            margin-right: 4%;
+            width: 21%;
+        }
+    }
+    .columns__item--delta {
+        @include breakpoint($small-wide) {
+            @include span(last 5.75 of 12);
+            border: 0;
+        }
+        @include breakpoint($tp-xlarge) {
+            float: left;
+            margin-right: 0;
+            width: 21%;
+        }
+    }
+}
+}
+
+.span {
+    &-1 {
+        @extend %clearfix;
+        @include span(12 of 12);
+        &--first {
+            @include breakpoint($medium-tall) {
+                @include span(1 of 12);
+            }
+        }
+        &--last {
+            @include breakpoint($medium-tall) {
+                @include span(last 1 of 12);
+            }
+        }
+    }
+    &-2 {
+        @extend %clearfix;
+        @include span(12 of 12);
+        &--first {
+            @include breakpoint($medium-tall) {
+                @include span(2 of 12);
+            }
+        }
+        &--last {
+            @include breakpoint($medium-tall) {
+                @include span(last 2 of 12);
+            }
+        }
+    }
+    &-3 {
+        @extend %clearfix;
+        @include span(12 of 12);
+        &--first {
+            @include breakpoint($medium-tall) {
+                @include span(3 of 12);
+            }
+        }
+        &--last {
+            @include breakpoint($medium-tall) {
+                @include span(last 3 of 12);
+            }
+        }
+    }
+    &-4 {
+        @extend %clearfix;
+        @include span(12 of 12);
+        &--first {
+            @include breakpoint($medium-tall) {
+                @include span(4 of 12);
+            }
+        }
+        &--last {
+            @include breakpoint($medium-tall) {
+                @include span(last 4 of 12);
+            }
+        }
+    }
+    &-5 {
+        @extend %clearfix;
+        @include span(12 of 12);
+        &--first {
+            @include breakpoint($medium-tall) {
+                @include span(5 of 12);
+            }
+        }
+        &--last {
+            @include breakpoint($medium-tall) {
+                @include span(last 5 of 12);
+            }
+        }
+    }
+    &-6 {
+        @extend %clearfix;
+        @include span(12 of 12);
+        &--first {
+            @include breakpoint($medium-tall) {
+                @include span(6 of 12);
+            }
+        }
+        &--last {
+            @include breakpoint($medium-tall) {
+                @include span(last 6 of 12);
+            }
+        }
+    }
+}

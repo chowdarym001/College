@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+
+        <link rel="stylesheet" href="fabricator/css/f.css"> 
+
+        <!-- project styles -->
+        <link rel="stylesheet" href="/../css/styles.css">
+        <!-- /project styles -->
+
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <!-- // Bugherd testing script required for QA -->
+        <script type='text/javascript'>
+            (function(d, t) {
+                var bh = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                bh.type = 'text/javascript';
+                bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xwwmnrlzrjcehtljffzjlw';
+                s.parentNode.insertBefore(bh, s);
+            })(document, 'script');
+        </script>
+
+    </head>
+
+    <body>
+
+            <!-- fabricator icons -->
+            <svg style="display: none;">
+            	<symbol id="f-icon-code" viewBox="0 0 512 512">
+            		<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+            	</symbol>
+            	<symbol id="f-icon-notes" viewBox="0 0 512 512">
+            		<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+            	</symbol>
+            	<symbol id="f-icon-labels" viewBox="0 0 512 512">
+            		<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+            	</symbol>
+            	<symbol id="f-icon-menu" viewBox="0 0 512 512">
+            		<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+            	</symbol>
+            	<symbol id="f-icon-settings" viewBox="0 0 512 512">
+            		<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+            	</symbol>
+            </svg>
+            <!-- /fabricator icons -->
+
+            <!-- fabricator menu -->
+            <div class="f-menu">
+            
+                <div class="f-controls">
+                	<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+                		<svg>
+                			<use xlink:href="#f-icon-labels" />
+                		</svg>
+                	</div>
+                	<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+                		<svg>
+                			<use xlink:href="#f-icon-notes" />
+                		</svg>
+                	</div>
+                	<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+                		<svg>
+                			<use xlink:href="#f-icon-code" />
+                		</svg>
+                	</div>
+                </div>
+            
+                <ul>
+                    <li>
+                        <a href="index.html" class="f-menu__heading">Overview</a>
+                    </li>
+            
+            <!-- ORIGINAL AUTOMATED MENU
+                    <li>
+                        <a href="1atoms.html" class="f-menu__heading">Atoms</a>
+                        <ul>
+                            <li>
+                                <a href="1atoms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#color-palette">Color Palette</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#dividers">Dividers</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#headings">Headings</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#images">Images</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#links">Links</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#menu">Menu</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#paragraph">Paragraph</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#social-proof">Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="1atoms.html#tables">Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="2molecules.html" class="f-menu__heading">Molecules</a>
+                        <ul>
+                            <li>
+                                <a href="2molecules.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="2molecules.html#images-icons">Images Icons</a>
+                            </li>
+                            <li>
+                                <a href="2molecules.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="3organisms.html" class="f-menu__heading">Organisms</a>
+                        <ul>
+                            <li>
+                                <a href="3organisms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#campuses">Campuses</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#intro">Intro</a>
+                            </li>
+                            <li>
+                                <a href="3organisms.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="hidden.html" class="f-menu__heading">Hidden</a>
+                        <ul>
+                            <li>
+                                <a href="hidden.html#hidden-accreditors">Hidden Accreditors</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-admissions">Hidden Admissions</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-areas">Hidden Areas</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-banners">Hidden Banners</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-credential">Hidden Credential</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-footer">Hidden Footer</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-global">Hidden Global</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-home">Hidden Home</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-industry">Hidden Industry</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-intro">Hidden Intro</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-nav">Hidden Nav</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-program">Hidden Program</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-social-proof">Hidden Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-student-experience">Hidden Student Experience</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html#hidden-toms-tiles">Hidden Toms Tiles</a>
+                            </li>
+                        </ul>
+                    </li>
+            -->
+                    
+                    <li>
+                        <a href="atoms.html" class="f-menu__heading">Atoms</a>
+                        <ul>
+                            <li>
+                                <a href="atoms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#buttons">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#color-palette">Color Palette</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#dividers">Dividers</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#headings">Headings</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#images">Images</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#links">Links</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#menu">Menu</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#paragraph">Paragraph</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#social-proof">Social Proof</a>
+                            </li>
+                            <li>
+                                <a href="atoms.html#tables">Tables</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="molecules.html" class="f-menu__heading">Molecules</a>
+                        <ul>
+                            <li>
+                                <a href="molecules.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="molecules.html#images-icons">Images Icons</a>
+                            </li>
+                            <li>
+                                <a href="molecules.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="organisms.html" class="f-menu__heading">Organisms</a>
+                        <ul>
+                            <li>
+                                <a href="organisms.html#banners">Banners</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#campuses">Campuses</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#intro">Intro</a>
+                            </li>
+                            <li>
+                                <a href="organisms.html#social-proof">Social Proof</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="templates.html" class="f-menu__heading">Templates</a>
+                        <ul>
+                        </ul>
+                    </li>
+                    
+            <!--
+                    <li>
+                        <a href="pages.html" class="f-menu__heading">5. Pages</a>
+                        <ul>
+                        </ul>
+                    </li>
+            -->
+                    
+                    <li>
+                        <a href="pages.html" class="f-menu__heading">Pages</a>
+                        <ul>
+                            <li>
+                                <a href="pages/admissions.html" target="_blank">Admissions</a>
+                            </li>
+                            <li>
+                                <a href="pages/areas-study.html" target="_blank">Areas Study</a>
+                            </li>
+                            <li>
+                                <a href="pages/credential-lpn.html" target="_blank">Credential Lpn</a>
+                            </li>
+                            <li>
+                                <a href="pages/homepage.html" target="_blank">Homepage</a>
+                            </li>
+                            <li>
+                                <a href="pages/industry-rsn.html" target="_blank">Industry Rsn</a>
+                            </li>
+                            <li>
+                                <a href="pages/program-lpn.html" target="_blank">Program Lpn</a>
+                            </li>
+                            <li>
+                                <a href="pages/student-experience.html" target="_blank">Student Experience</a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                </ul>
+            
+            
+            </div>
+            <!-- /fabricator menu -->            <div class="f-container">
+                <div class="f-control-bar">
+                	<div class="f-control f-menu-toggle">
+                		<svg>
+                			<use xlink:href="#f-icon-menu" />
+                		</svg>
+                	</div>
+                </div>
+
+            
+<h1 data-f-toggle="labels">2. Molecules</h1>
+<div class="f-item-notes" data-f-toggle="notes">
+    <ul>
+        <li>Relatively simple groups of UI elements functioning together as a unit.</li>
+        <li>Atoms assembled/combined in specific combination/formation to serve a purpose.</li>
+    </ul>
+</div>
+
+
+<div class="f-item-wrap" id="banners">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Banners</h2>
+	</div>
+		<div class="f-item-group" id="banners.banners-text">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Banners Text</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Banner text. Used in hero banners.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="banner-text">
+	<h2 class="banner-text__subtitle">Banner subtitle</h2>
+	<h1 class="banner-text__title">Banner title</h1>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;banner-text&quot;&gt;
+	&lt;h2 class&#x3D;&quot;banner-text__subtitle&quot;&gt;Banner subtitle&lt;/h2&gt;
+	&lt;h1 class&#x3D;&quot;banner-text__title&quot;&gt;Banner title&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="images-icons">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Images Icons</h2>
+	</div>
+		<div class="f-item-group" id="images-icons.rsb-svg-icon-on-dark">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rsb Svg Icon On Dark</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Light colored scalable vector graphic (SVG) icon. Use on dark backgrounds.</p>
+<p>Shown with School of Business (RSB) icons and colors.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--dark bgc-rsb--dark">
+	<ul class="list list--unordered">
+		<li>
+			<span>#1&#8212;Online Class</span>
+			<svg class="svg icon-01-online-class__white--rsb">
+                <use xlink:href="#icon-01-online-class__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#2&#8212;360&#176; Student Support</span>
+			<svg class="svg icon-02-360-support__white--rsb">
+                <use xlink:href="#icon-02-360-support__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#3&#8212;Accreditation</span>
+			<svg class="svg icon-03-accreditation__white--rsb">
+                <use xlink:href="#icon-03-accreditation__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#4&#8212;Certificate Exam</span>
+			<svg class="svg icon-04-certficiate-exam__white--rsb">
+                <use xlink:href="#icon-04-certficiate-exam__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#5&#8212;Flex Choice</span>
+			<svg class="svg icon-05-flexchoice__white--rsb">
+                <use xlink:href="#icon-05-flexchoice__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#6&#8212;Hands On</span>
+			<svg class="svg icon-06-hands-on__white--rsb">
+                <use xlink:href="#icon-06-hands-on__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#7&#8212;Time to Complete</span>
+			<svg class="svg icon-07-time-complete__white--rsb">
+                <use xlink:href="#icon-07-time-complete__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#8&#8212;What Learn</span>
+			<svg class="svg icon-08-what-learn__white--rsb">
+                <use xlink:href="#icon-08-what-learn__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#9&#8212;Faculty</span>
+			<svg class="svg icon-09-faculty__white--rsb">
+                <use xlink:href="#icon-09-faculty__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#10&#8212;Affordability</span>
+			<svg class="svg icon-10-affordability__white--rsb">
+                <use xlink:href="#icon-10-affordability__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#11&#8212;Career Advance</span>
+			<svg class="svg icon-11-career-advance__white--rsb">
+                <use xlink:href="#icon-11-career-advance__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#12&#8212;Job Outcomes</span>
+			<svg class="svg icon-12-job-outcomes__white--rsb">
+                <use xlink:href="#icon-12-job-outcomes__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#13&#8212;24-hour Tech Support</span>
+			<svg class="svg icon-13-24hr-support__white--rsb">
+                <use xlink:href="#icon-13-24hr-support__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#14&#8212;Power Healing</span>
+			<svg class="svg icon-14-power-healing__white--rsb">
+                <use xlink:href="#icon-14-power-healing__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#15&#8212;Program Skills</span>
+			<svg class="svg icon-15-program-skills__white--rsb">
+                <use xlink:href="#icon-15-program-skills__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#16&#8212;Building Career</span>
+			<svg class="svg icon-16-building-career__white--rsb">
+                <use xlink:href="#icon-16-building-career__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#17&#8212;Pro Skill Set</span>
+			<svg class="svg icon-17-pro-skillset__white--rsb">
+                <use xlink:href="#icon-17-pro-skillset__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#18&#8212;Community</span>
+			<svg class="svg icon-18-community__white--rsb">
+                <use xlink:href="#icon-18-community__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#19&#8212;Cost Savings</span>
+			<svg class="svg icon-19-cost-savings__white--rsb">
+                <use xlink:href="#icon-19-cost-savings__white--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#20&#8212;Credit Transfer</span>
+			<svg class="svg icon-20-credit-transfer__white--rsb">
+                <use xlink:href="#icon-20-credit-transfer__white--rsb"></use>
+            </svg>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--dark bgc-rsb--dark&quot;&gt;
+	&lt;ul class&#x3D;&quot;list list--unordered&quot;&gt;
+		&lt;li&gt;
+			&lt;span&gt;#1&amp;#8212;Online Class&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-01-online-class__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-01-online-class__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#2&amp;#8212;360&amp;#176; Student Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-02-360-support__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-02-360-support__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#3&amp;#8212;Accreditation&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-03-accreditation__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-03-accreditation__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#4&amp;#8212;Certificate Exam&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-04-certficiate-exam__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-04-certficiate-exam__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#5&amp;#8212;Flex Choice&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-05-flexchoice__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-05-flexchoice__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#6&amp;#8212;Hands On&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-06-hands-on__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-06-hands-on__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#7&amp;#8212;Time to Complete&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-07-time-complete__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-07-time-complete__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#8&amp;#8212;What Learn&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-08-what-learn__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-08-what-learn__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#9&amp;#8212;Faculty&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-09-faculty__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-09-faculty__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#10&amp;#8212;Affordability&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-10-affordability__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-10-affordability__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#11&amp;#8212;Career Advance&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-11-career-advance__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-11-career-advance__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#12&amp;#8212;Job Outcomes&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-12-job-outcomes__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-12-job-outcomes__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#13&amp;#8212;24-hour Tech Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-13-24hr-support__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-13-24hr-support__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#14&amp;#8212;Power Healing&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-14-power-healing__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-14-power-healing__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#15&amp;#8212;Program Skills&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-15-program-skills__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-15-program-skills__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#16&amp;#8212;Building Career&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-16-building-career__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-16-building-career__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#17&amp;#8212;Pro Skill Set&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-17-pro-skillset__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-17-pro-skillset__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#18&amp;#8212;Community&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-18-community__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-18-community__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#19&amp;#8212;Cost Savings&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-19-cost-savings__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-19-cost-savings__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#20&amp;#8212;Credit Transfer&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-20-credit-transfer__white--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-20-credit-transfer__white--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="images-icons.rsb-svg-icon-on-light">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rsb Svg Icon On Light</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Dark colored scalable vector graphic (SVG) icon. Use on light backgrounds.</p>
+<p>Shown with School of Health Sciences (RSB) icons and colors.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--light bgc-rsb--light">
+	<ul class="list list--unordered">
+		<li>
+			<span>#1&#8212;Online Class</span>
+			<svg class="svg icon-01-online-class__colored--rsb">
+                <use xlink:href="#icon-01-online-class__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#2&#8212;360&#176; Student Support</span>
+			<svg class="svg icon-02-360-support__colored--rsb">
+                <use xlink:href="#icon-02-360-support__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#3&#8212;Accreditation</span>
+			<svg class="svg icon-03-accreditation__colored--rsb">
+                <use xlink:href="#icon-03-accreditation__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#4&#8212;Certificate Exam</span>
+			<svg class="svg icon-04-certficiate-exam__colored--rsb">
+                <use xlink:href="#icon-04-certficiate-exam__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#5&#8212;Flex Choice</span>
+			<svg class="svg icon-05-flexchoice__colored--rsb">
+                <use xlink:href="#icon-05-flexchoice__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#6&#8212;Hands On</span>
+			<svg class="svg icon-06-hands-on__colored--rsb">
+                <use xlink:href="#icon-06-hands-on__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#7&#8212;Time to Complete</span>
+			<svg class="svg icon-07-time-complete__colored--rsb">
+                <use xlink:href="#icon-07-time-complete__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#8&#8212;What Learn</span>
+			<svg class="svg icon-08-what-learn__colored--rsb">
+                <use xlink:href="#icon-08-what-learn__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#9&#8212;Faculty</span>
+			<svg class="svg icon-09-faculty__colored--rsb">
+                <use xlink:href="#icon-09-faculty__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#10&#8212;Affordability</span>
+			<svg class="svg icon-10-affordability__colored--rsb">
+                <use xlink:href="#icon-10-affordability__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#11&#8212;Career Advance</span>
+			<svg class="svg icon-11-career-advance__colored--rsb">
+                <use xlink:href="#icon-11-career-advance__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#12&#8212;Job Outcomes</span>
+			<svg class="svg icon-12-job-outcomes__colored--rsb">
+                <use xlink:href="#icon-12-job-outcomes__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#13&#8212;24-hour Tech Support</span>
+			<svg class="svg icon-13-24hr-support__colored--rsb">
+                <use xlink:href="#icon-13-24hr-support__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#14&#8212;Power Healing</span>
+			<svg class="svg icon-14-power-healing__colored--rsb">
+                <use xlink:href="#icon-14-power-healing__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#15&#8212;Program Skills</span>
+			<svg class="svg icon-15-program-skills__colored--rsb">
+                <use xlink:href="#icon-15-program-skills__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#16&#8212;Building Career</span>
+			<svg class="svg icon-16-building-career__colored--rsb">
+                <use xlink:href="#icon-16-building-career__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#17&#8212;Pro Skill Set</span>
+			<svg class="svg icon-17-pro-skillset__colored--rsb">
+                <use xlink:href="#icon-17-pro-skillset__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#18&#8212;Community</span>
+			<svg class="svg icon-18-community__colored--rsb">
+                <use xlink:href="#icon-18-community__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#19&#8212;Cost Savings</span>
+			<svg class="svg icon-19-cost-savings__colored--rsb">
+                <use xlink:href="#icon-19-cost-savings__colored--rsb"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#20&#8212;Credit Transfer</span>
+			<svg class="svg icon-20-credit-transfer__colored--rsb">
+                <use xlink:href="#icon-20-credit-transfer__colored--rsb"></use>
+            </svg>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--light bgc-rsb--light&quot;&gt;
+	&lt;ul class&#x3D;&quot;list list--unordered&quot;&gt;
+		&lt;li&gt;
+			&lt;span&gt;#1&amp;#8212;Online Class&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-01-online-class__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-01-online-class__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#2&amp;#8212;360&amp;#176; Student Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-02-360-support__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-02-360-support__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#3&amp;#8212;Accreditation&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-03-accreditation__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-03-accreditation__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#4&amp;#8212;Certificate Exam&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-04-certficiate-exam__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-04-certficiate-exam__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#5&amp;#8212;Flex Choice&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-05-flexchoice__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-05-flexchoice__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#6&amp;#8212;Hands On&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-06-hands-on__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-06-hands-on__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#7&amp;#8212;Time to Complete&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-07-time-complete__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-07-time-complete__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#8&amp;#8212;What Learn&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-08-what-learn__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-08-what-learn__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#9&amp;#8212;Faculty&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-09-faculty__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-09-faculty__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#10&amp;#8212;Affordability&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-10-affordability__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-10-affordability__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#11&amp;#8212;Career Advance&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-11-career-advance__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-11-career-advance__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#12&amp;#8212;Job Outcomes&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-12-job-outcomes__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-12-job-outcomes__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#13&amp;#8212;24-hour Tech Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-13-24hr-support__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-13-24hr-support__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#14&amp;#8212;Power Healing&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-14-power-healing__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-14-power-healing__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#15&amp;#8212;Program Skills&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-15-program-skills__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-15-program-skills__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#16&amp;#8212;Building Career&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-16-building-career__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-16-building-career__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#17&amp;#8212;Pro Skill Set&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-17-pro-skillset__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-17-pro-skillset__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#18&amp;#8212;Community&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-18-community__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-18-community__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#19&amp;#8212;Cost Savings&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-19-cost-savings__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-19-cost-savings__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#20&amp;#8212;Credit Transfer&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-20-credit-transfer__colored--rsb&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-20-credit-transfer__colored--rsb&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="images-icons.rshs-svg-icon-on-dark">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rshs Svg Icon On Dark</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Light colored scalable vector graphic (SVG) icon. Use on dark backgrounds.</p>
+<p>Shown with School of Health Sciences (RSHS) icons and colors.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--dark bgc-rshs--dark">
+	<ul class="list list--unordered">
+		<li>
+			<span>#1&#8212;Online Class</span>
+			<svg class="svg icon-01-online-class__white--rshs">
+                <use xlink:href="#icon-01-online-class__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#2&#8212;360&#176; Student Support</span>
+			<svg class="svg icon-02-360-support__white--rshs">
+                <use xlink:href="#icon-02-360-support__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#3&#8212;Accreditation</span>
+			<svg class="svg icon-03-accreditation__white--rshs">
+                <use xlink:href="#icon-03-accreditation__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#4&#8212;Certificate Exam</span>
+			<svg class="svg icon-04-certficiate-exam__white--rshs">
+                <use xlink:href="#icon-04-certficiate-exam__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#5&#8212;Flex Choice</span>
+			<svg class="svg icon-05-flexchoice__white--rshs">
+                <use xlink:href="#icon-05-flexchoice__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#6&#8212;Hands On</span>
+			<svg class="svg icon-06-hands-on__white--rshs">
+                <use xlink:href="#icon-06-hands-on__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#7&#8212;Time to Complete</span>
+			<svg class="svg icon-07-time-complete__white--rshs">
+                <use xlink:href="#icon-07-time-complete__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#8&#8212;What Learn</span>
+			<svg class="svg icon-08-what-learn__white--rshs">
+                <use xlink:href="#icon-08-what-learn__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#9&#8212;Faculty</span>
+			<svg class="svg icon-09-faculty__white--rshs">
+                <use xlink:href="#icon-09-faculty__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#10&#8212;Affordability</span>
+			<svg class="svg icon-10-affordability__white--rshs">
+                <use xlink:href="#icon-10-affordability__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#11&#8212;Career Advance</span>
+			<svg class="svg icon-11-career-advice__white--rshs">
+                <use xlink:href="#icon-11-career-advice__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#12&#8212;Job Outcomes</span>
+			<svg class="svg icon-12-job-outcomes__white--rshs">
+                <use xlink:href="#icon-12-job-outcomes__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#13&#8212;24-hour Tech Support</span>
+			<svg class="svg icon-13-24hr-support__white--rshs">
+                <use xlink:href="#icon-13-24hr-support__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#14&#8212;Power Healing</span>
+			<svg class="svg icon-14-power-healing__white--rshs">
+                <use xlink:href="#icon-14-power-healing__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#15&#8212;Program Skills</span>
+			<svg class="svg icon-15-program-skills__white--rshs">
+                <use xlink:href="#icon-15-program-skills__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#16&#8212;Building Career</span>
+			<svg class="svg icon-16-building-career__white--rshs">
+                <use xlink:href="#icon-16-building-career__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#17&#8212;Pro Skill Set</span>
+			<svg class="svg icon-17-pro-skillset__white-rshs">
+                <use xlink:href="#icon-17-pro-skillset__white-rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#18&#8212;Community</span>
+			<svg class="svg icon-18-community__white--rshs">
+                <use xlink:href="#icon-18-community__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#19&#8212;Cost Savings</span>
+			<svg class="svg icon-19-cost-savings__white--rshs">
+                <use xlink:href="#icon-19-cost-savings__white--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#20&#8212;Credit Transfer</span>
+			<svg class="svg icon-20-credit-transfer__white--rshs">
+                <use xlink:href="#icon-20-credit-transfer__white--rshs"></use>
+            </svg>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--dark bgc-rshs--dark&quot;&gt;
+	&lt;ul class&#x3D;&quot;list list--unordered&quot;&gt;
+		&lt;li&gt;
+			&lt;span&gt;#1&amp;#8212;Online Class&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-01-online-class__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-01-online-class__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#2&amp;#8212;360&amp;#176; Student Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-02-360-support__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-02-360-support__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#3&amp;#8212;Accreditation&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-03-accreditation__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-03-accreditation__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#4&amp;#8212;Certificate Exam&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-04-certficiate-exam__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-04-certficiate-exam__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#5&amp;#8212;Flex Choice&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-05-flexchoice__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-05-flexchoice__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#6&amp;#8212;Hands On&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-06-hands-on__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-06-hands-on__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#7&amp;#8212;Time to Complete&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-07-time-complete__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-07-time-complete__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#8&amp;#8212;What Learn&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-08-what-learn__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-08-what-learn__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#9&amp;#8212;Faculty&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-09-faculty__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-09-faculty__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#10&amp;#8212;Affordability&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-10-affordability__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-10-affordability__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#11&amp;#8212;Career Advance&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-11-career-advice__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-11-career-advice__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#12&amp;#8212;Job Outcomes&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-12-job-outcomes__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-12-job-outcomes__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#13&amp;#8212;24-hour Tech Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-13-24hr-support__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-13-24hr-support__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#14&amp;#8212;Power Healing&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-14-power-healing__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-14-power-healing__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#15&amp;#8212;Program Skills&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-15-program-skills__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-15-program-skills__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#16&amp;#8212;Building Career&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-16-building-career__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-16-building-career__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#17&amp;#8212;Pro Skill Set&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-17-pro-skillset__white-rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-17-pro-skillset__white-rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#18&amp;#8212;Community&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-18-community__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-18-community__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#19&amp;#8212;Cost Savings&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-19-cost-savings__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-19-cost-savings__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#20&amp;#8212;Credit Transfer&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-20-credit-transfer__white--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-20-credit-transfer__white--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="images-icons.rshs-svg-icon-on-light">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Rshs Svg Icon On Light</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Dark colored scalable vector graphic (SVG) icon. Use on light backgrounds.</p>
+<p>Shown with School of Health Sciences (RSHS) icons and colors.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="f-colored-bg f-colored-bg--light bgc-rshs--light">
+	<ul class="list list--unordered">
+		<li>
+			<span>#1&#8212;Online Class</span>
+			<svg class="svg icon-01-online-class__colored--rshs">
+                <use xlink:href="#icon-01-online-class__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#2&#8212;360&#176; Student Support</span>
+			<svg class="svg icon-02-360-support__colored--rshs">
+                <use xlink:href="#icon-02-360-support__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#3&#8212;Accreditation</span>
+			<svg class="svg icon-03-accreditation__colored--rshs">
+                <use xlink:href="#icon-03-accreditation__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#4&#8212;Certificate Exam</span>
+			<svg class="svg icon-04-certficiate-exam__colored--rshs">
+                <use xlink:href="#icon-04-certficiate-exam__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#5&#8212;Flex Choice</span>
+			<svg class="svg icon-05-flexchoice__colored--rshs">
+                <use xlink:href="#icon-05-flexchoice__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#6&#8212;Hands On</span>
+			<svg class="svg icon-06-hands-on__colored--rshs">
+                <use xlink:href="#icon-06-hands-on__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#7&#8212;Time to Complete</span>
+			<svg class="svg icon-07-time-complete__colored--rshs">
+                <use xlink:href="#icon-07-time-complete__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#8&#8212;What Learn</span>
+			<svg class="svg icon-08-what-learn__colored--rshs">
+                <use xlink:href="#icon-08-what-learn__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#9&#8212;Faculty</span>
+			<svg class="svg icon-09-faculty__colored--rshs">
+                <use xlink:href="#icon-09-faculty__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#10&#8212;Affordability</span>
+			<svg class="svg icon-10-affordability__colored--rshs">
+                <use xlink:href="#icon-10-affordability__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#11&#8212;Career Advance</span>
+			<svg class="svg icon-11-career-advice__colored--rshs">
+                <use xlink:href="#icon-11-career-advice__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#12&#8212;Job Outcomes</span>
+			<svg class="svg icon-12-job-outcomes__colored--rshs">
+                <use xlink:href="#icon-12-job-outcomes__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#13&#8212;24-hour Tech Support</span>
+			<svg class="svg icon-13-24hr-support__colored--rshs">
+                <use xlink:href="#icon-13-24hr-support__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#14&#8212;Power Healing</span>
+			<svg class="svg icon-14-power-healing__colored--rshs">
+                <use xlink:href="#icon-14-power-healing__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#15&#8212;Program Skills</span>
+			<svg class="svg icon-15-program-skills__colored--rshs">
+                <use xlink:href="#icon-15-program-skills__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#16&#8212;Building Career</span>
+			<svg class="svg icon-16-building-career__colored--rshs">
+                <use xlink:href="#icon-16-building-career__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#17&#8212;Pro Skill Set</span>
+			<svg class="svg icon-17-pro-skillset__colored-rshs">
+                <use xlink:href="#icon-17-pro-skillset__colored-rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#18&#8212;Community</span>
+			<svg class="svg icon-18-community__colored--rshs">
+                <use xlink:href="#icon-18-community__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#19&#8212;Cost Savings</span>
+			<svg class="svg icon-19-cost-savings__colored--rshs">
+                <use xlink:href="#icon-19-cost-savings__colored--rshs"></use>
+            </svg>
+		</li>
+		<li>
+			<span>#20&#8212;Credit Transfer</span>
+			<svg class="svg icon-20-credit-transfer__colored--rshs">
+                <use xlink:href="#icon-20-credit-transfer__colored--rshs"></use>
+            </svg>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-colored-bg f-colored-bg--light bgc-rshs--light&quot;&gt;
+	&lt;ul class&#x3D;&quot;list list--unordered&quot;&gt;
+		&lt;li&gt;
+			&lt;span&gt;#1&amp;#8212;Online Class&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-01-online-class__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-01-online-class__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#2&amp;#8212;360&amp;#176; Student Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-02-360-support__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-02-360-support__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#3&amp;#8212;Accreditation&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-03-accreditation__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-03-accreditation__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#4&amp;#8212;Certificate Exam&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-04-certficiate-exam__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-04-certficiate-exam__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#5&amp;#8212;Flex Choice&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-05-flexchoice__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-05-flexchoice__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#6&amp;#8212;Hands On&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-06-hands-on__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-06-hands-on__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#7&amp;#8212;Time to Complete&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-07-time-complete__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-07-time-complete__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#8&amp;#8212;What Learn&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-08-what-learn__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-08-what-learn__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#9&amp;#8212;Faculty&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-09-faculty__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-09-faculty__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#10&amp;#8212;Affordability&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-10-affordability__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-10-affordability__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#11&amp;#8212;Career Advance&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-11-career-advice__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-11-career-advice__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#12&amp;#8212;Job Outcomes&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-12-job-outcomes__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-12-job-outcomes__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#13&amp;#8212;24-hour Tech Support&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-13-24hr-support__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-13-24hr-support__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#14&amp;#8212;Power Healing&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-14-power-healing__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-14-power-healing__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#15&amp;#8212;Program Skills&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-15-program-skills__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-15-program-skills__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#16&amp;#8212;Building Career&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-16-building-career__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-16-building-career__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#17&amp;#8212;Pro Skill Set&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-17-pro-skillset__colored-rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-17-pro-skillset__colored-rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#18&amp;#8212;Community&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-18-community__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-18-community__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#19&amp;#8212;Cost Savings&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-19-cost-savings__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-19-cost-savings__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;span&gt;#20&amp;#8212;Credit Transfer&lt;/span&gt;
+			&lt;svg class&#x3D;&quot;svg icon-20-credit-transfer__colored--rshs&quot;&gt;
+                &lt;use xlink:href&#x3D;&quot;#icon-20-credit-transfer__colored--rshs&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-wrap" id="social-proof">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Social Proof</h2>
+	</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-ras">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Ras</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-green--light">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job&nbsp;growth, 2014–2024<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-green--medium">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-green--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-green--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job&amp;nbsp;growth, 2014–2024&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-green--medium&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-green--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rsb">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rsb</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Business (RSB) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsb--light">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsb">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsb--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsb--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsb&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsb--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rsd">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rsd</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Design (RSD) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsd--light">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsd">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsd--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsd--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsd&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsd--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rse">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rse</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Education (RSE) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rse--light">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rse">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rse--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rse--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rse&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rse--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rshs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rshs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Health Sciences (RSHS) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rshs">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rshs--medium">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rshs--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rshs&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rshs--medium&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rshs--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rsjs">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rsjs</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Justice Studies (RSJS) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsjs--light">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rshs">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsjs--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsjs--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rshs&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsjs--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rsn">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rsn</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Nursing (RSN) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsn">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsn--medium">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rsn--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsn&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsn--medium&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rsn--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.colorful-stats-rst">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Colorful Stats Rst</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Colorful stats: headline title. Used in &quot;intro&quot; and &quot;at-a-glance&quot; sections on ppc microsites. Shown with School of Technology (RST) 3-color progression.</p>
+
+</div>
+<div class="f-item-preview">
+	<ul class="colorful-stats">
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rst--light">17<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">projected despicationes doctrina minim deserunt job growth, 2014–20242<sup>2</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rst">12</h1>
+		<h4 class="colorful-stats__subtitle">months&#8212;minimum time to completion<sup>4</sup></h4>
+	</li>
+	<li class="colorful-stats__item">
+		<h1 class="colorful-stats__title color-rst--dark">25<sup>%</sup></h1>
+		<h4 class="colorful-stats__subtitle">max potential savings through Flex Choice&#174;</h4>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class&#x3D;&quot;colorful-stats&quot;&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rst--light&quot;&gt;17&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;projected despicationes doctrina minim deserunt job growth, 2014–20242&lt;sup&gt;2&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rst&quot;&gt;12&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;months&amp;#8212;minimum time to completion&lt;sup&gt;4&lt;/sup&gt;&lt;/h4&gt;
+	&lt;/li&gt;
+	&lt;li class&#x3D;&quot;colorful-stats__item&quot;&gt;
+		&lt;h1 class&#x3D;&quot;colorful-stats__title color-rst--dark&quot;&gt;25&lt;sup&gt;%&lt;/sup&gt;&lt;/h1&gt;
+		&lt;h4 class&#x3D;&quot;colorful-stats__subtitle&quot;&gt;max potential savings through Flex Choice&amp;#174;&lt;/h4&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.testimonial-panel-left">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Testimonial Panel Left</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Testimonial quote with graphical background, left aligned</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="testimonial__card testimonial__card--alpha">
+	<div class="testimonial__banner">
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="http://lorempicsum.com/nemo/1000/500/1" media="(min-width: 768px)">
+			<source srcset="http://lorempicsum.com/nemo/760/500/1" media="(min-width: 480px)">
+			<source srcset="http://lorempicsum.com/nemo/480/500/1" media="(min-width: 0)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="" alt="">
+		</picture>
+	</div>
+	<blockquote class="testimonial__quote">
+		<h2 class="testimonial__title">Aliquip ut possumus eu varias cupidatat concursionibus ex nam o sempiternum</h2>
+		<p class="testimonial__text">Sint commodo nostrud, quo noster proident pariatur. E tamen enim quo singulis, tempor illustriora aut quamquam. Varias excepteur in summis cillum.</p>
+	</blockquote>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;testimonial__card testimonial__card--alpha&quot;&gt;
+	&lt;div class&#x3D;&quot;testimonial__banner&quot;&gt;
+		&lt;picture&gt;
+			&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/1000/500/1&quot; media&#x3D;&quot;(min-width: 768px)&quot;&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/760/500/1&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/480/500/1&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+			&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+			&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot;&gt;
+		&lt;/picture&gt;
+	&lt;/div&gt;
+	&lt;blockquote class&#x3D;&quot;testimonial__quote&quot;&gt;
+		&lt;h2 class&#x3D;&quot;testimonial__title&quot;&gt;Aliquip ut possumus eu varias cupidatat concursionibus ex nam o sempiternum&lt;/h2&gt;
+		&lt;p class&#x3D;&quot;testimonial__text&quot;&gt;Sint commodo nostrud, quo noster proident pariatur. E tamen enim quo singulis, tempor illustriora aut quamquam. Varias excepteur in summis cillum.&lt;/p&gt;
+	&lt;/blockquote&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="social-proof.testimonial-panel-right">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Testimonial Panel Right</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Testimonial quote with graphical background, right aligned</p>
+
+</div>
+<div class="f-item-preview">
+	<article class="testimonial__card testimonial__card--beta">
+	<div class="testimonial__banner">
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="http://lorempicsum.com/nemo/1000/500/2" media="(min-width: 768px)">
+			<source srcset="http://lorempicsum.com/nemo/760/500/2" media="(min-width: 480px)">
+			<source srcset="http://lorempicsum.com/nemo/480/500/2" media="(min-width: 0)">
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="" alt="">
+		</picture>
+	</div>
+	<blockquote class="testimonial__quote">
+		<h2 class="testimonial__title">Occaecat illum qui possumus cohaerescant, legam eu ita amet arbitror.</h2>
+		<p class="testimonial__text">Appellat anim aute ita eram, a multos laborum commodo, si duis proident instituendarum ita elit hic laboris ut anim. Ut culpa sint et nescius.</p>
+	</blockquote>
+</article>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;article class&#x3D;&quot;testimonial__card testimonial__card--beta&quot;&gt;
+	&lt;div class&#x3D;&quot;testimonial__banner&quot;&gt;
+		&lt;picture&gt;
+			&lt;!--[if IE 9]&gt;&lt;video style&#x3D;&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/1000/500/2&quot; media&#x3D;&quot;(min-width: 768px)&quot;&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/760/500/2&quot; media&#x3D;&quot;(min-width: 480px)&quot;&gt;
+			&lt;source srcset&#x3D;&quot;http://lorempicsum.com/nemo/480/500/2&quot; media&#x3D;&quot;(min-width: 0)&quot;&gt;
+			&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+			&lt;img srcset&#x3D;&quot;&quot; alt&#x3D;&quot;&quot;&gt;
+		&lt;/picture&gt;
+	&lt;/div&gt;
+	&lt;blockquote class&#x3D;&quot;testimonial__quote&quot;&gt;
+		&lt;h2 class&#x3D;&quot;testimonial__title&quot;&gt;Occaecat illum qui possumus cohaerescant, legam eu ita amet arbitror.&lt;/h2&gt;
+		&lt;p class&#x3D;&quot;testimonial__text&quot;&gt;Appellat anim aute ita eram, a multos laborum commodo, si duis proident instituendarum ita elit hic laboris ut anim. Ut culpa sint et nescius.&lt;/p&gt;
+	&lt;/blockquote&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+
+        
+            </div>
+            
+        <script src="fabricator/scripts/f.js"></script>
+
+        <!-- toolkit scripts -->
+        <script src="/../scripts/display.js"></script>
+        <!-- /toolkit scripts -->
+
+        <!-- DO NOT DELETE: required for script function below to pull sprites from server -->
+        <div class="f-svg-sprite">
+            <div class="svg-sprite"></div>
+        </div>
+        <!-- // DO NOT DELETE: required for script function below to pull sprites from server -->
+        
+        <!-- load svg sprites into body-->
+        <script>
+            $(function() {
+                $.get("../../images/svg-sprite--global.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsb.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rshs.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+                $.get("../../images/svg-sprite--rsn.svg", function(data) {
+                    try {
+                        $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+                    } catch (e) {
+                        $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+                    }
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

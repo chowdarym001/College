@@ -1,0 +1,186 @@
+// OLD GLANCE STYLES
+.glance {
+    @include clearfix;
+    @at-root #{&}__details {
+        @include clearfix;
+    }
+    @at-root #{&}__header {
+        @include clearfix;
+        @include y-axis-margin(0, 20px);
+        overflow: hidden;
+        position: relative;
+        @at-root #{&}__title {
+            @extend %font-headings--bold;
+            @include font-size($glance-header-title-font-sizes);
+            @include centered-axis-x(relative, 25px, -25px);
+            color: $color-gray-dark;
+            display: inline-block;
+            margin: 0;
+            padding: 0 40px;
+            position: relative;
+            z-index: +1;
+            &::before {
+                @include transform(translateY(0px) skew(-18deg, 0));
+                background-color: $color-white;
+                content: '';
+                display: block;
+                height: 100%;
+                left: 20px;
+                position: absolute;
+                width: 90%;
+                z-index: -1;
+                @include breakpoint($medium-tall) {
+                    width: 95%;
+                }
+            }
+        }
+    }
+    @at-root #{&}__content {
+        @include clearfix;
+        padding: 10px 0;
+        @include breakpoint($medium-tall) {
+            @include span(first 7.5 of 12);
+        }
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        @include font-size($glance-title-font-sizes);
+        margin-top: 10px;
+    }
+    @at-root #{&}__subtitle {
+        font-family: $font-flama--bold;
+        font-size: 24px;
+        font-weight: normal;
+        margin-top: 0;
+    }
+    @at-root #{&}__courses {
+        @include clearfix;
+        @extend %reset-list;
+        color: $color-text;
+        @at-root #{&}__item {
+            list-style: none;
+            margin-bottom: 40px;
+            p {
+                margin-top: 10px;
+            }
+        }
+        @at-root #{&}__title {
+            font-family: $font-flama--bold;
+            font-size: 20px;
+            font-weight: normal;
+            margin: 10px 0;
+        }
+        @at-root #{&}__subtitle {
+            font-family: $font-flama--medium;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+    }
+    @at-root #{&}__stats {
+        @include clearfix;
+        padding: 10px 0;
+        @include breakpoint($medium-tall) {
+            @include span(last 4 of 12);
+        }
+    }
+    @at-root #{&}__column {
+        @at-root #{&}-main {
+            @include breakpoint($medium-tall) {
+                @include span(last 6.5 of 12);
+            }
+        }
+        @at-root #{&}-sub {
+            @include y-axis-padding(0, 40px);
+            @include breakpoint($medium-tall) {
+                @include span(5 of 12);
+            }
+        }
+    }
+}
+
+@media all and (-ms-high-contrast: none) {
+    .glance__header__title {
+        @include transform(translateY(4px));
+        @include breakpoint($small) {
+            @include transform(translateY(4px));
+        }
+        @include breakpoint($small-wide) {
+            @include transform(translateY(4px));
+        }
+        @include breakpoint($medium-tall) {
+            @include transform(translateY(16px));
+        }
+        &::before {
+            @include transform(translateY(-4px) skew(-18deg, 0));
+            @include breakpoint($small) {
+                @include transform(translateY(-4px) skew(-18deg, 0));
+            }
+            @include breakpoint($small-wide) {
+                @include transform(translateY(-4px) skew(-18deg, 0));
+            }
+            @include breakpoint($medium-tall) {
+                @include transform(translateY(-16px) skew(-18deg, 0));
+            }
+        }
+    }
+}
+
+// NEW GLANCE STYLES
+.glance {
+    @include clearfix;
+    @at-root #{&}-content {
+        @include clearfix;
+        @at-root #{&}--main {
+            @include span(12 of 12);
+            @include breakpoint($medium-tall) {
+                @include span(first 7.5 of 12);
+            }
+        }
+        @at-root #{&}--aside {
+            @include span(12 of 12);
+            @include breakpoint($medium-tall) {
+                @include span(last 4 of 12);
+            }
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include font-headings($font-headings--medium, 1);
+                @include font-size($glance-title-font-sizes);
+            }
+            @at-root #{&}-2 {
+                @include font-body($font-flama--bold, 1);
+                font-size: 24px;
+            }
+            @at-root #{&}-3 {
+                @include font-body($font-flama--bold, 1);
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            @at-root #{&}-4 {
+                @include font-body($font-flama--medium, 1);
+                font-size: 14px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    @at-root #{&}-courses {
+        @include clearfix;
+        @at-root #{&}__list {
+            @extend %reset-list;
+            @include clearfix;
+        }
+        @at-root #{&}__item {
+            @include clearfix;
+            margin-bottom: 20px;
+        }
+    }
+    @at-root #{&}-stats {
+        @include clearfix;
+    }
+}

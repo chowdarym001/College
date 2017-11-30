@@ -1,0 +1,27 @@
+/*======
+VARIABLES
+======*/
+
+@import "_03.01.colors.scss";
+
+// TYPOGRAPHY
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// CONTAINERS
+$container-small: 85%;
+$container-large: 1200px;
+$container-tp-ridiculously-wide: 1400px;
+$container-tp-4k: 1600px;
+
+// IMAGES
+$path-fonts-dev-prime: "../fonts";
+$path-images-dev-prime: "../images";
+$path-images-project: "../../images";
+
+// Offcanvas menu
+$off-canvas-menu-width: 75%;
+$off-canvas-menu-width-large: 500px;
+
+// career path variables
+$career-path-circle-size: 24px;

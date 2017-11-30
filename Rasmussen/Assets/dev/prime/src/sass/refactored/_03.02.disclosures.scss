@@ -1,0 +1,58 @@
+// DISCLOSURES: to make known or public
+.disclosure {
+    @include clearfix;
+    color: $color-text--lightened;
+    padding: 20px;
+    .section-column & {
+        margin: 20px 0 0;
+    }
+    @at-root #{&}--cdi {
+        background-color: darken($color-white, 5%);
+    }
+    @at-root #{&}__grid {
+        @include clearfix;
+        margin: auto;
+        @at-root #{&}--half {
+            @include breakpoint($medium-tall) {
+                width: 50%;
+            }
+        }
+        @at-root #{&}--quarter {
+            @include breakpoint($medium-tall) {
+                width: 25%;
+            }
+        }
+        @at-root #{&}--third {
+            @include breakpoint($medium-tall) {
+                width: 33%;
+            }
+        }
+        @at-root #{&}--three-quarter {
+            @include breakpoint($medium-tall) {
+                width: 75%;
+            }
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @include font-headings($font-headings--regular, 1.25);
+        color: $color-text--lightened;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {}
+            @at-root #{&}-2 {}
+            @at-root #{&}-3 {
+                font-size: $font-size-base;
+                @include breakpoint($large) {
+                    //                    font-size: 18px;
+                    margin: 0 0 5px;
+                }
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+        //        @include breakpoint($tp-ginormous) {
+        //            font-size: $font-size-base;
+        //        }
+    }
+}

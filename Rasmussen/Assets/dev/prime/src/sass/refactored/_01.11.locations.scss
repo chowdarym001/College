@@ -1,0 +1,21 @@
+.locations {
+    @extend %clearfix;
+    @at-root #{&}__header {
+        @extend %clearfix;
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        @include font-size($h2-font-sizes);
+        line-height: 1;
+        margin: auto;
+        max-width: 1050px;
+        text-align: center;
+    }
+    @at-root #{&}__subtitle {
+        @extend %font-headings--medium;
+        margin: 10px 0;
+    }
+    @at-root #{&}__content {
+        @extend %clearfix;
+    }
+}

@@ -1,0 +1,98 @@
+$graph-color-grant: $color-ras-green--light;
+$graph-color-credits: $color-ras-green--bright;
+$graph-color-assessments: $color-ras-green--dark;
+$graph-color-remaining: darken($color-white, 35%);
+.graph {
+    &-bar {
+        @extend %clearfix;
+        height: 40px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        &--piece {
+            @include transition(all 0.25s ease-in-out);
+            display: block;
+            float: left;
+            height: inherit;
+            width: inherit;
+        }
+        &--credits, &--assessments, &--grant-innovation {
+            position: relative;
+            z-index: 2;
+        }
+        &--grant-innovation {
+            background: $graph-color-grant;
+        }
+        &--credits {
+            background: $graph-color-credits;
+        }
+        &--assessments {
+            background: $graph-color-assessments;
+        }
+        &--remaining {
+            background: $graph-color-remaining;
+            position: absolute;
+            z-index: 0;
+        }
+    }
+    &-legend {
+        @extend %clearfix;
+        &__title {
+            @extend %font-headings--medium;
+            font-size: $font-size-base;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            @include breakpoint($medium-tall) {
+                font-size: 18px;
+            }
+        }
+        &__list {
+            @extend %reset-list;
+            display: block;
+        }
+        &__item {
+            @include span(12 of 12);
+            margin-bottom: 10px;
+            @include breakpoint($small-wide) {
+                @include span(6 of 12);
+                &:nth-child(2n) {
+                    @include span(last 6 of 12);
+                }
+            }
+            @include breakpoint($medium-wide) {
+                @include span(3 of 12 no-gutters);
+                &:nth-child(2n) {
+                    @include span(first 3 of 12 no-gutters);
+                }
+            }
+        }
+        &__color {
+            display: block;
+            float: left;
+            height: 20px;
+            margin-right: 10px;
+            width: 20px;
+            &--grant {
+                background-color: $graph-color-grant;
+            }
+            &--credits {
+                background-color: $graph-color-credits;
+            }
+            &--assessments {
+                background-color: $graph-color-assessments;
+            }
+            &--remaining {
+                background-color: $graph-color-remaining;
+            }
+        }
+        &__desc {
+            float: left;
+            font-size: $font-size-base;
+            width: auto;
+            @include breakpoint($medium-wide) {
+                @include span(9.75 of 12);
+            }
+        }
+    }
+}

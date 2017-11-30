@@ -1,0 +1,257 @@
+.flickity-carousel {
+    @include clearfix;
+    @at-root #{&}__cell {
+        @include clearfix;
+        @include span(12 of 12);
+        cursor: pointer;
+        height: 100%;
+    }
+}
+
+.career-path {
+    @include clearfix;
+    overflow: hidden;
+    @at-root #{&}__steps {
+        @include clearfix;
+        height: 100px;
+        margin: 40px 0 0;
+        @at-root #{&}--rsn {
+            .career-path__bar {
+                .career-path__circle::after {
+                    background-color: $color-school-rsn--support--light;
+                }
+                &:focus, &:hover, &.career-path__bar--selected {
+                    .career-path__circle::after {
+                        background-color: $color-school-rsn--support--dark;
+                    }
+                }
+            }
+            .career-path__pointer {
+                background-color: lighten($color-school-rsn--primary, 60%);
+                &::after {
+                    border-left-color: lighten($color-school-rsn--primary, 60%);
+                }
+            }
+            .career-path__step--completed {
+                .career-path__pointer {
+                    background-color: $color-school-rsn--primary;
+                    &::after {
+                        border-left-color: $color-school-rsn--primary;
+                    }
+                }
+            }
+            .career-path__step--selected {
+                .career-path__pointer {
+                    background-color: $color-school-rsn--support--dark;
+                    &::after {
+                        border-left-color: $color-school-rsn--support--dark;
+                    }
+                }
+            }
+            .career-path__tooltip {
+                background-color: $color-school-rsn--support--dark;
+                color: $color-white;
+                &::before {
+                    border-bottom-color: $color-school-rsn--support--dark;
+                }
+            }
+        }
+        .flickity-carousel__cell {
+            @include breakpoint($medium-tall) {
+                opacity: 0;
+                @include animation(fadeInLeft 1s ease-in 1 forwards);
+                overflow: visible;
+                &:nth-of-type(1) {
+                    @include breakpoint($medium-tall) {
+                        //animation-delay: 250ms;
+                    }
+                }
+                &:nth-of-type(2) {
+                    @include breakpoint($medium-tall) {
+                        animation-delay: 1s;
+                        z-index: -1 !important;
+                    }
+                }
+                &:nth-of-type(3) {
+                    @include breakpoint($medium-tall) {
+                        animation-delay: 2s;
+                        z-index: -2 !important;
+                    }
+                }
+                &:nth-of-type(4) {
+                    @include breakpoint($medium-tall) {
+                        animation-delay: 3s;
+                        z-index: -3 !important;
+                    }
+                }
+                &:nth-of-type(5) {
+                    @include breakpoint($medium-tall) {
+                        animation-delay: 4s;
+                        z-index: -4 !important;
+                    }
+                }
+                &:nth-of-type(6) {
+                    @include breakpoint($medium-tall) {
+                        animation-delay: 5s;
+                        z-index: -5 !important;
+                    }
+                }
+            }
+        }
+    }
+    .flickity-viewport {
+        @include clearfix;
+        overflow: auto;
+        position: static;
+    }
+    .flickity-carousel__cell {
+        @include breakpoint($medium-tall) {
+            width: 50%;
+        }
+        @include breakpoint($medium-wide) {
+            width: 33%;
+        }
+        @include breakpoint($large) {
+            width: 25%;
+        }
+    }
+    @at-root #{&}__step {
+        display: block;
+        height: inherit;
+    }
+    @at-root #{&}__content {
+        @include clearfix;
+        display: block;
+        height: auto;
+        text-align: center;
+        position: relative;
+    }
+    @at-root #{&}__label {
+        @extend %font-headings--bold;
+        color: lighten($color-black, 40%);
+        display: block;
+        font-size: 20px;
+        margin: 0 0 10px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    @at-root #{&}__circle {
+        @include centered-horizontally-vertically(absolute, 50%, 50%, -50%, -50%);
+        background-color: $color-white;
+        border-radius: 200%;
+        border: 1px solid $color-white;
+        cursor: pointer;
+        display: block;
+        height: $career-path-circle-size;
+        margin: 0 auto;
+        width: $career-path-circle-size;
+        z-index: 3;
+        &::after {
+            @include centered-horizontally-vertically(absolute, 12.5%, 12.5%, 0, 0);
+            @include animation(pulse2 1s linear infinite);
+            background-color: $color-text;
+            border-radius: 200%;
+            border: 1px solid $color-white;
+            content: '';
+            cursor: pointer;
+            display: block;
+            height: $career-path-circle-size/1.5;
+            margin: 0 auto;
+            width: $career-path-circle-size/1.5;
+            z-index: 5;
+        }
+    }
+    @at-root #{&}__bar {
+        @include clearfix;
+        cursor: pointer;
+        position: relative;
+        // focusing/hovering over career-path__bar will only show tooltip if tooltip markup is at the same DOM level
+        // if using this method, the role="link" must be set on the career-path__bar instead of the .career-path__circle
+        //        &:focus, &:hover {
+        //            ~ .career-path__tooltip {
+        //                @include animation(bounceInDown, 0.75s, 0, linear, 1);
+        //                opacity: 1;
+        //            }
+        //        }
+        &:focus, &:hover, &.career-path__bar--selected {
+            .career-path__circle::after {
+                animation-play-state: paused;
+            }
+        }
+    }
+    @at-root #{&}__pointer {
+        @include clearfix;
+        @include span(12 of 12);
+        display: block;
+        padding: 20px 0 20px 20px;
+        position: relative;
+        &::after, &::before {
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-style: solid;
+            border-width: 20px 0 20px 20px;
+            content: " ";
+            display: block;
+            height: 0;
+            left: 100%;
+            //margin-top: -20px;
+            position: absolute;
+            //top: 50%;
+            top: 0;
+            width: 0;
+            z-index: 50 !important;
+        }
+        &::before {
+            border-left-color: $color-white;
+        }
+        &::after {
+            border-left-color: inherit;
+        }
+    }
+    @at-root #{&}__tooltip {
+        @include clearfix;
+        display: none;
+        // display none must be set in order to use JS solution. if using focus/hover state on .career-path__bar, must not use display none
+        margin: 20px auto 0;
+        max-width: 300px;
+        //        opacity: 0;
+        // opacity must be set to 0 if using focus/hover state on .career-path__bar
+        padding: 20px;
+        position: relative;
+        z-index: 100;
+        &::before {
+            display: block;
+            content: '';
+            height: 0;
+            border-bottom-color: inherit;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-style: solid;
+            border-width: 0 16px 16px 16px;
+            left: 45%;
+            position: absolute;
+            top: -16px;
+            width: 0;
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {}
+            @at-root #{&}-2 {}
+            @at-root #{&}-3 {
+                @extend %font-headings--bold;
+                font-size: 18px;
+                margin: 0;
+            }
+            @at-root #{&}-4 {
+                @extend %font-headings--regular;
+                font-size: 14px;
+                margin: 0 0 5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

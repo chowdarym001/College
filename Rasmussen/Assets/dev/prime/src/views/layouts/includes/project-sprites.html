@@ -1,0 +1,39 @@
+<!-- DO NOT DELETE: required for script function below to pull sprites from server -->
+<div class="f-svg-sprite">
+    <div class="svg-sprite"></div>
+</div>
+<!-- // DO NOT DELETE: required for script function below to pull sprites from server -->
+
+<!-- load svg sprites into body-->
+<script>
+    $(function() {
+        $.get("../../images/svg-sprite--global.svg", function(data) {
+            try {
+                $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+            }
+        });
+        $.get("../../images/svg-sprite--rsb.svg", function(data) {
+            try {
+                $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+            }
+        });
+        $.get("../../images/svg-sprite--rshs.svg", function(data) {
+            try {
+                $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+            }
+        });
+        $.get("../../images/svg-sprite--rsn.svg", function(data) {
+            try {
+                $(".f-svg-sprite .svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".f-svg-sprite .svg-sprite").append(data.documentElement);
+            }
+        });
+    });
+</script>

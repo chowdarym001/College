@@ -1,0 +1,18 @@
+<svg id="icon-arrow-down--ras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 143.38">
+    <defs>
+        <style>
+            .fill-ras-green--bright {
+                fill: #9bad4c;
+            }
+        </style>
+    </defs>
+    <title>icon-arrow-down--ras</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <g id="icon-arrow-down--ras">
+                <polygon class="fill-ras-green--bright" points="50 119.9 79.97 82.43 57.49 82.43 57.49 0 42.51 0 42.51 82.43 20.03 82.43 50 119.9" />
+                <rect class="fill-ras-green--bright" y="128.38" width="100" height="15" transform="translate(100 271.76) rotate(180)" />
+            </g>
+        </g>
+    </g>
+</svg>

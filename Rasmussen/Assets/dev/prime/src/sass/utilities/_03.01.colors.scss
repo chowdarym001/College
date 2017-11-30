@@ -1,0 +1,80 @@
+// COLORS
+
+// RAS == General Rasmussen College brand
+$color-ras-green--dark: #004712;
+$color-ras-green--light: #517f56;
+$color-ras-green--bright: #9bad4c;
+$color-ras-gold--bright: #F5CB07;
+$color-ras-gold--dark: #eeb111;
+$color-ras-gold--light: #f9dda9;
+
+// SCHOOL COLORS
+
+// RSB == School of Business
+$color-school-rsb: #c32032;
+$color-school-rsb-light: #e1c5ac;
+$color-school-rsb-dark: #5b1f2a;
+
+// RSD == School of Design
+$color-school-rsd: #9f1b96;
+$color-school-rsd-light: #c2b2c7;
+$color-school-rsd-dark: #411f1f;
+
+// RSE == School of Education
+$color-school-rse: #f47920;
+$color-school-rse-light: #ffca4e;
+$color-school-rse-dark: #9a1924;
+
+// RSHS == School of Health Sciences
+$color-school-rshs--primary: #82BFB0;
+$color-school-rshs--support--light: #2A8D82;
+$color-school-rshs--support--dark: #004261;
+
+// RSJS == School of Justice Studies
+$color-school-rsjs: #758ca5;
+$color-school-rsjs-light: #b4cdd0;
+$color-school-rsjs-dark: #334671;
+
+// RSN == School of Nursing
+$color-school-rsn--primary: #047dae;
+$color-school-rsn--support--light: #7bbfe4;
+$color-school-rsn--support--dark: #324671;
+$rsn-credential-bg--certificate: #F4F9FB; // 4% RSN primary alpha-transparency
+$rsn-credential-bg--diploma: #EAF3F7; // 8% RSN primary alpha-transparency
+$rsn-credential-bg--associates: #DFEDF4; // 12% RSN primary alpha-transparency
+$rsn-credential-bg--bachelors: #D5E8F0; // 16% RSN primary alpha-transparency
+$rsn-credential-bg--masters: #CBE3ED; // 20% RSN primary alpha-transparency
+
+
+// RST == School of Technology
+$color-school-rst: #02bed6;
+$color-school-rst-light: #8e847a;
+$color-school-rst-dark: #140e37;
+
+// GENERIC colors
+$color-black: #000;
+$color-white: #fff;
+$color-gray-dark: #393849;
+$color-gray: #414042;
+$color-error: #ff4d4d;
+$color-pale-gray: #eef1f4;
+
+// Colors for typographic content
+$color-text: $color-gray;
+$color-text--lightened: lighten($color-text, 35%);
+$color-link-inline: $color-ras-green--bright;
+$color-link-inline--hover: $color-ras-gold--dark;
+$color-black85: rgba($color-black, 85%);
+
+// accessible green on white bg
+$color-blue-gray: #758CA4;
+$color-ivory: #F4F4F4;
+$bgcolor-mmenu: rgba($color-text, 97%);
+$flipcard-bgcolor: #F5CB07;
+$rule-line--default: $color-ras-green--bright;
+
+// social networks
+$color-social-brand--facebook: #3B5A9A;
+$color-social-brand--instagram: #D93175;
+$color-social-brand--linkedin: #0077B5;
+$color-social-brand--youtube: #BB4444;

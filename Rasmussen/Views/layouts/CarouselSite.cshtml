@@ -1,0 +1,21 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+</head>
+<body>
+
+    <header>
+        @Html.Sitecore().Placeholder("phCarousel")
+    </header>
+    <div>
+        @Html.Sitecore().Placeholder("main")
+    </div>
+</body>
+</html>

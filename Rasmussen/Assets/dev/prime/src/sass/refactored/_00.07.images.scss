@@ -1,0 +1,171 @@
+.svg {
+    @extend %clearfix;
+    width: 100%;
+}
+
+.svg-sprite {
+    // Hides Source SVG Sprite, SVG's Accessible via <Use>
+    display: none;
+    height: 0;
+    visibility: hidden;
+}
+
+.imageset {
+    @include fadeIn(0.5s);
+    @at-root #{&}:last-child {
+        margin-bottom: 0;
+    }
+    @at-root #{&}__list {
+        @extend %clearfix;
+        @extend %reset-list;
+    }
+    @at-root #{&}__item {
+        margin-bottom: 5%;
+        overflow: hidden;
+        @at-root #{&}:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @at-root #{&} graphic {
+        @extend %clearfix;
+        width: 100%;
+    }
+    @at-root #{&} img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        max-width: 100%;
+        @include breakpoint($medium-wide) {
+            max-width: 400px;
+        }
+    }
+    @at-root #{&}__title {
+        font-family: $font-headings--medium;
+        font-size: 20px;
+        letter-spacing: .25px;
+        margin: 10px 0 0;
+        //text-transform: uppercase;
+    }
+    @at-root #{&} p {
+        margin-top: 0;
+    }
+    // modifiers
+    // 3column imagesets
+    @at-root #{&}--3 {
+        @extend %clearfix;
+        clear: both;
+        margin: 0 auto 40px auto;
+        .imageset__item {
+            @include breakpoint($small-wide) {
+                @include span(first 5.85 of 12);
+                margin-bottom: gutter(12);
+                &:nth-of-type(2n) {
+                    @include span(last 5.85 of 12);
+                }
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 4 of 12);
+                &:nth-of-type(2n) {
+                    @include span(first 4 of 12);
+                }
+                &:nth-of-type(3n) {
+                    @include span(last 4 of 12);
+                }
+            }
+            @include breakpoint($tp-ridiculously-wide) {
+                max-width: 80%;
+            }
+        }
+    }
+    // 4 column imagesets
+    @at-root #{&}--4 {
+        @extend %clearfix;
+        clear: both;
+        margin: 0 auto 40px auto;
+        .imageset__item {
+            @include breakpoint($small-wide) {
+                @include span(first 5.85 of 12);
+                margin-bottom: gutter(12);
+                &:nth-of-type(2n) {
+                    @include span(last 5.85 of 12);
+                }
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 4 of 12);
+                &:nth-of-type(2n) {
+                    @include span(first 4 of 12);
+                }
+                &:nth-of-type(3n) {
+                    @include span(last 4 of 12);
+                }
+            }
+            @include breakpoint($tp-xlarge) {
+                @include span(first 3 of 12);
+                &:nth-of-type(2n) {
+                    @include span(first 3 of 12);
+                }
+                &:nth-of-type(3n) {
+                    @include span(first 3 of 12);
+                }
+                &:nth-of-type(4n) {
+                    @include span(last 3 of 12);
+                }
+            }
+        }
+    }
+}
+
+.image-bg {
+    @include clearfix;
+    background-color: $color-text;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: block;
+}
+
+.social-icons {
+    @include clearfix;
+    overflow: hidden;
+    .list {
+        @include clearfix;
+    }
+    .list__item {
+        @include clearfix;
+    }
+    .list__link {
+        @include clearfix;
+        border-bottom: 0;
+        display: block;
+        padding: 20px;
+        &:focus, &:hover {
+            border-bottom: 0;
+        }
+    }
+    @at-root #{&}--2x2 {
+        .list {
+            display: block;
+            width: 100%;
+        }
+        .list__item {
+            float: left;
+            display: block;
+            margin: 0;
+            position: relative;
+            text-align: center;
+            width: 50%;
+        }
+        .list__link--social {
+            display: block;
+            //float: left;
+            height: 100%;
+            width: 100%;
+        }
+        .fa {
+            font-size: 48px;
+        }
+    }
+}
+
+.image-flipping--slow {
+    @include animation(flip 3s linear infinite);
+}

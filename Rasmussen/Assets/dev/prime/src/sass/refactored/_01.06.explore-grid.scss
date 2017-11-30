@@ -1,0 +1,272 @@
+.section-explore {
+    @extend %clearfix;
+}
+
+.explore-grid {
+    @extend %clearfix;
+    @at-root #{&}__header {
+        @extend %clearfix;
+        @include breakpoint($medium-wide) {
+            @include span(6.1 of 12 no-gutters);
+        }
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--bold;
+        font-size: 24px;
+        @include breakpoint($medium-wide) {
+            font-size: 32px;
+            margin-top: 0;
+        }
+        @include breakpoint($tp-xlarge) {
+            font-size: 40px;
+        }
+    }
+    @at-root #{&}__subtitle {
+        @extend %font-headings--bold;
+        font-size: 24px;
+        @include breakpoint($medium-wide) {
+            font-size: 32px;
+            margin: 0;
+        }
+    }
+    @at-root #{&}__stories {
+        @extend %clearfix;
+        overflow: hidden;
+        position: relative;
+        .explore-grid__content {
+            padding-right: 20%;
+        }
+        @include breakpoint($small) {
+            .explore-grid__content {
+                padding-right: 40%;
+            }
+        }
+        @at-root #{&}--alpha {
+            @include breakpoint($medium-wide) {
+                @include span(last 6.1 of 12 no-gutters);
+            }
+            .explore-grid__link {
+                height: 330px;
+                @include breakpoint($medium-wide) {
+                    height: 495px;
+                }
+                @include breakpoint($tp-xlarge) {
+                    height: 548px;
+                }
+                @include breakpoint($tp-ridiculously-wide) {
+                    height: 504px;
+                }
+            }
+            .explore-grid__banner img {
+                @include transform(translate(5%, 0%));
+                @include breakpoint($tp-xlarge) {
+                    @include transform(translate(0%, 0%));
+                }
+            }
+            .explore-grid__content {
+                @include breakpoint($small-wide) {
+                    padding-top: 40px;
+                }
+                @include breakpoint($medium-wide) {
+                    padding-top: 20px;
+                }
+                @include breakpoint($tp-xlarge) {
+                    padding-top: 100px;
+                }
+            }
+        }
+        @at-root #{&}--beta {
+            @include breakpoint($medium-wide) {
+                @include span(first 6.1 of 12 no-gutters);
+                clear: left;
+            }
+            .explore-grid__link {
+                height: 300px;
+                @include breakpoint($medium-wide) {
+                    height: 369px;
+                }
+                @include breakpoint($tp-xlarge) {
+                    height: 389px;
+                }
+            }
+            .explore-grid__banner img {
+                @include transform(translate(5%, 0%));
+                @include breakpoint($tp-xlarge) {
+                    @include transform(translate(0%, 0%));
+                }
+            }
+            .explore-grid__content {
+                @include breakpoint($medium-wide) {
+                    padding-right: 30%;
+                }
+            }
+        }
+    }
+    @at-root #{&}__story {
+        @extend %clearfix;
+        .explore-grid__content {
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+        .explore-grid__cta {
+            margin: 10px 0 0 -20px;
+            .explore-grid__cta__label {
+                padding: 10px 10px 10px 20px;
+            }
+            &::after, &::before {
+                border-color: transparent transparent transparent $color-ras-green--dark;
+            }
+            &::before {
+                border-width: 44px 0 0 44px;
+                right: -44px;
+                bottom: 0;
+            }
+            &::after {
+                border-width: 25px 0 0 25px;
+                top: -23px;
+                left: 0;
+            }
+        }
+    }
+    @at-root #{&}__items {
+        @extend %clearfix;
+        @at-root #{&}--alpha {
+            @include breakpoint($medium-wide) {
+                @include span(6.1 of 12 no-gutters);
+            }
+        }
+        @at-root #{&}--beta {
+            @include breakpoint($medium-wide) {
+                @include span(last 6.1 of 12 no-gutters);
+                margin-top: -99px;
+            }
+            @include breakpoint($tp-xlarge) {
+                margin-top: -185px;
+            }
+        }
+    }
+    @at-root #{&}__item {
+        @extend %clearfix;
+        @include breakpoint($small-wide) {
+            @include span(6.10 of 12 no-gutter);
+        }
+        .explore-grid__content {
+            height: 180px;
+            @include breakpoint($medium-wide) {
+                height: 232px;
+            }
+            @include breakpoint($tp-xlarge) {
+                height: 285px;
+            }
+        }
+        .explore-grid__cta {
+            bottom: 0;
+            position: absolute;
+            right: 0;
+            .explore-grid__cta__label {
+                padding: 10px 20px 10px 10px;
+            }
+            &::after, &::before {
+                border-color: transparent transparent $color-ras-green--dark transparent;
+            }
+            &::before {
+                border-width: 0 0 43px 43px;
+                left: -43px;
+                bottom: 0;
+            }
+            &::after {
+                border-width: 0 0 25px 25px;
+                top: -23px;
+                right: 0;
+            }
+        }
+    }
+    &__item, &__story {
+        border: 2px solid $color-white;
+    }
+    @at-root #{&}__link {
+        @extend %clearfix;
+        border: 0;
+        color: $color-white;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        &:focus, &:hover {
+            color: $color-white;
+            border: 0;
+            .explore-grid__cta {
+                @include animation(fadeIn .25s 0 linear 1);
+                background-color: $color-ras-green--dark;
+                &::after, &::before {
+                    border-style: solid;
+                    content: '';
+                    display: block;
+                    height: 0;
+                    position: absolute;
+                    width: 0;
+                }
+            }
+        }
+    }
+    @at-root #{&}__banner {
+        @extend %clearfix;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        img {
+            @include transform(translate(0%, 0%));
+            height: auto;
+            max-height: none;
+            max-width: none;
+            min-height: 100%;
+            min-width: 100%;
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            width: auto;
+        }
+    }
+    @at-root #{&}__content {
+        @extend %clearfix;
+        @include text-shadow(0, 2px, 0, rgba($color-black, .25));
+        padding: 20px;
+        z-index: 1;
+        &__subtitle, &__title {
+            @extend %font-headings--medium;
+            color: $color-white;
+        }
+        @at-root #{&}__title {
+            font-size: 24px;
+            @include breakpoint($medium-tall) {
+                font-size: 32px;
+            }
+        }
+        @at-root #{&}__subtitle {
+            border-bottom: 2px solid $color-white;
+            font-size: 18px;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+    }
+    @at-root #{&}__cta {
+        @extend %font-headings--bold;
+        color: $color-white;
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        @at-root #{&}__label {
+            @extend %cta-inline-arrow-static;
+            display: inline-block;
+        }
+    }
+    @at-root #{&}__footer {
+        clear: both;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,405 @@
+// MODIFIER COLOR CLASSES
+// SCHOOL BACKGROUND COLORS
+.bgc-neutral {
+    background-color: lighten($color-black, 30%);
+}
+
+.bgc-ras {
+    background-color: $color-ras-green--bright;
+    &--lighten25 {
+        background-color: lighten($color-ras-green--bright, 45%);
+    }
+    &--rgba25 {
+        background-color: rgba($color-ras-green--bright, .25);
+    }
+    @at-root #{&}-gold {
+        @at-root #{&}--bright {
+            background-color: $color-ras-gold--bright;
+        }
+        @at-root #{&}--dark {
+            background-color: $color-ras-gold--dark;
+        }
+        @at-root #{&}--light {
+            background-color: $color-ras-gold--light;
+        }
+    }
+    @at-root #{&}-green {
+        @at-root #{&}--bright {
+            background-color: $color-ras-green--bright;
+        }
+        @at-root #{&}--dark {
+            background-color: $color-ras-green--dark;
+        }
+        @at-root #{&}--light {
+            background-color: $color-ras-green--light;
+        }
+    }
+    &-dark, &--dark {
+        background-color: $color-ras-green--dark;
+    }
+    &-light, &--light {
+        background-color: $color-ras-green--light;
+        &--lighten40 {
+            background-color: lighten($color-ras-green--light, 40%);
+        }
+        &--rgba40 {
+            background-color: rgba($color-ras-green--light, .40);
+        }
+        &--rgba45 {
+            background-color: rgba($color-ras-green--light, .45);
+        }
+    }
+    &-medium, &--medium {
+        background-color: $color-ras-green--bright;
+    }
+}
+
+.bgc-rsb {
+    background-color: $color-school-rsb;
+    &--rgba25 {
+        background-color: rgba($color-school-rsb, .25);
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rsb-dark;
+    }
+    &-light, &--light {
+        background-color: $color-school-rsb-light;
+    }
+}
+
+.bgc-rsd {
+    background-color: $color-school-rsd;
+    &--lighten25 {
+        background-color: lighten($color-school-rsd, 25%);
+    }
+    &--rgba25 {
+        background-color: rgba($color-school-rsd, .25);
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rsd-dark;
+    }
+    &-light, &--light {
+        background-color: $color-school-rsd-light;
+    }
+}
+
+.bgc-rse {
+    background-color: $color-school-rse;
+    &--lighten25 {
+        background-color: lighten($color-school-rse, 25%);
+    }
+    &--rgba25 {
+        background-color: rgba($color-school-rse, .25);
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rse-dark;
+    }
+    &-light, &--light {
+        background-color: $color-school-rse-light;
+    }
+}
+
+.bgc-rshs {
+    background-color: $color-school-rshs--primary;
+    &--lighten25 {
+        background-color: lighten($color-school-rshs--primary, 25%);
+    }
+    &--rgba25 {
+        background-color: rgba($color-school-rshs--primary, .25);
+    }
+    &--rgba50 {
+        background-color: rgba($color-school-rshs--primary, .50);
+    }
+    &-primary, &--primary {
+        background-color: $color-school-rshs--primary;
+    }
+    &--support {
+        &--dark {
+            background-color: $color-school-rshs--support--dark;
+        }
+        &--light {
+            background-color: $color-school-rshs--support--light;
+        }
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rshs--support--dark;
+    }
+    &-light, &--light {
+        background-color: lighten($color-school-rshs--primary, 25%);
+    }
+    &-medium, &--medium {
+        background-color: $color-school-rshs--support--light;
+        &--rgba75 {
+            background-color: rgba($color-school-rshs--support--light, .75);
+        }
+    }
+}
+
+.bgc-rsjs {
+    background-color: $color-school-rsjs;
+    &--rgba25 {
+        background-color: rgba($color-school-rsjs, .25);
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rsjs-dark;
+    }
+    &-light, &--light {
+        background-color: $color-school-rsjs-light;
+    }
+}
+
+.bgc-rsn {
+    background-color: $color-school-rsn--support--light;
+    &--rgba25 {
+        background-color: rgba($color-school-rsn--support--light, .25);
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rsn--support--dark;
+    }
+    &-light, &--light {
+        background-color: rgba($color-school-rsn--primary, .10);
+    }
+    &-medium, &--medium {
+        background-color: $color-school-rsn--primary;
+    }
+    &-primary, &--primary {
+        background-color: $color-school-rsn--primary;
+    }
+    &--support {
+        &--dark {
+            background-color: $color-school-rsn--support--dark;
+        }
+        &--light {
+            background-color: $color-school-rsn--support--light;
+        }
+    }
+    // credential color variations
+    @at-root #{&}--diploma {
+        background-color: $rsn-credential-bg--diploma;
+    }
+    @at-root #{&}--certificate {
+        background-color: $rsn-credential-bg--certificate;
+    }
+    @at-root #{&}--associates {
+        background-color: $rsn-credential-bg--associates;
+    }
+    @at-root #{&}--bachelors {
+        background-color: $rsn-credential-bg--bachelors;
+    }
+    @at-root #{&}--masters {
+        background-color: $rsn-credential-bg--masters;
+    }
+}
+
+.bgc-rst {
+    background-color: $color-school-rst;
+    &--lighten25 {
+        background-color: lighten($color-school-rst, 25%);
+    }
+    &--rgba25 {
+        background-color: rgba($color-school-rst, .25);
+    }
+    &-dark, &--dark {
+        background-color: $color-school-rst-dark;
+    }
+    &-light, &--light {
+        background-color: $color-school-rst-light;
+    }
+}
+
+.bgc-white-outline-gold {
+    background-color: $color-white;
+    border: 1px solid $color-ras-gold--dark;
+}
+
+// BACKGROUND-COLORS SOCIAL BRANDS
+.bgc-brand {
+    &--facebook {
+        background-color: $color-social-brand--facebook;
+    }
+    &--instagram {
+        background-color: $color-social-brand--instagram;
+    }
+    &--linkedin {
+        background-color: $color-social-brand--linkedin;
+    }
+    &--youtube {
+        background-color: $color-social-brand--youtube;
+    }
+}
+
+// BORDERS
+.border-ras {
+    &-green {
+        &--dark {
+            border-color: $color-ras-green--dark;
+        }
+        &--light {
+            border-color: $color-ras-green--light;
+        }
+    }
+    &-gold {
+        &--dark {
+            border-color: $color-ras-gold--dark;
+        }
+        &--light {
+            border-color: $color-ras-gold--light;
+        }
+    }
+}
+
+.border-rsb {
+    &--primary {
+        border-color: $color-school-rsb;
+    }
+}
+
+.border-rsd {
+    &--primary {
+        border-color: $color-school-rsd;
+    }
+}
+
+.border-rse {
+    &--primary {
+        border-color: $color-school-rse;
+    }
+}
+
+.border-rshs {
+    &--primary {
+        border-color: $color-school-rshs--primary;
+    }
+}
+
+.border-rsjs {
+    &--primary {
+        border-color: $color-school-rsjs;
+    }
+}
+
+.border-rsn {
+    &--primary {
+        border-color: $color-school-rsn--primary;
+    }
+}
+
+.border-rst {
+    &--primary {
+        border-color: $color-school-rst;
+    }
+}
+
+// TEXT COLOR
+.color-gray {
+    &-dark, &--dark {
+        color: $color-gray-dark;
+    }
+}
+
+// BRAND COLORS
+.color-green {
+    &-dark, &--dark {
+        color: $color-ras-green--dark;
+    }
+    &-light, &--light {
+        color: $color-ras-green--light;
+    }
+    &-medium, &--medium {
+        color: $color-ras-green--bright;
+    }
+}
+
+.color-yellow {
+    color: $color-ras-gold--dark;
+    &-light, &--light {
+        color: $color-ras-gold--light;
+    }
+}
+
+// SCHOOL COLORS
+.color-ras {
+    color: $color-ras-green--bright;
+    &-dark, &--dark {
+        color: $color-ras-green--dark;
+    }
+    &-light, &--light {
+        color: $color-ras-green--light;
+    }
+    &-medium, &--medium {
+        color: $color-ras-green--bright;
+    }
+}
+
+.color-rsb {
+    color: $color-school-rsb;
+    &-dark, &--dark {
+        color: $color-school-rsb-dark;
+    }
+    &-light, &--light {
+        color: $color-school-rsb-light;
+    }
+}
+
+.color-rsd {
+    color: $color-school-rsd;
+    &-dark, &--dark {
+        color: $color-school-rsd-dark;
+    }
+    &-light, &--light {
+        color: $color-school-rsd-light;
+    }
+}
+
+.color-rse {
+    color: $color-school-rse;
+    &-dark, &--dark {
+        color: $color-school-rse-dark;
+    }
+    &-light, &--light {
+        color: $color-school-rse-light;
+    }
+}
+
+.color-rshs {
+    color: $color-school-rshs--primary;
+    &-dark, &--dark {
+        color: $color-school-rshs--support--dark;
+    }
+    &-medium, &--medium {
+        color: $color-school-rshs--support--light;
+    }
+}
+
+.color-rsjs {
+    color: $color-school-rsjs;
+    &-dark, &--dark {
+        color: $color-school-rsjs-dark;
+    }
+    &-light, &--light {
+        color: $color-school-rsjs-light;
+    }
+}
+
+.color-rsn {
+    color: $color-school-rsn--support--light;
+    &-dark, &--dark {
+        color: $color-school-rsn--support--dark;
+    }
+    &-medium, &--medium {
+        color: $color-school-rsn--primary;
+    }
+    &-primary, &--primary {
+        color: $color-school-rsn--primary;
+    }
+}
+
+.color-rst {
+    color: $color-school-rst;
+    &-dark, &--dark {
+        color: $color-school-rst-dark;
+    }
+    &-light, &--light {
+        color: $color-school-rst-light;
+    }
+}

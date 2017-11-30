@@ -1,0 +1,160 @@
+// RESPONSIVE FONT SIZING
+// general font sizing
+$h1-font-sizes: (
+    null: 32px,
+    $medium-tall: 40px,
+    $large: 48px,
+    $tp-ginormous: 56px
+);
+
+$h2-font-sizes: (
+    null: 24px,
+    $medium-tall: 28px,
+    $large: 32px,
+    $tp-ginormous: 36px
+);
+
+$h3-font-sizes: (
+    null: 24px,
+    $medium-tall: 30px,
+    $large: 36px
+);
+
+$h4-font-sizes: (
+    null: 20px,
+    $medium-tall: 24px,
+    $large: 28px
+);
+
+// specific font sizing
+// BANNERS
+$banner-title-font-sizes: (
+    null: 32px,
+    $small-wide: 40px,
+    $tp-huge: 48px
+);
+$banner-subtitle-font-sizes: (
+    null: 20px,
+    $small-wide: 24px,
+    $tp-huge: 28px
+);
+
+// INTRO
+$intro-text-font-sizes: (
+    null: 16px,
+    $medium-wide: 18px,
+    $tp-ridiculously-wide: 20px
+);
+
+// STATS
+$stats-title-font-sizes: (
+    null: 48px,
+    $small-wide: 56px,
+    $medium-tall: 68px
+);
+$stats-subtitle-font-sizes: (
+    null: 20px,
+    $medium-tall: 24px,
+    $large: 28px
+);
+
+// VALUE PROPS
+$uvp-font-sizes: (
+    null: 24px,
+    $small-wide: 32px,
+);
+
+// GLANCE
+$glance-header-title-font-sizes: (
+    null: 32px,
+    $medium-tall: 40px,
+);
+
+$glance-title-font-sizes: (
+    null: 28px,
+    $small-wide: 32px
+);
+
+$glance-cta-font-sizes: (
+    null: 28px,
+    $small-wide: 32px
+);
+
+$cta-inline--plain-font-sizes: (
+    null: 18px,
+    $large: 20px
+);
+
+$cta-inline--button-font-sizes: (
+    null: 14px
+);
+
+$cta-inline--inactive-font-sizes: (
+    null: 14px,
+    $large: 18px
+);
+
+// The function below looks at what font sizes are declared in the above variables
+// and pulls it in and outputs proper media queries for each breakpoint. Variables
+// should be defined on a per element basis.
+
+// To use: @include font-size($element-variable)
+// replace element with whatever element the variable leads with
+
+@mixin font-size($fs-map) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            font-size: $fs-font-size;
+        }
+        @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                font-size: $fs-font-size;
+            }
+        }
+    }
+}
+
+// Unprefixed base values for anything using a WYSIWYG CMS Editor
+// Everything else can be styled by a class for specificity
+h1 {
+    @include font-size($h1-font-sizes);
+    color: $color-gray-dark;
+    //    font-family: $font-klavika-bold;
+    //    font-size: 55px;
+    line-height: 1.1;
+}
+
+h2 {
+    color: $color-gray-dark;
+    //    font-family: $font-klavika-bold;
+    font-size: 45px;
+    line-height: 1.1;
+}
+
+h3 {
+    color: $color-gray;
+    //    font-family: $font-klavika-medium;
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+h4 {
+    color: $color-gray-dark;
+    //    font-family: $font-klavika-bold;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+h5 {
+    color: $color-gray;
+    //    font-family: $font-klavika-bold;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+h6 {
+    color: $color-gray-dark;
+    //    font-family: $font-klavika-medium;
+    font-size: 19px;
+    line-height: 1.2;
+}

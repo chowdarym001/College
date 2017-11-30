@@ -1,0 +1,48 @@
+// ANGLED FULL WIDTH HEADER BAR
+.header-angled-bar {
+    @include clearfix;
+    @include margin-axis-y(0, 20px);
+    overflow: hidden;
+    position: relative;
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include font-headings;
+                @include font-size($glance-header-title-font-sizes);
+                @include centered-axis-x(relative, 25px, -25px);
+                color: $color-gray-dark;
+                display: inline-block;
+                margin: 0;
+                padding: 0 40px;
+                position: relative;
+                z-index: +1;
+                &::before {
+                    @include transform(translateY(0px) skew(-18deg, 0));
+                    background-color: $color-white;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    left: 20px;
+                    position: absolute;
+                    width: 90%;
+                    z-index: -1;
+                    @include breakpoint($medium-tall) {
+                        width: 95%;
+                    }
+                }
+            }
+            //            // name of program in header
+            //            @at-root #{&}-2 {
+            //                @extend %font-headings--bold;
+            //                //@include centered-axis-y(relative, 0%, 0%);
+            //                color: $color-white;
+            //                font-size: 21px;
+            //                float: left;
+            //                line-height: 1;
+            //                padding: 0 20px;
+            //                width: auto;
+            //            }
+        }
+    }
+}

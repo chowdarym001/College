@@ -1,0 +1,97 @@
+// HERO IMAGES
+.hero-full {
+    @include clearfix;
+    display: block;
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    min-width: 100%;
+    max-width: 150%;
+    width: 100%;
+}
+
+.hero-image {
+    @include clearfix;
+    z-index: 0;
+    @at-root #{&}--bg {
+        background-image: url("http://placehold.it/480x225");
+        background-color: transparent;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 225px;
+        @include breakpoint($small) {
+            background-image: url("http://placehold.it/640x225");
+        }
+        @include breakpoint($small-wide) {
+            background-image: url("http://placehold.it/960x300");
+            height: 300px;
+        }
+        @include breakpoint($medium-wide) {
+            background-image: url("http://placehold.it/1200x330");
+            height: 330px;
+        }
+        @include breakpoint($tp-xlarge) {
+            background-image: url("http://placehold.it/2000x335");
+            height: 335px;
+        }
+    }
+    @at-root #{&}--inline {
+        @extend %picturefill-images;
+        picture {
+            width: 100%;
+        }
+        img {
+            object-position: 0;
+            @include breakpoint($small) {
+                object-position: 40%;
+            }
+            @include breakpoint($tp-ridiculously-wide) {
+                object-position: 0;
+            }
+        }
+    }
+    @include breakpoint($medium-wide) {
+        // at 960bp, float image on right in 2column
+        @include span(last 6.1 of 12 no-gutters);
+    }
+}
+
+.hero-text {
+    @include clearfix;
+    @include padding-axis-y(40px, 0);
+    position: relative;
+    //z-index: 0;
+    @include breakpoint($medium-wide) {
+        // at 960bp, float image on left in 2column
+        @include span(first 6.1 of 12 no-gutters);
+        &::after {
+            // pseudo white triangle to cover image
+            border-color: $color-white transparent transparent transparent;
+            border-style: solid;
+            border-width: 335px 100px 0 0;
+            content: '';
+            display: block;
+            height: 0;
+            left: 100%;
+            position: absolute;
+            top: 0;
+            width: 0;
+            //z-index: -1;
+            z-index: 0;
+        }
+    }
+    @at-root #{&}__headline {
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @extend %font-headings--bold;
+                @include font-size($banner-title-font-sizes);
+            }
+            @at-root #{&}-2 {
+                @extend %font-headings--light;
+                @include font-size($banner-subtitle-font-sizes);
+                text-transform: uppercase;
+            }
+        }
+    }
+}

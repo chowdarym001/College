@@ -1,0 +1,144 @@
+// MASONRY
+.masonry-tiles {
+    @include clearfix;
+    margin: 0 auto;
+    overflow: hidden;
+    @at-root #{&}__cell {
+        @include span(12 of 12);
+        color: $color-white;
+        position: relative;
+        padding: 40px;
+        @include breakpoint($medium-tall) {
+            @include span(6.1 of 12 no-gutters);
+        }
+        &:nth-child(2n) {
+            @include breakpoint($medium-tall) {
+                @include span(last 6.1 of 12 no-gutters);
+            }
+        }
+        @at-root #{&}--image {
+            background-color: transparent;
+            background-position: 0 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @at-root #{&}--regular {
+            height: 300px;
+            @include breakpoint($medium-tall) {
+                height: 350px;
+            }
+            @include breakpoint($tp-xlarge) {
+                height: 450px;
+            }
+        }
+        @at-root #{&}--short {
+            height: 300px;
+        }
+        @at-root #{&}--tall {
+            height: 400px;
+            @include breakpoint($tp-xlarge) {
+                height: 600px;
+            }
+        }
+    }
+    @at-root #{&}__content {
+        z-index: 0;
+    }
+    @at-root #{&}__image {
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    // Toms tiles headlines
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @extend %font-headings--medium;
+                font-size: 24px;
+                margin: 0 0 20px;
+                @include breakpoint($large) {
+                    font-size: 32px;
+                }
+            }
+            @at-root #{&}-2 {
+                @extend %font-body--regular;
+                font-size: 18px;
+                margin: 0 0 20px;
+                @include breakpoint($large) {
+                    font-size: 21px;
+                }
+            }
+            @at-root #{&}-3 {
+                @extend %font-headings--medium;
+                border-bottom: 2px solid $color-white;
+                display: inline-block;
+                font-size: 18px;
+            }
+        }
+    }
+    @at-root #{&}__quote {
+        @include clearfix;
+        @extend %font-body--bold;
+        font-size: 20px;
+    }
+    @at-root #{&}__source {
+        @include clearfix;
+        @extend %font-body--medium;
+    }
+    @at-root #{&}__legend {
+        font-family: $font-flama--medium-italic;
+        font-size: $font-size-base;
+    }
+}
+
+.masonry {
+    @include clearfix;
+    display: block;
+    margin: 0 auto 100px;
+    //height: 800px; 
+    width: 100%;
+    .masonry-grid {
+        @include clearfix;
+        height: 100%;
+        @at-root #{&}--2col-3row-zigzag {}
+        @at-root #{&}--2col-3row-lopsided {}
+    }
+    .masonry-item {
+        color: white;
+        //display: block;
+        background: orange;
+        //width: 25%;
+        float: left;
+        margin: 0;
+        padding: 20px;
+        &.masonry-item--1x1 {
+            float: left;
+            border: 1px solid black;
+            width: 25%;
+        }
+        &.masonry-item--1x2h {
+            background: red;
+            height: 250px;
+            //height: 50vmin;
+            width: 25%;
+        }
+        &.masonry-item--1x2w {
+            background: blue;
+            height: 250px;
+            //height: 25vmin;
+            width: 50%;
+        }
+        &.masonry-item--4x4 {
+            background: purple;
+            height: 500px;
+            //height: 50vmin;
+            width: 50%;
+        }
+    }
+}

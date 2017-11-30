@@ -1,0 +1,70 @@
+.global-footer {
+    @extend %clearfix;
+    //background: $color-ras-green--dark;
+    clear: both;
+    color: $color-white;
+    display: block;
+    font-size: 16px;
+    min-height: 116px;
+    //padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @at-root #{&} .container {
+        @include clearfix;
+        line-height: 1.5;
+        padding: 30px 0;
+        margin: 0 auto;
+    }
+    @at-root #{&}__disclosures {
+        display: block;
+        @at-root #{&}-toggle {
+            @include breakpoint($medium-wide) {
+                @include span(6 of 12);
+            }
+        }
+        @at-root #{&}-content {
+            display: none;
+        }
+    }
+    @at-root #{&}__privacy {
+        @include breakpoint($medium-wide) {
+            @include span(5.8 of 12);
+        }
+    }
+    @at-root #{&}__link {
+        border-bottom: 1px solid $color-ras-green--light;
+        color: $color-white;
+        text-decoration: none;
+        &:focus, &:hover {
+            border-bottom-color: $color-ras-gold--dark;
+            color: $color-ras-gold--dark;
+        }
+        @at-root #{&}--reverse {
+            color: lighten($color-text, 25%);
+        }
+    }
+    @at-root #{&}__content {}
+    // Global Footer: Schools of [X] Color References.
+    //    @at-root #{&}--rsb {
+    //        background: $color-school-rsb-dark;
+    //    }
+    //    @at-root #{&}--rsd {
+    //        background: $color-school-rsd-dark;
+    //    }
+    //    @at-root #{&}--rse {
+    //        background: $color-school-rse-dark;
+    //    }
+    //    @at-root #{&}--rshs {
+    //        background: $color-school-rshs--support--dark;
+    //    }
+    //    @at-root #{&}--rsjs {
+    //        background: $color-school-rsjs-dark;
+    //    }
+    //    @at-root #{&}--rsn {
+    //        background: $color-school-rsn--support--dark;
+    //    }
+    //    @at-root #{&}--rst {
+    //        background: $color-school-rst-dark;
+    //    }
+}

@@ -1,0 +1,47 @@
+﻿@model Rasmussen.Models.HomeBannerModel
+
+<section class="section section-modality" id="student-xp-online-oncampus">
+    <div class="container">
+        <section class="section-column section-column--half">
+            <header class="section-header">
+                <h1 class="section__headline section__headline--lvl-1">@Html.Sitecore().Field("Heading", Model.Item)</h1>
+            </header>
+            <section class="section-content">
+                <p>@Html.Sitecore().Field("SubHeading", Model.Item)</p>
+            </section>
+        </section>
+        <section class="section-column section-column--half">
+            <div class="image-box-shadow">
+                <picture>
+                    @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_850))
+                    {
+                        <source srcset="@Url.Content(@Model.BackgroundImageurl_850)" media="(min-width: 1600px)">
+                    }
+                    @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_640))
+                    {
+                        <source srcset="@Url.Content(@Model.BackgroundImageurl_640)" media="(min-width: 1200px)">
+                    }
+                    @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_480))
+                    {
+                        <source srcset="@Url.Content(@Model.BackgroundImageurl_480)" media="(min-width: 760px)">
+                    }
+                    @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_850))
+                    {
+                        <source srcset="@Url.Content(@Model.BackgroundImageurl_850)" media="(min-width: 640px)">
+                    }
+                    @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_640))
+                    {
+                        <source srcset="@Url.Content(@Model.BackgroundImageurl_640)" media="(min-width: 480px)">
+                    }
+                    @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_480))
+                    {
+                        <source srcset="@Url.Content(@Model.BackgroundImageurl_480)" media="(min-width: 0px)">
+                    }
+                    <img srcset="" alt="" data-sizes="auto" data-object-fit="cover" class="lazyload">
+                </picture>
+            </div>
+        </section>
+    </div>
+</section>
+@Html.Sitecore().Field("Body", Model.Item)
+

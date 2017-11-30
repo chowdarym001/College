@@ -1,0 +1,12 @@
+﻿@model Rasmussen.Models.GenericContentBlockModel
+
+<section class="section career-path career-path--rsn">
+    <div class="container">
+        @Html.Raw(Model.Body)
+        
+        <footer class="section-footer">
+            @Html.Raw(@Model.Footer)
+           
+        </footer>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+---
+fabricator: true
+---
+
+<h1 data-f-toggle="labels">5. Pages</h1>
+<div class="f-item-notes" data-f-toggle="notes">
+    <ul>
+        <li>Specific instances of templates that replace placeholder content with real representative content.</li>
+        <li>Essential for testing the effectiveness of the underlying design system.</li> 
+        <li>Provide a place to articulate variations in templates.</li>
+    </ul>
+</div>
+
+<!--
+{{#each materials.5pages.items}}
+{{> f-item this}}
+{{/each}}
+-->
+
+<ul>
+    {{#each views.pages.items}}
+    <li>
+        <a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
+    </li>
+    {{/each}}
+</ul>

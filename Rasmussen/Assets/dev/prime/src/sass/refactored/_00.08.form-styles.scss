@@ -1,0 +1,278 @@
+.find-program {
+    @extend %clearfix;
+    @at-root #{&} .form__group {
+        display: block;
+        float: none;
+        margin: auto;
+        max-width: 550px;
+        text-align: center;
+        width: auto;
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--bold;
+        @include span(12 of 12);
+        font-size: 24px;
+        line-height: 1;
+        margin: 3px 10px 10px 0;
+        text-align: center;
+        @include breakpoint($small-wide) {
+            clear: none;
+        }
+        @include breakpoint($medium-wide) {
+            font-size: 32px;
+            margin: 0 10px 0 0;
+        }
+        @include breakpoint($tp-xlarge) {
+            font-size: 40px;
+        }
+        @at-root #{&}--narrow {
+            width: auto;
+        }
+    }
+    @at-root #{&}__select {
+        @include span(12 of 12);
+        background-color: $color-white;
+        border: 1px solid darken($color-white, 25%);
+        border-radius: 4px;
+        display: inline-block;
+        height: 32px;
+        margin: 0 auto 20px;
+        @include breakpoint($small) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($small-wide) {
+            @include span(7.5 of 12);
+            margin: 5px 20px 0 0;
+            max-width: 330px;
+        }
+        @include breakpoint($tp-xlarge) {
+            height: 40px;
+            margin-bottom: 0;
+        }
+        @at-root #{&}--narrow {
+            @include span(last 10.5 of 12 no-gutters);
+            @include breakpoint($small) {
+                float: left;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: auto;
+            }
+        }
+    }
+    @at-root #{&} .button--solid {
+        clear: both;
+        float: none;
+        margin: 10px auto;
+        @include breakpoint($small-wide) {
+            clear: none;
+            float: left;
+            margin: 0;
+            width: auto;
+        }
+    }
+}
+
+.form {
+    @at-root #{&}__group {
+        @extend %clearfix;
+        @include span(12 of 12);
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+        &--school {
+            @include breakpoint($medium-tall) {
+                @include span(6 of 12);
+            }
+            @include breakpoint($medium-wide) {
+                @include span(4.25 of 12);
+            }
+            @include breakpoint($medium-wide) {
+                @include span(3.75 of 12);
+            }
+        }
+        &--program {
+            @include breakpoint($medium-tall) {
+                @include span(last 6 of 12);
+            }
+            @include breakpoint($medium-wide) {
+                @include span(4.25 of 12);
+            }
+            @include breakpoint($tp-xlarge) {
+                @include span(4 of 12);
+            }
+        }
+        &--zip {
+            @include breakpoint($small-wide) {
+                @include span(6 of 12);
+            }
+            @include breakpoint($medium-wide) {
+                @include span(1.25 of 12);
+            }
+            @include breakpoint($tp-xlarge) {
+                @include span(2 of 12);
+            }
+        }
+        &--button {
+            @include breakpoint($small-wide) {
+                @include span(last 6 of 12);
+                padding-top: 24px;
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 2 of 12);
+            }
+        }
+        &--range {
+            @extend %clearfix;
+            margin-bottom: 20px;
+        }
+        &--alpha, &--beta {
+            @extend %clearfix;
+        }
+        &--alpha {}
+        &--beta {}
+        &--disabled {
+            opacity: .5;
+        }
+    }
+    &__result {
+        @extend %font-headings--bold;
+        clear: both;
+        font-size: 32px;
+        line-height: 1;
+        @include breakpoint($medium-tall) {
+            font-size: 48px;
+        }
+        &--cost {
+            color: $graph-color-remaining;
+        }
+        &--savings {
+            color: $color-ras-green--bright;
+        }
+        &--time {
+            color: $color-ras-green--dark;
+        }
+    }
+    @at-root #{&}--search {}
+    .hide-label--wide {
+        @include breakpoint($medium-wide) {
+            display: none;
+        }
+        @include breakpoint($tp-xlarge) {
+            display: inline;
+        }
+    }
+}
+
+// FORM: BACHELOR COMPLETER ESTIMATOR
+.bachelor-completer-estimator {
+    &__results {
+        @extend %clearfix;
+        display: none;
+    }
+    .form__label {
+        @extend %font-body--bold;
+        font-size: $font-size-base;
+        @include breakpoint($large) {}
+    }
+    .form__graph {
+        @include y-axis-padding(20px, 20px);
+    }
+    .form__controls {}
+    .group-sliders {
+        @extend %clearfix;
+        clear: left;
+        @include breakpoint($small-wide) {
+            @include span(first 8 of 12);
+        }
+        @include breakpoint($medium-tall) {
+            @include span(first 7 of 12);
+        }
+        @include breakpoint($large) {
+            @include span(first 8.75 of 12);
+        }
+        @include breakpoint($tp-ginormous) {
+            @include span(first 7 of 12);
+        }
+        @include breakpoint($tp-4k) {
+            @include span(first 7.75 of 12);
+        }
+    }
+    .form__group--innovation-grant {
+        @include span(12 of 12);
+        @include breakpoint($large) {
+            @include span(first 4 of 12);
+        }
+        @include breakpoint($tp-4k) {
+            @include span(first 4.5 of 12);
+        }
+    }
+    .form__group--transfer-credits {
+        @include breakpoint($medium-wide) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($large) {
+            @include span(first 4 of 12);
+        }
+        @include breakpoint($tp-4k) {
+            @include span(first 3.65 of 12);
+        }
+    }
+    .form__group--flex-choice {
+        @include breakpoint($medium-wide) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($large) {
+            @include span(last 4 of 12);
+        }
+        @include breakpoint($tp-ginormous) {
+            @include span(last 3.5 of 12);
+        }
+    }
+    .group-results {
+        @extend %clearfix;
+        clear: right;
+        @include breakpoint($small-wide) {
+            @include span(last 3 of 12);
+        }
+        @include breakpoint($medium-tall) {
+            @include span(last 4 of 12);
+        }
+        @include breakpoint($large) {
+            @include span(last 3 of 12);
+        }
+        @include breakpoint($tp-ginormous) {
+            @include span(last 4.75 of 12);
+        }
+        @include breakpoint($tp-4k) {
+            @include span(last 3.65 of 12);
+        }
+    }
+    .form__group--estimated-cost {
+        @include span(6 of 12);
+        @include breakpoint($small-wide) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($medium-wide) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($tp-ginormous) {
+            @include span(first 6 of 12);
+        }
+    }
+    .form__group--estimated-savings {
+        @include span(last 6 of 12);
+        @include breakpoint($small-wide) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($medium-wide) {
+            @include span(12 of 12);
+        }
+        @include breakpoint($tp-ginormous) {
+            @include span(last 6 of 12);
+        }
+    }
+}
+
+.api-data {
+    display: none;
+}

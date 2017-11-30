@@ -1,0 +1,23 @@
+.centered-copy-block {
+    @include span(12 of 12);
+    text-align: center;
+    font-size: 19px;
+    line-height: 28px;
+    margin: 20px 0 0 0;
+    @include breakpoint($medium-tall) {
+        @include span(10 of 12);
+        @include push(1 of 12);
+    }
+    @include breakpoint($large) {
+        @include span(8 of 12);
+        @include push(2 of 12);
+    }
+    &-noselect h1 {
+        margin-bottom: 48px;
+        @include breakpoint($small-wide) { margin-bottom: 64px; }
+    }
+    h1 {
+        font-family: $font-klavika-light;
+        @include breakpoint($medium-tall) { font-size: 45px; }
+    }
+}

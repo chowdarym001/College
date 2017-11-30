@@ -1,0 +1,121 @@
+/* START BEM STYLES */
+
+.glance {
+    @extend %clearfix;
+    // Glance courses and data points
+    @at-root #{&}__course-data {
+        @extend %clearfix;
+    } // wrapper
+    // Glance header
+    @at-root #{&}__program-header {
+        background-color: $color-ras-green--light; // brand color
+        height: 36px;
+        margin: 0 0 16px 0;
+        text-align: left;
+        // Glance School of header color modifiers 
+        @at-root #{&}--rsb {
+            background-color: $color-school-rsb;
+        }
+        @at-root #{&}--rsd {
+            background-color: $color-school-rsd;
+        }
+        @at-root #{&}--rse {
+            background-color: $color-school-rse;
+        }
+        @at-root #{&}--rshs {
+            background-color: $color-school-rshs--primary;
+        }
+        @at-root #{&}--rsjs {
+            background-color: $color-school-rsjs;
+        }
+        @at-root #{&}--rsn {
+            background-color: $color-school-rsn--support--light;
+        }
+        @at-root #{&}--rst {
+            background-color: $color-school-rst;
+        }
+        @at-root #{&}-title {
+            color: $color-white;
+            font-size: 24px;
+            font-family: $font-klavika-medium;
+            line-height: 1.5;
+            margin: 0 8px;
+            height: inherit;
+            z-index: 0;
+            @include breakpoint($medium-tall) {
+                line-height: .5;
+            }
+        }
+        @at-root #{&}-skew {
+            color: $color-gray-dark;
+            float: right;
+            font-family: $font-klavika-bold;
+            font-size: 32px;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+            transform: translatey(-4px);
+            z-index: +1;
+            @include breakpoint($small) {
+                font-size: 36px;
+                margin: 0 18px 0 0;
+                transform: translatey(-8px);
+            }
+            @include breakpoint($medium-tall) {
+                float: none;
+                font-size: 48px;
+                margin: 0 0 0 18px;
+                transform: translatey(8px);
+            }
+            &::before {
+                background: $color-white;
+                border-top: 2px solid $color-white; // to fix small line on glance's skewed title
+                content: '';
+                display: block;
+                height: 36px;
+                left: -5%;
+                position: absolute;
+                top: 0;
+                transform: translateY(4px) skew(-18deg, 0);
+                width: 115%;
+                z-index: -1;
+                @include breakpoint($small) {
+                    transform: translateY(8px) skew(-18deg, 0);
+                }
+                @include breakpoint($medium-tall) {
+                    transform: translateY(-8px) skew(-18deg, 0);
+                }
+            }
+        }
+    }
+    // Glance Course
+    @at-root #{&}__course {
+        // wrapper
+        @extend %clearfix;
+        @at-root #{&}-heading {
+            font-family: $font-flama-book;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.33;
+            margin-bottom: 0;
+        }
+        @at-root #{&}-paragraph {
+            line-height: 1.5;
+            margin-top: 12px;
+            margin-bottom: 32px;
+        }
+    }
+    // Glance value props
+    @at-root #{&}__value-prop {
+        @extend %clearfix;
+        @at-root #{&}-card {
+            border: 1px solid red;
+        }
+        @at-root #{&}-group {
+            border: 1px solid blue;
+        }
+        @at-root #{&}-divider {
+            border: 1px solid green;
+        }
+    } // wrapper
+}

@@ -1,0 +1,20 @@
+<svg id="icon-bars-horizontal--gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.75 39.72">
+    <defs>
+        <style>
+            .fill-black--85 {
+                fill: #59595c;
+            }
+
+        </style>
+    </defs>
+    <title>icon-bars-horizontal--gray</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <g id="icon-bars-horizontal">
+                <rect class="fill-black--85" width="51.75" height="8.98" />
+                <rect class="fill-black--85" y="15.37" width="51.75" height="8.98" />
+                <rect class="fill-black--85" y="30.74" width="51.75" height="8.98" />
+            </g>
+        </g>
+    </g>
+</svg>

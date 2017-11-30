@@ -1,0 +1,14 @@
+.sidebar-nav {
+    @extend %clearfix;
+    @extend %reset-list;
+    @at-root #{&}__item {
+        margin-bottom: 10px;
+    }
+    @at-root #{&}__link {
+        @extend %font-body--semibold;
+        border: 0;
+        color: $color-text;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}

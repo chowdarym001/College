@@ -1,0 +1,140 @@
+.button {
+    @include button;
+    @at-root #{&}--primary {
+        @include button-primary;
+        margin: 20px auto;
+    }
+    @at-root #{&}--secondary {
+        @include button-secondary;
+    }
+    @at-root #{&}--solid {
+        background-color: $color-ras-green--dark;
+        color: $color-white;
+        cursor: pointer;
+        float: left;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:focus, &:hover {
+            background-color: $color-ras-green--bright;
+            border: 0;
+            color: $color-white;
+        }
+    }
+    @at-root #{&}-simple {
+        @at-root #{&}--primary {
+            @include button-simple--primary;
+        }
+        @at-root #{&}--secondary {
+            @include button-simple--secondary;
+        }
+    }
+}
+
+.menu-burger {
+    cursor: pointer;
+    float: right;
+    height: 48px;
+    padding: 4px 0 0 0;
+    width: 100%;
+    @at-root #{&}__layer {
+        @include transition(all 187.5ms ease-in-out);
+        background-color: transparent;
+        border-radius: 2px;
+        width: 100%;
+        @at-root #{&}--colored {
+            background-color: $color-ras-green--dark;
+            height: 3px;
+        }
+        @at-root #{&}--white {
+            background-color: $color-white;
+            height: 5px;
+        }
+    }
+    @at-root #{&}__title {
+        @extend %font-headings--medium;
+        color: $color-ras-green--dark;
+        font-size: 12px;
+        margin-top: 4px;
+        text-transform: uppercase;
+        @include breakpoint($medium-tall) {
+            font-size: $font-size-base;
+            margin-top: 8px;
+        }
+    }
+}
+
+// menu-burger active state
+.menu-burger--active {
+    .menu-burger__title {
+        color: $color-ras-green--bright;
+    }
+    .menu-burger__layer--colored {
+        @include transition(all 137.5ms ease-in-out);
+        background-color: $color-ras-green--bright;
+        margin: 0;
+        transform-origin: center center;
+        &:nth-child(1), &:nth-child(5) {
+            opacity: 0;
+            transform-origin: center center;
+        }
+        &:nth-child(1) {
+            transform: translateY(-2deg);
+        }
+        &:nth-child(5) {
+            transform: translateY(2deg);
+        }
+        &:nth-child(3) {
+            transform: rotate(400deg);
+            transform-origin: center center;
+        }
+        &:nth-child(3)::after {
+            background-color: inherit;
+            border-radius: inherit;
+            display: block;
+            content: ' ';
+            height: inherit;
+            width: inherit;
+            transform: rotate(100deg);
+            transform-origin: center center;
+            transition: all 275ms ease-in-out;
+        }
+    }
+}
+
+.colored-click-boxes {
+    @extend %clearfix;
+    @extend %reset-list;
+    @at-root #{&}__item {
+        @include span(12 of 12);
+        margin-bottom: 20px;
+        @include breakpoint($small-wide) {
+            @include span(6 of 12);
+        }
+        &:nth-child(2n) {
+            @include breakpoint($small-wide) {
+                @include span(last 6 of 12);
+            }
+        }
+    }
+    @at-root #{&}__link {
+        background-color: $color-ras-green--bright;
+        border: 0;
+        color: $color-white;
+        display: block;
+        padding: 40px;
+        text-align: center;
+        &:focus, &:hover {
+            background-color: $color-ras-green--dark;
+            border: 0;
+            color: $color-white;
+        }
+    }
+    @at-root #{&} .fa {
+        color: $color-ras-green--light;
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    @at-root #{&} p {
+        margin: 0;
+    }
+}

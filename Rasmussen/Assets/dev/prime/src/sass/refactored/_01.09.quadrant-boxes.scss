@@ -1,0 +1,44 @@
+.quadrant-boxes {
+    @include clearfix;
+    @at-root #{&}--plain {
+        .quadrant-boxes__item {
+            background-color: darken($color-white, 5%);
+        }
+    }
+    @at-root #{&}__grid {
+        @include clearfix;
+    }
+    @at-root #{&}__list {
+        @extend %reset-list;
+        @include clearfix;
+    }
+    @at-root #{&}__item {
+        @include clearfix;
+        @include span(12 of 12);
+        margin-bottom: gutter(12);
+        padding: 30px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include breakpoint($medium-tall) {
+            @include span(6 of 12);
+        }
+        &:nth-child(2n) {
+            @include breakpoint($medium-tall) {
+                @include span(last 6 of 12);
+            }
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @extend %font-headings--bold;
+                font-size: 20px;
+                @include breakpoint($tp-ginormous) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

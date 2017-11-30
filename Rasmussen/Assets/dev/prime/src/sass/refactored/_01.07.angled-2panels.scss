@@ -1,0 +1,237 @@
+// angled 2-panel content
+.angled-2panel-full {
+    @include clearfix;
+    overflow: hidden;
+    @at-root #{&}__panel {
+        @include clearfix;
+        @include span(12 of 12);
+        @at-root #{&}--alpha {}
+        @at-root #{&}--beta {}
+    }
+    @at-root #{&}__container {
+        @include clearfix;
+        background-color: inherit;
+        margin: 0 auto;
+        max-width: 85%;
+        position: relative;
+        @include breakpoint($medium-wide) {
+            max-width: 750px;
+        }
+        @include breakpoint($tp-ridiculously-wide) {
+            max-width: 85%;
+        }
+    }
+    @at-root #{&}__content {
+        @include clearfix;
+        position: relative;
+        background-color: inherit;
+        &.text--dark-on-light {
+            a {
+                &:focus, &:hover {
+                    color: $color-text;
+                }
+            }
+        }
+        &.text--light-on-dark {
+            a {
+                &:focus, &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    @at-root #{&}__copy {
+        @include clearfix;
+        z-index: 5;
+        @include breakpoint($medium-wide) {
+            @include centered-horizontally-vertically(relative, 50%, 50%, -50%, -50%);
+        }
+    }
+    @at-root #{&}__image {
+        @include clearfix;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: inherit;
+        overflow: hidden;
+        position: absolute;
+        left: -10%;
+        right: 0;
+        top: 0;
+        width: 120%;
+        z-index: -1;
+        @include breakpoint($medium-wide) {
+            width: 150%;
+        }
+    }
+    @at-root #{&}__headline {
+        @include clearfix;
+        @at-root #{&}--lvl {
+            @at-root #{&}-1 {
+                @include font-headings($font-headings--medium);
+                font-size: 32px;
+            }
+            @at-root #{&}-2 {
+                @include font-headings;
+                border-bottom: 2px solid $color-white;
+                display: inline-block;
+                font-size: 18px;
+                padding-bottom: 5px;
+            }
+            @at-root #{&}-3 {
+                @include clearfix;
+                @include font-headings($font-headings--medium);
+                font-size: 18px;
+                @include breakpoint($large) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    @at-root #{&}__text {
+        em {
+            font-family: $font-flama--book-italic;
+            font-size: 14px;
+            font-weight: normal;
+            @include breakpoint($large) {
+                font-size: 18px;
+            }
+        }
+    }
+    // alpha panel overlaps
+    @at-root #{&}--alpha-overlap {
+        .angled-2panel-full__panel--alpha {
+            @include breakpoint($medium-wide) {
+                @include span(5.5 of 12 no-gutters);
+            }
+            .angled-2panel-full__container {
+                @include breakpoint($medium-wide) {
+                    // padding push to mimic default container
+                    padding-left: 80px;
+                }
+            }
+            .angled-2panel-full__content {
+                padding: 40px 0 20px;
+                z-index: 0;
+                @include breakpoint($medium-wide) {
+                    padding: 30px 0;
+                }
+                &::after {
+                    @include transform(skew(0, -6deg));
+                    background-color: inherit;
+                    display: block;
+                    bottom: -6%;
+                    content: '';
+                    height: 50%;
+                    left: -10%;
+                    position: absolute;
+                    top: auto;
+                    width: 200%;
+                    z-index: -1;
+                    @include breakpoint($medium-wide) {
+                        @include transform(skewX(-15deg));
+                        background-color: inherit;
+                        display: block;
+                        content: '';
+                        height: 100%;
+                        left: 88%;
+                        position: absolute;
+                        top: 0;
+                        width: 30%;
+                        z-index: 0;
+                    }
+                    @include breakpoint($tp-ridiculously-wide) {
+                        left: 90%;
+                    }
+                }
+            }
+        }
+        .angled-2panel-full__panel--beta {
+            @include breakpoint($medium-wide) {
+                @include span(last 6.7 of 12 no-gutters);
+            }
+            .angled-2panel-full__container {
+                @include breakpoint($medium-wide) {
+                    // padding push to mimic default container
+                    padding-right: 80px;
+                }
+            }
+            .angled-2panel-full__content {
+                padding: 80px 0 40px;
+                @include breakpoint($medium-wide) {
+                    padding: 40px 0 40px 100px;
+                }
+            }
+        }
+    }
+    // beta panel overlaps
+    @at-root #{&}--beta-overlap {
+        .angled-2panel-full__panel--alpha {
+            @include breakpoint($medium-wide) {
+                @include span(first 6.7 of 12 no-gutters);
+            }
+            .angled-2panel-full__container {
+                @include breakpoint($medium-wide) {
+                    // padding push to mimic default container
+                    padding-right: 80px;
+                }
+            }
+            .angled-2panel-full__content {
+                padding: 40px 0 80px;
+                @include breakpoint($medium-wide) {
+                    padding: 40px 40px 40px 40px;
+                }
+            }
+        }
+        .angled-2panel-full__panel--beta {
+            @include breakpoint($medium-wide) {
+                @include span(last 5.5 of 12 no-gutters);
+            }
+            .angled-2panel-full__container {
+                @include breakpoint($medium-wide) {
+                    // padding push to mimic default container
+                    padding: 0;
+                }
+            }
+            .angled-2panel-full__content {
+                padding: 20px 0 40px;
+                @include breakpoint($medium-wide) {
+                    padding: 40px 80px 40px 20px;
+                }
+                &::before {
+                    @include transform(skew(0, -6deg));
+                    background-color: inherit;
+                    display: block;
+                    content: '';
+                    height: 100%;
+                    left: -10%;
+                    position: absolute;
+                    top: -25%;
+                    width: 200%;
+                    z-index: -1;
+                    @include breakpoint($small-wide) {
+                        top: -46%;
+                    }
+                    @include breakpoint($medium-wide) {
+                        @include transform(skewX(-15deg));
+                        background-color: inherit;
+                        display: block;
+                        content: '';
+                        height: 100%;
+                        left: -10%;
+                        position: absolute;
+                        top: 0;
+                        width: 30%;
+                        z-index: 0;
+                    }
+                    @include breakpoint($tp-ridiculously-wide) {
+                        left: -25%;
+                    }
+                }
+            }
+        }
+    }
+}

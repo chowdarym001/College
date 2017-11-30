@@ -1,0 +1,39 @@
+.accreditation-ccne {
+    @at-root #{&}--left {
+        background: url("../../images/rsn/value-prop-accreditation-ccne-760.png") 50% 50%/cover $color-white;
+        @include breakpoint($small-wide) {
+            position: absolute;
+            margin: 15px 15px 0 0;
+            //            margin: -50px auto 0;
+            right: 40px;
+        }
+        @include breakpoint($medium-wide) {
+            display: block;
+            height: 62px;
+            left: calc(50% - 130px);
+            margin-top: 15px;
+            width: 80px;
+            position: absolute;
+        }
+    }
+    @at-root #{&}--right {
+        background: url("../../images/rsn/value-prop-accreditation-ccne-760.png") 50% 50%/cover $color-white;
+        display: block;
+        @include breakpoint($small-wide) {
+            position: absolute;
+            margin: 15px 15px 0 0;
+            //            margin: -50px auto 0;
+            right: 40px;
+        }
+        @include breakpoint($medium-wide) {
+            height: 62px;
+            margin: 15px 0 0 0;
+            right: calc(50% - 30px);
+            width: 80px;
+        }
+    }
+}
+
+.accrediting-org {
+    @include clearfix;
+}

@@ -1,0 +1,102 @@
+.industry {
+    @extend %clearfix;
+    @at-root #{&}__grid {
+        @include span(12 of 12);
+    }
+    /*
+    @at-root #{&}-card {
+        @extend %clearfix;
+        @include span(12 of 12);
+        display: inline-block;
+        height: 200px;
+        margin-bottom: 20px;
+        padding: 40px 30px 30px;
+        @include breakpoint($small-wide) {
+            @include span(6 of 12);
+        }
+        @include breakpoint($medium-wide) {
+            @include span(4 of 12);
+            height: 300px;
+        }
+        @include breakpoint($tp-huge) {
+            @include span(3 of 12);
+        }
+        @include breakpoint($tp-4k) {
+            @include span(first 2.4 of 12);
+        }
+        &:nth-child(2n) {
+            @include breakpoint($small-wide) {
+                @include span(last 6 of 12);
+            }
+            @include breakpoint($medium-wide) {
+                @include span(first 4 of 12);
+            }
+            @include breakpoint($tp-huge) {
+                @include span(first 3 of 12);
+            }
+            @include breakpoint($tp-4k) {
+                @include span(first 2.4 of 12);
+            }
+        }
+        &:nth-child(3n) {
+            @include breakpoint($medium-wide) {
+                @include span(last 4 of 12);
+            }
+            @include breakpoint($tp-huge) {
+                @include span(first 3 of 12);
+            }
+            @include breakpoint($tp-4k) {
+                @include span(first 2.4 of 12);
+            }
+        }
+        &:nth-child(4n) {
+            @include breakpoint($tp-huge) {
+                @include span(last 3 of 12);
+            }
+            @include breakpoint($tp-4k) {
+                @include span(first 2.4 of 12);
+            }
+        }
+        &:nth-child(5n) {
+            @include breakpoint($tp-4k) {
+                @include span(last 2.4 of 12);
+            }
+        }
+        @at-root #{&}--cross {
+            background-color: $color-white;
+            border: 1px solid darken($color-white, 10%);
+        }
+        @at-root #{&}__link {
+            @extend %clearfix;
+            @include span(12 of 12);
+            border: 0;
+            height: 100%;
+            position: relative;
+            &:focus, &:hover {
+                border: 0;
+            }
+        }
+        @at-root #{&}__title {
+            @extend %font-headings--medium;
+            font-size: 20px;
+            margin: 0 0 10px;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: 24px;
+            }
+        }
+        @at-root #{&}__subtitle {
+            font-size: 14px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            @include breakpoint($tp-ridiculously-wide) {
+                font-size: 20px;
+            }
+        }
+        .button {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+*/
+}

@@ -1,0 +1,31 @@
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.FourColumnContentBlockModel 
+
+<section class="section industry">
+    <div class="container">
+        <header class="section-header">
+            @Html.Raw(Model.Body)
+            
+        </header>
+        <section class="section-content">
+            <div class="program-card-basic__grid program-card-basic__grid--three">
+                <ul class="program-card-basic__list">
+                    @foreach (var column in Model.ContentCards)
+                    {
+                        <li class="program-card-basic__item program-card-basic__item--@Html.Raw(column.Title)" >
+                            @Html.Raw(column.Body)
+
+                        </li>
+
+                    }
+                </ul>
+            </div>
+        </section>
+
+        <footer class="section-footer text--centered">
+            @Html.Raw(Model.Footer)
+            
+        </footer>
+    </div>
+</section>

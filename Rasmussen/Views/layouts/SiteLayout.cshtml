@@ -1,0 +1,77 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+  Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    <!-- project styles -->
+    <link href="~/Assets/dist/prime/css/styles.css" rel="stylesheet" />
+    @*<link href="~/Assets/images" rel="icon"/>*@
+    <!-- /project styles -->
+    <script>
+            // Picture element HTML5 shiv
+            document.createElement( "picture" );
+    </script>
+  
+</head>
+
+  <body>
+      <div class="page-wrapper">
+          <header class="global-header global-header--sticky global-header--down" role="banner">
+              @Html.Sitecore().Placeholder("Header")
+          </header>
+          <main class="main-contents">
+              @Html.Sitecore().Placeholder("Body")
+          </main>
+          <footer class="global-footer global-footer--multicolumn">
+              @Html.Sitecore().Placeholder("Footer")
+          </footer>
+      </div>
+
+      <script src="~/Assets/dist/prime/scripts/display.js"></script>
+      <!-- DO NOT DELETE: required for script function below to pull sprites from server -->
+      <div class="svg-sprite"></div>
+      <!-- // DO NOT DELETE: required for script function below to pull sprites from server -->
+      <!-- load svg sprites into body-->
+      <script>
+    $(function() {
+        $.get("/Assets/dist/prime/images/svg-sprite--global.svg", function(data) {
+            try {
+                $(".svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".svg-sprite").append(data.documentElement);
+            }
+        });
+        $.get("/Assets/dist/prime/images/svg-sprite--rsb.svg", function(data) {
+            try {
+                $(".svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".svg-sprite").append(data.documentElement);
+            }
+        });
+        $.get("/Assets/dist/prime/images/svg-sprite--rshs.svg", function(data) {
+            try {
+                $(".svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".svg-sprite").append(data.documentElement);
+            }
+        });
+        $.get("/Assets/dist/prime/images/svg-sprite--rsn.svg", function(data) {
+            try {
+                $(".svg-sprite")[0].append(data.documentElement);
+            } catch (e) {
+                $(".svg-sprite").append(data.documentElement);
+            }
+        });
+    });
+      </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{{title}}</title>
+
+        {{#if fabricator}}
+        <link rel="stylesheet" href="{{baseurl}}fabricator/css/f.css"> {{/if}}
+
+        <!-- project styles -->
+        <link rel="stylesheet" href="{{baseurl}}/../css/styles.css">
+        <!-- /project styles -->
+
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement("picture");
+        </script>
+        <!-- // Bugherd testing script required for QA -->
+        <script type='text/javascript'>
+            (function(d, t) {
+                var bh = d.createElement(t),
+                    s = d.getElementsByTagName(t)[0];
+                bh.type = 'text/javascript';
+                bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xwwmnrlzrjcehtljffzjlw';
+                s.parentNode.insertBefore(bh, s);
+            })(document, 'script');
+        </script>
+
+    </head>
+
+    <body>
+        {{#if fabricator}}
+
+            {{> f-icons}}
+
+            {{> f-menu}}
+            <div class="f-container">
+                {{> f-control-bar}}
+        {{/if}}
+
+            {% body %}
+
+        
+        {{#if fabricator}}
+            </div>
+            
+        <script src="{{baseurl}}fabricator/scripts/f.js"></script>
+        {{/if}}
+
+        <!-- toolkit scripts -->
+        <script src="{{baseurl}}/../scripts/display.js"></script>
+        <!-- /toolkit scripts -->
+
+        {{> project-sprites}}
+
+    </body>
+
+</html>

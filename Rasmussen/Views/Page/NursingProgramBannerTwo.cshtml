@@ -1,0 +1,45 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.HomeBannerModel
+
+
+<section class="section angled-2panel-full angled-2panel-full--alpha-overlap no-padding">
+    @Html.Sitecore().Field("SubHeading", Model.Item)
+    
+    <article class="angled-2panel-full__panel angled-2panel-full__panel--beta" >
+        <div class="angled-2panel-full__container">
+            <section class="angled-2panel-full__content text--light-on-dark text--centered" >
+                <div class="angled-2panel-full__image">
+                    <picture>
+                        <!--[if IE 9]><video><![endif]-->
+                        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1200))
+                        {
+                            <source srcset="@Url.Content(@Model.BackgroundImageurl_1200)" media="(min-width: 1600px)">
+                        }
+                        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1000))
+                        {
+                            <source srcset="@Url.Content(@Model.BackgroundImageurl_1000)" media="(min-width: 960px)">
+                        }
+                        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_850))
+                        {
+                            <source srcset="@Url.Content(@Model.BackgroundImageurl_850)" media="(min-width: 760px)">
+                        }
+                        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_640))
+                        {
+                            <source srcset="@Url.Content(@Model.BackgroundImageurl_640)" media="(min-width: 480px)">
+                        }
+                        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_480))
+                        {
+                            <source srcset="@Url.Content(@Model.BackgroundImageurl_480)" media="(min-width: 0)">
+                        }
+                        
+                        <!--[if IE 9]></video><![endif]-->
+                        <img srcset=" " alt=" " data-object-fit="cover ">
+                    </picture>
+                </div>
+                @Html.Sitecore().Field("Body", Model.Item)
+               
+            </section>
+        </div>
+    </article>
+</section>

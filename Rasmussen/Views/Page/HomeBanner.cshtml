@@ -1,0 +1,42 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.HomeBannerModel
+
+<div class="banner-full banner-full--tall" role="banner">
+    <picture>
+        
+        @*@Html.Sitecore().Field("BackgroundImage",@Model.Item)*@
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_2000))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_2000)" media="(min-width: 1600px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1600))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_1600)" media="(min-width: 1200px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1200))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_1200)" media="(min-width: 960px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_960))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_960)" media="(min-width: 640px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_640))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_640)" media="(min-width: 480px)">
+        }
+        @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_480))
+        {
+            <source srcset="@Url.Content(@Model.BackgroundImageurl_480)" media="(min-width: 0px)">
+        }
+       
+        <img srcset="" alt="" data-object-fit="cover">
+    </picture>
+    <div class="container">
+        <div class="banner-text banner-text--beneath-small-overlay-large">
+            <h2 class="banner-text__subtitle">@Html.Sitecore().Field("Heading", Model.Item)</h2>
+            @Html.Sitecore().Field("SubHeading", Model.Item)@Html.Sitecore().Field("CTALink", Model.Item)
+        </div>
+    </div>
+</div>

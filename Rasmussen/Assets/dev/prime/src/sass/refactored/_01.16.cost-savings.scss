@@ -1,0 +1,8 @@
+.cost-savings {
+    @extend %clearfix;
+    background-color: $color-pale-gray;
+    
+    img {
+        max-width: 100%;
+    }
+}

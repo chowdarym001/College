@@ -1,0 +1,45 @@
+<svg id="footer-edu--ras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 716">
+	<defs>
+		<style>
+			.fill-ras-green--bright {
+				fill: #9bad4c;
+			}
+
+			.fill-6b8123 {
+				fill: #6b8123;
+			}
+
+			.fill-6b8123-opacity80 {
+				fill: #6b8123;
+				opacity: 0.8;
+			}
+
+			.fill-8b9f3e {
+				fill: #8b9f3e;
+			}
+
+			.fill-60761e {
+				fill: #60761e;
+			}
+
+			.fill-60761e-opacity43 {
+				fill: #60761e;
+				opacity: 0.43;
+			}
+
+		</style>
+	</defs>
+	<title>footer-edu--ras</title>
+	<g id="Layer_2" data-name="Layer 2">
+		<g id="footer-edu--ras">
+			<rect class="fill-ras-green--bright" y="17" width="2000" height="700"/>
+			<rect class="fill-6b8123-opacity80" width="2000" height="18"/>
+			<rect class="fill-8b9f3e" y="18" width="96" height="700"/>
+			<rect id="bottom-straight" class="fill-6b8123" y="617" width="2000" height="100"/>
+			<polygon id="bottom-angle" class="fill-60761e" points="1683 717 1242 717 1143 617 1584 617 1683 717"/>
+			<polygon id="bottom-triangle-large" class="fill-60761e-opacity43" points="200 717 0 717 0 517 200 717"/>
+			<polygon id="bottom-triangle-small" class="fill-60761e" points="197.39 717 98.44 618.06 0 716.5 197.39 717"/>
+			<polygon id="triangle-top" class="fill-60761e-opacity43" points="2000 210 1806 16 2000 16 2000 210"/>
+		</g>
+	</g>
+</svg>

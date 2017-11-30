@@ -1,0 +1,68 @@
+<svg id="icon-laptop--gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.45 167.75">
+    <defs>
+        <style>
+            .fill-353f49 {
+                fill: #353f49;
+            }
+            
+            .fill-474f59 {
+                fill: #474f59;
+            }
+            
+            .fill-white {
+                fill: #fff;
+            }
+            
+            .fill-e8b417 {
+                fill: #e8b417;
+            }
+            
+            .fill-cccbca {
+                fill: #cccbca;
+            }
+            
+            .fill-d9d8d7 {
+                fill: #d9d8d7;
+            }
+        </style>
+    </defs>
+    <title>icon-laptop--gold</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <g id="icon-laptop--gold">
+                <path class="fill-353f49" d="M280,2.45A8.28,8.28,0,0,0,274.09,0H37.37A8.37,8.37,0,0,0,29,8.38V154.68H282.48V8.38A8.32,8.32,0,0,0,280,2.45Z" />
+                <path class="fill-474f59" d="M159.28,6.43a3.55,3.55,0,1,1-3.55-3.54A3.55,3.55,0,0,1,159.28,6.43Z" />
+                <path class="fill-white" d="M157.25,6.43a1.53,1.53,0,1,1-1.53-1.5A1.53,1.53,0,0,1,157.25,6.43Z" />
+                <rect class="fill-white" x="42.17" y="12.89" width="227.12" height="141.78" />
+                <path class="fill-e8b417" d="M148.39,101H54.18V48h94.21ZM93.18,83.82l16.21-9.38L93.18,65.09Z" />
+                <rect class="fill-353f49" x="162.59" y="47.95" width="38.79" height="21.81" />
+                <polygon class="fill-cccbca" points="178.66 55.02 185.33 58.86 178.66 62.73 178.66 55.02" />
+                <rect class="fill-353f49" x="162.59" y="79.11" width="38.79" height="21.85" />
+                <polygon class="fill-cccbca" points="178.66 86.18 185.33 90.05 178.66 93.88 178.66 86.18" />
+                <rect class="fill-353f49" x="162.59" y="110.3" width="38.79" height="21.81" />
+                <polygon class="fill-cccbca" points="178.66 117.37 185.33 121.21 178.66 125.05 178.66 117.37" />
+                <rect class="fill-d9d8d7" x="209.29" y="60.67" width="47.98" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="67.05" width="47.98" height="2.72" />
+                <rect class="fill-d9d8d7" x="209.29" y="54.33" width="47.98" height="2.72" />
+                <rect class="fill-d9d8d7" x="209.29" y="47.95" width="27.33" height="2.75" />
+                <rect class="fill-d9d8d7" x="75.07" y="123.02" width="73.32" height="2.74" />
+                <rect class="fill-d9d8d7" x="75.07" y="129.37" width="36.66" height="2.75" />
+                <rect class="fill-d9d8d7" x="75.07" y="116.64" width="73.32" height="2.75" />
+                <rect class="fill-d9d8d7" x="54.18" y="110.3" width="41.76" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="91.83" width="47.98" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="98.2" width="47.98" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="85.49" width="47.98" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="79.11" width="27.33" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="123.02" width="47.98" height="2.74" />
+                <rect class="fill-d9d8d7" x="209.29" y="129.37" width="47.98" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="116.64" width="47.98" height="2.75" />
+                <rect class="fill-d9d8d7" x="209.29" y="110.3" width="27.33" height="2.75" />
+                <rect class="fill-e8b417" x="54.18" y="25.58" width="203.09" height="11.01" />
+                <rect class="fill-e8b417" x="57.42" y="29.7" width="98.31" height="2.75" />
+                <path class="fill-cccbca" d="M0,159.64a95.67,95.67,0,0,0,38.73,8.11h234a95.68,95.68,0,0,0,38.72-8.11Z" />
+                <rect class="fill-white" y="154.81" width="311.45" height="4.83" />
+                <rect class="fill-cccbca" x="128.69" y="154.81" width="54.06" height="2.41" />
+            </g>
+        </g>
+    </g>
+</svg>

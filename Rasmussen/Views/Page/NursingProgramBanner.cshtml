@@ -1,0 +1,37 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model Rasmussen.Models.HomeBannerModel
+
+<div class="banner-full banner-full--imageless bgc-rsn--primary">
+    <div class="container">
+        <div class="banner-text text--light-on-dark">
+            <h3 class="banner-text__headline banner-text__headline--lvl-3">@Html.Sitecore().Field("Heading", Model.Item)</h3>
+        </div>
+    </div>
+</div>
+<div class="hero-full hero-full--image" role="banner">
+    <div class="hero-image hero-image--inline">
+        <picture>
+            <!--[if IE 9]><video><![endif]-->
+            @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_1000))
+            {
+                <source srcset="@Url.Content(@Model.BackgroundImageurl_1000)" media="(min-width: 960px)">
+            }
+            @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_850))
+            {
+                <source srcset="@Url.Content(@Model.BackgroundImageurl_850)" media="(min-width: 760px)">
+            }
+            @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_640))
+            {
+                <source srcset="@Url.Content(@Model.BackgroundImageurl_640)" media="(min-width: 480px)">
+            }
+            @if (!String.IsNullOrEmpty(@Model.BackgroundImageurl_480))
+            {
+                <source srcset="@Url.Content(@Model.BackgroundImageurl_480)" media="(min-width: 0)">
+            }
+
+            <img srcset="" alt="" data-object-fit="cover">
+        </picture>
+    </div>
+    @Html.Sitecore().Field("SubHeading", Model.Item)
+</div>

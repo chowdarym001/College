@@ -1,0 +1,138 @@
+// Rasmussen Border Styles
+
+// Component: Global Nav Rainbow-Borders (Current Use: Global Nav)
+// Options: All color dividers can be found in the mixin of the same naming convention
+.global-nav-border { @include global-nav-border(brand); }
+.global-nav-border-rsb { @include global-nav-border(rsb); }
+.global-nav-border-rsd { @include global-nav-border(rsd); }
+.global-nav-border-rse { @include global-nav-border(rse); }
+.global-nav-border-rshs { @include global-nav-border(rshs); }
+.global-nav-border-rsjs { @include global-nav-border(rsjs); }
+.global-nav-border-rsn { @include global-nav-border(rsn); }
+.global-nav-border-rst { @include global-nav-border(rst); }
+
+// Component: Chevron Borders (Current Use: Intro Module)
+// Options:
+// .bdr-ch is for globals seen below
+// .bdr-ch-{axis: x/y} (defaults to rasmussen's color palette) or
+// .bdr-ch-{axis: x/y}-{school_abbr: holds color palettes referenced in brd-ch-x/y mixins...}
+// .bdr-ch-{direction: t, r, b, l... left and right default to bottom in mobile}
+.bdr-ch {
+    display: inline-block;
+    position: relative;
+    &::before, &::after { @extend %pseudo-arrow; }
+}
+// Chevron X/Y-Axis Border Colors
+.bdr-ch-x { @include bdr-ch-x(); }
+.bdr-ch-y { @include bdr-ch-y(); }
+// Chevron (Horizontal, X-Axis) Border, Top Border Version
+.bdr-ch-t {
+    border-style: solid hidden hidden hidden;
+    border-width: 3px 0 0 0;
+    &::before, &::after { border-style: hidden solid solid solid; }
+    &::before {
+        border-color: transparent transparent currentColor transparent;
+        border-width: 0 22px 16px 22px;
+        left: calc(50% - 22px);
+        top: -17px;
+    }
+    &::after {
+        border-color: transparent transparent $color-white transparent;
+        border-width: 0 18px 13px 18px;
+        left: calc(50% - 18px);
+        top: -13px;
+    }
+}
+// Chevron (Horizontal, X-Axis) Border, Bottom Border Version
+.bdr-ch-b {
+    border-style: hidden hidden solid hidden;
+    border-width: 0 0 3px 0;
+    &::before, &::after { border-style: solid solid hidden solid; }
+    &::before {
+        border-color: currentColor transparent transparent transparent;
+        border-width: 16px 22px 0 22px;
+        left: calc(50% - 22px);
+        bottom: -16px;
+    }
+    &::after {
+        border-color: $color-white transparent transparent transparent;
+        border-width: 13px 18px 0 18px;
+        left: calc(50% - 18px);
+        bottom: -13px;
+    }
+}
+
+// Chevron (Horizontal, X-Axis) Border, Bottom Border Version (Mobile Only)
+.bdr-ch-b-mobile {
+	@include breakpoint(max-width $medium-tall) {
+		border-style: hidden hidden solid hidden;
+	    border-width: 0 0 3px 0;
+	    &::before, &::after { border-style: solid solid hidden solid; }
+	    &::before {
+	        border-color: currentColor transparent transparent transparent;
+	        border-width: 16px 22px 0 22px;
+	        left: calc(50% - 22px);
+	        bottom: -16px;
+	    }
+	    &::after {
+	        border-color: $color-white transparent transparent transparent;
+	        border-width: 13px 18px 0 18px;
+	        left: calc(50% - 18px);
+	        bottom: -13px;
+		}
+	}
+	@include breakpoint($medium-tall) { border: 0; }
+}
+
+// Chevron (Vertical, Y-Axis) Border, Left Border Version
+.bdr-ch-l {
+    // @extend .bdr-ch-b-mobile; Just add to markup instead of default
+    border: 0;
+    @include breakpoint($medium-tall) {
+        border-style: hidden hidden hidden solid;
+        border-width: 0 0 0 3px;
+        &::before, &::after {
+            border-style: solid solid solid hidden;
+            bottom: initial;
+            right: initial;
+        }
+        &::before {
+            border-color: transparent currentColor transparent transparent;
+            border-width: 16px 22px 22px 0;
+            left: -22px;
+            top: calc(50% - 18px);
+        }
+        &::after {
+            border-color: transparent $color-white transparent transparent;
+            border-width: 14px 19px 19px 0;
+            left: -17px;
+            top: calc(50% - 16px);
+        }
+    }
+}
+// Chevron (Vertical, Y-Axis) Border, Right Border Version
+.bdr-ch-r {
+    // @extend .bdr-ch-b-mobile; Just add to markup instead of default
+    border: 0;
+    @include breakpoint($medium-tall) {
+        border-style: hidden solid hidden hidden;
+        border-width: 0 3px 0 0;
+        &::before, &::after {
+            border-style: solid hidden solid solid;
+            bottom: initial;
+            left: initial;
+        }
+        &::before {
+            border-color: transparent transparent transparent currentColor;
+            border-width: 22px 0 22px 16px;
+            right: -17px;
+            top: calc(50% - 18px);
+        }
+        &::after {
+            border-color: transparent transparent transparent $color-white;
+            border-width: 19px 0 19px 14px;
+            right: -14px;
+            top: calc(50% - 15px);
+        }
+    }
+}

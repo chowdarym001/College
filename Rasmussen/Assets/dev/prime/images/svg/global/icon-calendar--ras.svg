@@ -1,0 +1,27 @@
+<svg id="icon-calendar--ras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.4 119.9">
+    <defs>
+        <style>
+            .fill-ras-green--bright {
+                fill: #9bad4c;
+            }
+        </style>
+    </defs>
+    <title>icon-calendar--ras</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <g id="icon-calendar--ras">
+                <rect class="fill-ras-green--bright" x="37.47" y="44.96" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="59.95" y="44.96" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="82.43" y="44.96" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="14.99" y="67.44" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="37.47" y="67.44" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="59.95" y="67.44" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="82.43" y="67.44" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="14.99" y="89.92" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="37.47" y="89.92" width="14.99" height="14.99" />
+                <rect class="fill-ras-green--bright" x="59.95" y="89.92" width="14.99" height="14.99" />
+                <path class="fill-ras-green--bright" d="M97.42,15V3.75A3.75,3.75,0,0,0,93.67,0h-15a3.75,3.75,0,0,0-3.75,3.75V15H37.47V3.75A3.75,3.75,0,0,0,33.72,0h-15A3.75,3.75,0,0,0,15,3.75V15H0V119.9H112.4V15Zm-15-7.49h7.49v15H82.43Zm-59.95,0H30v15H22.48ZM104.91,112.4H7.49V37.47h97.42Z" />
+            </g>
+        </g>
+    </g>
+</svg>
